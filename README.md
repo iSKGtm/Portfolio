@@ -1,4 +1,4 @@
-# Nova paleta de cores da marca, e animações suaves. (xx/09/2022)
+# Nova paleta de cores da marca, e animações suaves. (06/09/2022)
 
 4 - Nova paleta de cores da marca, e animações suaves.
 
