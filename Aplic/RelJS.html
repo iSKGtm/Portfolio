@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/favicon/ICO LOW.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <title>Relógio em JavaScript</title>
+    <style>
+        #iskgtmmin {
+        width: 30px;
+        height: 30px;
+        display: inline-flex;
+        float: right;
+        position: relative;
+        top: -6px;
+        right: -6px;
+        }
+
+        :root{
+	    --blueActive:  #ad1669;
+	    --blueNotActive: rgba(105, 105, 105, 0.034);
+	    --blueBoxShadow: 0px -2px 25px #00000066;
+		}
+    </style>
+</head>
+<body>
+
+	<div id="nbar">
+    <ul>
+        <li><a href="https://linktr.ee/iSKGtm" target="_blank" rel="external">Contatos</a></li>
+		<li><a href="https://www.linkedin.com/in/iskgtm/" target="_blank" rel="external">LinkedIn</a></li>
+        <li><a href="/index.html">Home<div id="iskgtmmin"> 
+            <img src="/imagens/iskg256px.png" alt="iskgtmmin">
+        </div></a></li>
+      </ul><p></p>
+	</div>
+
+    <div class="divm">
+		
+    <section><h1>Relógio em JavaScript</h1>
+		<hr>
+        <p>	<div class="wrapper">
+			<div class="numbers">
+				<div class="number num-hour">
+
+					<div class="digit digit1">
+						<div class="line line-top line-horizontal"></div>
+
+						<div class="line line-left-top line-vertical"></div>
+						<div class="line line-right-top line-vertical"></div>
+
+						<div class="line line-middle line-horizontal"></div>
+
+						<div class="line line-left-bottom line-vertical"></div>
+						<div class="line line-right-bottom line-vertical"></div>
+
+						<div class="line line-bottom line-horizontal"></div>					
+					</div>
+					<div class="digit digit2">
+						<div class="line line-top line-horizontal"></div>
+
+						<div class="line line-left-top line-vertical"></div>
+						<div class="line line-right-top line-vertical"></div>
+
+						<div class="line line-middle line-horizontal"></div>
+
+						<div class="line line-left-bottom line-vertical"></div>
+						<div class="line line-right-bottom line-vertical"></div>
+
+						<div class="line line-bottom line-horizontal"></div>
+					</div>
+
+				</div>
+
+				<span class="colon colon-minute">:</span>
+
+				<div class="number num-minute">
+					<div class="digit digit1">
+						<div class="line line-top line-horizontal"></div>
+
+						<div class="line line-left-top line-vertical"></div>
+						<div class="line line-right-top line-vertical"></div>
+
+						<div class="line line-middle line-horizontal"></div>
+
+						<div class="line line-left-bottom line-vertical"></div>
+						<div class="line line-right-bottom line-vertical"></div>
+
+						<div class="line line-bottom line-horizontal"></div>
+					</div>
+					<div class="digit digit2">
+						<div class="line line-top line-horizontal"></div>
+
+						<div class="line line-left-top line-vertical"></div>
+						<div class="line line-right-top line-vertical"></div>
+
+						<div class="line line-middle line-horizontal"></div>
+
+						<div class="line line-left-bottom line-vertical"></div>
+						<div class="line line-right-bottom line-vertical"></div>
+
+						<div class="line line-bottom line-horizontal"></div>
+					</div>
+				</div>
+
+				<span class="colon colon-second">:</span>
+
+				<div class="number num-second">
+					<div class="digit digit1">
+						<div class="line line-top line-horizontal"></div>
+
+						<div class="line line-left-top line-vertical"></div>
+						<div class="line line-right-top line-vertical"></div>
+
+						<div class="line line-middle line-horizontal"></div>
+
+						<div class="line line-left-bottom line-vertical"></div>
+						<div class="line line-right-bottom line-vertical"></div>
+
+						<div class="line line-bottom line-horizontal"></div>
+					</div>
+					<div class="digit digit2">
+						<div class="line line-top line-horizontal"></div>
+
+						<div class="line line-left-top line-vertical"></div>
+						<div class="line line-right-top line-vertical"></div>
+
+						<div class="line line-middle line-horizontal"></div>
+
+						<div class="line line-left-bottom line-vertical"></div>
+						<div class="line line-right-bottom line-vertical"></div>
+						<div class="line line-bottom line-horizontal"></div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="footer-wrapper">
+				<div class="footer footer_number1">
+					<span>12h</span>
+					<input type="checkbox" class="toggle-12-24" id="switch1"> 
+					<label for="switch1"></label>
+					<span>24h</span>
+				</div>
+				<div class="footer footer_number2">
+					
+				</div>
+				<div class="footer footer_number3">
+					<span>Off</span>
+					<input type="checkbox" checked="checked" class="toggle-second" id="switch3"> 
+					<label for="switch3"></label>
+					<span>On</span>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="ampm-wrapper">
+			<span class="ampm"></span>
+		</div></p>
+    </section> </div> <p>
+
+	<section><div class="divcur">
+		<h1>Como este funciona?</h1>
+                    <h3>Este é um simples relógio digital com seletores "AM" & "PM" <br> Também há um seletor de segundos acima.</h3>
+					<h5>Código "exemplo" feito por <a href="https://github.com/berliners1/Flexbox-Digital-Clock" target="_blank" rel="external">berlines1</a>, implementado e adaptado por mim por aqui.</h5> <img src="/Aplic/Icones/rel.png" class="legsrc" title="Relógio em real-time em JS.">
+	</div></section>
+<br><div class="divfot">
+	<footer>
+		<section> iShaking Media Creative © 2016-<span id="aaaa">2022</span>
+		</section>
+	</footer>
+</div>
+
+<script src="/Aplic/RelJS/Rel.js"></script>
+</body>
+</html>
