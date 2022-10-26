@@ -1,8 +1,32 @@
 @charset "UTF-8";
 
+html h1 {
+  font-size:x-large;
+}
+
+html h2 {
+  font-size: xx-small;
+}
+
+html h3 {
+  font-size: large;
+}
+
+html h4 {
+  font-size: large;
+}
+
+html h5 {
+  font-size: medium;
+}
+
+html h6 {
+  font-size:x-large;
+}
+
 body {
     background: linear-gradient(250deg, #ad1669 0%, #ff3647 100%);
-    font-family: Lato, Roboto; /* Alteração de sujestão de https://github.com/pushline */
+    font-family: Lato, Roboto !important; /* Alteração de sujestão de https://github.com/pushline */
     font-size: 15px;
     text-align: auto;
     overflow: auto;
@@ -144,7 +168,8 @@ ul a:hover {
   z-index: 99999;
 }
 
-/* @media (max-width: 768px) {
+
+/* @media (max-width: 900px) {
   #nbaranim {
     position: fixed;
     top: 0px;
@@ -163,7 +188,7 @@ ul a:hover {
 
 @media (max-width: 900px) {
   .wrapper {
-    transform: scale(0.4, 0.4);
+    transform: scale(0.7, 0.7);
   }
 }
 a:active {
@@ -180,9 +205,35 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
 }
 
+@media (max-width: 900px) {
+  section {
+  padding: auto;
+  margin: auto;
+  }
+}
+
 .divm {
   text-align: center;
   float: auto;
+}
+
+.divimg1 {
+  float: auto;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+#resimg {
+  max-width: 840px;
+  max-height: 480px;
+}
+
+#cartextback {
+  background-color: rgba(255, 255, 255, 0.63);
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
 }
 
 @media (min-width: 900px) {
@@ -190,8 +241,8 @@ section {
   transition: box-shadow 0.5s, transform 0.5s, margin 0.5s, margin-bottom 0.5s, margin-top 0.5s, border 0.5s;
   border: solid 0px #ff364700;
   margin: auto;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
   }
 }
 
@@ -203,8 +254,8 @@ section {
   margin-bottom: 3rem;
   margin-top: 3rem;
   transition: margin 0.5s, margin-bottom 0.5s, margin-top 0.5s, transform 0.5s, border 0.5s, box-shadow 0.5s;
-  transform: scale(1.2);
-  border: solid 3px #ff3647;
+  transform: scale(1.3);
+  border: solid 20px #ff3647;
   }
 }
 
@@ -219,7 +270,8 @@ section {
   align-items: center;
   text-align: center;
   flex-direction: row;
-  /* background-color: rgb(0, 255, 0); */
+  flex-flow: wrap;
+/*   background-color: rgb(0, 255, 0); */
 }
 
 @media (max-width: 950px) {
@@ -228,7 +280,7 @@ section {
     transform: scale(0.9);
     padding-top: 71px;
     flex-flow: wrap;
-    padding: 0px;
+    padding: 10px;
   }
 }
 
@@ -367,7 +419,6 @@ section {
     margin-bottom: -0;
     min-height:100px;
     max-height:150px;
-    border-radius: 10px;
     background-attachment: fixed;
     background-repeat: no-repeat
   }

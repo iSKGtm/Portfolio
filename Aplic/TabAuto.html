@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="shortcut icon" href="/favicon/ICO LOW.png" type="image/x-icon">
-    <title>Aplic. Tabuada em JS</title>
+    <title>Tabuada em JavaScript</title>
     <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <style>         
     #iskgtmmin {
         width: 30px;
@@ -14,13 +15,14 @@
         display: inline-flex;
         float: right;
         position: relative;
-        top: -6px;
+        top: -3px;
         right: -6px;
         }
 </style>
 </head>
 <body>
 
+<div class="container-fluid mt-3">
 	<div id="nbar">
         <ul>
             <li><a href="https://linktr.ee/iSKGtm" target="_blank" rel="external">Contatos</a></li>
@@ -30,30 +32,33 @@
             </div></a></li>
           </ul><p></p>
         </div>
+</div>
 
+<div class="container">
     <div class="divm">
         <section>
-            <h1>Tabuada em JavaScript</h1>
-            <hr>
+            <h1>Tabuada em JavaScript</h1> <p></p>
             <div>
-                <p>Número: <input type="number" name="num" id="txtn">
-                <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
+                <p><input type="number" name="num" id="txtn" placeholder="Digite um número..." class="form-control text-center"></p>
+                <input type="button" value="Gerar Tabuada" class="btn btn-outline-danger" role="button" onclick="tabuada()"></p>
             </div>
             <div>
-                <select name="tabuada" id="seltab" size="10">
-                    <option>Por favor, digite um número na caixa acima.👆</option>
-                </select>
+                <h4><select name="tabuada" id="seltab" size="10" class="table text-center">
+                    <option>N X N = N</option>
+                </select></h4>
             </div>
                 </p>
         </section> <p>
 
+        <div class="container">
             <div class="divcur">
                 <section> <h1>Como este funciona?</h1>
                     <h3>Este é um gerador de tabuadas de N * 1 até 10... <br> Digite um número acima para iniciar o calculo!</h3>
                     <h5>Código JS desenvolvido inteiramente por mim para um exercício de um curso. <br> Simples, mas funcional.</p><img src="/Aplic/Icones/tab.png" class="legsrc" title="Relógio em real-time em JS."></h5>
-</div>
+            </div>
+        </div>
 
-<br><div class="divfot">
+<p><div class="divfot">
     <footer>
         <section> iShaking Media Creative © 2016-<span id="aaaa">2022</span>
         </section>

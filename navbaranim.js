@@ -4,7 +4,7 @@ var prevScrollpos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("nbaranim").style.top = "0";
     } else {
-      document.getElementById("nbaranim").style.top = "-76px";
+      document.getElementById("nbaranim").style.top = "-85px";
     }
     prevScrollpos = currentScrollPos;
   }
