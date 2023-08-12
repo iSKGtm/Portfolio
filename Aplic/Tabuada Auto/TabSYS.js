@@ -2,7 +2,7 @@ function tabuada() {
     var num = document.getElementById('txtn') // Armazenar variavel de entrada txtn
     var tab = document.getElementById('seltab')
     if(num.value.length == 0) { // String.fromCodePoint(0x1F629) [TENTATIVA DE ADICIONAR 😩, ATRAVES METODOS ANTIGOS.]
-        window.alert('Sem meu número, eu não consigo! 😩😩😩 \nDigite um número para que eu possa calcular.') // Se o valor de entrada não for digitado corretamente (usando um numero, então mostrara uma alerta do navegador.)
+        window.alert('Sem meu número, eu não consigo! 😩 \nDigite um número para que eu possa calcular.') // Se o valor de entrada não for digitado corretamente (usando um numero, então mostrara uma alerta do navegador.)
     } else { // se não, seguir com o calculo normalmente.
         var n = Number(num.value) // armazenar numero de entrada e transformar string em numero.
         var c = 1 //armazenar 1 (para  o inicio de multiplicação)
