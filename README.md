@@ -1,4 +1,6 @@
-# 6 - Projeto Externo. (11/03/2023)
+# 7 - Projetos Externos em Imagem (12/08/2023)
+
+7 - Projetos Externos em Imagem (12/08/2023)
 
 6 - Projeto Externo. Supremo Roleplay (11/03/2023)
 
