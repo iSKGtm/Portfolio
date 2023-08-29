@@ -48,19 +48,25 @@ body {
 }
 
 #nbar ul {
+  transition: border-radius 0.5s;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   border: 1px solid #e7e7e7;
   background-color: #f3f3f3c0;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 3px;
   width: auto;
   max-width: fit-content;
   position: fixed;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
   backdrop-filter: blur(15px);
+}
+
+#nbar ul:hover {
+  transition: border-radius 0.5s;
+  border-radius: 10px;
 }
 
 #exp li {
@@ -102,7 +108,7 @@ h1 {
     background: linear-gradient(60deg, #ad1669 0%, #ff3647 100%);
     background-size: 200% 200%;
     animation: anim 5s ease infinite;
-    border-radius: 10px;
+    border-radius: 11px;
     width: 370px;
     margin: auto;
     padding-left: 3%;
@@ -212,12 +218,18 @@ a:active {
 
 section {
     background-image: linear-gradient(rgb(255, 255, 255), rgb(228, 228, 228));
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 15px;
     width: auto;
     max-width: fit-content;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
+    transition: border-radius 0.5s;
+}
+
+section:hover {
+  transition: border-radius 0.5s;
+  border-radius: 10px;
 }
 
 @media (max-width: 900px) {
@@ -328,17 +340,19 @@ section {
 }
 
 #secanim {
-  transition: box-shadow 0.5s, transform 0.5s, margin 0.5s, border 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s, margin 0.5s, border 0.5s, border-radius 0.5s;
   transition-timing-function: ease;
   border: solid 0px #ff364700;
   margin: 10px;
+  border-radius: 30px;
 }
 
 #secanim:hover {
   box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
   cursor: pointer;
-  transition: margin 0.5s, transform 0.5s, border 0.5s, box-shadow 0.5s;
+  transition: margin 0.5s, transform 0.5s, border 0.5s, box-shadow 0.5s, border-radius 0.5s;
   transition-timing-function: ease;
+  border-radius: 15px;
 
 }
 
@@ -377,16 +391,17 @@ section {
   color: #ad1669;
   background: linear-gradient(60deg, #ad166900 0%, #ff364700 100%);
   background-size: 500% 500%;
-  border-radius: 13px;
+  border-radius: 20px;
   text-decoration: none;
-  transition: background-size 500ms;
+  transition: background-size 500ms, border-radius 0.5s;
 }
 
 #curriculobutton:hover {
   background: linear-gradient(60deg, #ad1669 0%, #ff3647 100%);
   background-size: 100% 100%;
   color: white;
-  transition: background-size 500ms;
+  border-radius: 10px;
+  transition: background-size 500ms, border-radius 0.5s;;
 }
 
 /* Animação wave */
