@@ -114,6 +114,7 @@ h1 {
     padding-left: 3%;
     padding-right: 3%;
     width: fit-content;
+
 }
   @keyframes anim {
     0% {
@@ -235,6 +236,17 @@ ul a:hover {
 }
 a:active {
     color:rgb(107, 107, 107)
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(30px);
+  opacity: 0%;
+  transition: 500ms;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 100%;
 }
 
 section {
