@@ -2344,8 +2344,8 @@ ul {
       display: block;
     }
     #nbar {
-      scale: 75%;
-      margin-left: -50px;
+      scale: 100%;
+      margin-left: 0px;
     }
     .vipBox {
       height: 325px;
@@ -2448,8 +2448,8 @@ ul {
       width: 290px;
     }
     #nbar {
-      scale: 70%;
-      margin-left: -50px;
+      scale: 80%;
+      margin-left: -30px;
     }
     .titLabel1 {
       font-size: 20px;
