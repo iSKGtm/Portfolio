@@ -345,6 +345,7 @@ ul {
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
     color: #fff;
+    --lord-icon-primary: #FFF;
     letter-spacing: 15px;
     cursor: pointer;
     position: fixed;
@@ -364,6 +365,7 @@ ul {
     box-shadow: 0 30px 30px #FF003C75;
     border: 0px;
     color: #FF003C;
+    --lord-icon-primary: #FF003C;
     background-color: #ffffff;
     outline: 1px #FF003C solid;
     border-bottom-left-radius: 9px;
@@ -537,6 +539,7 @@ ul {
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   color: #fff;
+  --lord-icon-primary: #FFF;
   letter-spacing: 15px;
   cursor: pointer;
   position: absolute;
@@ -554,6 +557,7 @@ ul {
   box-shadow: 0 30px 30px #FF003C75;
   border: 0px;
   color: #FF003C;
+  --lord-icon-primary: #FF003C;
   background-color: #ffffff;
   outline: 1px #FF003C solid;
   transition: box-shadow 300ms, outline 300ms, border-bottom 300ms, background-color 300ms, color 300ms;
@@ -1198,7 +1202,7 @@ ul {
   }
 
   .titText3 {
-    text-align: left;
+    text-align: center;
     font-family: Bariol, "Helvetica Neue";
     letter-spacing: 1px;
   }
@@ -1443,7 +1447,7 @@ ul {
     margin-right: auto;
     margin-bottom: 120px;
     width: 840px;
-    height: 305px;
+    height: 325px;
     outline: 1px #ffffff solid;
     transition: border-radius 300ms;
   }
@@ -1688,6 +1692,10 @@ ul {
       letter-spacing: 2px;
       line-height: 80px;
     }
+    .titText3 {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
     .viplans {
       position: relative;
       align-items: center;
@@ -1798,6 +1806,9 @@ ul {
       width: fit-content;
       letter-spacing: 2px;
       line-height: 80px;
+    }
+    .titText3 {
+      font-size: 15px;
     }
     .viplans {
       position: relative;
@@ -1921,6 +1932,9 @@ ul {
       width: 100%;
       letter-spacing: 1px;
       line-height: 80px;
+    }
+    .titText3 {
+      font-size: 13px;
     }
     .vipContainer {
       width: 100%;
@@ -2088,7 +2102,7 @@ ul {
     }
     .parCad{
       width: 625px;
-      height: 530px;
+      height: 550px;
       margin-bottom: 80px;
       transition: all 300ms;
     }
@@ -2162,6 +2176,9 @@ ul {
       width: 100%;
       letter-spacing: 1px;
       line-height: 20px;
+    }
+    .titText3 {
+      line-height: 15px !important;
     }
     .vipContainer {
       width: 100%;
@@ -2270,7 +2287,7 @@ ul {
 
     .parCad{
       width: 324px;
-      height: 370px;
+      height: 410px;
       margin-bottom: 80px;
       transition: all 300ms;
     }
@@ -2408,7 +2425,7 @@ ul {
     }
     .parCad{
       width: 83vw;
-      height: 1048px;
+      height: 1068px;
       margin-bottom: 80px;
       transition: all 300ms;
     }

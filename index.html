@@ -10,6 +10,7 @@
         <script src="src/js/date.js" defer></script>
         <script src="src/js/video.js" defer></script>
         <script src="src/js/countdown.js" defer></script>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
         <title>Home - iSKGtm</title>
         <meta name="description" content="iSKGtm Music | iSKGtm Prod's. | iSKGtm Dev | iSKGtm, Estamos em Tudo!">
         <link rel="shortcut icon" href="src/favicon/favicon-16x16.png">
@@ -34,7 +35,13 @@
                 </div>
             </div>
         </header>
-        <button onclick="topFunction()" id="butScroll"><i class="fa-solid fa-arrow-up"></i></button>
+        <button onclick="topFunction()" id="butScroll">
+            <lord-icon 
+                class="butArrow"
+                src="https://cdn.lordicon.com/dwoxxgps.json"
+                trigger="hover"
+                style="width:25px;height:25px; margin-bottom: -4px;">
+            </lord-icon></button>
         <div id="respSys">
             Site indisp. neste dispositivo.<br>
             Entre em contato direto, via Discord<br>
@@ -566,7 +573,14 @@
                                 </a>
                             </div>
                     </div>
-                    <button id="videoBackBtn" onclick="videoBG()"><i class="fa-solid fa-pause"></i></button>
+                    <button id="videoBackBtn" onclick="videoBG()">
+                        <lord-icon
+                        src="https://cdn.lordicon.com/ptvmrrcc.json"
+                        trigger="morph"
+                        state="morph-play-pause"
+                        style="width:25px;height:25px;margin-left:-8px;margin-bottom:-5px;">
+                        </lord-icon>
+                    </button>
                 </section>
                 <section class="home2" id="paralaxx2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 1411 22" class="secDivide2"><path stroke="#FFFFFF" stroke-linecap="round" stroke-width="5" d="M3 8.663h469.161c2.324 0 32.767-.275 25.053.116-15.001.759-29.76 2.856-44.308 4.955-16.83 2.429 6.597 1.152 11.181 1.152 27.157 0 53.799-1.262 80.747-3.111 57.598-3.953 114.423-3.112 172.467-3.112 88.432 0 176.877-2.074 265.431-2.074h44.308c1.19 0 9.78-.1 7.25.346-22.19 3.9-45.821 5.261-68.536 7.952-17.508 2.073-35.304 2.374-53.003 3.687-12.276.911 33.62.09 36.44 0 73.339-2.346 144.839-9.91 218.639-9.91 32.23 0 63.41.627 95.03-2.997 45.66-5.232 98.47-1.152 145.14-1.152"></path></svg>
@@ -642,9 +656,10 @@
                 <section class="home3" id="paralaxx2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 1411 22" class="secDivide2"><path stroke="#FFFFFF" stroke-linecap="round" stroke-width="5" d="M3 8.663h469.161c2.324 0 32.767-.275 25.053.116-15.001.759-29.76 2.856-44.308 4.955-16.83 2.429 6.597 1.152 11.181 1.152 27.157 0 53.799-1.262 80.747-3.111 57.598-3.953 114.423-3.112 172.467-3.112 88.432 0 176.877-2.074 265.431-2.074h44.308c1.19 0 9.78-.1 7.25.346-22.19 3.9-45.821 5.261-68.536 7.952-17.508 2.073-35.304 2.374-53.003 3.687-12.276.911 33.62.09 36.44 0 73.339-2.346 144.839-9.91 218.639-9.91 32.23 0 63.41.627 95.03-2.997 45.66-5.232 98.47-1.152 145.14-1.152"></path></svg>
                     <div class="titLabel2 uianimated delay-200">PARCEIROS</div>
-                    <div class="titText2 uianimated delay-400" style="line-height: 25px; margin-top: 35px;">VEJA QUEM UTILIZA NOSSOS SERVIÇOS!</div>
+                    <div class="titText2 uianimated delay-300" style="line-height: 25px; margin-top: 35px;">VEJA QUEM UTILIZA NOSSOS SERVIÇOS!</div>
                     <div class="uianimated">
                         <div class="parCad">
+                            <div class="titText3 uianimated delay-100" style="line-height: 25px; margin-bottom: 10px; margin-top: -15px;">Prod's: Design Gráfico/VFX | Music: Prod. de Músicas | Dev: Developer Full-Stack </div>
                             <div class="parFlexPagCont uianimated delay-200">
                                 <a class="parFlexPag" href="https://discord.gg/euforiagg" target="_blank">
                                     <img src="src/img/parceiros/Euforia.jpg" id="logoParCad">
