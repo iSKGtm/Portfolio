@@ -2204,6 +2204,10 @@ ul {
     .titLabel1 > img {
       height: 200px;
     }
+
+    #videoBackBtn {
+      bottom: 130px;
+    }
     .secDivide {
       position: absolute;
       margin-top: 45vh;
