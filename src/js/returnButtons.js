@@ -16,7 +16,7 @@ function showAtribution () {
     document.body.style.overflow = 'hidden';
   
     function delayedAnimIn() {
-        window.location.href = "/atribuicoes";
+        window.location.href = "/atribuicoes.html";
     }
     setTimeout(delayedAnimIn, 100);
 }
@@ -41,7 +41,7 @@ if(document.title !== "Home | iSKGtm" || window.location.href !== "Noticias | iS
         butScroll.style.animation = "animOutSection 125ms ease-out";
       
         function delayedAnimIn() {
-            window.location.href = "/home";
+            window.location.href = "/home.html";
         }
         setTimeout(delayedAnimIn, 100);
     }
@@ -53,7 +53,7 @@ if(document.title !== "Home | iSKGtm" || window.location.href !== "Noticias | iS
         mainFooter.style.animation = "animOutSection 125ms ease-out";
       
         function delayedAnimIn() {
-            window.location.href = "/noticias";
+            window.location.href = "/noticias.html";
         }
         setTimeout(delayedAnimIn, 100);
       }
@@ -78,7 +78,7 @@ if(document.title !== "Home | iSKGtm" || window.location.href !== "Noticias | iS
         butScroll.style.animation = "animOutSection 125ms ease-out";
       
         function delayedAnimIn() {
-            window.location.href = "home";
+            window.location.href = "/home.html";
         }
         setTimeout(delayedAnimIn, 100);
     }
@@ -90,7 +90,7 @@ if(document.title !== "Home | iSKGtm" || window.location.href !== "Noticias | iS
         mainFooter.style.animation = "animOutSection 125ms ease-out";
       
         function delayedAnimIn() {
-            window.location.href = "noticias";
+            window.location.href = "/noticias.html";
         }
         setTimeout(delayedAnimIn, 100);
       }
@@ -106,7 +106,7 @@ if (document.title == "Noticias | iSKGtm") {
         document.body.style.overflow = 'hidden';
     
         function delayedAnimIn() {
-            window.location.href = "home";
+            window.location.href = "/home.html";
         }
         setTimeout(delayedAnimIn, 100);
     }

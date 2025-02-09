@@ -94,7 +94,7 @@ if (document.title !== "Home | iSKGtm") {
     document.body.style.overflow = 'hidden';
   
     function delayedAnimIn() {
-        window.location.href = "atribuicoes";
+        window.location.href = "/atribuicoes.html";
     }
     setTimeout(delayedAnimIn, 100);
 }
@@ -110,7 +110,7 @@ if (document.title !== "Home | iSKGtm") {
     mainFooter.style.animation = "animOutSection 125ms ease-out";
   
     function delayedAnimIn() {
-        window.location.href = "atribuicoes";
+        window.location.href = "/atribuicoes.html";
     }
     setTimeout(delayedAnimIn, 100);
 }

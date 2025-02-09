@@ -27,7 +27,7 @@ function showNews() {
     mainFooter.style.animation = "animOutSection 125ms ease-out";
   
     function delayedAnimIn() {
-        window.location.href = "noticias";
+        window.location.href = "/noticias.html";
     }
     setTimeout(delayedAnimIn, 100);
   }
