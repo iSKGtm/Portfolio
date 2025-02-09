@@ -1,0 +1,124 @@
+/*Tema Padrão*/
+/* Bordas*/
+
+.butScroll, .homeSelectionTitleIMG, .homeSelection, .newsIMG, .newsIMG1,
+.selectNewsSwpBox, .selectNewsSwiper {
+  border-radius: 15px;
+}
+
+.expContainer2, .p100, .p50, .p25, .p10, .p0 {
+  border-radius: 12px;
+}
+
+/* Paleta de Cor*/
+
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-button:hover,
+.swiper-scrollbar-drag {
+  background-color: white;
+}
+
+body, code {
+  background: #272727;
+  color: white;
+}
+
+::selection{
+  background: #db1268;
+}
+
+.mainFooter {
+  background-color: #272727;
+}
+
+.ToolbarCont, .butScroll, .homeSelectionTitleIMG, .homeSelection, .expContainer2 {
+  background-color:#333333;
+  color: white;
+  border: 1px solid #92929225;
+}
+
+.expPercent {
+  color: white;
+}
+
+.newsProgress {
+  background-color: white;
+}
+
+.homeSelection:hover {
+  background-color:#3a3a3a;
+  border: 1px solid #99999949;
+}
+
+.newsText a, code, .newsProgress, .footerSocial a {
+  color: white;
+}
+
+.ToolbarIcon:hover, .ToolbarIconActive, .butScroll:active, .homeSelection:active, .homeSelection:hover,
+.p100, .p50, .p25, .p10, .p0  {
+  background-color:#424242;
+  border: 1px solid #92929225;
+}
+  
+  @media screen and (max-width: 720px) {
+    .homeSelection:hover {
+      background-color:#333333;
+      border: 1px solid #92929225;
+    }
+    
+    .homeSelection:active {
+      background-color:#424242;
+      border: 1px solid #ffffff49;
+    }
+  }
+
+/* Swiper.js custom */
+
+  .selectNewsSwpTitleHeader {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    background-color:#333333;
+    color: white;
+    outline: 1px solid #92929225;
+    transition: all 150ms;
+  }
+
+  .selectNewsSwpBox:hover > .selectNewsSwpTitleHeader {
+    background-color:#3a3a3a;
+    outline: 1px solid #99999949;
+    transition: all 150ms;
+  }
+
+  @media screen and (max-width: 720px) {
+    .selectNewsSwpBox:hover > .selectNewsSwpTitleHeader {
+      background-color:#333333;
+      outline: 1px solid #92929225;
+    }
+
+    .selectNewsSwpBox:active > .selectNewsSwpTitleHeader {
+      background-color:#3a3a3a;
+      outline: 1px solid #99999949;
+      transition: all 150ms;
+    }
+
+  }
+
+/*Fontes*/
+
+body {
+  font-family: SF;
+}
+
+.homeSelectionIMGText, .homeSelection, .expPercent, .expContainer {
+  font-family: Syne;
+  font-weight: 700;
+}
+
+.newsTitle, .newsLabel {
+  font-family: Syne;
+  font-weight: 700;
+}
+
+.newsText {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
