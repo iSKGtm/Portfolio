@@ -200,6 +200,10 @@
     width: 75%;
 }
 
+.videoPlayer {
+    aspect-ratio: 18/9;
+}
+
 .newsLabel {
     font-size: 20px;
     font-weight: 700;
@@ -264,6 +268,12 @@
 
 .newsText code {
     margin: 10px 0;
+}
+
+.newsText li {
+    list-style-type: circle;
+    font-family: SF;
+    font-weight: 300;
 }
 
 .newsIMGContainer {
