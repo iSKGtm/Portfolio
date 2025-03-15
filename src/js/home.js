@@ -21,10 +21,10 @@ let sectionSobre = document.querySelector('#sectionSobre');
 //DOM EVENTS
 
 function showNews() {
-    mainHome.style.animation = "animOutSection 125ms ease-out";
+    mainHome.style.animation = "animOutSection 125ms ease-out forwards";
     document.body.style.overflow = 'hidden';
     mainFooter.style.display = 'flex';
-    mainFooter.style.animation = "animOutSection 125ms ease-out";
+    mainFooter.style.animation = "animOutSection 125ms ease-out forwards";
   
     function delayedAnimIn() {
         window.location.href = "/noticias.html";
