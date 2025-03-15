@@ -11,8 +11,8 @@ let footerAtribution = document.querySelector('#footerAtribution');
 //DOM EVENTS
 
 function showAtribution () {
-    mainNews.style.animation = "animOutSection 125ms ease-out";
-    mainFooter.style.animation = "animOutSection 125ms ease-out";
+    mainNews.style.animation = "animOutSection 125ms ease-out forwards";
+    mainFooter.style.animation = "animOutSection 125ms ease-out forwards";
     document.body.style.overflow = 'hidden';
   
     function delayedAnimIn() {
@@ -34,11 +34,11 @@ if(document.title !== "Home | iSKGtm" || window.location.href !== "Noticias | iS
     addEventListener("load", showPage);
     
     function showHome() {
-        mainNews.style.animation = "animOutSection 125ms ease-out";
+        mainNews.style.animation = "animOutSection 125ms ease-out forwards";
         mainFooter.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-        mainFooter.style.animation = "animOutSection 125ms ease-out";
-        butScroll.style.animation = "animOutSection 125ms ease-out";
+        mainFooter.style.animation = "animOutSection 125ms ease-out forwards";
+        butScroll.style.animation = "animOutSection 125ms ease-out forwards";
       
         function delayedAnimIn() {
             window.location.href = "/home.html";
@@ -47,10 +47,10 @@ if(document.title !== "Home | iSKGtm" || window.location.href !== "Noticias | iS
     }
     
     function showNews() {
-        mainNews.style.animation = "animOutSection 125ms ease-out";
+        mainNews.style.animation = "animOutSection 125ms ease-out forwards";
         mainFooter.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-        mainFooter.style.animation = "animOutSection 125ms ease-out";
+        mainFooter.style.animation = "animOutSection 125ms ease-out forwards";
       
         function delayedAnimIn() {
             window.location.href = "/noticias.html";
@@ -71,11 +71,11 @@ if(document.title !== "Home | iSKGtm" || window.location.href !== "Noticias | iS
     addEventListener("load", showPage);
     
     function showHome() {
-        mainNews.style.animation = "animOutSection 125ms ease-out";
+        mainNews.style.animation = "animOutSection 125ms ease-out forwards";
         mainFooter.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-        mainFooter.style.animation = "animOutSection 125ms ease-out";
-        butScroll.style.animation = "animOutSection 125ms ease-out";
+        mainFooter.style.animation = "animOutSection 125ms ease-out forwards";
+        butScroll.style.animation = "animOutSection 125ms ease-out forwards";
       
         function delayedAnimIn() {
             window.location.href = "/home.html";
@@ -84,10 +84,10 @@ if(document.title !== "Home | iSKGtm" || window.location.href !== "Noticias | iS
     }
     
     function showNews() {
-        mainNews.style.animation = "animOutSection 125ms ease-out";
+        mainNews.style.animation = "animOutSection 125ms ease-out forwards";
         mainFooter.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-        mainFooter.style.animation = "animOutSection 125ms ease-out";
+        mainFooter.style.animation = "animOutSection 125ms ease-out forwards";
       
         function delayedAnimIn() {
             window.location.href = "/noticias.html";
@@ -102,7 +102,7 @@ if(document.title !== "Home | iSKGtm" || window.location.href !== "Noticias | iS
 if (document.title == "Noticias | iSKGtm") {
 
     function showHomeSelect() {
-        mainFooter.style.animation = "animOutSection 125ms ease-out";
+        mainFooter.style.animation = "animOutSection 125ms ease-out forwards";
         document.body.style.overflow = 'hidden';
     
         function delayedAnimIn() {
