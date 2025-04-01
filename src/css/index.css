@@ -58,6 +58,15 @@
     margin-bottom: 24px;
     padding: 10px;
     object-fit: contain;
+    transition: all 100ms;
+}
+
+.homeSelectionTitleIMG:hover {
+    transition: all 100ms;
+}
+
+.homeSelectionTitleIMG:active {
+    transition: all 100ms;
 }
 
 .homeSelectionCont{

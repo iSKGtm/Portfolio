@@ -1,0 +1,1037 @@
+/* hero-mouse */
+
+.hero-mouse {
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    margin-left: -15px;
+    text-align: center;
+    z-index: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-out;
+  }
+  .hero-mouse h3 {
+    margin-left: -14px;
+    padding-top: 15px;
+  }
+  
+  .mouse-icon {
+    width: 41px;
+    height: 75px;
+    border-radius: 12px;
+    position: relative;
+    border: 2px solid #dedede;
+    text-align: center;
+  }
+  .mouse-icon span {
+    width: 3px;
+    height: 8px;
+    margin: 2px auto 0;
+    display: block;
+    background: #dedede;
+    border-radius: 5px;
+    -webkit-animation: 1.2s ease infinite wheel-up-down;
+            animation: 1.2s ease infinite wheel-up-down;
+  }
+  
+  @-webkit-keyframes wheel-up-down {
+    0% {
+      margin-top: 2px;
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      margin-top: 20px;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes wheel-up-down {
+    0% {
+      margin-top: 2px;
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      margin-top: 20px;
+      opacity: 0;
+    }
+  }
+
+/* Sessão 1 (Apresentação) */
+
+.mainInst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    flex-direction: column;
+}
+
+.section1{
+    width: 100vw;
+    height: 100vh;
+}
+
+.section1Background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -5;
+    animation: fadeIn 1s ease-out;
+}
+
+.section1Overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  scale: 100%;
+  opacity: 1;
+  z-index: 0;
+}
+  
+.section1Cont {
+  display: flex;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 75px;
+  padding-left: 35px;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(transparent 60%, #000000 90%);
+}
+
+.section1Logo {
+  display: flex;
+  width: 474px;
+  height: 75px;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInInstLogo 1000ms ease-out;
+  animation-delay: 0ms;
+  transition: 100ms all;
+}
+
+.section1Text {
+  display: flex;
+  height: 75px;
+  z-index: 1;
+  align-items: center;
+  font-family: phonk;
+  text-wrap: nowrap;
+  font-size: 32px;
+  color: #bfbfbf;
+  animation: fadeInInstLogo 1500ms ease-out;
+  transition: 100ms all;
+}
+.section1LogoImg {
+  width: 100%;
+}
+
+.butScrollDown {
+  position: absolute;
+  bottom: 9px;
+  right: 59px;
+}
+
+/* Sessão 2 (Carousel) */
+
+.section2 {
+  width: 100vw;
+  padding-bottom: 80px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: black;
+  display: flex;
+  margin: auto;
+  position: relative;
+  user-select: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.section2Text {
+  display: flex;
+  margin-top: 70px;
+  width: 866px;
+  z-index: 1;
+  align-items: center;
+  font-family: Syne;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 57px;
+  text-align: justify;
+  text-align-last: center;
+  background: -webkit-linear-gradient(285deg, white, #cf246e);
+  background-size: 200% 200%;
+  animation: animatedTextColor 5s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 100ms all;
+}
+
+.videoThumb {
+  position: relative;
+  animation: thumbLoop1 7500ms ease-in-out infinite;
+  transition: all 100ms;
+}
+
+.videoThumbCont {
+  width: min-content;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.videoThumbCont > img {
+  height: 640px;
+  border-radius: 33px;
+}
+
+.videoPlay{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #db1268;
+  outline: solid 1px white;
+  font-size: 55px;
+  padding-left: 10px;
+  border-radius: 16px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+
+.videoThumb:hover .videoPlay {
+  transform: translate(-45%, -45%);
+  background-color: #ff4797;
+  scale: 1.100;
+  transition: 300ms;
+}
+
+.spotlight {
+  flex: none;
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 122px;
+  width: 848px;
+  z-index: 4;
+}
+
+.section3Spotlight1 {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .08) 50.000000000000014%, rgba(255, 255, 255, .27) 100%);
+  height: 283px;
+  width: 111px;
+  left: calc(50% - 50px);
+  filter: blur(30px);
+  top: -74px;
+  transform: rotate(90deg);
+  animation: pulseSpotlight 17500ms infinite linear;
+  z-index: -2;
+}
+
+/*Photos Carousel Framework (FIC 8 / 1) (iSKGtm)*/
+
+@keyframes infiniteCarouselInf1 {
+	from { 
+    transform: translateX(calc(0% - 1820px));
+    }
+	to { 
+    transform: translateX(calc(100% + 170px));
+    }
+}
+
+.carouselMainCont {
+  width: 1920px;
+  overflow: hidden;
+  padding-bottom: 40px;
+  -webkit-mask: linear-gradient(90deg, transparent, white 0%, white 100%, transparent);
+  
+}
+
+#sysCarousel{
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1921px) {
+  #sysCarousel {
+    -webkit-mask: linear-gradient(90deg, transparent, white 0%, white 100%, transparent);
+    width: 2220px;
+  }
+}
+
+#carouselLines1 {
+  animation: infiniteCarouselInf1 20s linear infinite;
+}
+
+#carouselLines2 {
+  animation: infiniteCarouselInf1 20s linear infinite;
+}
+
+#carouselLines3 {
+  animation: infiniteCarouselInf1 20s linear infinite;
+}
+
+.carouselText {
+  color: white;
+  font-family: Baron;
+  font-weight: 900;
+  font-size: 60px;
+  text-align: center;
+}
+
+.carouselLabel {
+  color: white;
+  font-family: Baron;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.carouselHighlightText {
+  font-family: BillionDreams;
+  font-weight: 100;
+  font-size: 30px;
+  color: #0a81ff;
+  text-shadow: 0 0 8px #000;
+}
+
+.carouselCont {
+  width: 100%;
+  height: 245px;
+  gap: 13px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: all 100ms;
+  transform: perspective(1200px) scale(1.0) rotateY(160deg);
+}
+
+.carouselLines {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  height: 107px;
+  max-width: 1366px;
+  align-items: center;
+}
+
+.carouselBox {
+  -webkit-transform: scaleX(-1);
+  aspect-ratio: 16 / 9;
+  letter-spacing: 1px;
+  padding-top: 2px;
+  min-width: 400px;
+  overflow: hidden;
+  z-index: 5;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: nowrap;
+  outline: 1px #ffffff90 solid;
+  background-color: #1e293b;
+  border-radius: 25px;
+  transition: box-shadow 300ms, transform 300ms, outline 300ms, border-bottom 300ms, border-right 300ms, background-color 300ms, color 300ms, scale 300ms;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  cursor: default !important;
+}
+
+#carouselLines1:hover,
+#carouselLines2:hover,
+#carouselLines3:hover {
+  animation-play-state: default;
+}
+
+.carouselIMG {
+  width: 100%;
+}
+
+.sgInfFavIco {
+  position: absolute;
+  width: 28px;
+  right: 13px;
+  top: 10px;
+  filter: invert(100%);
+}
+
+.carouselContName {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  z-index: 10;
+}
+
+.carouselName{
+  position: absolute;
+  top: 15px;
+  font-family: Baron;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: -5px;
+  margin-left: 10px;
+  letter-spacing: 0px;
+}
+
+.carouselNameLabel {
+  position: absolute;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  top: 25px;
+  font-family: 'Europa';
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 15px;
+  padding: 2px 10px;
+  margin-top: 12px;
+  height: 45px;
+  width: 224px;
+  text-wrap: wrap;
+  align-items: center;
+}
+
+.carouselDiscordBut {
+  animation: UpDownLoop1 7500ms ease-in-out infinite;
+  width: fit-content;
+  margin: 40px auto;
+  margin-bottom: 0;
+}
+
+/* Sessão 3 (Seletores Music, Prod & Dev) */
+
+.section3 {
+  width: 100vw;
+  padding-bottom: 80px;
+  margin-top: -30px;
+  background-color: black;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  display: flex;
+  position: relative;
+  user-select: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 4;
+}
+
+.section3Text {
+  display: flex;
+  margin-top: 70px;
+  z-index: 1;
+  align-items: center;
+  font-family: Syne;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 57px;
+  text-align: justify;
+  text-align-last: center;
+  background: -webkit-linear-gradient(285deg, #cf246e, white);
+  background-size: 200% 200%;
+  animation: animatedTextColor 5s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 100ms all;
+}
+
+.section3ButCont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
+  margin: 50px 0;
+}
+
+.section3But {
+  font-family: SF;
+  font-weight: 500;
+  text-decoration: none;
+  color: #cccccc;
+  padding-right: 25px;
+  width: 315px;
+  height: 92px;
+  background: linear-gradient(270deg, transparent 10%, #ffffff1f 100%);
+  border: 1px solid #92929240;
+  border-radius: 100px;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.section3ChooseButtonActive {
+  color: #ffffff;
+  background-color: #FFFFFF10;
+  border: 1px solid #ffffff60 !important;
+  color: #ffffff !important;
+}
+
+.section3But:active {
+  scale: 0.90;
+  transition: 100ms all;
+}
+
+.section3But:hover {
+  color: #ffffff;
+  background-color: #FFFFFF10;
+  transition: all 100ms;
+}
+
+.section3ButIcon {
+  background-color: #FFFFFF05;
+  border-radius: 100px;
+  width: 100%;
+  max-width: 94px;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  transition: all 100ms;
+}
+
+.section3ButIcon > img {
+  height: 55px;
+  margin-left: -12px;
+  object-fit: contain;
+  filter: brightness(0) invert(100%);
+}
+
+.section3ButText {
+  padding-bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section3ChooseCont {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 50px;
+  gap: 35px;
+  height: fit-content;
+  max-width: 2333px;
+}
+
+#section3Music, #section3Prod, #section3Dev {
+  display: none;
+}
+
+.section3Left {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.section3Title {
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  font-family: Syne;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 57px;
+  text-align: justify;
+  text-align-last: center;
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 100ms all;
+}
+
+.section3Label {
+  font-family: SF;
+  font-weight: 500;
+  font-size: 25px;
+  color: #cccccc;
+}
+
+.section3But2Cont {
+  display: flex;
+  gap: 10px;
+}
+
+.section3But2 {
+  font-family: SF;
+  font-weight: 600;
+  text-decoration: none;
+  color: #cccccc;
+  width: fit-content;
+  height: 53px;
+  padding: 0 20px;
+  background: linear-gradient(270deg, transparent 10%, #ffffff1f 100%);
+  border: 1px solid #92929240;
+  border-radius: 100px;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  transition: all 100ms;
+}
+
+.section3But2:hover {
+  color: #ffffff;
+  background-color: #FFFFFF10;
+  transition: all 100ms;
+}
+
+.section3ButText2 {
+  padding-bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section3Label2 {
+  font-family: SF;
+  font-weight: 300;
+  font-size: 13px;
+  color: #cccccc;
+}
+
+.section3Right {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.section3Video {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+.instPreview {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+/* Sessão 4 (Contato) */
+
+.section4Spotlight1 {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .08) 50.000000000000014%, rgba(255, 255, 255, .27) 100%);
+  height: 283px;
+  width: 160px;
+  left: calc(50% - 80px);
+  filter: blur(50px);
+  top: -10px;
+  transform: rotate(90deg);
+  animation: pulseSpotlight 17500ms infinite linear;
+  z-index: -1;
+}
+
+.section4 {
+  width: 100vw;
+  padding-bottom: 80px;
+  margin-top: -60px;
+  background: -webkit-linear-gradient(90deg, #272727, black);
+  display: flex;
+  position: relative;
+  user-select: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.section4Text {
+  display: flex;
+  margin-top: 70px;
+  z-index: 1;
+  align-items: center;
+  font-family: Syne;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 57px;
+  text-align: justify;
+  text-align-last: center;
+  background: -webkit-linear-gradient(135deg, #cf246e, white);
+  background-size: 200% 200%;
+  animation: animatedTextColor 5s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 100ms all;
+}
+
+.section4ButCont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 50px 0;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.section4But {
+  font-family: SF;
+  font-weight: 600;
+  text-decoration: none;
+  color: #cccccc;
+  width: fit-content;
+  height: 53px;
+  padding: 0 20px;
+  background: linear-gradient(270deg, transparent 10%, #ffffff1f 100%);
+  border: 1px solid #92929240;
+  border-radius: 100px;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  transition: all 100ms;
+}
+
+.section4But:hover {
+  color: #ffffff;
+  background-color: #FFFFFF10;
+  transition: all 100ms;
+}
+
+.section4ButDiscord {
+  cursor: default;
+}
+
+.section4ButText {
+  padding-bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Resp. FIX (iPad's & Surface's) */
+
+@media screen and (width: 1024px), (height: 1366px) {
+  .hero-mouse{
+    display: none;
+  }
+}
+
+@media screen and (width: 912px), (height: 1368px) {
+  .hero-mouse{
+    display: none;
+  }
+}
+
+@media screen and (width: 820px), (height: 1180px) {
+  .hero-mouse{
+    display: none;
+  }
+}
+
+@media screen and (width: 768px), (height: 1024px) {
+  .hero-mouse{
+    display: none;
+  }
+}
+
+/* Resp. Geral*/
+
+@media screen and (max-width: 1366px) {
+  .section1Logo {
+    width: 360px;
+    height: 60px;
+  }
+
+  .section1Text {
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .section2 {
+    padding-bottom: 20px;
+  }
+
+  .section2Text {
+    margin-top: 10px;
+    font-size: 40px;
+    line-height: 47px;
+    width: 700px;
+  }
+
+  .carouselCont{
+    scale: 0.75;
+  }
+
+  .videoThumbCont {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    transition: all 0ms;
+  }
+
+  .videoThumb {
+    width: 100%;
+    scale: 1.0;
+    padding: 0 10vw;
+    margin-top: 0.5vw;
+    transition: all 0ms;
+  }
+
+  .videoThumbCont > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 3vw;
+  }
+
+  .videoPlay {
+    width: 8vw;
+    height: 8vw;
+    font-size: 5vw;
+    padding-left: 1vw;
+    border-radius: 2vw;
+  }
+
+  .section3ButCont {
+    gap: 16px;
+    width: 100%;
+    margin: 50px 0;
+    padding: 0 120px;
+  }
+
+  .section3But {
+    width: 100%;
+  }
+
+  .section3Label {
+    font-size: 21px;
+  }
+
+  .section3But2 {
+    font-size: 21px
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .videoThumbCont {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .videoThumb {
+    width: 100%;
+    scale: 1.0;
+    padding: 0 10px;
+    margin-top: 0.5vw;
+  }
+
+  .videoThumbCont > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 3vw;
+  }
+
+  .videoPlay {
+    width: 9vw;
+    height: 9vw;
+    font-size: 6vw;
+    padding-left: 1vw;
+    border-radius: 2vw;
+  }
+
+  .section3ButCont {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+    width: 100%;
+    margin: 50px 0;
+    padding: 0 10px;
+  }
+
+  .section3But {
+    width: 100%;
+    height: 75px;
+  }
+
+  .section3ButText {
+    font-size: 5vw;
+  }
+
+  .section3ChooseCont {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .section3Left {
+    align-items: center;
+  }
+
+  .section3Label {
+    font-size: 21px;
+    text-align: center;
+  }
+
+  .section3But2 {
+    font-size: 21px
+  }
+}
+
+
+@media screen and (max-width: 728px) {
+
+  .hero-mouse{
+    display: none;
+  }
+
+  .section1Background {
+    top: -3em;
+  }
+
+  .section1Cont {
+    align-items: center;
+    padding-left: 0;
+    padding-bottom: 15vh;
+  }
+
+  .section1Logo {
+    width: 300px;
+    height: 48px;
+  }
+
+  .section1Text {
+    height: 48px;
+    font-size: 21px;
+  }
+
+  .carouselCont{
+    scale: 0.5;
+  }
+
+  .section2 {
+    padding-bottom: 40px;
+    margin-top: -50px;
+  }
+
+  .section2Text {
+    margin-top: -3vw;
+    font-size: 6vw;
+    line-height: 6vw;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+    transition: all 0ms;
+  }
+
+  .videoThumbCont {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .videoThumb {
+    width: 100%;
+    scale: 1.0;
+    padding: 0 10px;
+    margin-top: 0.5vw;
+  }
+
+  .videoThumbCont > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5vw;
+  }
+
+  .videoPlay {
+    width: 12vw;
+    height: 12vw;
+    font-size: 8vw;
+    padding-left: 1vw;
+    border-radius: 2vw;
+  }
+
+  .section3Left {
+    gap: 10px;
+  }
+
+  .section3Text {
+    font-size: 6vw;
+    line-height: 6vw;
+    text-align: center;
+    width: fit-content;
+    padding: 0 10px;
+    transition: all 0ms;
+  }
+
+  .section3Title {
+    font-size: 8vw;
+    transition: 0ms all;
+  }
+  
+  .section4Text {
+    font-size: 6vw;
+    line-height: 6vw;
+    text-align: center;
+    width: fit-content;
+    padding: 0 10px;
+    transition: all 0ms;
+  }
+
+}

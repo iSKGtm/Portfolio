@@ -61,7 +61,7 @@ function uianimated() {
   topFunction();
 
 
-/* Video Background */
+/* Video Background Institucional (NÃO UTILIZADO) */
 
 let video = document.getElementById("videoBack");        
 let btn = document.getElementById("videoBackBtn");

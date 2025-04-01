@@ -7,6 +7,7 @@ let navbarNews = document.querySelector('#navbarNews');
 let mainSelectNews = document.querySelector('#mainSelectNews');
 
 let homeSelectionTitleIMG = document.querySelector('.homeSelectionTitleIMG');
+let institucionalButton = document.querySelector('#institucionalButton');
 let sectionDevButton = document.querySelector('#sectionDevButton');
 let sectionMusicasButton = document.querySelector('#sectionMusicasButton');
 let sectionProducoesButton = document.querySelector('#sectionProducoesButton');
@@ -19,6 +20,20 @@ let sectionProducoes = document.querySelector('#sectionProducoes');
 let sectionSobre = document.querySelector('#sectionSobre');
 
 //DOM EVENTS
+
+function showInstitucional() {
+    mainHome.style.animation = "animOutSection 125ms ease-out forwards";
+    document.body.style.overflow = 'hidden';
+    mainFooter.style.display = 'flex';
+    mainFooter.style.animation = "animOutSection 125ms ease-out forwards";
+  
+    function delayedAnimIn() {
+        window.location.href = "/institucional.html";
+    }
+    setTimeout(delayedAnimIn, 100);
+}
+
+institucionalButton.addEventListener('click', showInstitucional);
 
 function showNews() {
     mainHome.style.animation = "animOutSection 125ms ease-out forwards";

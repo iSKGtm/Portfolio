@@ -44,7 +44,7 @@ body, code {
   background-color: white;
 }
 
-.homeSelection:hover {
+.homeSelection:hover, .homeSelectionTitleIMG:hover {
   background-color:#3a3a3a;
   border: 1px solid #99999949;
 }
