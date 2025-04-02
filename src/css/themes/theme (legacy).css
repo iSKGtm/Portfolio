@@ -13,7 +13,7 @@
 /* Paleta de Cor (Institucional)*/
 
 .section4 {
-  background: -webkit-linear-gradient(90deg, #101010, black);
+  background: -webkit-linear-gradient(90deg, #272727, black);
 }
 
 /* Paleta de Cor (Geral)*/
@@ -24,7 +24,7 @@
 }
 
 body, code {
-  background: #101010;
+  background: #272727;
   color: white;
 }
 
@@ -33,12 +33,11 @@ body, code {
 }
 
 .mainFooter {
-  background-color: #101010;
+  background-color: #272727;
 }
 
 .ToolbarCont, .butScroll, .homeSelectionTitleIMG, .homeSelection, .expContainer2 {
-  background-color:#33333375;
-  backdrop-filter: blur(50px);
+  background-color:#333333;
   color: white;
   border: 1px solid #92929225;
 }
@@ -52,7 +51,7 @@ body, code {
 }
 
 .homeSelection:hover, .homeSelectionTitleIMG:hover {
-  background-color:#42424270;
+  background-color:#3a3a3a;
   border: 1px solid #99999949;
 }
 
@@ -62,18 +61,18 @@ body, code {
 
 .ToolbarIcon:hover, .ToolbarIconActive, .butScroll:active, .homeSelection:active, .homeSelection:hover,
 .p100, .p50, .p25, .p10, .p0  {
-  background-color:#42424270;
+  background-color:#424242;
   border: 1px solid #92929225;
 }
   
 @media screen and (max-width: 720px) {
   .homeSelection:hover {
-    background-color:#33333375;
+    background-color:#333333;
     border: 1px solid #92929225;
   }
   
   .homeSelection:active {
-    background-color:#42424270;
+    background-color:#424242;
     border: 1px solid #ffffff49;
   }
 }
@@ -83,14 +82,14 @@ body, code {
 .selectNewsSwpTitleHeader {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-color:#202020;
+  background-color:#333333;
   color: white;
   outline: 1px solid #92929225;
   transition: all 150ms;
 }
 
 .selectNewsSwpBox:hover > .selectNewsSwpTitleHeader {
-  background-color:#303030;
+  background-color:#3a3a3a;
   outline: 1px solid #99999949;
   transition: all 150ms;
 }
@@ -102,7 +101,7 @@ body, code {
   }
 
   .selectNewsSwpBox:active > .selectNewsSwpTitleHeader {
-    background-color:#303030;
+    background-color:#3a3a3a;
     outline: 1px solid #99999949;
     transition: all 150ms;
   }
