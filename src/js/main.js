@@ -76,6 +76,47 @@ function videoBG() {
   }
 }
 
+/* Tematização */
+/* Tema padrão (1 & 2) */
+
+let themeSet = 1;
+var css = function(url, callback) {
+
+  var head = document.getElementsByTagName('head')[0];
+  var cssnode = document.createElement('link');
+
+  cssnode.type = 'text/css';
+  cssnode.rel = 'stylesheet';
+  cssnode.href = url;
+
+  cssnode.onreadystatechange = callback;
+  cssnode.onload = callback;
+
+  head.appendChild(cssnode);
+}
+
+function setTheme () {
+  if (themeSet == 1 || themeSet == null) {
+    css('./src/css/themes/theme.css');
+  } else if (themeSet == 0) {
+    css('./src/css/themes/themeLegacy.css');
+  } else if (themeSet == 2) {
+    css('./src/css/themes/themeSantWeek.css');
+  } else if (themeSet == 3) {
+    css('./src/css/themes/themeJuneCelebration.css');
+  } else if (themeSet == 4) {
+    css('./src/css/themes/themeOctubreISKGTM.css');
+  } else if (themeSet == 5) {
+    css('./src/css/themes/themeXMAS.css');
+  } else if (themeSet == 10) {
+    css('./src/css/themes/theme10YEARS.css');
+  }
+  
+}
+
+addEventListener("load", setTheme);
+
+
 /* Footer */
 
 if (document.title !== "Home | iSKGtm") {
