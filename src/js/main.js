@@ -77,7 +77,7 @@ function videoBG() {
 }
 
 /* Tematização */
-/* Tema padrão (1 & 2) */
+/* Tema padrão (0 & 1) */
 
 let themeSet = 1;
 var css = function(url, callback) {
@@ -100,16 +100,16 @@ function setTheme () {
     css('./src/css/themes/theme.css');
   } else if (themeSet == 0) {
     css('./src/css/themes/themeLegacy.css');
-  } else if (themeSet == 2) {
-    css('./src/css/themes/themeSantWeek.css');
-  } else if (themeSet == 3) {
-    css('./src/css/themes/themeJuneCelebration.css');
-  } else if (themeSet == 4) {
-    css('./src/css/themes/themeOctubreISKGTM.css');
-  } else if (themeSet == 5) {
-    css('./src/css/themes/themeXMAS.css');
-  } else if (themeSet == 10) {
-    css('./src/css/themes/theme10YEARS.css');
+  //} else if (themeSet == 2) {
+  //  css('./src/css/themes/themeSantWeek.css');
+  //} else if (themeSet == 3) {
+  //  css('./src/css/themes/themeJuneCelebration.css');
+  //} else if (themeSet == 4) {
+  //  css('./src/css/themes/themeOctubreISKGTM.css');
+  //} else if (themeSet == 5) {
+  //  css('./src/css/themes/themeXMAS.css');
+  //} else if (themeSet == 10) {
+  //  css('./src/css/themes/theme10YEARS.css');
   }
   
 }
