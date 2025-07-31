@@ -1,0 +1,160 @@
+.articlePage {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--color-bg-primary);
+  font-family: SF, Helvetica, Arial, sans-serif;
+}
+
+.containerHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px 0px;
+  user-select: none;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  font-family: SyneBold;
+}
+
+.label {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+  font-weight: 300;
+}
+
+.image {
+  width: 32px;
+  margin-top: -3px;
+}
+
+.dateAuthor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgDateMin {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--color-text-primary);
+}
+
+.author {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+  font-weight: 300;
+}
+
+.shareButton {
+  box-shadow: inset 0 8px 15px -6px #ffffff25;
+  text-decoration: none;
+  user-select: none;
+  font-family: SF, Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  padding: 0.4rem 1.0rem;
+  width: 56px;
+  border-radius: 18px;
+  cursor: default;
+}
+
+.content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 19px;
+  padding: 10px 0px;
+}
+.content > main > img {
+  border-radius: 25px;
+  margin: 20px 0;
+  width: 100%;
+  user-select: none;
+}
+
+.content > main > h3 {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 0.6;
+  user-select: none;
+}
+
+
+.content > main > h2 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.content > main > p {
+  margin-bottom: 10px;
+}
+
+.content > main > iframe {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  aspect-ratio: 18 / 9;
+  user-select: none;
+  border-radius: 25px;
+}
+
+.content > main > ul {
+  list-style-type: disc;
+  margin: 20px 0;
+  margin-left: 20px;
+}
+
+.content > main > a,
+.content > main > p > a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  margin: 20px 0;
+}
+
+.content > main > a:hover,
+.content > main > p > a:hover {
+  text-decoration: none;
+}
+
+/* HOVERS */
+
+.shareButton {
+  background-color: var(--color-bg-blur-primary);
+  border: 1px solid #92929225;
+  transition: all 0.1s;
+}
+
+.shareButton:hover {
+  color: var(--color-text-primary); 
+  background: #ffffff1c;
+  border: 1px solid #92929285;
+  transition: all 0.1s;
+}
+
+@media screen and (max-width: 992px) { 
+  .shareButton:hover {
+    background-color: var(--color-bg-blur-primary);
+    border: 1px solid #92929225;
+    transition: all 0.1s;
+  }
+
+  .shareButton:active {
+    color: var(--color-text-primary); 
+    background: #ffffff1c;
+    border: 1px solid #92929285;
+    transition: all 0.1s;
+  }
+}

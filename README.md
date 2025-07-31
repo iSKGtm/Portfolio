@@ -1,0 +1,1 @@
+# Mini aplicação web, que demonstra projetos e portfolios iSKGtm.

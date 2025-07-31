@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* 🎯 Tema padrão (claro) */
+:root {
+  --color-primary: #2C2C2C;
+  --color-secondary: #4B1E4D;
+  --color-accent: #BE3455;
+  --color-neutral: #64748B;
+  --color-bg-primary: #000000;
+  --color-bg-secondary: white;
+  --color-bg-blur-primary: #20202025;
+  --color-text-primary: white;
+  --color-text-secondary: black;
+  
+  font-family: SF, Helvetica, Arial, sans-serif;
+}
+
+/* FONTES */
+
+@font-face {
+  font-family: SF;
+  src: url("/assets/fonts/SF/SFBLACK.otf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: SF;
+  src: url("/assets/fonts/SF/SFBOLD.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: SF;
+  src: url("/assets/fonts/SF/SFREG.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: SF;
+  src: url("/assets/fonts/SF/SFLIGHT.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: SFITALIC;
+  src: url("/assets/fonts/SF/SFBLACKITALIC.otf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: SFITALIC;
+  src: url("/assets/fonts/SF/SFBOLDITALIC.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: SFITALIC;
+  src: url("/assets/fonts/SF/SFREGITALIC.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: SFITALIC;
+  src: url("/assets/fonts/SF/SFLIGHTITALIC.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: SyneExt;
+  src: url("/assets/fonts/Syne/SyneExtra.otf");
+}
+
+@font-face {
+  font-family: SyneBold;
+  src: url("/assets/fonts/Syne/SyneBold.otf");
+}
+
+@font-face {
+  font-family: SyneReg;
+  src: url("/assets/fonts/Syne/SyneRegular.otf");
+}
+
+@font-face {
+  font-family: Phonk;
+  src: url("/assets/fonts/Phonk/PhonkContrast.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Phonk;
+  src: url("/assets/fonts/Phonk/PhonkRegular.otf");
+  font-weight: 500;
+}
+
+#root {
+  display: block;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-primary);
+}

@@ -1,0 +1,119 @@
+/* ABOUT FOOTER */
+
+footer {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 100px;
+  flex-direction: column;
+  color: white;
+}
+
+.footerAtribution {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.footerAtribution:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.footerContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0px 20px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.footerCopy {
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+.footerSocial {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+  margin-top: 0px;
+  gap: 10px;
+  font-weight: 300;
+  flex-direction: row;
+}
+
+.footerSocial a {
+  text-decoration: none;
+  color: white;
+}
+
+.footerTerm {
+  display: flex;
+  gap: 25px;
+}
+
+.footerTerm > a:hover {
+  text-decoration: underline;
+}
+
+.footerSocialIcons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footerSocialIcons > a {
+  font-size: 25px;
+}
+
+/* RESP */
+
+@media screen and (max-width: 1715px) {
+  footer {
+    padding: 0 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  footer {
+    padding: 0 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 0 0px;
+    padding-bottom: 100px;
+  }
+
+  .footerCopy {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerSocial{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: -15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+/* PARA NOAVAILABLE (RESPSYS) */
+@media screen and (max-width: 300px) {
+  footer {
+    display: none;
+  }
+}

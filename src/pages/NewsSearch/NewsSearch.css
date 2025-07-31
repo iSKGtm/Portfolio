@@ -1,0 +1,227 @@
+@import "tailwindcss";
+.mainNews {
+    color: var(--color-white);
+    background-color: var(--color-bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 50px;
+    gap: 50px;
+}
+
+.mainSection {
+    width: 100%;
+    max-width: 1600px;
+    padding: 10px 0px;
+}
+
+.mainSectionSkeleton {
+    width: 100%;
+    max-width: 1600px;
+    padding: 10px 0px;
+    cursor: progress;
+}
+
+.divisionHR {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    width: calc(100% - 50px);
+}
+
+.inputSearchContainer {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    padding-top: 9px;
+    padding-bottom: 18px;
+}
+
+.inputSearchContainer > input {
+    font-family: SF, Helvetica, Arial, sans-serif;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    box-shadow: inset 0 8px 15px -6px #ffffff25;
+    outline: 0;
+    width: 340px;
+    height: 50px;
+    padding: 0 15px;
+}
+
+.inputSearchContainer > button {
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    box-shadow: inset 0 8px 15px -6px #ffffff25;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+}
+
+
+.titleNewsSearch {
+    margin-top: 0;
+    font-family: Phonk;
+    text-align: left;
+    font-size: 48px;
+    color: var(--color-text-primary);
+}
+
+.labelNewsSearch {
+    font-family: SF, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.containerSearch {
+    display: flex;
+    gap: 30px;
+    min-height: 480px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.containerSearch > h2 {
+    font-family: SF, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.containerSearch > h2 > text {
+    font-weight: 600;
+}
+
+.containerSearchSkeleton {
+    display: flex;
+    gap: 30px;
+    height: 500px;
+    max-height: 500px;
+    min-height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    mask: linear-gradient(180deg,white 50%, transparent);
+    cursor: progress;
+    user-select: none;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.containerSearchSkeleton > img {
+    display: none;
+}
+
+/* HOVERS */
+
+.inputSearchContainer > input {
+  background: var(--color-bg-blur-primary);
+  border: 1px solid #92929225;
+  transition: all 0.1s;
+}
+
+.inputSearchContainer > input:focus {
+  background: #ffffff1c;
+  border: 1px solid #92929285;
+}
+
+.inputSearchContainer > button {
+  background: var(--color-bg-blur-primary);
+  border: 1px solid #92929225;
+  transition: all 0.1s;
+}
+
+.inputSearchContainer > button:hover {
+  background: #ffffff1c;
+  border: 1px solid #92929285;
+}
+
+@media screen and (max-width: 992px) {
+
+  .inputSearchContainer > button {
+    background: var(--color-bg-blur-primary);
+    border: 1px solid #92929225;
+    transition: all 0.1s;
+  }
+
+  .inputSearchContainer > button:hover {
+    background: var(--color-bg-blur-primary);
+    border: 1px solid #92929225;
+  }
+
+  .inputSearchContainer > button:active {
+    background: #ffffff1c;
+    border: 1px solid #92929285;
+  }
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--color-bg-primary);
+}
+
+/* RESP */
+
+@media screen and (max-width: 1600px) {
+    .mainSection {
+        padding: 10px 0px;
+    }
+    .labelNewsSearch {
+        font-size: 20px;
+        padding-right: 50px;
+    }
+
+    .titleNewsSearch {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+
+    .mainSection {
+        padding: 0px 0px;
+    }
+
+    .labelNewsSearch {
+        font-size: 19px;
+        padding-right: 0px;
+    }
+    .titleNewsSearch {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .mainNews{
+        padding: 30px 20px;
+    }
+
+    .mainSection {
+        padding: 0px 0px;
+    }
+
+    .divisionHR {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .inputSearchContainer > input { 
+        width: calc(100%);
+    }
+
+    .labelNewsSearch {
+        font-size: 18px;
+    }
+    .titleNewsSearch {
+        font-size: 30px;
+    }
+    .containerSearch {
+        gap: 30px;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+
+}

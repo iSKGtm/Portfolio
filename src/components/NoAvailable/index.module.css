@@ -1,0 +1,66 @@
+/* NOAVAILABLE (RESPSYS) */
+
+.containerNoAvailable {
+  position: fixed;
+  padding-top: 5px;
+  width: 100vw;
+  height: 100vh;
+  padding: 55px;
+  background-color: black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999999;
+}
+
+.containerNoAvailable > img {
+  width: 100px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.containerNoAvailable > p {
+  color: white;
+  font-size: 18px;
+  font-family: SF, Helvetica, Arial, sans-serif;
+  text-align: justify;
+  text-align-last: center;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 260px), (max-height: 224px) {
+
+  .containerNoAvailable {
+    padding: 25px;
+  }
+
+  .containerNoAvailable > img {
+    display: none;
+  }
+
+  .containerNoAvailable > p {
+    font-size: 5vw;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* PARA NOAVAILABLE (RESPSYS) */
+@media screen and (max-width: 300px) {
+  header, footer, section {
+    display: none;
+  }
+}

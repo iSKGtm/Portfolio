@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+.mainAboutSkeleton {
+    color: var(--color-white);
+    cursor: wait;
+}
+.mainAbout {
+    color: var(--color-white);
+}
+
+.section2 {
+    background-color: var(--color-bg-primary);
+}
+
+.section3 {
+    background-color: var(--color-bg-secondary);
+}
+
+.section4 {
+    background-color: var(--color-bg-primary);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--color-bg-primary);
+}

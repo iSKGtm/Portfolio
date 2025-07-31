@@ -1,0 +1,35 @@
+.expContainer {
+    margin: 35px 0px;
+    font-family: SF, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    user-select: none;
+}
+
+.expContainer2 {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: var(--color-bg-blur-primary);
+    color: white;
+    border: 1px solid #92929225;
+    border-radius: 15px;
+    user-select: none;
+}
+
+.expPercent {
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 7px;
+    color: white;
+    font-weight: bold;
+    background: #ffffff1c;
+    border: 1px solid #92929225;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.p100 {width: 100%;}
+.p50 {width: 50%;}
+.p25 {width: 25%;}
+.p10 {width: 10%;}
+.p0 {width: 0%;}
