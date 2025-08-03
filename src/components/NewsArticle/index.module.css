@@ -35,6 +35,8 @@
 .dateAuthor {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .imgDateMin {
@@ -156,5 +158,11 @@
     background: #ffffff1c;
     border: 1px solid #92929285;
     transition: all 0.1s;
+  }
+}
+
+@media screen and (max-width: 570px) { 
+  .title {
+    font-size: 2.0rem;
   }
 }
