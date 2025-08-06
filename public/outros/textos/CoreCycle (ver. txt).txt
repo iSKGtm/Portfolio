@@ -1,0 +1,72 @@
+Metodologia CoreCycle
+Inicio: 01 Jul. 2025
+
+Aplicável para seguintes serviços após o inicio:
+
+Serviço			Programa ou Framework
+
+iSKGtm Music	Cockos REAPER
+iSKGtm Prod		Adobe Photoshop | Blackmagic DaVinci Resolve
+iSKGtm Dev		META REACT (TS ver.) | JS VANILLA | Python (Versões Recentes)
+
+
+Princípios da CoreCycle
+
+Princípio		Descrição
+
+Essência funcional	Reaproveitar o serviço ou projeto modularizado.
+Modularidade viva	Garantir que tudo possa se transformar e se adaptar.
+Estética iterativa	Valorizar a beleza que pode emergir do reaproveitamento e reinvenção.
+Ciclo consciente	Evitar retrabalho, priorizando melhorias e polimento.
+Registro contínuo	Aprender com os próprios ciclos e alimentar os próximos.
+
+
+Ciclo de Evolução
+•	Monitorar o desempenho dos ativos reaproveitados.
+•	Aprimorar os que apresentarem melhor desempenho com base em métricas.
+•	Arquivar ou descartar os que não gerarem mais valor.
+
+
+Serviço iSKGtm Music
+
+No serviço Music, com REAPER, onde é compatível com este fluxograma, utilizam-se projetos
+com modulos (pastas) de samples e VST's que podem ser reutilizados com facilidade.
+
+
+Serviço iSKGtm Prod.
+
+No serviço Prod, com Photoshop, onde é compatível com este fluxograma, utilizam-se
+projetos com modulos (pastas de composição), que podem ser reutilizados com facilidade em produções futuras.
+
+Ainda no serviço Prod, com DaVinci Resolve, onde é compatível com este fluxograma,
+utilizam-se projetos com modulos (pastas de trabalho, timeline e composição), que
+podem ser reutilizados com alguma facilidade, com uso reduzido de plugins de terceiros,
+para melhor reutilização.
+
+Serviço iSKGtm Dev
+
+No serviço Dev, utilizando ou não, Frameworks, linguagens como JavaScript, 
+TypeScript ou Python, para determinadas situações, utilizam-se projetos com modulos
+(ou componentes [React]), que podem ser utilizados com facilidade.
+
+
+Resumo
+
+É um fluxo de trabalho, ou metodologia que visa a reutilização de projetos com
+elementos modulares, que deram "certo", para otimizar tempo e qualidade de
+serviço/produção.
+
+Como funcionava?
+Não havia um tipo de fluxograma, sendo assim, podendo ou não recriar projetos do 0,
+mesmo sem haver a necessidade disto, demandando tempo e reduzindo a qualidade de
+um projeto em produção, como polimento do mesmo por exemplo.
+
+
+Observação a parceiros que utilizam serviço iSKGtm Prod. (Edição VFX VEGAS Pro)
+
+Os serviços de vídeo estão em transição, de um programa para outro, de VEGAS Pro para
+DaVinci Resolve, iniciado em 14 jun. 2025. Vale destacar a incompatibilidade com esta
+metodologia com VEGAS Pro, devido a problemas com projetos legados e ausência de elementos
+modulares a serem criados. Parceiros que mantem projetos legados deste programa (como
+EagleVision e PlayVicio), serão mantidos até o final de 2026, mas não se enquadrará nos
+novos padrões de fluxograma, com criação limitada e com serviços maior lentidão.
