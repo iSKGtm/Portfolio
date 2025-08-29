@@ -22,10 +22,19 @@ footer {
 .footerContainer {
   display: flex;
   width: 100%;
+  height: 80px;
   max-width: 1600px;
   padding: 0px 20px;
   flex-direction: column;
   margin: 0 auto;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  background-color: var(--color-bg-blur-primary);
+  box-shadow: inset 0 8px 13px -6px #ffffff25;
+  border: 1px solid #92929225;
+  justify-content: center;
+  user-select: none;
 }
 
 .footerCopy {
@@ -76,14 +85,21 @@ footer {
 
 @media screen and (max-width: 1715px) {
   footer {
-    padding: 0 100px;
+    padding: 0 15px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  footer {
+    padding: 0 15px;
     padding-bottom: 100px;
   }
 }
 
 @media screen and (max-width: 1199px) {
   footer {
-    padding: 0 100px;
+    padding: 0 15px;
     padding-bottom: 100px;
   }
 }
@@ -92,6 +108,12 @@ footer {
   footer {
     padding: 0 0px;
     padding-bottom: 100px;
+  }
+
+  .footerContainer {
+    width: calc(100% - 30px);
+    height: unset;
+    gap: 10px;
   }
 
   .footerCopy {

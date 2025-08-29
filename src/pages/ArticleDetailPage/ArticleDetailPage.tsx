@@ -88,14 +88,19 @@ const ArticleDetailPage: React.FC = () => {
       <SetTitle title={pageTitle} />
       <main className="mainArticlePage">
         {isLoading ? (
-          <div className='articlePageSkeleton' style={{ maxWidth: '1280px', margin: '0 auto', padding: '35px' }}>
-            <Skeleton height={40} width="70%" style={{ marginBottom: '20px' }} />
-            <Skeleton height={16} width="50%" style={{ marginBottom: '5px' }} />
-            <Skeleton height={16} width="25%" style={{ marginBottom: '10px' }} />
-            <Skeleton height={48} width="48px" style={{ marginBottom: '30px' }} />
-            <hr />
-            <Skeleton height={400} width="100%" style={{ marginBottom: '20px', marginTop: '30px' }} />
-            <Skeleton count={5} />
+          <div className='articlePageSkeleton' style={{ maxWidth: '1280px' }}>
+            <div className='containerHeaderSkeleton'>
+              <Skeleton height={40} width="70%" style={{ marginBottom: '20px' }} />
+              <Skeleton height={16} width="50%" style={{ marginBottom: '5px' }} />
+              <Skeleton height={16} width="25%" style={{ marginBottom: '10px' }} />
+              <Skeleton height={48} width="48px" />
+            </div>
+
+            <div className='contentSkeleton'>
+              <Skeleton height={400} width="100%" style={{ marginBottom: '20px', marginTop: '30px' }} />
+              <Skeleton count={5} />
+            </div>
+
           </div>
         ) : error ? (
           <>

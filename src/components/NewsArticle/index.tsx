@@ -57,7 +57,6 @@ const sanitizedContent = DOMPurify.sanitize(article.content, {
         </div>
         <button onClick={shareArticle} className={styles.shareButton}><FontAwesomeIcon icon={faShare} /></button>
       </div>
-      <hr />
       <div dangerouslySetInnerHTML={{ __html: sanitizedContent } } className={styles.content} />
     </div>
   );

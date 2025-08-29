@@ -21,7 +21,6 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div className={styles.footerContainer}>
-        <hr />
         <div className={styles.footerCopy}>
             <span>© 2016-<span ref={dateRef}></span> | iShaking Creative Media, Todos os Direitos Reservados.</span><br />
         </div>

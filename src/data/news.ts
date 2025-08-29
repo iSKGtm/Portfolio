@@ -52,7 +52,7 @@ export const newsData: NewsItem[] = [
         <p>
         <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
         </p>
-        Última atualização: Setembro de 2025.
+        Última atualização: Agosto de 2025.
         <p>
       </main>
     `,
@@ -715,9 +715,8 @@ export const newsData: NewsItem[] = [
     `,
   },
 
-    {
+  {
     url: "/news/freed_from_desire_iskgtm_remix",
-    hide: true,
     title: "Freed From Desire (iSKGtm Remix)",
     label: "Freed From Desire, um novo remix bootleg, de Gala.",
     imageUrl: "/images/news/posts/music/freed_from_desire_iskgtm_remix/banner.jpg",

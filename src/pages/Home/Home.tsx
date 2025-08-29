@@ -27,7 +27,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 800);
   }, []);
 
   return (
