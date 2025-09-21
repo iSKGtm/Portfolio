@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faNewspaper, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import LiquidGlass from 'liquid-glass-react'
 
 const Navbar: React.FC = () => {
   const lastScrollTop = useRef(0);
