@@ -5,10 +5,10 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
 import NewsSearch from './pages/NewsSearch/NewsSearch';
 import ArticleDetailPage from './pages/ArticleDetailPage/ArticleDetailPage';
+import Hidden from './pages/Hidden/Hidden';
 import NotFound from './components/NotFound';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import styled from 'styled-components';
-
 const SetTitle = ({ title }: { title: string }) => {
   React.useEffect(() => {
     document.title = title;
@@ -87,6 +87,15 @@ function App() {
             <>
               <SetTitle title="Página não encontrada." />
               <NotFound />
+            </>
+          }
+        />
+        <Route
+          path="/hidden"
+          element={
+            <>
+              <SetTitle title="For Testing Purposes" />
+              <Hidden />
             </>
           }
         />

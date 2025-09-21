@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState } from 'react';
 import styles from './index.module.css'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import LiquidGlass from 'liquid-glass-react';
 
 const AboutHeader: React.FC = () => {
   const aboutHeaderRef = useRef<HTMLVideoElement | null>(null);
@@ -61,6 +62,7 @@ const AboutHeader: React.FC = () => {
 
   return (
     <>
+
       <SkeletonTheme baseColor="#1a1a1a" highlightColor="#333" borderRadius={10}>
         <section className={styles.mainSection}>
           {isLoading ? (

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faNewspaper, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import LiquidGlass from 'liquid-glass-react'
 
 const Navbar: React.FC = () => {
   const lastScrollTop = useRef(0);
@@ -59,11 +60,35 @@ const Navbar: React.FC = () => {
 
   return (
     <>
+      <svg
+      style={{ position: 'absolute', width: 0, height: 0, overflow: 'visible' }}
+      aria-hidden="true"
+      >
+      <filter
+          id="glassLiquidStatic"
+          x="-10%" y="-10%" width="120%" height="120%"
+          filterUnits="objectBoundingBox"
+      >
+          <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.010 0.010"
+          numOctaves="1"
+          result="noise"
+          />
+          <feDisplacementMap
+          in="SourceGraphic"
+          in2="noise"
+          scale="75"
+          xChannelSelector="R"
+          yChannelSelector="G"
+          />
+      </filter>
+      </svg>
+
       <header className={styles.headerAnim} ref={headerRef}>
         <div className={styles.scrollButton} onClick={scrollToTop} ref={buttonScrollRef}>
           <FontAwesomeIcon icon={faArrowUp} />
         </div>
-
         <div className={styles.mainNavbar}>
           <nav>
             <Link
@@ -75,7 +100,6 @@ const Navbar: React.FC = () => {
               <div className={styles.buttonText}>HOME</div>
               <FontAwesomeIcon icon={faHouse} className={styles.icon} />
             </Link>
-
             <div className={styles.logo}>
               <div className={styles.logoGif}>
                 <img src="/images/logo/logoGif.gif" />
@@ -84,7 +108,6 @@ const Navbar: React.FC = () => {
                 <img src="/images/logo/logoName.png" />
               </div>
             </div>
-
             <Link
               to="/news"
               className={`${styles.buttonNav} ${styles.buttonItem} ${
