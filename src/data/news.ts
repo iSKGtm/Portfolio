@@ -322,11 +322,11 @@ export const newsData: NewsItem[] = [
           <div class="expContainer2">
             <div class="expPercent p10">Iniciante</div>
           </div>
-          Blackmagic DaVinci Resolve (+ Fusion VFX 2D)
+          Blackmagic DaVinci Resolve (+ Fusion Motion Graphics)
           <div class="expContainer2">
             <div class="expPercent p25">Básico</div>
           </div>
-          MAGIX VEGAS PRO (+ VFX 2D)
+          MAGIX VEGAS PRO (+ Motion Graphics)
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
           </div>

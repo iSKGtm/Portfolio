@@ -111,7 +111,7 @@
   padding: 10px 10px;
   border-radius: 30px;
   background-color: var(--color-bg-blur-primary);
-  box-shadow: inset 0 8px 13px -6px #ffffff25;
+  box-shadow: inset 0 5px 10px -3px #ffffff30;
   outline: 1px solid #92929225;
 }
 
@@ -155,7 +155,7 @@
 }
 
 .buttonSkills {
-  border-radius: 0.8em;
+  border-radius: 100px;
   padding: 0.5em 1.0em;
   margin-bottom: 20px;
   width: 100%;
@@ -165,7 +165,7 @@
   font-family: inherit;
   backdrop-filter: blur(20px);
   color: var(--color-text-primary);
-  box-shadow: inset 0 8px 13px -6px #ffffff25;
+  box-shadow: inset 0 5px 10px -3px #ffffff30;
   cursor: default;
   transition: all 0.1s;
 
