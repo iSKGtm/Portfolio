@@ -101,6 +101,11 @@
   transition: all 0.1s;
 }
 
+.button:active {
+  scale: 0.950;
+  transition: scale 200ms;
+}
+
 /* RESP */
 
 @media (max-width: 1313px) {

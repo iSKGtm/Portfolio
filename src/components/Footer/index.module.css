@@ -35,6 +35,7 @@ footer {
   border: 1px solid #92929225;
   justify-content: center;
   user-select: none;
+  transition: scale 200ms;
 }
 
 .footerCopy {
@@ -79,6 +80,11 @@ footer {
 
 .footerSocialIcons > a {
   font-size: 25px;
+}
+
+.footerContainer:active {
+  scale: 0.995;
+  transition: scale 200ms;
 }
 
 /* RESP */

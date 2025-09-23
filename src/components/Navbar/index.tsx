@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
                 activeButton === 'home' ? styles.active : ''
               }`}
             >
-              <div className={styles.buttonText}>HOME</div>
+              <div className={styles.buttonText}>Home</div>
               <FontAwesomeIcon icon={faHouse} className={styles.icon} />
             </Link>
             <div className={styles.logo}>
@@ -139,7 +139,7 @@ const Navbar: React.FC = () => {
                 activeButton === 'news' ? styles.active : ''
               }`}
             >
-              <div className={styles.buttonText}>NOTÍCIAS</div>
+              <div className={styles.buttonText}>Notícias</div>
               <FontAwesomeIcon icon={faNewspaper} className={styles.icon} />
             </Link>
           </nav>

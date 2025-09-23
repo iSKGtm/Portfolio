@@ -58,24 +58,23 @@ useEffect(() => {
     <SkeletonTheme baseColor="#1a1a1a" highlightColor="#333" borderRadius={10}>
       <main className='mainNews' style={{ display: isLoading ? 'none' : 'flex' }}>
         <section className="mainSection">
-          <div className='titleNewsSearch'>noticias</div>
-          <div className='labelNewsSearch'>Acompanhe notícias e comunicados da iShaking Creative Media.</div>
-          <div className='inputSearchContainer'>
-            <input
-              type="text"
-              placeholder="Digite para buscar..."
-              maxLength={32}
-              value={searchTerm}
-              onChange={handleChange}
-            />
-            {showClearButton && (
-              <button onClick={() => clearInput()}>
-                <FontAwesomeIcon icon={faX} />
-              </button>
-            )}
-          </div>
-          <div className='divisionHR'>
-            <hr />
+          <div className='containerHeader'>
+            <div className='titleNewsSearch'>noticias</div>
+            <div className='labelNewsSearch'>Acompanhe notícias e comunicados da iShaking Creative Media.</div>
+            <div className='inputSearchContainer'>
+              <input
+                type="text"
+                placeholder="Digite para buscar..."
+                maxLength={32}
+                value={searchTerm}
+                onChange={handleChange}
+              />
+              {showClearButton && (
+                <button onClick={() => clearInput()}>
+                  <FontAwesomeIcon icon={faX} />
+                </button>
+              )}
+            </div>
           </div>
           {filteredNews.length > 0 ? (
             <div className="containerSearch">
@@ -95,18 +94,17 @@ useEffect(() => {
       <SkeletonTheme baseColor="#1a1a1a" highlightColor="#333" borderRadius={10}>
         <main className='mainNews'>
           <section className="mainSectionSkeleton">
-            <div className='titleNewsSearch'><Skeleton width="20%" /></div>
-            <div className='labelNewsSearch'><Skeleton width="35%" /></div>
-            <div className='inputSearchContainer'>
-              <input
-                type="text"
-                placeholder="Por favor, aguarde..."
-                maxLength={32}
-                disabled={true}
-              />
+            <div className='containerHeader'>
+              <div className='titleNewsSearch'><Skeleton width="20%" /></div>
+              <div className='labelNewsSearch'><Skeleton width="35%" /></div>
+              <div className='inputSearchContainer'>
+                <input
+                  type="text"
+                  placeholder="Por favor, aguarde..."
+                  maxLength={32}
+                  disabled={true}
+                />
             </div>
-            <div className='divisionHR'>
-              <hr />
             </div>
             <div className="containerSearchSkeleton">
               {Array.from({ length: 10 }, (_, i) => (

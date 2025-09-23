@@ -83,6 +83,11 @@
   transition: all 0.1s;
 }
 
+.button:active {
+  scale: 0.950;
+  transition: scale 200ms;
+}
+
 @media screen and (max-width: 992px) { 
   .button:hover {
     background-color: var(--color-bg-blur-primary);

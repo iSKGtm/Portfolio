@@ -29,6 +29,11 @@
   font-weight: 300;
 }
 
+.button:active {
+  scale: 0.950;
+  transition: scale 200ms;
+}
+
 @media screen and (max-width: 260px), (max-height: 224px) {
 
   .containerNoAvailable {

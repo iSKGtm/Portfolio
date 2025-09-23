@@ -5,7 +5,7 @@
 }
 
 .scrollButton {
-  border-radius: 18px;
+  border-radius: 100px;
   height: 32px;
   width: 32px;
   z-index: 10;
@@ -21,7 +21,8 @@
   position: absolute;
   background-color: var(--color-bg-blur-primary);
   backdrop-filter: url(#glass-distortion) blur(3px);
-  box-shadow: inset 0 5px 10px -3px #ffffff30;
+  box-shadow: inset 0 5px 10px -3px #ffffff30,
+  0px 0px 15px #00000055;
   color: white;
   border: 1px solid #92929225;
   transition: all 0.1s;
@@ -52,13 +53,14 @@ nav {
   align-items: center;
   justify-content: center;
   user-select: none !important;
-  font-family: SyneBold;
-  font-size: 13px;
-  font-weight: 500;
+  font-family: SF, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
   gap: 0px;
   margin-bottom: 15px;
-  border-radius: 25px;
-  padding: 0 17px;
+  border-radius: 100px;
+  padding: 0 7px;
   bottom: 15px;
   width: fit-content;
   height: 70px;
@@ -66,13 +68,22 @@ nav {
   backdrop-filter: url(#glass-distortion) blur(3px);
   color: white;
   border: 1px solid #92929225;
-  box-shadow: inset 0 5px 10px -3px #ffffff30;
+  box-shadow: inset 0 5px 10px -3px #ffffff30,
+  0px 0px 15px #00000055;
   transition: scale 200ms;
+}
+
+.buttonNav {
+  background-color: #00000000;
+  outline: 0px solid #92929200;
+  border-radius: 100px;
+  transition: outline 0.1s;
 }
 
 nav > .buttonItem {
   display: flex;
-  gap: 3px;
+  gap: 0px;
+  padding: 0 5px;
   align-items: center;
   flex-direction: column-reverse;
   cursor: default;
@@ -83,7 +94,7 @@ nav > .buttonItem {
 nav > .buttonItem > svg {
   background-color: #ffffff00;
   outline: 1px #0000;
-  border-radius: 15px;
+  border-radius: 100px;
   padding: 3px 25px;
   transition: all 0.1s;
 }
@@ -132,13 +143,16 @@ nav:active {
   transition: scale 200ms;
 }
 
-.buttonNav{
-  border: 0 solid #00000000;
-  background: #00000000;
+.buttonNav:hover{
+  background: #ffffff1c;
+  outline: 1px solid #92929285;
+  transition: outline 0.1s;
 }
-.buttonNav:hover {
-  border: 0 solid #00000000;
-  background: #00000000;
+
+.buttonNav.active{
+  background: #ffffff1c;
+  outline: 1px solid #92929285;
+  transition: outline 0.1s;
 }
 
 .scrollButton:hover {
@@ -146,17 +160,11 @@ nav:active {
   border: 1px solid #92929285;
   transition: all 0.1s;
 }
-.buttonNav:hover .icon {
-  background: #ffffff1c;
-  outline: 1px solid #92929285;
-  transition: outline 0.1s;
-}
 
-.buttonNav.active .icon {
-  background: #ffffff1c;
-  outline: 1px solid #92929285;
+.scrollButton:active {
+  scale: 0.950;
+  transition: scale 200ms;
 }
-
 
 @media screen and (max-width: 992px) {
   .scrollButton:hover {
@@ -169,12 +177,6 @@ nav:active {
     border: 1px solid #92929285;
     transition: all 0.1s;
   }
-
-  .buttonNav:active .icon {
-    background: #ffffff1c;
-    outline: 1px solid #92929285;
-    transition: outline 0.1s;
-  }
 }
 
 /* RESP */
@@ -182,15 +184,16 @@ nav:active {
 @media screen and (max-width: 575px) {
 
   nav {
-    width: calc(100% - 30px);
+    /* width: calc(100% - 30px); */
+    width: 280px;
     justify-content: space-around;
   }
   nav > .buttonItem > .buttonText {
     display: none;
   }
 
-  .buttonNav > svg {
-    padding: 15px;
+  nav > .buttonItem > svg {
+    padding: 15px 30px;
   }
 
   .logoName {

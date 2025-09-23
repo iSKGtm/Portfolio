@@ -19,12 +19,26 @@ const SetTitle = ({ title }: { title: string }) => {
 
 const FadeInContainer = styled.div`
   opacity: 0;
-  transform: translateY(-5%);
   animation: fadeIn 200ms ease-out forwards;
 
   @keyframes fadeIn {
     from {
-      transform: translateY(-5%);
+      transform: translateY(-1%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+`;
+
+const FadeInContainerHome = styled.div`
+  animation: fadeInHome 200ms ease-out;
+
+  @keyframes fadeInHome {
+    from {
+      transform: translateY(-1%);
       opacity: 0;
     }
     to {
@@ -54,8 +68,10 @@ function App() {
           path="/home"
           element={
             <>
-              <SetTitle title="iSKGtm - Home" />
-              <Home />
+              <FadeInContainerHome>
+                <SetTitle title="iSKGtm - Home" />
+                <Home />
+              </FadeInContainerHome>
             </>
           }
         />
