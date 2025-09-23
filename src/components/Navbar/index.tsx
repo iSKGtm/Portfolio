@@ -9,15 +9,28 @@ const Navbar: React.FC = () => {
   const lastScrollTop = useRef(0);
   const headerRef = useRef<HTMLDivElement | null>(null);
   const buttonScrollRef = useRef<HTMLDivElement | null>(null);
+  const homeSVG = useRef<SVGSVGElement | null>(null);
+  const newsSVG = useRef<SVGSVGElement | null>(null);
   const [activeButton, setActiveButton] = useState('');
   const location = useLocation();
 
   useEffect(() => {
     const currentPath = location.pathname;
+    
     if (currentPath.startsWith('/news')) {
       setActiveButton('news');
+      
+      if(newsSVG.current && homeSVG.current) {
+        newsSVG.current.classList.add(styles.activeSVG);
+        homeSVG.current.classList.remove(styles.activeSVG);
+      }
     } else if (currentPath.startsWith('/home')) {
       setActiveButton('home');
+      
+      if(newsSVG.current && homeSVG.current) {
+        newsSVG.current.classList.remove(styles.activeSVG);
+        homeSVG.current.classList.add(styles.activeSVG);
+      }
     } else {
       setActiveButton('');
     }
@@ -86,7 +99,7 @@ const Navbar: React.FC = () => {
             surfaceScale="5"
             specularConstant="1"
             specularExponent="100"
-            lighting-color="white"
+            lightingColor="white"
             result="specLight"
           >
             <fePointLight x="-200" y="-200" z="300" />
@@ -123,7 +136,7 @@ const Navbar: React.FC = () => {
               }`}
             >
               <div className={styles.buttonText}>Home</div>
-              <FontAwesomeIcon icon={faHouse} className={styles.icon} />
+              <FontAwesomeIcon ref={homeSVG} icon={faHouse} className={styles.icon} />
             </Link>
             <div className={styles.logo}>
               <div className={styles.logoGif}>
@@ -140,7 +153,7 @@ const Navbar: React.FC = () => {
               }`}
             >
               <div className={styles.buttonText}>Notícias</div>
-              <FontAwesomeIcon icon={faNewspaper} className={styles.icon} />
+              <FontAwesomeIcon ref={newsSVG} icon={faNewspaper} className={styles.icon} />
             </Link>
           </nav>
         </div>

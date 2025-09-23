@@ -4,9 +4,10 @@
 
 ### Added
 
-- GlassDesign: 100%.
+- GlassDesign: 100%
 
 ### Fixed
 
-- FIX animation bugs.
+- FIX animation transition pages.
+- FIX .SVG fill off/on in NAVBAR system.
 - FIX minor bugs.
