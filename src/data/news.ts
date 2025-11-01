@@ -762,7 +762,6 @@ export const newsData: NewsItem[] = [
 
   {
   url: "/news/how_to_love_iskgtm_remix",
-  hide: true,
   title: "How to Love (iSKGtm Remix)",
   label: "How to Love, um novo remix bootleg, de Tokio Hotel.",
   imageUrl: "/images/news/posts/music/how_to_love_iskgtm_remix/banner.jpg",

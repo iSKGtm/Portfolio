@@ -9,10 +9,12 @@ const NoAvailableRef: React.FC = () => {
 
   useEffect(() => {
     const windowWidthNoAvailable = () => {
-      const windowWidth = window.innerWidth;
-      const windowHeight = window.innerHeight;
+      const sysWidth = window.outerHeight;
+      const sysHeight = window.outerHeight;
 
-      if(windowWidth < 300 || windowHeight < 150) {
+      console.log(sysWidth);
+
+      if(sysWidth < 600 || sysHeight < 150) {
 
         if (noAvailableRef.current && warningTextRef.current) {
           warningTextRef.current.textContent = "Esta aplicação não está disponível para este dispositivo.";
