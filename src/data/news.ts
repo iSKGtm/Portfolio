@@ -28,6 +28,261 @@ export interface Article {
 export const newsData: NewsItem[] = [
 
   {
+    url: "/news/10-anos",
+    hide: true,
+    title: "Antes do 'Especial 10 anos'...",
+    label: "Surpresas para o especial de 10 anos de iSKGtm, em 2026!",
+    imageUrl: "https://i.imgur.com/YkikNw0.jpeg",
+    tags: ["iSKGtm 10"],
+    tagImage: "/images/symb/10y.png",
+    date: "12/01/2025",
+    authorName: "Anthony M.",
+    minutesRead: 2,
+    content: `
+    <main>
+      <img src="https://i.imgur.com/tsy6Kcb.jpeg"/>
+
+      <h3>Arte de 10 anos de iSKGtm. Imagem: Acervo iSKGtm</h3>
+
+      <h2> Trajetória </h2>
+
+      <p>
+        Em Janeiro, iremos entrar no ano, em que faremos 10 anos de atividade! <br>
+        Aconteceram diversas coisas ao longo desses 10 anos, incluindo: diversão, alegria, trabalhos, surpresas. <br>
+        Houve também, reinvenções da própria marca, por isso, estamos ativos até hoje, o que não é fácil, ainda mais, levando em conta que a marca "iSKGtm" inicialmente era só de gameplays de SA:MP, antes chamado de "iShakinGameR".
+      </p>
+
+      <img src="https://i.imgur.com/EVmXQ9l.jpeg"/>
+
+      <h3>Um dos primeiros vídeos "iShaKinGameR". Imagem: Acervo iSKGtm</h3>
+
+      <h2>Atualmente</h2>
+
+      <p>
+        Atualmente, a iShaking Creative Media (iSKGtm) atua nas áreas de:
+
+        <ul>
+          <li>Produção Músical</li>
+          <li>Branding</li>
+          <li>Edição Profissional de Imagem e Vídeo</li>
+          <li>Motion Graphics</li>
+          <li>Desenvolvimento de Softwares</li>
+          <li>Inteligência Artificial</li>
+        </ul>
+        
+        Atuamos tanto para o uso de serviços próprios, quanto para clientes e parceiros que confiam no nosso trabalho. <br>
+        Haverá surpresas durante 2026, tanto para nossos views, quanto para nossos parceiros, então, te espero em 2026!
+      </p>
+
+      <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/Yqf_Fhd-9hc"></iframe>
+
+      <h2>iSKGtm, We Are in Everything</h2>
+    </main>
+  `,
+  },
+
+  {
+    url: "/news/how-to-love-iskgtm_remix",
+    title: "How to Love (iSKGtm Remix)",
+    label: "How to Love, um novo remix bootleg, de Tokio Hotel.",
+    imageUrl: "/images/news/posts/music/how_to_love_iskgtm_remix/banner.jpg",
+    tags: ["iSKGtm Music"],
+    tagImage: "/images/symb/music.png",
+    date: "11/01/2025",
+    authorName: "Anthony M.",
+    minutesRead: 2,
+    content: `
+    <main>
+      <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
+      
+      <p>Este remix foi lançado em Novembro de 2025, seguindo as regras de um bootleg. A voz desta música é de Tokio Hotel, gravado originalmente e lançada em 2022.
+      </p>
+
+      <img src="/images/news/posts/music/how_to_love_iskgtm_remix/0.jpg"/>
+
+      <h3>Imagem do Álbum ∞ (iSKGtm). Imagem: Reprodução</h3>
+
+      <h2> Estrutura Sonora (parte técnica) </h2>
+
+      <p>
+        Este REMIX utiliza o classico 'drum kit' "Chill Tropical", que traz harmonias dançantes do Dance / House, mas com uma nova tecnologia de mixagem, com auxilio da utilização de IA, 
+        e claro, seguindo os padrões tecnicos e sonoros, assim como, a nossa identidade sonora iSKGtm Music.
+      </p>
+
+      <h2>Produção Nº54 e escolha da música</h2>
+
+      <p>
+        A música “How to Love”, de Tokio Hotel, é uma faixa lançada em 2022 dentro do álbum “2001”, que marca uma fase mais madura e introspectiva da banda. Nela, o grupo (liderado pelos irmãos Bill e Tom Kaulitz)
+        mescla synthpop, eletrônica e elementos alternativos, com uma produção moderna e bastante refinada.
+        <br> Com nosso Remix, a música que já era boa, 'deu' uma revitalizada, deixando ela com aspecto quente e dançante! Vale a pena conferir.
+      </p>
+
+      <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/-D6n4L2iEnw"></iframe>
+
+      <h2>iSKGtm, We Are in Everything</h2>
+    </main>
+  `,
+  },
+
+  {
+    url: "/news/freed-from-desire-iskgtm-remix",
+    title: "Freed From Desire (iSKGtm Remix)",
+    label: "Freed From Desire, um novo remix bootleg, de Gala.",
+    imageUrl: "/images/news/posts/music/freed_from_desire_iskgtm_remix/banner.jpg",
+    tags: ["iSKGtm Music"],
+    tagImage: "/images/symb/music.png",
+    date: "09/01/2025",
+    authorName: "Anthony M.",
+    minutesRead: 3,
+    content: `
+      <main>
+        <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
+        
+        <p>Este remix foi lançado em Setembro de 2025, seguindo as regras de um bootleg. A voz desta música é de Gala, gravado originalmente em 1996 e lançada no mesmo ano.
+        </p>
+
+        <img src="/images/news/posts/music/freed_from_desire_iskgtm_remix/0.jpg"/>
+
+        <h3>Imagem do Álbum ∞ (iSKGtm). Imagem: Reprodução</h3>
+
+        <h2> Estrutura Sonora (parte técnica) </h2>
+
+        <p>
+          Este REMIX utiliza o 'drum kit' "Disco Tropical", especificadamente de "Beautiful People (iSKGtm Remix)" (Produção Nº52), que relembra um pouco como foi o sucesso de um estilo Funk ou Disco na década de 1970 (não confuda Funk Brasileiro com Disco), só que com os padrões e tecnologias modernas para a produção desta música, assim como, a nossa identidade sonora iSKGtm Music.
+
+          <br> Esta faixa REMIX, apesar da base ser a mesma da Produção Nº52, houve melhorias com padrões e masterização, bem como um novo '808' que utiliza baixos virtualizados de alta fidelidade.
+        </p>
+
+        <h2>Produção Nº53 e escolha da música</h2>
+
+        <p>
+          A música “Freed from Desire”, da cantora italiana Gala, foi lançada originalmente em 1996, e foi o sucesso nas pistas de dança em 1997 em diversos paises, com estilo de música moderna para época, chamada Techno Dance ou Euro Dance. <br>
+
+          Durante o Mundial de Clubes da FIFA de 2025, após 1 semana depois da finalização da produção Nº52 em Julho, a faixa "Freed From Desire" teve um pico de 850%, considerando apenas no Brasil, com a letra "nanananananaaaaaan nan". <br>
+          Ouvindo-a e comparando tecnicamente com a Produção Nº52, observei que a música ficaria excelente naquela base. No final de Junho, a produção foi iniciada, seguindo critérios rigorosos, tanto de parte legal, quanto de parte técnica, vale a pena conferir.
+        </p>
+
+        <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/1Lr89TR7YpY"></iframe>
+
+        <h2>iSKGtm, We Are in Everything</h2>
+      </main>
+    `,
+  },
+
+  {
+    url: "/news/corecycle",
+    title: "CoreCycle",
+    label: "Metodologia CoreCycle.",
+    imageUrl: "/images/news/posts/outros/corecycle/banner.jpg",
+    tags: ["Outros"],
+    tagImage: "/images/symb/outros.png",
+    date: "08/06/2025",
+    authorName: "Anthony M.",
+    minutesRead: 5,
+    content: `
+      <main>
+        <img src="/images/news/tags/iskgtm.jpg" alt="iSKGtm"/>
+        
+        <p>É um fluxo de trabalho, ou metodologia, iniciado em 01 de julho de 2025 a todos os serviços, que visa a reutilização de projetos com elementos modulares, que deram "certo", para otimizar tempo e qualidade de
+        serviço/produção.</p>
+
+        <h2>Anteriormente, como funcionava?</h2>
+
+        <p>Não havia um tipo de fluxograma, sendo assim, podendo ou não recriar projetos do 0,
+        mesmo sem haver a necessidade disto, demandando tempo e reduzindo a qualidade de
+        um projeto em produção, como polimento do mesmo por exemplo.</p>
+
+        <h2>Princípios da CoreCycle</h2>
+        <p>
+          <table>
+            <thead>
+              <tr>
+                <th>Princípio</th>
+                <th>Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Essência funcional</td>
+                <td>Reaproveitar o serviço ou projeto modularizado.</td>
+              </tr>
+              <tr>
+                <td>Modularidade viva</td>
+                <td>Garantir que tudo possa se transformar e se adaptar.</td>
+              </tr>
+              <tr>
+                <td>Estética iterativa</td>
+                <td>Valorizar a beleza que pode emergir do reaproveitamento e reinvenção.</td>
+              </tr>
+              <tr>
+                <td>Ciclo consciente</td>
+                <td>Evitar retrabalho, priorizando melhorias e polimento.</td>
+              </tr>
+              <tr>
+                <td>Registro contínuo</td>
+                <td>Aprender com os próprios ciclos e alimentar os próximos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </p>
+
+        <h2>Ciclo de Evoução</h2>
+
+        <p>
+          <ul>
+            <li>Monitorar o desempenho dos ativos reaproveitados.</li>
+            <li>Aprimorar os que apresentarem melhor desempenho com base em métricas.</li>
+            <li>Arquivar ou descartar os que não gerarem mais valor.</li>
+          </ul>
+        </p>
+
+        <h2>Como funcionará nos serviços iSKGtm Music?</h2>
+
+        <p>No serviço Music, com REAPER, onde é compatível com este fluxograma, utilizam-se projetos com modulos (pastas) de samples e VST's que podem ser reutilizados com facilidade em produções futuras.</p>
+
+        <img src="/images/news/posts/outros/corecycle/0.jpg" alt="Exemplo de modulos, com REAPER"/>
+
+        <h3>Exemplo de modulos (pastas), com REAPER.</h3>
+
+        <h2>Como funcionará nos serviços iSKGtm Prod?</h2>
+
+        <p>No serviço Prod, com Photoshop, onde é compatível com este fluxograma, utilizam-se
+        projetos com modulos (pastas de composição), que podem ser reutilizados com facilidade. </p>
+
+        <p>Ainda no serviço Prod, com DaVinci Resolve, onde é compatível com este fluxograma,
+        utilizam-se projetos com modulos (pastas de trabalho, timeline e composição), que
+        podem ser reutilizados com alguma facilidade, com uso reduzido de plugins de terceiros,
+        para melhor reutilização.</p>
+
+        <img src="/images/news/posts/outros/corecycle/1.jpg" alt="Exemplo de modulos, com DaVinci Resolve"/>
+
+        <h3>Exemplo de modulos, com DaVinci Resolve.</h3>
+
+        <h2>Como funcionará nos serviços iSKGtm Dev?</h2>
+
+        <p>No serviço Dev, utilizando ou não, Frameworks, linguagens como JavaScript, 
+        TypeScript ou Python, para determinadas situações, utilizam-se projetos com modulos
+        (ou componentes [React]), que podem ser utilizados com facilidade.</p>
+
+        <img src="/images/news/posts/outros/corecycle/2.jpg" alt="Exemplo de modulos, com VS Code"/>
+
+        <h3>Exemplo de modulos, com Visual Studio Code.</h3>
+
+        <h2>Observação a parceiros que utilizam nossos serviços iSKGtm Prod.</h2>
+
+        <p>Os serviços de produção, de vídeo, estão em transição, de um programa para outro, de VEGAS Pro para
+        DaVinci Resolve, iniciado em 14 jun. 2025. Vale destacar a incompatibilidade com esta
+        metodologia com VEGAS Pro, devido a problemas com projetos legados e ausência de elementos
+        modulares a serem criados. <br> Parceiros que mantem projetos legados deste programa (como
+        EagleVision e PlayVicio att: [06/08/2025]), serão mantidos até o final de 2026, mas não se enquadrará nos
+        novos padrões de fluxograma, com criação limitada e com serviços maior lentidão.</p>
+
+        <h2>iSKGtm, We Are in Everything</h2>
+      </main>
+    `,
+  },
+
+  {
     url: "/news/atribuicoes",
     hide: true,
     title: "Atribuições Legais",
@@ -55,6 +310,194 @@ export const newsData: NewsItem[] = [
         Última atualização: Agosto de 2025.
         <p>
       </main>
+    `,
+  },
+
+  {
+    url: "/news/novo-website",
+    title: "Novo Website",
+    label: "Novo website que demonstra nossos projetos e portfólios.",
+    imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
+    tags: ["iSKGtm Dev"],
+    tagImage: "/images/symb/dev.png",
+    date: "08/01/2025",
+    authorName: "Anthony M.",
+    minutesRead: 3,
+    content: `
+      <main>
+        <img src="/images/news/tags/dev.jpg" alt="iSKGtm Dev"/>
+        
+        <p>Re-escrevemos nosso website, agora, utilizando tecnologias modernas, como React (em TypeScript) & Tailwind CSS.</p>
+
+        <img src="/images/news/posts/dev/novo_website/0.jpg" alt="iSKGtm Dev"/>
+
+        <h3>Imagem do website atual</h3>
+
+        <h2>Como vai funcionar nosso website?</h2>
+
+        <p>Nosso site foi feito para demonstrar nossos projetos e portfólios, em artigos ou matérias, divulgando nossos trabalhos, como: iSKGtm Music, iSKGtm Prod & iSKGtm Dev. <br> Também vamos divulgar nossos parceiros tercerizados que confiam nos nossos serviços.</p>
+
+        <h2>Como era o website anterior (Vanilla JS)</h2>
+
+        <img src="/images/news/posts/dev/novo_website/1.jpg"/>
+
+        <h3>Imagem do website anterior. Imagem: Acervo iSKGtm</h3>
+
+        <p>Este site anterior era feito com JavaScript Vanilla, e não utilizava frameworks como React. Ele tinha uma aparência similar a este atual, inclusive, a pagina inicial e páginas de artigo foram herdados do anterior, mas tinha um problema, não utilizava recursos de listagem para exibir todo o conteúdo dinâmico, como também, não tinha uma estrutura de dados eficiente para armazenar informações sobre os artigos.</p>
+
+        <img src="/images/news/posts/dev/novo_website/5.jpg"/>
+
+        <h3>Imagem do website atual em estágio inicial (26 jun. 2025). Imagem: Acervo iSKGtm</h3>
+
+        <h2>Como era o website de 2024</h2>
+
+        <img src="/images/news/posts/dev/novo_website/2.jpg"/>
+
+        <h3>Imagem do website de 2024. Imagem: Acervo iSKGtm</h3>
+
+        <p>O site de 2024 tinha sessões similares, com seus respectivos botões parecidos com o atual, mas tudo ocorria dentro de uma página apenas, com visual mais fantasioso e com destaque nas animações, o que não ocorre com o atual.</p>
+        <h2>Como era o website de 2023</h2>
+
+        <img src="/images/news/posts/dev/novo_website/3.jpg"/>
+
+        <h3>Imagem do website de 2023. Imagem: Acervo iSKGtm</h3>
+
+        <p>O site de 2023 era simplório, apenas para demonstrar efeitos com CSS, contia uma breve história sobre iSKGtm e mostrava alguns projetos externos que havia participado, na qual não estou mais. <br> Curiosamente, devido ao nosso fluxo de trabalho, alguns recursos desta versão, como todo o sistema de navegação foi portado para as respectivas versões seguintes, incluindo a atual (com adaptações para ReactTS).</p>
+
+        <h2>Como era o primeiro website</h2>
+
+        <img src="/images/news/posts/dev/novo_website/4.jpg"/>
+
+        <h3>Imagem do website de 2022. Imagem: Acervo iSKGtm</h3>
+
+        <p>O site em questão era tão simples que o foco foi apenas no HTML, usando o CSS apenas para cores ou decoração nos textos, tinha um botão de curriculo, para não dizer que era só uma pagina. 😂 Foi a primeira versão do nosso site.</p>
+
+        <h2>Como é por dentro do novo website?</h2>
+
+        <p>Fizemos ele de uma forma diferente das anteriores, demonstrando profissionalismo e simplicidade, até no código. O site também herda alguns recursos das respectivas versões de 2023 e 2024, como o sistema de navegação e scrolling do site (chama-se internamente de FLUID UI), onde houve apenas melhorias de como ele reage e a mudança visual da barra de navegação, para melhor acesso aos dispositivos móveis. Na parte de CSS, herdamos toda estrutura base do site de 2024, com animações & fontes pré-definidas, apenas melhoramos para melhor visualização.</p>
+
+        <h2>iSKGtm, We Are in Everything</h2>
+      </main>
+    `,
+  },
+
+  {
+    url: "/news/producao-n50",
+    title: "Produção Nº50",
+    label: "Remix N°50 em 6 anos de iSKGtm Music.",
+    imageUrl: "/images/news/posts/music/producao_n50/banner.jpg",
+    tags: ["iSKGtm Music"],
+    tagImage: "/images/symb/music.png",
+    date: "04/01/2025",
+    authorName: "Anthony M.",
+    minutesRead: 3,
+    content: `
+    <main>
+      <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
+
+      <p>
+        Esta é a produção comemorativa, número 50 da iSKGtm Music, que surgiu em 2019. O remix em bootleg foi da música Drink About, de Seeb & Dagny, lançada em 2018.
+      </p>
+
+      <img src="/images/news/posts/music/producao_n50/0.jpg"/>
+
+      <h3>Imagem do Álbum ∞ comemorativo. Imagem: Reprodução</h3>
+
+      <h2> Estrutura Sonora (parte técnica) </h2>
+
+      <p>
+        Seguindo a estruturação base de "Chill Tropical", especificadamente de "Quer Voar (iSKGtm Remix)", esta produção traz toda a harmonia e segmentação com boa progressividade para que os ouvintes ouçam e entre na imersividade da 'batida'!
+        <br> Esta faixa REMIX, apesar da base ser a mesma de "Quer Voar (iSKGtm Remix)", houve melhorias com padrões e masterização das mais recentes da iSKGtm Music, como também um 'fork' da prévia da estrutura "Disco Tropical" dentro desta produção.
+      </p>
+
+      <h2>Produção Nº50 e escolha da música</h2>
+
+      <p>
+        A iSKGtm Music conseguiu o feito de atingir a produção de número 50 durante esses 6 anos, foram muitas dificuldades, problemas com direitos autorais & problemas técnicos, mas também superação de todos eles. <br>
+        Foi escolhida a música "Drink About" pois a dupla (Seeb) que fez esta faixa, fez também o remix "I Took a Pill in Ibiza", de 2015, mas o que isso quer dizer? <br>
+        Quer dizer que, graças a faixa remix de 2015 e a quem o produziu, que a iSKGtm Music surgiu, visto que, despertou-se a vontade de produzir músicas, inclusive, com a base 'sampleadas' similares. Como não tenho contatos a eles, não foi possivel lançar um remix oficial, mantendo apenas BOOTLEG.
+      </p>
+
+      <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/uts5nNEik-4"></iframe>
+
+      <h2>iSKGtm, We Are in Everything</h2>
+
+    </main>
+    `,
+  },
+
+  {
+    url: "/news/nova-padronizacao-prod",
+    title: "Nova Padronização",
+    label: "Nova padronização nos vídeos para os prox. anos.",
+    imageUrl: "/images/news/posts/prod/nova-padronizacao-prod/banner.jpg",
+    tags: ["iSKGtm Prod"],
+    tagImage: "/images/symb/prod.png",
+    date: "02/24/2025",
+    authorName: "Anthony M.",
+    minutesRead: 4,
+    content: `
+    <main>
+      <img src="/images/news/tags/iskgtm.jpg" alt="iSKGtm Music"/>
+
+      <h2>Qual padronização seria?</h2>
+      <p>
+        A iShaking Creative Media possuia desde 2019, uma padronização nas produções de vídeos para o canal iSKGtm & para terceiros, que inclui:
+        <ul>
+          <li>Resolução de Material: 1920x1080p (Full HD)</li>
+          <li>Resolução de Vídeo: 2880x1440p (2.5K Wide)</li>
+          <li>Espaço de cor: Rec.709</li>
+          <li>Bitrate de Vídeo: 28mb/s</li>
+          <li>Frequência de Áudio: 44.1KHz</li>
+          <li>Bitrate de Áudio: 192kb/s</li>
+          <li>Container: H.265 (VBR)</li>
+        </ul>
+
+        Este padrão serve para manter uma boa qualidade em nossas produções, em diversas redes, tanto para iSKGtm quanto para terceiros.
+      </p>
+
+      <img src="/images/news/posts/prod/nova-padronizacao-prod/0.jpg"/>
+
+      <h3>Imagem de novo programa de edição. Imagem: Pessoal</h3>
+
+      <h2>Como será a partir de agora?</h2>
+
+      <p>
+        A mudança começa pelo editor, partindo de VEGAS Pro 22 para DaVinci Resolve 20, onde este ultimo possui uma série de novas ferramentas e melhorias para o editor, como a capacidade de criar e editar áudio com qualidade superior e projetos modulares, permitindo a criação de projetos complexos e eficientes, se enquadrando no novo fluxo de trabalho, chamado <a href="/news/corecycle" target="_blank"> CoreCycle</a>, que implicará também em outros setores (exceto com VEGAS Pro [iSKGtm Prod]), como iSKGtm Music e iSKGtm Dev. <br> A transição de um editor para o outro começou em Junho de 2025, sendo assim, toda nova produção, será feita no novo editor. Parceiros que utilizam projetos com VEGAS Pro terão suporte até 2027, que será descontinuado em nossos serviços.
+      </p>
+
+      <img src="/images/news/posts/prod/nova-padronizacao-prod/1.jpg"/>
+
+      <h3>Imagem de antigo programa de edição. Imagem: Pessoal</h3>
+
+      <p>
+        A padronização nas produções de vídeos para o canal iSKGtm & para terceiros, serão:
+        <ul>
+          <li>Resolução de Material: 3840x2160p (4K) ou upscaling de 1080p > 2160p (4K)</li>
+          <li>Resolução de Vídeo: 4096x2048p (4K Wide)</li>
+          <li>Espaço de cor: Rec.709 SDR ou Rec.2020 HDR HLG</li>
+          <li>Bitrate de Vídeo: 50mb/s</li>
+          <li>Frequência de Áudio: 48KHz</li>
+          <li>Bitrate de Áudio: 320kb/s</li>
+          <li>Container: H.265 (CBR) / AV1</li>
+        </ul>
+
+        A qualidade podem variar de acordo com a plataforma que serão disponibilizados os arquivos, estas informações é apenas para arquivos Source.
+      </p>
+
+      <h2>Essa mudança será grande?</h2>
+
+      <p>
+        Não será grande, pois o padrão anterior já atendia muito bem, mas trará uma melhor imagem e som, seguindo tendencias e padronizações de streaming e broadcasting nesta meia década, para que você possa usufruir melhor de produções que só a iShaking Creative Media sabe fazer!
+      </p>
+
+      <p>
+        Todo nosso material no acervo, que tem padrões citados abaixo do esperado ou abaixo da resolução 1440p, terão todo tratamento de imagem, com upscaling a 2160p (4K) via IA, incluindo vídeos clássicos de iSKGtm.
+      </p>
+
+      <h2>iSKGtm, We Are in Everything</h2>
+
+    </main>
     `,
   },
 
@@ -412,395 +855,6 @@ export const newsData: NewsItem[] = [
         iSKGtm, We Are in Everything</h2>
       </main>
     `,
-  },
-
-  {
-    url: "/news/nova-padronizacao-prod",
-    title: "Nova Padronização",
-    label: "Nova padronização nos vídeos para os prox. anos.",
-    imageUrl: "/images/news/posts/prod/nova-padronizacao-prod/banner.jpg",
-    tags: ["iSKGtm Prod"],
-    tagImage: "/images/symb/prod.png",
-    date: "02/24/2025",
-    authorName: "Anthony M.",
-    minutesRead: 4,
-    content: `
-    <main>
-      <img src="/images/news/tags/iskgtm.jpg" alt="iSKGtm Music"/>
-
-      <h2>Qual padronização seria?</h2>
-      <p>
-        A iShaking Creative Media possuia desde 2019, uma padronização nas produções de vídeos para o canal iSKGtm & para terceiros, que inclui:
-        <ul>
-          <li>Resolução de Material: 1920x1080p (Full HD)</li>
-          <li>Resolução de Vídeo: 2880x1440p (2.5K Wide)</li>
-          <li>Espaço de cor: Rec.709</li>
-          <li>Bitrate de Vídeo: 28mb/s</li>
-          <li>Frequência de Áudio: 44.1KHz</li>
-          <li>Bitrate de Áudio: 192kb/s</li>
-          <li>Container: H.265 (VBR)</li>
-        </ul>
-
-        Este padrão serve para manter uma boa qualidade em nossas produções, em diversas redes, tanto para iSKGtm quanto para terceiros.
-      </p>
-
-      <img src="/images/news/posts/prod/nova-padronizacao-prod/0.jpg"/>
-
-      <h3>Imagem de novo programa de edição. Imagem: Pessoal</h3>
-
-      <h2>Como será a partir de agora?</h2>
-
-      <p>
-        A mudança começa pelo editor, partindo de VEGAS Pro 22 para DaVinci Resolve 20, onde este ultimo possui uma série de novas ferramentas e melhorias para o editor, como a capacidade de criar e editar áudio com qualidade superior e projetos modulares, permitindo a criação de projetos complexos e eficientes, se enquadrando no novo fluxo de trabalho, chamado CoreCycle, que implicará também em outros setores (exceto com VEGAS Pro [iSKGtm Prod]), como iSKGtm Music e iSKGtm Dev. <br> A transição de um editor para o outro começou em Junho de 2025, sendo assim, toda nova produção, será feita no novo editor. Parceiros que utilizam projetos com VEGAS Pro terão suporte até 2027, que será descontinuado em nossos serviços.
-      </p>
-
-      <img src="/images/news/posts/prod/nova-padronizacao-prod/1.jpg"/>
-
-      <h3>Imagem de antigo programa de edição. Imagem: Pessoal</h3>
-
-      <p>
-        A padronização nas produções de vídeos para o canal iSKGtm & para terceiros, serão:
-        <ul>
-          <li>Resolução de Material: 3840x2160p (4K) ou upscaling de 1080p > 2160p (4K)</li>
-          <li>Resolução de Vídeo: 4096x2048p (4K Wide)</li>
-          <li>Espaço de cor: Rec.709 SDR ou Rec.2020 HDR HLG</li>
-          <li>Bitrate de Vídeo: 50mb/s</li>
-          <li>Frequência de Áudio: 48KHz</li>
-          <li>Bitrate de Áudio: 320kb/s</li>
-          <li>Container: H.265 (CBR) / AV1</li>
-        </ul>
-
-        A qualidade podem variar de acordo com a plataforma que serão disponibilizados os arquivos, estas informações é apenas para arquivos Source.
-      </p>
-
-      <h2>Essa mudança será grande?</h2>
-
-      <p>
-        Não será grande, pois o padrão anterior já atendia muito bem, mas trará uma melhor imagem e som, seguindo tendencias e padronizações de streaming e broadcasting nesta meia década, para que você possa usufruir melhor de produções que só a iShaking Creative Media sabe fazer!
-      </p>
-
-      <p>
-        Todo nosso material no acervo, que tem padrões citados abaixo do esperado ou abaixo da resolução 1440p, terão todo tratamento de imagem, com upscaling a 2160p (4K) via IA, incluindo vídeos clássicos de iSKGtm.
-      </p>
-
-      <h2>iSKGtm, We Are in Everything</h2>
-
-    </main>
-    `,
-  },
-
-  {
-    url: "/news/producao-n50",
-    title: "Produção Nº50",
-    label: "Remix N°50 em 6 anos de iSKGtm Music.",
-    imageUrl: "/images/news/posts/music/producao_n50/banner.jpg",
-    tags: ["iSKGtm Music"],
-    tagImage: "/images/symb/music.png",
-    date: "04/01/2025",
-    authorName: "Anthony M.",
-    minutesRead: 3,
-    content: `
-    <main>
-      <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
-
-      <p>
-        Esta é a produção comemorativa, número 50 da iSKGtm Music, que surgiu em 2019. O remix em bootleg foi da música Drink About, de Seeb & Dagny, lançada em 2018.
-      </p>
-
-      <img src="/images/news/posts/music/producao_n50/0.jpg"/>
-
-      <h3>Imagem do Álbum ∞ comemorativo. Imagem: Reprodução</h3>
-
-      <h2> Estrutura Sonora (parte técnica) </h2>
-
-      <p>
-        Seguindo a estruturação base de "Chill Tropical", especificadamente de "Quer Voar (iSKGtm Remix)", esta produção traz toda a harmonia e segmentação com boa progressividade para que os ouvintes ouçam e entre na imersividade da 'batida'!
-        <br> Esta faixa REMIX, apesar da base ser a mesma de "Quer Voar (iSKGtm Remix)", houve melhorias com padrões e masterização das mais recentes da iSKGtm Music, como também um 'fork' da prévia da estrutura "Disco Tropical" dentro desta produção.
-      </p>
-
-      <h2>Produção Nº50 e escolha da música</h2>
-
-      <p>
-        A iSKGtm Music conseguiu o feito de atingir a produção de número 50 durante esses 6 anos, foram muitas dificuldades, problemas com direitos autorais & problemas técnicos, mas também superação de todos eles. <br>
-        Foi escolhida a música "Drink About" pois a dupla (Seeb) que fez esta faixa, fez também o remix "I Took a Pill in Ibiza", de 2015, mas o que isso quer dizer? <br>
-        Quer dizer que, graças a faixa remix de 2015 e a quem o produziu, que a iSKGtm Music surgiu, visto que, despertou-se a vontade de produzir músicas, inclusive, com a base 'sampleadas' similares. Como não tenho contatos a eles, não foi possivel lançar um remix oficial, mantendo apenas BOOTLEG.
-      </p>
-
-      <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/uts5nNEik-4"></iframe>
-
-      <h2>iSKGtm, We Are in Everything</h2>
-
-    </main>
-    `,
-  },
-
-  {
-    url: "/news/novo-website",
-    title: "Novo Website",
-    label: "Novo website que demonstra nossos projetos e portfólios.",
-    imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
-    tags: ["iSKGtm Dev"],
-    tagImage: "/images/symb/dev.png",
-    date: "08/01/2025",
-    authorName: "Anthony M.",
-    minutesRead: 3,
-    content: `
-      <main>
-        <img src="/images/news/tags/dev.jpg" alt="iSKGtm Dev"/>
-        
-        <p>Re-escrevemos nosso website, agora, utilizando tecnologias modernas, como React (em TypeScript) & Tailwind CSS.</p>
-
-        <img src="/images/news/posts/dev/novo_website/0.jpg" alt="iSKGtm Dev"/>
-
-        <h3>Imagem do website atual</h3>
-
-        <h2>Como vai funcionar nosso website?</h2>
-
-        <p>Nosso site foi feito para demonstrar nossos projetos e portfólios, em artigos ou matérias, divulgando nossos trabalhos, como: iSKGtm Music, iSKGtm Prod & iSKGtm Dev. <br> Também vamos divulgar nossos parceiros tercerizados que confiam nos nossos serviços.</p>
-
-        <h2>Como era o website anterior (Vanilla JS)</h2>
-
-        <img src="/images/news/posts/dev/novo_website/1.jpg"/>
-
-        <h3>Imagem do website anterior. Imagem: Acervo iSKGtm</h3>
-
-        <p>Este site anterior era feito com JavaScript Vanilla, e não utilizava frameworks como React. Ele tinha uma aparência similar a este atual, inclusive, a pagina inicial e páginas de artigo foram herdados do anterior, mas tinha um problema, não utilizava recursos de listagem para exibir todo o conteúdo dinâmico, como também, não tinha uma estrutura de dados eficiente para armazenar informações sobre os artigos.</p>
-
-        <img src="/images/news/posts/dev/novo_website/5.jpg"/>
-
-        <h3>Imagem do website atual em estágio inicial (26 jun. 2025). Imagem: Acervo iSKGtm</h3>
-
-        <h2>Como era o website de 2024</h2>
-
-        <img src="/images/news/posts/dev/novo_website/2.jpg"/>
-
-        <h3>Imagem do website de 2024. Imagem: Acervo iSKGtm</h3>
-
-        <p>O site de 2024 tinha sessões similares, com seus respectivos botões parecidos com o atual, mas tudo ocorria dentro de uma página apenas, com visual mais fantasioso e com destaque nas animações, o que não ocorre com o atual.</p>
-        <h2>Como era o website de 2023</h2>
-
-        <img src="/images/news/posts/dev/novo_website/3.jpg"/>
-
-        <h3>Imagem do website de 2023. Imagem: Acervo iSKGtm</h3>
-
-        <p>O site de 2023 era simplório, apenas para demonstrar efeitos com CSS, contia uma breve história sobre iSKGtm e mostrava alguns projetos externos que havia participado, na qual não estou mais. <br> Curiosamente, devido ao nosso fluxo de trabalho, alguns recursos desta versão, como todo o sistema de navegação foi portado para as respectivas versões seguintes, incluindo a atual (com adaptações para ReactTS).</p>
-
-        <h2>Como era o primeiro website</h2>
-
-        <img src="/images/news/posts/dev/novo_website/4.jpg"/>
-
-        <h3>Imagem do website de 2022. Imagem: Acervo iSKGtm</h3>
-
-        <p>O site em questão era tão simples que o foco foi apenas no HTML, usando o CSS apenas para cores ou decoração nos textos, tinha um botão de curriculo, para não dizer que era só uma pagina. 😂 Foi a primeira versão do nosso site.</p>
-
-        <h2>Como é por dentro do novo website?</h2>
-
-        <p>Fizemos ele de uma forma diferente das anteriores, demonstrando profissionalismo e simplicidade, até no código. O site também herda alguns recursos das respectivas versões de 2023 e 2024, como o sistema de navegação e scrolling do site (chama-se internamente de FLUID UI), onde houve apenas melhorias de como ele reage e a mudança visual da barra de navegação, para melhor acesso aos dispositivos móveis. Na parte de CSS, herdamos toda estrutura base do site de 2024, com animações & fontes pré-definidas, apenas melhoramos para melhor visualização.</p>
-
-        <h2>iSKGtm, We Are in Everything</h2>
-      </main>
-    `,
-  },
-
-  {
-    url: "/news/corecycle",
-    title: "CoreCycle",
-    label: "Metodologia CoreCycle.",
-    imageUrl: "/images/news/posts/outros/corecycle/banner.jpg",
-    tags: ["Outros"],
-    tagImage: "/images/symb/outros.png",
-    date: "08/06/2025",
-    authorName: "Anthony M.",
-    minutesRead: 5,
-    content: `
-      <main>
-        <img src="/images/news/tags/iskgtm.jpg" alt="iSKGtm"/>
-        
-        <p>É um fluxo de trabalho, ou metodologia, iniciado em 01 de julho de 2025 a todos os serviços, que visa a reutilização de projetos com elementos modulares, que deram "certo", para otimizar tempo e qualidade de
-        serviço/produção.</p>
-
-        <h2>Anteriormente, como funcionava?</h2>
-
-        <p>Não havia um tipo de fluxograma, sendo assim, podendo ou não recriar projetos do 0,
-        mesmo sem haver a necessidade disto, demandando tempo e reduzindo a qualidade de
-        um projeto em produção, como polimento do mesmo por exemplo.</p>
-
-        <h2>Princípios da CoreCycle</h2>
-        <p>
-          <table>
-            <thead>
-              <tr>
-                <th>Princípio</th>
-                <th>Descrição</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Essência funcional</td>
-                <td>Reaproveitar o serviço ou projeto modularizado.</td>
-              </tr>
-              <tr>
-                <td>Modularidade viva</td>
-                <td>Garantir que tudo possa se transformar e se adaptar.</td>
-              </tr>
-              <tr>
-                <td>Estética iterativa</td>
-                <td>Valorizar a beleza que pode emergir do reaproveitamento e reinvenção.</td>
-              </tr>
-              <tr>
-                <td>Ciclo consciente</td>
-                <td>Evitar retrabalho, priorizando melhorias e polimento.</td>
-              </tr>
-              <tr>
-                <td>Registro contínuo</td>
-                <td>Aprender com os próprios ciclos e alimentar os próximos.</td>
-              </tr>
-            </tbody>
-          </table>
-        </p>
-
-        <h2>Ciclo de Evoução</h2>
-
-        <p>
-          <ul>
-            <li>Monitorar o desempenho dos ativos reaproveitados.</li>
-            <li>Aprimorar os que apresentarem melhor desempenho com base em métricas.</li>
-            <li>Arquivar ou descartar os que não gerarem mais valor.</li>
-          </ul>
-        </p>
-
-        <h2>Como funcionará nos serviços iSKGtm Music?</h2>
-
-        <p>No serviço Music, com REAPER, onde é compatível com este fluxograma, utilizam-se projetos com modulos (pastas) de samples e VST's que podem ser reutilizados com facilidade em produções futuras.</p>
-
-        <img src="/images/news/posts/outros/corecycle/0.jpg" alt="Exemplo de modulos, com REAPER"/>
-
-        <h3>Exemplo de modulos (pastas), com REAPER.</h3>
-
-        <h2>Como funcionará nos serviços iSKGtm Prod?</h2>
-
-        <p>No serviço Prod, com Photoshop, onde é compatível com este fluxograma, utilizam-se
-        projetos com modulos (pastas de composição), que podem ser reutilizados com facilidade. </p>
-
-        <p>Ainda no serviço Prod, com DaVinci Resolve, onde é compatível com este fluxograma,
-        utilizam-se projetos com modulos (pastas de trabalho, timeline e composição), que
-        podem ser reutilizados com alguma facilidade, com uso reduzido de plugins de terceiros,
-        para melhor reutilização.</p>
-
-        <img src="/images/news/posts/outros/corecycle/1.jpg" alt="Exemplo de modulos, com DaVinci Resolve"/>
-
-        <h3>Exemplo de modulos, com DaVinci Resolve.</h3>
-
-        <h2>Como funcionará nos serviços iSKGtm Dev?</h2>
-
-        <p>No serviço Dev, utilizando ou não, Frameworks, linguagens como JavaScript, 
-        TypeScript ou Python, para determinadas situações, utilizam-se projetos com modulos
-        (ou componentes [React]), que podem ser utilizados com facilidade.</p>
-
-        <img src="/images/news/posts/outros/corecycle/2.jpg" alt="Exemplo de modulos, com VS Code"/>
-
-        <h3>Exemplo de modulos, com Visual Studio Code.</h3>
-
-        <h2>Observação a parceiros que utilizam nossos serviços iSKGtm Prod.</h2>
-
-        <p>Os serviços de produção, de vídeo, estão em transição, de um programa para outro, de VEGAS Pro para
-        DaVinci Resolve, iniciado em 14 jun. 2025. Vale destacar a incompatibilidade com esta
-        metodologia com VEGAS Pro, devido a problemas com projetos legados e ausência de elementos
-        modulares a serem criados. <br> Parceiros que mantem projetos legados deste programa (como
-        EagleVision e PlayVicio att: [06/08/2025]), serão mantidos até o final de 2026, mas não se enquadrará nos
-        novos padrões de fluxograma, com criação limitada e com serviços maior lentidão.</p>
-
-        <h2>iSKGtm, We Are in Everything</h2>
-      </main>
-    `,
-  },
-
-  {
-    url: "/news/freed_from_desire_iskgtm_remix",
-    title: "Freed From Desire (iSKGtm Remix)",
-    label: "Freed From Desire, um novo remix bootleg, de Gala.",
-    imageUrl: "/images/news/posts/music/freed_from_desire_iskgtm_remix/banner.jpg",
-    tags: ["iSKGtm Music"],
-    tagImage: "/images/symb/music.png",
-    date: "09/01/2025",
-    authorName: "Anthony M.",
-    minutesRead: 3,
-    content: `
-      <main>
-        <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
-        
-        <p>Este remix foi lançado em Setembro de 2025, seguindo as regras de um bootleg. A voz desta música é de Gala, gravado originalmente em 1996 e lançada no mesmo ano.
-        </p>
-
-        <img src="/images/news/posts/music/freed_from_desire_iskgtm_remix/0.jpg"/>
-
-        <h3>Imagem do Álbum ∞ (iSKGtm). Imagem: Reprodução</h3>
-
-        <h2> Estrutura Sonora (parte técnica) </h2>
-
-        <p>
-          Este REMIX utiliza o 'drum kit' "Disco Tropical", especificadamente de "Beautiful People (iSKGtm Remix)" (Produção Nº52), que relembra um pouco como foi o sucesso de um estilo Funk ou Disco na década de 1970 (não confuda Funk Brasileiro com Disco), só que com os padrões e tecnologias modernas para a produção desta música, assim como, a nossa identidade sonora iSKGtm Music.
-
-          <br> Esta faixa REMIX, apesar da base ser a mesma da Produção Nº52, houve melhorias com padrões e masterização, bem como um novo '808' que utiliza baixos virtualizados de alta fidelidade.
-        </p>
-
-        <h2>Produção Nº53 e escolha da música</h2>
-
-        <p>
-          A música “Freed from Desire”, da cantora italiana Gala, foi lançada originalmente em 1996, e foi o sucesso nas pistas de dança em 1997 em diversos paises, com estilo de música moderna para época, chamada Techno Dance ou Euro Dance. <br>
-
-          Durante o Mundial de Clubes da FIFA de 2025, após 1 semana depois da finalização da produção Nº52 em Julho, a faixa "Freed From Desire" teve um pico de 850%, considerando apenas no Brasil, com a letra "nanananananaaaaaan nan". <br>
-          Ouvindo-a e comparando tecnicamente com a Produção Nº52, observei que a música ficaria excelente naquela base. No final de Junho, a produção foi iniciada, seguindo critérios rigorosos, tanto de parte legal, quanto de parte técnica, vale a pena conferir.
-        </p>
-
-        <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/1Lr89TR7YpY"></iframe>
-
-        <h2>iSKGtm, We Are in Everything</h2>
-      </main>
-    `,
-  },
-
-  {
-  url: "/news/how_to_love_iskgtm_remix",
-  title: "How to Love (iSKGtm Remix)",
-  label: "How to Love, um novo remix bootleg, de Tokio Hotel.",
-  imageUrl: "/images/news/posts/music/how_to_love_iskgtm_remix/banner.jpg",
-  tags: ["iSKGtm Music"],
-  tagImage: "/images/symb/music.png",
-  date: "11/01/2025",
-  authorName: "Anthony M.",
-  minutesRead: 2,
-  content: `
-    <main>
-      <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
-      
-      <p>Este remix foi lançado em Novembro de 2025, seguindo as regras de um bootleg. A voz desta música é de Tokio Hotel, gravado originalmente e lançada em 2022.
-      </p>
-
-      <img src="/images/news/posts/music/how_to_love_iskgtm_remix/0.jpg"/>
-
-      <h3>Imagem do Álbum ∞ (iSKGtm). Imagem: Reprodução</h3>
-
-      <h2> Estrutura Sonora (parte técnica) </h2>
-
-      <p>
-        Este REMIX utiliza o classico 'drum kit' "Chill Tropical", que traz harmonias dançantes do Dance / House, mas com uma nova tecnologia de mixagem, com auxilio da utilização de IA, 
-        e claro, seguindo os padrões tecnicos e sonoros, assim como, a nossa identidade sonora iSKGtm Music.
-      </p>
-
-      <h2>Produção Nº54 e escolha da música</h2>
-
-      <p>
-        A música “How to Love”, de Tokio Hotel, é uma faixa lançada em 2022 dentro do álbum “2001”, que marca uma fase mais madura e introspectiva da banda. Nela, o grupo (liderado pelos irmãos Bill e Tom Kaulitz)
-        mescla synthpop, eletrônica e elementos alternativos, com uma produção moderna e bastante refinada.
-        <br> Com nosso Remix, a música que já era boa, 'deu' uma revitalizada, deixando ela com aspecto quente e dançante! Vale a pena conferir.
-      </p>
-
-      <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/-D6n4L2iEnw"></iframe>
-
-      <h2>iSKGtm, We Are in Everything</h2>
-    </main>
-  `,
   },
   
 ];
