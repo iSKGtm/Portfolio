@@ -15,7 +15,7 @@ const AboutPartnersCard: React.FC<AboutPartnersCardProps> = ({ partners }) => {
 
       <div className={styles.text}>
         <h1 className={styles.title}>parceiros</h1>
-        <p>Nossos parceiros que usam nossos serviços, atualmente.</p>
+        <p>Nossos parceiros ou parceiros que utilizam nossos serviços, atualmente.</p>
       </div>
 
       <div className={styles.containerCard}>

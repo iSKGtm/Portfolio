@@ -12,8 +12,6 @@ const NoAvailableRef: React.FC = () => {
       const sysWidth = window.outerHeight;
       const sysHeight = window.outerHeight;
 
-      console.log(sysWidth);
-
       if(sysWidth < 600 || sysHeight < 150) {
 
         if (noAvailableRef.current && warningTextRef.current) {

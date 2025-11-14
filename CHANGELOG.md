@@ -4,15 +4,21 @@
 
 ### Adicionado
 
-- GlassDesign: 100%
+- Efeito de vidro liquido na barra de navegação.
 
-### Corrigido
+- Efeito de contorno e preenchimento de .svg's na barra de navegação.
 
-- FIX animation transition pages.
+### Correção ou Alteração
 
-- FIX .SVG fill off/on in NAVBAR system.
+- Corrigido animações de transição entre páginas.
 
-- FIX minor bugs.
+- Corrigido bugs menores.
+
+- Alteração de rota "/news" para "/artigo" e "/artigos".
+
+- Alteração de 2 imagens no slide carousel.
+
+- Mudança artistica, para comemoração de 10 anos iSKGtm.
 
 ### Problemas Conhecidos
 

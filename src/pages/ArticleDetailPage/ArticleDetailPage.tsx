@@ -35,7 +35,7 @@ const ArticleDetailPage: React.FC = () => {
       setIsLoading(true);
       setError(null);
       try {
-        const foundArticle = newsData.find(item => item.url === `/news/${id}`);
+        const foundArticle = newsData.find(item => item.url === `/artigo/${id}`);
 
         if (foundArticle) {
           const mappedArticle: Article = {

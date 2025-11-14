@@ -59,7 +59,7 @@ useEffect(() => {
       <main className='mainNews' style={{ display: isLoading ? 'none' : 'flex' }}>
         <section className="mainSection">
           <div className='containerHeader'>
-            <div className='titleNewsSearch'>noticias</div>
+            <div className='titleNewsSearch'>artigos</div>
             <div className='labelNewsSearch'>Acompanhe notícias e comunicados da iShaking Creative Media.</div>
             <div className='inputSearchContainer'>
               <input

@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
         
         <div className={styles.footerSocial}>
           <div className={styles.footerTerm}>
-              <a className={styles.footerAtribution} href='/news/atribuicoes' target='_blank'>
+              <a className={styles.footerAtribution} href='/artigo/atribuicoes' target='_blank'>
                   Atribuições Legais
               </a>
           </div>

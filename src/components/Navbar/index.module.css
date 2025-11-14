@@ -128,9 +128,22 @@ nav > .buttonItem:hover {
 }
 
 .logoGif > img {
+  width: 65px;
+  margin-bottom: 9px;
+  margin-left: 5px;
+  margin-right: 2px;
+  pointer-events: none;
+}
+
+/*
+.logoGif > img {
   width: 72px;
   pointer-events: none;
 }
+
+*/
+
+
 .logoName > img {
   width: 211px;
   padding-right: 15px;
@@ -215,6 +228,14 @@ nav:active {
   .logoName {
     display: none;
   }
+
+  .logoGif > img {
+    width: 65px;
+    margin-bottom: 9px;
+    margin-left: 0px;
+    margin-right: 0px;
+    pointer-events: none;
+}
 }
 
 /* ANIMATIONS */

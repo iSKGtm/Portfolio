@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const currentPath = location.pathname;
     
-    if (currentPath.startsWith('/news')) {
+    if (currentPath.startsWith('/artigos')) {
       setActiveButton('news');
       
       if(newsSVG.current && homeSVG.current) {
@@ -147,12 +147,12 @@ const Navbar: React.FC = () => {
               </div>
             </div>
             <Link
-              to="/news"
+              to="/artigos"
               className={`${styles.buttonNav} ${styles.buttonItem} ${
                 activeButton === 'news' ? styles.active : ''
               }`}
             >
-              <div className={styles.buttonText}>Notícias</div>
+              <div className={styles.buttonText}>Artigos</div>
               <FontAwesomeIcon ref={newsSVG} icon={faNewspaper} className={styles.icon} />
             </Link>
           </nav>

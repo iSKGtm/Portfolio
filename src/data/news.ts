@@ -28,26 +28,26 @@ export interface Article {
 export const newsData: NewsItem[] = [
 
   {
-    url: "/news/10-anos",
-    hide: true,
+    url: "/artigo/antes-do-especial-10-anos",
+    hide: false,
     title: "Antes do 'Especial 10 anos'...",
     label: "Surpresas para o especial de 10 anos de iSKGtm, em 2026!",
-    imageUrl: "https://i.imgur.com/YkikNw0.jpeg",
+    imageUrl: "https://i.imgur.com/cke2ut6.jpeg",
     tags: ["iSKGtm 10"],
     tagImage: "/images/symb/10y.png",
-    date: "12/01/2025",
+    date: "11/15/2025",
     authorName: "Anthony M.",
     minutesRead: 2,
     content: `
     <main>
-      <img src="https://i.imgur.com/tsy6Kcb.jpeg"/>
+      <img src="https://i.imgur.com/qjJVEin.jpeg"/>
 
       <h3>Arte de 10 anos de iSKGtm. Imagem: Acervo iSKGtm</h3>
 
-      <h2> Trajetória </h2>
+      <h2>Uma Breve Trajetória</h2>
 
       <p>
-        Em Janeiro, iremos entrar no ano, em que faremos 10 anos de atividade! <br>
+        Em Janeiro de 2026, será o ano em que faremos 10 anos de atividade! <br>
         Aconteceram diversas coisas ao longo desses 10 anos, incluindo: diversão, alegria, trabalhos, surpresas. <br>
         Houve também, reinvenções da própria marca, por isso, estamos ativos até hoje, o que não é fácil, ainda mais, levando em conta que a marca "iSKGtm" inicialmente era só de gameplays de SA:MP, antes chamado de "iShakinGameR".
       </p>
@@ -82,7 +82,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/how-to-love-iskgtm_remix",
+    url: "/artigo/how-to-love-iskgtm_remix",
     title: "How to Love (iSKGtm Remix)",
     label: "How to Love, um novo remix bootleg, de Tokio Hotel.",
     imageUrl: "/images/news/posts/music/how_to_love_iskgtm_remix/banner.jpg",
@@ -125,7 +125,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/freed-from-desire-iskgtm-remix",
+    url: "/artigo/freed-from-desire-iskgtm-remix",
     title: "Freed From Desire (iSKGtm Remix)",
     label: "Freed From Desire, um novo remix bootleg, de Gala.",
     imageUrl: "/images/news/posts/music/freed_from_desire_iskgtm_remix/banner.jpg",
@@ -170,7 +170,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/corecycle",
+    url: "/artigo/corecycle",
     title: "CoreCycle",
     label: "Metodologia CoreCycle.",
     imageUrl: "/images/news/posts/outros/corecycle/banner.jpg",
@@ -283,7 +283,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/atribuicoes",
+    url: "/artigo/atribuicoes",
     hide: true,
     title: "Atribuições Legais",
     label: "",
@@ -314,7 +314,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/novo-website",
+    url: "/artigo/novo-website",
     title: "Novo Website",
     label: "Novo website que demonstra nossos projetos e portfólios.",
     imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
@@ -382,7 +382,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/producao-n50",
+    url: "/artigo/producao-n50",
     title: "Produção Nº50",
     label: "Remix N°50 em 6 anos de iSKGtm Music.",
     imageUrl: "/images/news/posts/music/producao_n50/banner.jpg",
@@ -427,7 +427,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/nova-padronizacao-prod",
+    url: "/artigo/nova-padronizacao-prod",
     title: "Nova Padronização",
     label: "Nova padronização nos vídeos para os prox. anos.",
     imageUrl: "/images/news/posts/prod/nova-padronizacao-prod/banner.jpg",
@@ -475,7 +475,7 @@ export const newsData: NewsItem[] = [
         <ul>
           <li>Resolução de Material: 3840x2160p (4K) ou upscaling de 1080p > 2160p (4K)</li>
           <li>Resolução de Vídeo: 4096x2048p (4K Wide)</li>
-          <li>Espaço de cor: Rec.709 SDR ou Rec.2020 HDR HLG</li>
+          <li>Espaço de cor: Rec.2020 SDR ou Rec.2020 HDR HLG</li>
           <li>Bitrate de Vídeo: 50mb/s</li>
           <li>Frequência de Áudio: 48KHz</li>
           <li>Bitrate de Áudio: 320kb/s</li>
@@ -502,7 +502,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/dev",
+    url: "/artigo/dev",
     hide: true,
     title: "O que é iSKGtm Dev?",
     label: "Como surgiu e o que é iSKGtm Dev?",
@@ -603,7 +603,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/music",
+    url: "/artigo/music",
     hide: true,
     title: "O que é iSKGtm Music",
     label: "Como surgiu e o que é iSKGtm Music?",
@@ -700,7 +700,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/prod",
+    url: "/artigo/prod",
     hide: true,
     title: "O que é iSKGtm Prod?",
     label: "Como surgiu e o que é iSKGtm Prod?",
@@ -785,7 +785,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/news/iskgtm",
+    url: "/artigo/iskgtm",
     hide: true,
     title: "O que é iShaking Creative Media?",
     label: "Como surgiu e o que é iShaking Creative Media?",

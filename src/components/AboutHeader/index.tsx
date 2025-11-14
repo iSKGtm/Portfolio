@@ -76,9 +76,11 @@ const AboutHeader: React.FC = () => {
             </>
           ) : (
             <>
-              <video autoPlay muted loop className={styles.backgroundVideo} ref={aboutHeaderRef}>
-                <source src="/videos/backgrounds/Website.mp4" type="video/mp4"/>
-              </video>
+              <div className={styles.backgroundVideoContainer}>
+                <video autoPlay muted loop className={styles.backgroundVideo} ref={aboutHeaderRef}>
+                  <source src="/videos/backgrounds/Website10.mp4" type="video/mp4"/>
+                </video>
+              </div>
               <div className={styles.logoName}>
                 <img src="/images/logo/logoName.png"/>
                 <div>we are in everything</div>

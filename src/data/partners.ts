@@ -9,9 +9,9 @@ export interface Partner {
 export const partners: Partner[] = [
   {
     id: 1,
-    name: 'EagleVision Group',
-    logo: 'https://yt3.googleusercontent.com/1NcLzRAk-OPuM7ZZgZ2UNoLow9AxEEyMwsIvgp7JRCnf4PJUOch_wJV42310oj6evxJtc3bc=s900-c-k-c0x00ffffff-no-rj',
-    description: 'iSKGtm Prod iSKGtm Dev',
-    link: 'https://www.instagram.com/eaglevisionbrasil/'
+    name: 'Priorado',
+    logo: 'https://i.imgur.com/soGm7KS.jpeg',
+    description: 'Seu portal de notícias confiável.',
+    link: 'https://priorado.com.br/'
   },
 ]

@@ -76,18 +76,18 @@ function App() {
           }
         />
         <Route
-          path="/news"
+          path="/artigos"
           element={
             <>
               <FadeInContainer>
-                <SetTitle title="iSKGtm - Notícias" />
+                <SetTitle title="iSKGtm - Artigos" />
                 <NewsSearch />
               </FadeInContainer>
             </>
           }
         />
         <Route
-          path="/news/:id"
+          path="/artigo/:id"
           element={
             <>
               <SetTitle title="iSKGtm - Artigo" />
