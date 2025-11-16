@@ -39,7 +39,7 @@ const AboutFeatures: React.FC = () => {
           <h1 className={styles.title}>we are in everything</h1>
           <p>Este slogam, traduzido para "Estamos em Tudo", é uma expressão que informa que estamos presentes nas diversas áreas de atuação, tais como: produção e composição sonora; produção de imagem e vídeo & desevolvimento. Estamos ativos desde Outubro de 2016.</p>
           <div className={styles.buttonsSkills}>
-            <a href='/news/iskgtm' target='_blank' className={styles.buttonSkills}>Mais Informações</a>
+            <a href='/artigo/iskgtm' target='_blank' className={styles.buttonSkills}>Mais Informações</a>
           </div>
         </div>
         <div className={styles.thumb} ref={buttonPlayVideoRef}>
@@ -63,7 +63,7 @@ const AboutFeatures: React.FC = () => {
 
           <div className={styles.buttonsSkills}>
             <a href='https://youtube.com/playlist?list=PL2DivU5yf-1wIXM2F8rp_GNEqpVYW3sqt&si=Y66NYeQN0dtEc5Aw' target='_blank' className={styles.buttonSkills}>Acesse</a>
-            <a href='/news/music' target='_blank' className={styles.buttonSkills}>Mais Informações</a>
+            <a href='/artigo/music' target='_blank' className={styles.buttonSkills}>Mais Informações</a>
           </div>
           <h4>Link para playlist de produções já feitas.</h4>
         </div>
@@ -84,7 +84,7 @@ const AboutFeatures: React.FC = () => {
 
           <div className={styles.buttonsSkills}>
             <a href='https://youtube.com/playlist?list=PL2DivU5yf-1ygeNsR8NEPsPsZYO5DK4_L&si=vSoDsnz24s1SeU3T' target='_blank' className={styles.buttonSkills}>Acesse</a>
-            <a href='/news/prod' target='_blank' className={styles.buttonSkills}>Mais Informações</a>
+            <a href='/artigo/prod' target='_blank' className={styles.buttonSkills}>Mais Informações</a>
           </div>
           <h4>Link para playlist de produções já feitas.</h4>
         </div>
@@ -104,7 +104,7 @@ const AboutFeatures: React.FC = () => {
           <p>Desenvolvemos web/aplic., desde 2022, tanto para parceiros terceirizados quanto para o próprio iSKGtm, com diversos estilos de páginas e design, seguindo tendências visuais. </p>
 
           <div className={styles.buttonsSkills}>
-            <a href='/news/dev' target='_blank' className={styles.buttonSkills}>Mais Informações</a>
+            <a href='/artigo/dev' target='_blank' className={styles.buttonSkills}>Mais Informações</a>
           </div>
           <h4></h4>
         </div>
