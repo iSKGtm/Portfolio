@@ -14,4 +14,11 @@ export const partners: Partner[] = [
     description: 'Seu portal de notícias confiável.',
     link: 'https://priorado.com.br/'
   },
+  {
+  id: 2,
+  name: 'Truco 24H',
+  logo: 'https://i.imgur.com/vtn6G09.jpeg',
+  description: 'Jogue, aposte, ganhe!',
+  link: 'https://truco24hr.com/'
+},
 ]
