@@ -12,7 +12,7 @@ export const partners: Partner[] = [
     name: 'Priorado',
     logo: 'https://i.imgur.com/soGm7KS.jpeg',
     description: 'Seu portal de notícias confiável.',
-    link: 'https://priorado.com.br/'
+    link: 'https://www.instagram.com/priorado.com.br/'
   },
   {
   id: 2,

@@ -28,6 +28,51 @@ export interface Article {
 export const newsData: NewsItem[] = [
 
   {
+    url: "/artigo/ordinary-iskgtm-remix",
+    hide: true,
+    title: "Ordinary (iSKGtm Remix)",
+    label: "Ordinary, um novo remix bootleg, de Alex Warren.",
+    imageUrl: "https://i.imgur.com/qYc0xAx.jpeg",
+    tags: ["iSKGtm Music"],
+    tagImage: "/images/symb/music.png",
+    date: "01/01/2026",
+    authorName: "Anthony M.",
+    minutesRead: 2,
+    content: `
+    <main>
+      <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
+      
+      <p>
+      Este remix foi lançado no primeiro dia do ano de 2026, e claro, seguindo as regras de um bootleg. A voz desta música é de Alex Warren, gravado e lançada em 2025.
+      </p>
+
+      <img src="https://i.imgur.com/qYc0xAx.jpeg"/>
+
+      <h3>Imagem do Álbum ∞ 2026 (iSKGtm). Imagem: Reprodução</h3>
+
+      <h2> Estrutura Sonora (parte técnica) </h2>
+
+      <p>
+        Este REMIX utiliza a versão mais recente do drum kit "Disco Tropical", que relembra um pouco como foi o sucesso de um estilo Funk ou Disco na década de 1970 (não confuda Funk Brasileiro com Disco), só que com os padrões e tecnologias modernas para a produção desta música, assim como, a nossa identidade sonora iSKGtm Music. Vale ressaltar que esta é a terceira versão deste drum kit, que vem sendo aprimorado, com suporte de 96KHz/24bit Hi-Res.
+      </p>
+
+      <h2>Produção Nº55 e escolha da música</h2>
+
+      <p>
+        A música “Ordinary”, de Alex Warren, é uma faixa lançada em Fevereiro de 2025 como parte do álbum "You'll Be Alright, Kid". É uma faixa de chamber pop que fala sobre como amar alguém pode tornar a vida "extraordinária", trazendo uma narrativa emocional e um refrão marcante. 
+        <br> Esta faixa foi impulsionada por uma estratégia digital muito forte & algoritmos dessas redes, tanto que logo após o lançamento, ficou viralizada em redes sociais como TikTok e Instagram. <br> O videoclipe oficial, estrelado pela esposa de Warren, também ajudou a aumentar o engajamento nas redes sociais, vale a pena conferir esta faixa original.
+
+        <br> Com nosso Remix, eu escolhi este drum kit, pois durante os testes com esta faixa, o drum kit "Disco Tropical" se saiu melhor comparado com as outras, principalmente devido ao nível elevado de vocal chop adicionado neste Remix, já que esse drum kit se destaca nesse cenário.
+      </p>
+
+      <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/MQAukHZqJ2Q"></iframe>
+
+      <h2>iSKGtm, We Are in Everything</h2>
+    </main>
+  `,
+  },
+
+  {
     url: "/artigo/antes-do-especial-10-anos",
     hide: false,
     title: "Antes do 'Especial 10 anos'...",
@@ -82,7 +127,7 @@ export const newsData: NewsItem[] = [
   },
 
   {
-    url: "/artigo/how-to-love-iskgtm_remix",
+    url: "/artigo/how-to-love-iskgtm-remix",
     title: "How to Love (iSKGtm Remix)",
     label: "How to Love, um novo remix bootleg, de Tokio Hotel.",
     imageUrl: "/images/news/posts/music/how_to_love_iskgtm_remix/banner.jpg",
@@ -475,7 +520,7 @@ export const newsData: NewsItem[] = [
         <ul>
           <li>Resolução de Material: 3840x2160p (4K) ou upscaling de 1080p > 2160p (4K)</li>
           <li>Resolução de Vídeo: 4096x2048p (4K Wide)</li>
-          <li>Espaço de cor: Rec.2020 SDR ou Rec.2020 HDR HLG</li>
+          <li>Espaço de cor: Rec.709 SDR ou Rec.2020 HDR HLG</li>
           <li>Bitrate de Vídeo: 50mb/s</li>
           <li>Frequência de Áudio: 48KHz</li>
           <li>Bitrate de Áudio: 320kb/s</li>
@@ -726,9 +771,9 @@ export const newsData: NewsItem[] = [
 
         <h2>O que é iSKGtm Produções?</h2>
 
-        <p>São serviços de edição profissional de vídeo & design gráfico veja os serviços feitos por nós. Nossos serviços em vídeo são feitos com a versão mais recente do VEGAS PRO, da MAGIX, na qual utilizamos desde a versão 14 deste programa. Este programa é capaz de desenvolver edições de alto nivel, em pouco tempo. <br>
-        Já serviços de Design Gráfico e derivados, utilizamos a solução da Adobe, o popular Photoshop, desde a versão CS6. Este programa também é capaz de fazer diversas coisas criativas de forma intuitiva.
-        Ambos são usados desde o surgimento da própria iShaking Creative Media com as ultimas versões.</p>
+        <p>São serviços de edição profissional de vídeo & design gráfico veja os serviços feitos por nós. Nossos serviços em vídeo são feitos com a versão mais recente do DaVinci Resolve, da Blackmagic Design (antes, era utilizado o VEGAS PRO, desde a versão 14 até a 22). <br>
+        Já serviços de Design Gráfico e derivados, utilizamos a solução da Adobe, o popular Photoshop, desde a versão CS6. No inicio de 2026, passamos a utilizar a solução da Canva/Serif, o Affinity. Ambos os programas também são capazes de fazer diversas coisas criativas de forma intuitiva. <br>
+        Vale lembrar, que o VEGAS PRO & Photoshop foram utilizados no surgimento da própria iShaking Creative Media, ou iShaKinGameR.</p>
 
         <img src="/images/news/sobre/prod/1.jpg"/>
 
@@ -736,7 +781,7 @@ export const newsData: NewsItem[] = [
 
         <h2>Alguns problemas com editor de vídeo</h2>
 
-        <p>Assim como o DAW da MAGIX, o ACID PRO, o editor de vídeo VEGAS PRO tem alguns problemas, uma delas é similar ao problema no DAW, já que ambos aparentam ter o mesmo framework, afinal, VEGAS PRO surgiu do ACID PRO, como também, funcionalidades ultrapassadas, sendo substituido aos poucos pelo Blackmagic DaVinci Resolve 20, uma solução superior.</p>
+        <p>Assim como o DAW da MAGIX, o ACID PRO, o editor de vídeo VEGAS PRO tem alguns problemas, uma delas é similar ao problema no DAW, já que ambos aparentam ter o mesmo framework, afinal, VEGAS PRO surgiu do ACID PRO. As funcionalidades deste programa são boas para a maioria das pessoas, mas são obsoletas para nosso padrão, faltando recursos simples como sistema de textos avançados, edição FULL 3D e não PSEUDO 3D (técnicas de distorção de imagem). Este programa foi substituido aos poucos, nos periodos de Junho de 2025, pelo Blackmagic DaVinci Resolve, na versão 20, que se demonstrou uma solução superior.</p>
 
         <img src="/images/news/sobre/iskgtm/0.gif"/>
 
@@ -845,7 +890,7 @@ export const newsData: NewsItem[] = [
 
         <img src="/images/news/sobre/iskgtm/4.jpg"/>
 
-        <h3>Logo "iSKGtm Music" de 09/2019. Imagem: Acervo iSKGtm</h3>
+        <h3>Logo atual "iSKGtm" Imagem: Reprodução</h3>
 
         <h2>Mudanças de propostas</h2>
 
