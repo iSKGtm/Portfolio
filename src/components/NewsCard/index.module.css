@@ -18,6 +18,8 @@
   aspect-ratio: 16 / 9;
   justify-content: center;
   align-items: center;
+  user-select: none;
+  pointer-events: none;
 
 }
 

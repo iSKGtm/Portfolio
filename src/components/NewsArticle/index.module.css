@@ -114,6 +114,14 @@
   margin-bottom: 10px;
 }
 
+q {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
 .content > main > iframe {
   display: flex;
   flex-direction: column;

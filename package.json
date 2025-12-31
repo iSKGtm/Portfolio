@@ -1,7 +1,7 @@
 {
   "name": "iskgtm-website",
   "private": true,
-  "version": "1.2.0",
+  "version": "26.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
