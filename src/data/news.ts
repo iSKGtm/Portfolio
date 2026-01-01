@@ -29,7 +29,7 @@ export const newsData: NewsItem[] = [
 
   {
     url: "/artigo/ordinary-iskgtm-remix",
-    hide: true,
+    hide: false,
     title: "Ordinary (iSKGtm Remix)",
     label: "Ordinary, um novo remix bootleg, de Alex Warren.",
     imageUrl: "https://i.imgur.com/qYc0xAx.jpeg",
@@ -88,9 +88,12 @@ export const newsData: NewsItem[] = [
     content: `
     <main>
       <p>
-        Antes de entrar em 2026, a iShaking Creative Media fez todo um levantamento sobre todo nosso acervo, que contém, tanto trabalhos para o próprio iSKGtm, quanto para clientes e parceiros. <br>
+        Antes de entrar em 2026, a iShaking Creative Media fez todo um levantamento sobre todo nosso acervo, que contém, tanto trabalhos para o próprio iSKGtm, quanto para clientes e parceiros.
+      </p>
+
+      <p>
         - <q>Há um mundo inteiro alí, tem coisas de 2016, inclusive, projetos em .veg e .psd, que são arquivos de produção feitos em VEGAS PRO & Photoshop, todo material bruto também estão lá. </q> <br>
-        <cite>Diz Anthony M. - responsável pela marca iSKGtm.</cite>
+        <cite>Diz Anthony M. - responsável pela marca iSKGtm / iShaking Creative Media.</cite>
       </p>
 
       <img src="https://i.imgur.com/ORkdONI.jpeg"/>
@@ -100,14 +103,20 @@ export const newsData: NewsItem[] = [
       <h2> O levantamento dos acervos de projetos </h2>
 
       <p>
-        Fizemos um levantamento de tudo, inclusive até mesmo, de armazenamento que todo o acervo consumia, que era de aproximadamente 91.1GB. <br>
-      - <q>Durante o levantamento de armazenamento, para colocar-los em uma nuvem, vimos que consumia 91.1GB de armazenamento, quase 100GB em quase 10 anos, onde contém sonhos, projetos e alegrias, em que a iSKGtm participou ao longo do tempo. </q> <br>
+        Fizemos um levantamento de tudo, inclusive até mesmo, de armazenamento que todo o acervo consumia, que era de aproximadamente 91.1GB.
+      </p>
+
+      <p>
+        - <q>Durante o levantamento de armazenamento, para colocar-los em uma nuvem, vimos que consumia 91.1GB de armazenamento, quase 100GB em quase 10 anos, onde contém sonhos, projetos e alegrias, em que a iSKGtm participou ao longo do tempo. </q> <br>
         <cite>Diz Anthony M.</cite>
       </p>
 
       <p>
-        No dia 29 de Dezembro de 2025, iSKGtm apagou arquivos desnecessários como projetos e alguns arquivos brutos (não todos), de clientes e projetos obsoletos ou descontinuados, reduzindo o uso de armazenamento do acervo de 91.1GB para 69GB. <br>
-      - <q>Foram removidos diversos arquivos, sobre tudo, arquivos .psd e .veg de trabalhos que foram descontinuados que não existem mais, mas mantive alguns arquivos pre-renderizados, como vídeo, áudio ou imagem para recordação. Foram cerca de 22.1GB de arquivos removidos.</q> <br>
+        No dia 29 de Dezembro de 2025, iSKGtm apagou arquivos desnecessários como projetos e alguns arquivos brutos (não todos), de clientes e projetos obsoletos ou descontinuados, reduzindo o uso de armazenamento do acervo de 91.1GB para 69GB, ele complementa:
+      </p>
+
+      <p>
+        - <q>Foram removidos diversos arquivos, sobre tudo, arquivos .psd e .veg de trabalhos que foram descontinuados que não existem mais, mas mantive alguns arquivos pre-renderizados, como vídeo, áudio ou imagem para recordação. Foram cerca de 22.1GB de arquivos removidos.</q> <br>
         <cite>Diz Anthony M.</cite>
       </p>
 
@@ -171,6 +180,8 @@ export const newsData: NewsItem[] = [
       </p>
 
       <img src="https://i.imgur.com/YqvY5aW.png"/>
+
+      <h3>Serif/Canva Affinity 3 - Imagem: Pessoal</h3>
       
       <h2>Como será os trabalhos em 2026</h2>
 
@@ -179,7 +190,10 @@ export const newsData: NewsItem[] = [
       </p>
 
       <p>
-        Também, esperamos evoluir cada vez mais, para oferecer serviços mais competitivos e entregar uma melhor experiência para você! <br>
+        Também, esperamos evoluir cada vez mais, para oferecer serviços mais competitivos e entregar uma melhor experiência para você!
+      </p>
+
+      <p>
         - <q>Em 2026, esperamos evoluir cada vez mais, para entregar cada vez mais sonhos, projetos e alegrias, como sempre entregamos! Esperamos contar com você, e um feliz 2026! </q> <br>
         <cite>Diz Anthony M.</cite>
       </p>
