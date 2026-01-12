@@ -1,5 +1,6 @@
 .articlePage {
   max-width: 1280px;
+  padding-top: 15px;
   margin: 0 auto;
   font-family: SF, Helvetica, Arial, sans-serif;
 }
@@ -181,7 +182,7 @@ th, td {
   .articlePage {
     max-width: calc(100% - 30px);
     border-radius: 27px;
-    margin-top: 30px;
+    padding-top: 15px;
     margin-bottom: 30px;
   }
 }
@@ -218,9 +219,9 @@ th, td {
   }
 
   .content > main > ul {
-  margin: 10px 0;
-  margin-left: 15px;
-}
+    margin: 10px 0;
+    margin-left: 15px;
+  }
 }
 
 

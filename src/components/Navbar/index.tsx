@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const currentPath = location.pathname;
     
-    if (currentPath.startsWith('/artigos')) {
+    if (currentPath.startsWith('/artigos') || currentPath.startsWith('/artigo')) {
       setActiveButton('news');
       
       if(newsSVG.current && homeSVG.current) {

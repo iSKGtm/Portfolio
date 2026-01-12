@@ -7,6 +7,7 @@ import NewsSearch from './pages/NewsSearch/NewsSearch';
 import ArticleDetailPage from './pages/ArticleDetailPage/ArticleDetailPage';
 import Hidden from './pages/Hidden/Hidden';
 import NotFound from './components/NotFound';
+import BlurTopBottom from './components/BlurTopBottom';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import styled from 'styled-components';
 const SetTitle = ({ title }: { title: string }) => {
@@ -53,6 +54,7 @@ function App() {
     <Router>
       <NoAvailable />
       <Navbar />
+      <BlurTopBottom />
 
       <Routes>
         <Route

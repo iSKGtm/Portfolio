@@ -88,16 +88,19 @@ const ArticleDetailPage: React.FC = () => {
       <SetTitle title={pageTitle} />
       <main className="mainArticlePage">
         {isLoading ? (
-          <div className='articlePageSkeleton' style={{ maxWidth: '1280px' }}>
+          <div className='articlePageSkeleton' style={{ maxWidth: '1280px', paddingTop: "50px"}}>
             <div className='containerHeaderSkeleton'>
               <Skeleton height={40} width="70%" style={{ marginBottom: '20px' }} />
               <Skeleton height={16} width="50%" style={{ marginBottom: '5px' }} />
               <Skeleton height={16} width="25%" style={{ marginBottom: '10px' }} />
+              <div style={{display: "flex", flexDirection: "row-reverse", marginBottom: "-20px"}}>
+                <Skeleton height={16} width="120px" style={{ position: "relative", bottom: "25px" }} />
+              </div>
               <Skeleton height={48} width="48px" />
             </div>
 
             <div className='contentSkeleton'>
-              <Skeleton height={400} width="100%" style={{ marginBottom: '20px', marginTop: '30px' }} />
+              <Skeleton height={400} width="100%" style={{ marginBottom: '20px', marginTop: '30px', width: "100vw" }} />
               <Skeleton count={5} />
             </div>
 

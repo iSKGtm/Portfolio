@@ -1,7 +1,24 @@
 # Changelog
 
-## [1.2.0] - 23/09/2025
+## [26.1] - 12/01/2026
+### Adicionado
 
+- Efeito de blur e gradiente nas extremidades, no topo e no fundo da janela.
+
+### Corrigido
+
+- Corrigido um pequeno bug, na barra de navegação envolvendo o botão "Artigos".
+
+- Corrigido um pequeno bug visual, sobre o esqueleto ao carregar a página de artigo detalhado.
+
+- Correção parcial de skeleton no página home.
+
+### Problemas Conhecidos
+
+- Uma correção no skeleton precisa ser finalizada, sobretudo em AboutCarousel, pois apenas o componente AboutHeader conseguiu funcionar sem problemas.
+
+
+## [1.2.0] - 23/09/2025
 ### Adicionado
 
 - Efeito de vidro liquido na barra de navegação.

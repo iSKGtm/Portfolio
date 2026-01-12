@@ -27,8 +27,10 @@ const Home: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 800);
+    }, 0);
   }, []);
+
+  //Skeleton da pagina desativado.
 
   return (
     <>

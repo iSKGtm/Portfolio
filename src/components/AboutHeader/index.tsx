@@ -15,11 +15,15 @@ const AboutHeader: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const winScroll = window.pageYOffset || document.documentElement.scrollTop;
+      let winScroll = window.pageYOffset || document.documentElement.scrollTop;
       const blur = 0 + winScroll / 50;
       const scale = 1 + winScroll / 5000;
       const translate = 0 + winScroll / -10;
       const opacity = 1.0 - winScroll / 1000;
+      
+      if (winScroll > 1) {
+        winScroll = 0;
+      }
 
       if (aboutHeaderRef.current) {
         aboutHeaderRef.current.style.filter = `
@@ -61,7 +65,6 @@ const AboutHeader: React.FC = () => {
 
   return (
     <>
-
       <SkeletonTheme baseColor="#1a1a1a" highlightColor="#333" borderRadius={10}>
         <section className={styles.mainSection}>
           {isLoading ? (

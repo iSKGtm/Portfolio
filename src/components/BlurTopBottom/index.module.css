@@ -1,0 +1,29 @@
+.containerBlurTopBottom {
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    z-index: 9;
+    pointer-events: none; /* desativa interação geral */
+}
+
+.BlurTop, .BlurBottom {
+    background-color: #00000090;
+    backdrop-filter: blur(2px);
+}
+
+.BlurTop{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 30px;
+    mask: linear-gradient(0deg, transparent 0%, white 70%);
+
+}
+
+.BlurBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 35px;
+    mask: linear-gradient(180deg, transparent, white 70%);
+}
