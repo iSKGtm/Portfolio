@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
       lastScrollTop.current = currentScroll <= 0 ? 0 : currentScroll;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    //window.addEventListener('scroll', handleScroll); (Função de esconder navbar)
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

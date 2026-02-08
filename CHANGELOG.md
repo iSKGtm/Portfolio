@@ -5,6 +5,10 @@
 
 - Efeito de blur e gradiente nas extremidades, no topo e no fundo da janela.
 
+- Barra de navegação agora fixo, seguindo tendências de UI/UX (GlassDesign).
+
+- Correções minimas na barra de navegação.
+
 ### Corrigido
 
 - Corrigido um pequeno bug, na barra de navegação envolvendo o botão "Artigos".

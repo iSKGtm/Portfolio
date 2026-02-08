@@ -8,7 +8,7 @@ const Hidden: React.FC = () => {
     return (
         <>
             <main className='mainHidden'>
-            Hello World!
+            iSKGtm Music Placeholder
             </main>
         </>
   );

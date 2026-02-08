@@ -86,7 +86,7 @@ export const newsData: NewsItem[] = [
 
       <img src="/images/carouselImages/slide8.jpg"/>
 
-      <h3>Webappp para Truco 24H. Imagem: Acervo iSKGtm</h3>
+      <h3>WebApp para Truco 24H. Imagem: Acervo iSKGtm</h3>
 
       <p>
         Tudo isso será mostrado no nosso Especial de 10 Anos, fiquem ligados!
