@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import styles from './index.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faNewspaper, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faNewspaper, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
   const lastScrollTop = useRef(0);
   const headerRef = useRef<HTMLDivElement | null>(null);
   const buttonScrollRef = useRef<HTMLDivElement | null>(null);
+  const buttonScrollIconRef = useRef<HTMLDivElement | null>(null);
   const homeSVG = useRef<SVGSVGElement | null>(null);
   const newsSVG = useRef<SVGSVGElement | null>(null);
   const [activeButton, setActiveButton] = useState('');
@@ -52,12 +53,20 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
-        if (buttonScrollRef.current) {
-          buttonScrollRef.current.style.transform = 'translateX(calc(0% + 0px))';
+        if (buttonScrollRef.current && buttonScrollIconRef.current) {
+          //buttonScrollRef.current.style.transform = 'translateX(calc(0% + 0px))';
+          buttonScrollRef.current.style.opacity = "1";
+          buttonScrollRef.current.style.transition = "all 225ms";
+
+          buttonScrollIconRef.current.style.filter = "blur(0px)";
+          buttonScrollIconRef.current.style.transition = "all 190ms";
         }
       } else {
-        if (buttonScrollRef.current) {
-          buttonScrollRef.current.style.transform = 'translateX(calc(100% + 15px))';
+        if (buttonScrollRef.current && buttonScrollIconRef.current) {
+          //buttonScrollRef.current.style.transform = 'translateX(calc(100% + 15px))';
+          buttonScrollRef.current.style.opacity = "0";
+
+          buttonScrollIconRef.current.style.filter = "blur(10px)";
         }
       }
     };
@@ -125,7 +134,9 @@ const Navbar: React.FC = () => {
 
       <header className={styles.headerAnim} ref={headerRef}>
         <div className={styles.scrollButton} onClick={scrollToTop} ref={buttonScrollRef}>
-          <FontAwesomeIcon icon={faArrowUp} />
+          <div ref={buttonScrollIconRef}>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </div>
         </div>
         <div className={styles.mainNavbar}>
           <nav>

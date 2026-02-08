@@ -24,6 +24,6 @@
     position: absolute;
     bottom: 0;
     width: 100vw;
-    height: 35px;
+    height: 45px;
     mask: linear-gradient(180deg, transparent, white 70%);
 }
