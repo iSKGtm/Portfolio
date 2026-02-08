@@ -54,17 +54,19 @@ const Navbar: React.FC = () => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
         if (buttonScrollRef.current && buttonScrollIconRef.current) {
+          buttonScrollRef.current.style.transition = "all 300ms";
+          buttonScrollIconRef.current.style.transition = "all 210ms";
           //buttonScrollRef.current.style.transform = 'translateX(calc(0% + 0px))';
           buttonScrollRef.current.style.opacity = "1";
-          buttonScrollRef.current.style.transition = "all 225ms";
+            buttonScrollRef.current.style.transform = 'scale(1)';
 
           buttonScrollIconRef.current.style.filter = "blur(0px)";
-          buttonScrollIconRef.current.style.transition = "all 190ms";
         }
       } else {
         if (buttonScrollRef.current && buttonScrollIconRef.current) {
           //buttonScrollRef.current.style.transform = 'translateX(calc(100% + 15px))';
           buttonScrollRef.current.style.opacity = "0";
+          buttonScrollRef.current.style.transform = 'scale(1.1)';
 
           buttonScrollIconRef.current.style.filter = "blur(10px)";
         }

@@ -1,1 +1,1 @@
-# iSKGtm Website (Ver 26.0)
+# iSKGtm Website (Ver 26)

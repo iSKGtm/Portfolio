@@ -1,17 +1,19 @@
-import React, { useState, useEffect, ChangeEvent } from 'react'
+import React, { useState, useEffect, ChangeEvent, useRef } from 'react'
 import Footer from '../../components/Footer';
 import './NewsSearch.css'
 import NewsCard from '../../components/NewsCard'
 import { newsData, NewsItem } from '../../data/news'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faX } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faX } from '@fortawesome/free-solid-svg-icons';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { CircularProgress } from '@mui/material';
 
 const NewsSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('')
   const [filteredNews, setFilteredNews] = useState<NewsItem[]>(newsData)
   const [isLoading, setIsLoading] = useState(true);
+  const showClearButtonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -62,15 +64,18 @@ useEffect(() => {
             <div className='titleNewsSearch'>artigos</div>
             <div className='labelNewsSearch'>Acompanhe notícias e comunicados da iShaking Creative Media.</div>
             <div className='inputSearchContainer'>
+              <div className='searchIcon'>
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </div>
               <input
                 type="text"
-                placeholder="Digite para buscar..."
-                maxLength={32}
+                placeholder="Buscar..."
+                maxLength={16}
                 value={searchTerm}
                 onChange={handleChange}
               />
               {showClearButton && (
-                <button onClick={() => clearInput()}>
+                <button ref={showClearButtonRef} style={{ animation: 'fadeIn 250ms, blurIn 190ms' }} onClick={() => clearInput()}>
                   <FontAwesomeIcon icon={faX} />
                 </button>
               )}
@@ -84,7 +89,10 @@ useEffect(() => {
             </div>
           ) : (
             <div className="containerSearch">
-              <h2>Nenhuma notícia encontrada para “<text>{searchTerm}</text>”.</h2>
+              <div className='containerSearchNone'>
+                <img src="/images/symb/warning.png" />
+                <h2>Nenhum artigo encontrado para “<text>{searchTerm}</text>”.</h2>
+              </div>
             </div>
           )}
         </section>
@@ -98,6 +106,9 @@ useEffect(() => {
               <div className='titleNewsSearch'><Skeleton width="20%" /></div>
               <div className='labelNewsSearch'><Skeleton width="35%" /></div>
               <div className='inputSearchContainer'>
+                <div className='searchIcon'>
+                  <CircularProgress enableTrackSlot color="white" />
+                </div>
                 <input
                   type="text"
                   placeholder="Por favor, aguarde..."

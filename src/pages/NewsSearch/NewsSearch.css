@@ -29,7 +29,7 @@
     max-width: 1600px;
     overflow-x: hidden;
     padding: 2rem;
-    border-radius: 30px;
+    border-radius: 50px;
     background-color: var(--color-bg-blur-primary);
     box-shadow: inset 0 5px 10px -3px #ffffff30;
     outline: 1px solid #92929225;
@@ -43,6 +43,22 @@
     width: calc(100% - 50px);
 }
 
+.searchIcon {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: var(--color-bg-blur-primary);
+    box-shadow: inset 0 5px 10px -3px #ffffff30;
+    outline: 2px solid #92929225;
+    justify-content: center;
+    align-items: center;
+}
+
 .inputSearchContainer {
     display: flex;
     width: 100%;
@@ -54,17 +70,18 @@
 .inputSearchContainer > input {
     font-family: SF, Helvetica, Arial, sans-serif;
     backdrop-filter: blur(20px);
-    border-radius: 15px;
+    border-radius: 100px;
     box-shadow: inset 0 8px 15px -6px #ffffff25;
     outline: 0;
     width: 340px;
     height: 50px;
     padding: 0 15px;
+    padding-left: 50px;
 }
 
 .inputSearchContainer > button {
     backdrop-filter: blur(20px);
-    border-radius: 15px;
+    border-radius: 50%;
     box-shadow: inset 0 8px 15px -6px #ffffff25;
     width: 50px;
     aspect-ratio: 1 / 1;
@@ -88,10 +105,11 @@
 .containerSearch {
     display: flex;
     gap: 30px;
-    min-height: 480px;
+    min-height: 310px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .containerSearch > h2 {
@@ -122,6 +140,27 @@
 
 .containerSearchSkeleton > img {
     display: none;
+}
+
+.containerSearchNone {
+    display: flex;
+    gap: 15px;
+    padding: 2rem 3rem;
+    height: fit-content;
+    border-radius: 50px;
+    background-color: var(--color-bg-blur-primary);
+    box-shadow: inset 0 5px 10px -3px #ffffff30;
+    outline: 1px solid #92929225;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerSearchNone > img {
+  width: 100px;
+  animation: pulse 2s infinite ease-in-out;
+  user-select: none;
+  pointer-events: none;
 }
 
 /* HOVERS */
@@ -236,10 +275,38 @@
     }
     .containerSearch {
         gap: 30px;
+        min-height: 0;
+    }
+    .containerSearchNone {
+        text-align: center;
     }
 
 }
 
 @media screen and (max-width: 575px) {
 
+}
+
+/* ANIMATIONS */
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes blurIn {
+  from { filter: blur(5px); }
+  to   { filter: blur(0); }
 }

@@ -7,7 +7,7 @@
 }
 
 .BlurTop, .BlurBottom {
-    background-color: #00000090;
+    background-color: #000000A0;
     backdrop-filter: blur(2px);
 }
 

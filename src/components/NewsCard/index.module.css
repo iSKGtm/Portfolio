@@ -4,7 +4,7 @@
   height: 380px;
   width: 296px;
   color: var(--color-text-primary);
-  border-radius: 30px;
+  border-radius: 35px;
   user-select: none;
   overflow: hidden;
   background-color: var(--color-bg-blur-primary);

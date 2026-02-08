@@ -9,6 +9,10 @@
 
 - Correções minimas na barra de navegação.
 
+- Integração com a biblioteca Material UI (Para alterações futuras no HOME).
+
+- Polimento na tela de pesquisa de artigos & Spinner Material UI.
+
 ### Corrigido
 
 - Corrigido um pequeno bug, na barra de navegação envolvendo o botão "Artigos".
