@@ -1,6 +1,6 @@
 # Changelog
 
-## [26.1] - 12/01/2026
+## [26.1] - 10/02/2026
 ### Adicionado
 
 - Efeito de blur e gradiente nas extremidades, no topo e no fundo da janela.
@@ -13,6 +13,10 @@
 
 - Polimento na tela de pesquisa de artigos & Spinner Material UI.
 
+- Polimento na tela home, agora com elementos Material UI.
+
+- Removido o carousel de projetos, para alteração futura.
+
 ### Corrigido
 
 - Corrigido um pequeno bug, na barra de navegação envolvendo o botão "Artigos".
@@ -23,7 +27,7 @@
 
 ### Problemas Conhecidos
 
-- Uma correção no skeleton precisa ser finalizada, sobretudo em AboutCarousel, pois apenas o componente AboutHeader conseguiu funcionar sem problemas.
+- N/A
 
 
 ## [1.2.0] - 23/09/2025

@@ -134,6 +134,7 @@
   display: flex;
   justify-content: center;
   margin-top: 25px;
+  margin-bottom: 25px;
   gap: 15px;
   width: 100%;
   user-select: none;
@@ -151,29 +152,6 @@
   pointer-events: all;
   border: 2px solid white;
   background-color: var(--color-bg-primary);
-}
-
-.buttonSkills {
-  border-radius: 100px;
-  padding: 0.5em 1.0em;
-  margin-bottom: 20px;
-  width: 100%;
-  text-align: center;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  backdrop-filter: blur(20px);
-  color: var(--color-text-primary);
-  box-shadow: inset 0 5px 10px -3px #ffffff30;
-  cursor: default;
-  transition: all 0.1s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttonSkills > h4 {
-  font-weight: 300;
 }
 
 /* HOVERS */
@@ -330,7 +308,7 @@
 
   .buttonsSkills {
     flex-direction: column;
-    gap: 0;
+    gap: 10px;
   }
 }
 
