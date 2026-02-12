@@ -557,9 +557,11 @@ export const newsData: NewsItem[] = [
         <p>Atribuições de objetos utilizadas nos nossos serviços abaixo:</p>
 
         <p>
-        <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+        <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> <br>
+        <a href="https://mui.com/" target="_blank">Material UI</a>
         </p>
-        Última atualização: Agosto de 2025.
+
+        Última atualização: Fevereiro de 2026.
         <p>
       </main>
     `,

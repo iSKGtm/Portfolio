@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import './Home.css';
-import AboutCarousel from '../../components/AboutProjects';
+import AboutCarousel from '../../components/AboutCarousel';
 import AboutHeader from '../../components/AboutHeader';
 import AboutFeatures from '../../components/AboutFeatures';
 import AboutPartnersCard from '../../components/AboutPartners';

@@ -215,6 +215,10 @@ nav:active {
 
 @media screen and (max-width: 575px) {
 
+  .mainNavbar {
+    margin-bottom: 10px; 
+  }
+
   nav {
     /* width: calc(100% - 30px); */
     height: 60px;

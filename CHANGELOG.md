@@ -15,7 +15,7 @@
 
 - Polimento na tela home, agora com elementos Material UI.
 
-- Removido o carousel de projetos, para alteração futura.
+- O carousel de imagens ed projetos foi aprimorado.
 
 ### Corrigido
 
@@ -28,7 +28,6 @@
 ### Problemas Conhecidos
 
 - N/A
-
 
 ## [1.2.0] - 23/09/2025
 ### Adicionado

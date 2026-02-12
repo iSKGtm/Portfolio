@@ -13,14 +13,14 @@ const AboutFeatures: React.FC = () => {
     textTransform: 'none',
     fontFamily: 'inherit',
     fontWeight: 500,
-    backdropFilter: 'blur(20px)',
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     border: '1px solid rgba(255, 255, 255, 0.15)',
     boxShadow: 'inset 0 5px 10px -3px rgba(255, 255, 255, 0.2)',
     transition: 'all 0.2s ease-in-out',
     width: '100%',
+    cursor: 'default',
     '&:hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.15)',
+      backgroundColor: 'rgba(255, 255, 255, 0.12)',
       borderColor: 'rgba(255, 255, 255, 0.4)',
     }
   };

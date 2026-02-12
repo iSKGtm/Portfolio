@@ -9,7 +9,8 @@
 }
 
 .section2 {
-    background-color: var(--color-bg-primary);
+    /* background-color: var(--color-bg-primary);*/
+    background-color: #00000000;
 }
 
 .section3 {
