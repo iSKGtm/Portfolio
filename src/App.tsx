@@ -1,5 +1,11 @@
 import './App.css';
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+
+// --- FRAMER MOTION ---
+import { motion, AnimatePresence } from 'framer-motion';
+
+// --- COMPONENTES & PAGES ---
 import NoAvailable from './components/NoAvailable';
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
@@ -8,123 +14,133 @@ import ArticleDetailPage from './pages/ArticleDetailPage/ArticleDetailPage';
 import Hidden from './pages/Hidden/Hidden';
 import NotFound from './components/NotFound';
 import BlurTopBottom from './components/BlurTopBottom';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import styled from 'styled-components';
 
-// --- NOVOS IMPORTS DO MATERIAL UI ---
+// --- MATERIAL UI ---
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { theme } from './theme'; // Certifique-se de que o arquivo theme.ts está na mesma pasta ou ajuste o caminho
+import { theme } from './theme';
 
 const SetTitle = ({ title }: { title: string }) => {
   React.useEffect(() => {
     document.title = title;
   }, [title]);
-
   return null;
 };
 
-const FadeInContainer = styled.div`
-  opacity: 0;
-  animation: fadeIn 200ms ease-out forwards;
+// Componente que gerencia as rotas animadas
+const AnimatedRoutes = () => {
+  const location = useLocation();
 
-  @keyframes fadeIn {
-    from {
-      transform: translateY(-1%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-`;
+  // Variantes para páginas internas (Artigos, etc)
+  const pageVariants = {
+    initial: { opacity: 0, y: -10, filter: "blur(10px)" },
+    animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.1 } }
+  };
 
-const FadeInContainerHome = styled.div`
-  animation: fadeInHome 200ms ease-out;
+  // Variantes específicas para a Home (Slide lateral)
+  const homeVariants = {
+    initial: { opacity: 0, filter: "blur(10px)" },
+    animate: { x: 0, opacity: 1, filter: "blur(0px)" },
+    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.1} }
+  };
 
-  @keyframes fadeInHome {
-    from {
-      transform: translateY(-1%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-`;
+  return (
+    // mode="wait" garante que a página atual saia antes da nova entrar
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <>
+              <SetTitle title="iShaking Creative Media" />
+              <Navigate to="/home" replace />
+            </>
+          }
+        />
+        
+        <Route
+          path="/home"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={homeVariants}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              style={{ width: '100%', overflowX: 'hidden' }}
+            >
+              <SetTitle title="iSKGtm - Home" />
+              <Home />
+            </motion.div>
+          }
+        />
+
+        <Route
+          path="/artigos"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={pageVariants}
+              transition={{ duration: 0.3 }}
+            >
+              <SetTitle title="iSKGtm - Artigos" />
+              <NewsSearch />
+            </motion.div>
+          }
+        />
+
+        <Route
+          path="/artigo/:id"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={pageVariants}
+              transition={{ duration: 0.3 }}
+            >
+              <SetTitle title="iSKGtm - Artigo" />
+              <ArticleDetailPage />
+            </motion.div>
+          }
+        />
+
+        <Route
+          path="*"
+          element={
+            <div style={{ width: '100%' }}>
+              <SetTitle title="Página não encontrada." />
+              <NotFound />
+            </div>
+          }
+        />
+
+        <Route
+          path="/hidden"
+          element={
+            <div style={{ width: '100%' }}>
+              <SetTitle title="For Testing Purposes" />
+              <Hidden />
+            </div>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  );
+};
 
 function App() {
   return (
-    /* ThemeProvider envolve tudo para que botões e textos sigam o vidro azul */
     <ThemeProvider theme={theme}>
-      {/* CssBaseline limpa estilos padrões do browser e aplica o fundo dark do tema */}
       <CssBaseline /> 
-      
       <Router>
         <NoAvailable />
         <Navbar />
         <BlurTopBottom />
-
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <SetTitle title="iShaking Creative Media" />
-                <Navigate to="/home" replace />
-              </>
-            }
-          />
-          <Route
-            path="/home"
-            element={
-              <FadeInContainerHome>
-                <SetTitle title="iSKGtm - Home" />
-                <Home />
-              </FadeInContainerHome>
-            }
-          />
-          <Route
-            path="/artigos"
-            element={
-              <FadeInContainer>
-                <SetTitle title="iSKGtm - Artigos" />
-                <NewsSearch />
-              </FadeInContainer>
-            }
-          />
-          <Route
-            path="/artigo/:id"
-            element={
-              <>
-                <SetTitle title="iSKGtm - Artigo" />
-                <FadeInContainer>
-                  <ArticleDetailPage />
-                </FadeInContainer>
-              </>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <>
-                <SetTitle title="Página não encontrada." />
-                <NotFound />
-              </>
-            }
-          />
-          <Route
-            path="/hidden"
-            element={
-              <>
-                <SetTitle title="For Testing Purposes" />
-                <Hidden />
-              </>
-            }
-          />
-        </Routes>
+        <AnimatedRoutes />
       </Router>
     </ThemeProvider>
   );
