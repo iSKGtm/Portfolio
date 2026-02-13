@@ -14,6 +14,7 @@ import BlurTopBottom from './components/BlurTopBottom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from './theme';
+import MusicHome from './pages/MusicHome/MusicHome';
 
 const SetTitle = ({ title }: { title: string }) => {
   React.useEffect(() => {
@@ -40,7 +41,6 @@ const AnimatedRoutes = () => {
   };
 
   return (
-    // mode="wait" garante que a página atual saia antes da nova entrar
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route
@@ -67,6 +67,22 @@ const AnimatedRoutes = () => {
             </motion.div>
           }
         />
+
+        <Route
+          path="/music"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={homeVariants}
+            >
+              <SetTitle title="iSKGtm Music - Home" />
+              <MusicHome />
+            </motion.div>
+          }
+        />
+
 
         <Route
           path="/artigos"
