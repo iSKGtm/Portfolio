@@ -1,6 +1,6 @@
 .mainSection {
     position: relative; /* Adicionado para prender a logo */
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     overflow: hidden;
     user-select: none;
