@@ -14,21 +14,38 @@ const AboutCarousel: React.FC<ContinuousCarouselProps> = ({
 }) => {
   const mergedSlides = [...slides, ...slides];
   const wrapperRef = useRef<HTMLDivElement>(null);
+  let loopFixRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      // Mantendo sua lógica original de rotação
       const rotation = Math.max(-175, Math.min(-160 - scrollY / 60, -90));
 
       if (wrapperRef.current) {
         wrapperRef.current.style.transform = `perspective(1200px) rotateY(${rotation}deg)`;
       }
+
+      // Alteração solicitada: delay de 5s e valor de 199px
+      setTimeout(() => {
+        if (loopFixRef.current) {
+          loopFixRef.current.style.height = "200px";
+        }
+      }, 100);
     };
 
+    // Adiciona os ouvintes para scroll e load
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("load", handleScroll);
+
+    // Executa imediatamente para evitar "pulo" visual
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Limpeza: remove ambos os ouvintes ao desmontar
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("load", handleScroll);
+    };
   }, []);
 
   return (
@@ -45,7 +62,7 @@ const AboutCarousel: React.FC<ContinuousCarouselProps> = ({
               "--duration": `${durationInSeconds}s`,
             } as React.CSSProperties}
           >
-            <div className="slider-track">
+            <div className="slider-track" ref={loopFixRef}>
               {mergedSlides.map((src, idx) => (
                 <img
                   key={idx}

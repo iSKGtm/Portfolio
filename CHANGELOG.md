@@ -15,15 +15,17 @@
 
 - Polimento na tela home, agora com elementos Material UI.
 
-- O carousel de imagens ed projetos foi aprimorado.
-
 ### Corrigido
 
 - Corrigido um pequeno bug, na barra de navegação envolvendo o botão "Artigos".
 
 - Corrigido um pequeno bug visual, sobre o esqueleto ao carregar a página de artigo detalhado.
 
-- Correção parcial de skeleton no página home.
+- Corrigido um pequeno bug com skeleton no página home.
+
+- Corrigido um bug visual animação de loop carousel, ao carregar a pagina home (as vezes).
+
+- Correção no sistema de transição entre páginas.
 
 ### Problemas Conhecidos
 

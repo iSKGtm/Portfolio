@@ -1,11 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-
-// --- FRAMER MOTION ---
-import { motion, AnimatePresence } from 'framer-motion';
-
-// --- COMPONENTES & PAGES ---
+import { motion, AnimatePresence, scale } from 'framer-motion';
 import NoAvailable from './components/NoAvailable';
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
@@ -15,7 +11,6 @@ import Hidden from './pages/Hidden/Hidden';
 import NotFound from './components/NotFound';
 import BlurTopBottom from './components/BlurTopBottom';
 
-// --- MATERIAL UI ---
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from './theme';
@@ -27,22 +22,21 @@ const SetTitle = ({ title }: { title: string }) => {
   return null;
 };
 
-// Componente que gerencia as rotas animadas
 const AnimatedRoutes = () => {
   const location = useLocation();
 
   // Variantes para páginas internas (Artigos, etc)
   const pageVariants = {
-    initial: { opacity: 0, y: -10, filter: "blur(10px)" },
-    animate: { opacity: 1, y: 0, filter: "blur(0px)" },
-    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.1 } }
+    initial: { opacity: 0, filter: "blur(10px)", scale: 0.95 },
+    animate: { opacity: 1, filter: "blur(0px)", scale: 1 },
+    exit: { opacity: 0, filter: "blur(10px)", scale: 0.99, transition: { duration: 0.2 } }
   };
 
   // Variantes específicas para a Home (Slide lateral)
   const homeVariants = {
-    initial: { opacity: 0, filter: "blur(10px)" },
-    animate: { x: 0, opacity: 1, filter: "blur(0px)" },
-    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.1} }
+    initial: { opacity: 0, filter: "blur(10px)"},
+    animate: { opacity: 1, filter: "blur(0px)" },
+    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.2} }
   };
 
   return (
@@ -67,8 +61,6 @@ const AnimatedRoutes = () => {
               animate="animate"
               exit="exit"
               variants={homeVariants}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              style={{ width: '100%', overflowX: 'hidden' }}
             >
               <SetTitle title="iSKGtm - Home" />
               <Home />
@@ -84,7 +76,7 @@ const AnimatedRoutes = () => {
               animate="animate"
               exit="exit"
               variants={pageVariants}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
               <SetTitle title="iSKGtm - Artigos" />
               <NewsSearch />
@@ -100,7 +92,7 @@ const AnimatedRoutes = () => {
               animate="animate"
               exit="exit"
               variants={pageVariants}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
               <SetTitle title="iSKGtm - Artigo" />
               <ArticleDetailPage />

@@ -1,150 +1,97 @@
-
-/* CAROUSEL */
-
-.mainSection{
+.mainSection {
+    position: relative; /* Adicionado para prender a logo */
     height: 100vh;
-    max-width: 1080px;
-    width: calc(100vw - 15px);
+    width: 100%;
+    overflow: hidden;
     user-select: none;
-    pointer-events: none;
+    background-color: #000;
     z-index: -1;
 }
 
+.backgroundVideoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
 .backgroundVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
+    position: fixed; /* Mantido fixed para o efeito de parallax no scroll */
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -5;
-    animation: fadeIn 1s ease-out;
+    z-index: -1; /* Fica atrás de tudo */
+    pointer-events: none;
 }
 
-.logoName {
-    padding-left: 25px;
-    width: 100%;
+.logoName, .logoNameSkeleton {
     position: absolute;
+    left: 25px;
     bottom: 90px;
-    font-family: Phonk;
-    text-wrap: nowrap;
     font-size: 32px;
-    font-weight: 900;
-    gap: 7px;
+    z-index: 10; /* Garante que fique acima do vídeo */
+    font-family: Phonk, sans-serif;
+    color: #bfbfbf;
     display: flex;
     flex-direction: column;
-    color: #bfbfbf;
+    gap: 7px;
+    text-transform: lowercase;
+}
+
+.logoNameSkeleton {
+    bottom: 40px;
+    left: 20px;
 }
 
 .logoName > img {
     width: 474px;
+    height: auto;
 }
 
-.section2 {
-    background-color: var(--color-bg-primary);
-    height: 1500px;
+/* Fix para o skeleton não quebrar o layout */
+.logoNameSkeleton {
+    padding-left: 25px;
 }
 
-/* RESP */
+/* --- RESPONSIVIDADE CORRIGIDA --- */
 
 @media screen and (max-width: 575px) {
     .logoName {
-        font-size: 6.4vw;
-        gap: 5px;
-        display: flex;
-        padding-left: 0;
+        left: 0;
+        width: 100%;
         align-items: center;
         padding: 0 20px;
+        font-size: 5.7vw;
     }
+    .logoName > img { width: 90%; }
 
-    .logoName > img {
-        width: 100%;
-        max-width: 550px;
-    }
-}
-
-@media screen and (min-width: 576px) {
-    .logoName {
-        font-size: 28px;
-        gap: 5px;
-        display: flex;
-        padding-left: 0;
-        align-items: center;
-    }
-
-    .logoName > img {
-        width: 393px;
+    .logoNameSkeleton {
+        bottom: 90px;
+        left: 0px;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 1199px) {
     .logoName {
-        font-size: 28px;
-        gap: 5px;
-        display: flex;
-        padding-left: 0;
-        align-items: center;
-    }
-
-    .logoName > img {
-        width: 393px;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .logoName {
-        font-size: 28px;
-        gap: 5px;
-        display: flex;
-        padding-left: 0;
-        align-items: center;
-    }
-
-    .logoName > img {
-        width: 393px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .logoName {
-        font-size: 26px;
-        gap: 5px;
+        left: 20px;
         align-items: flex-start;
-        padding-left: 25px;
+        font-size: 24px;
     }
-
-    .logoName > img {
-        width: 385px;
+    .logoName > img { width: 350px; }
+    
+    .logoNameSkeleton {
+        bottom: 90px;
+        left: 0px;
     }
 }
 
 @media screen and (min-width: 1600px) {
     .logoName {
-        font-size: 32px;
-        gap: 7px;
-        bottom: 30px;
-        padding-left: 25px;
+        bottom: 50px;
+        left: 40px;
     }
-
-    .logoName > img {
-        width: 474px;
-    }
-}
-
-@keyframes fadeOut {
-  0%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-
-@keyframes fadeIn {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
 }

@@ -23,7 +23,7 @@
 
 .slider-track {
   gap: 20px;
-  height: 200px;
+  height: 199.9px;
   display: flex;
   width: max-content;
   animation: scroll var(--duration) linear infinite;
