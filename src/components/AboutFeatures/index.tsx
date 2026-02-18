@@ -7,6 +7,17 @@ import { Button, IconButton, Box } from '@mui/material';
 const AboutFeatures: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // Única adição: Função para rastrear o mouse
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { currentTarget: target, clientX, clientY } = e;
+    const rect = target.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+
+    target.style.setProperty('--mouse-x', `${x}px`);
+    target.style.setProperty('--mouse-y', `${y}px`);
+  };
+
   const glassButtonStyle = {
     borderRadius: '100px',
     color: '#fff',
@@ -75,7 +86,11 @@ const AboutFeatures: React.FC = () => {
           key={section.id} 
           className={styles.container2} 
           id={section.reverse ? styles.container2Rev : ''}
+          onMouseMove={handleMouseMove} // Rastreio de mouse aqui
         >
+          {/* Única adição: Camada do Spotlight */}
+          <div className={styles.spotlight}></div>
+
           <div className={styles.text2}>
             <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>{section.title}</h1>
             <p>{section.description}</p>
@@ -92,7 +107,6 @@ const AboutFeatures: React.FC = () => {
           <div className={styles.containerSkills} style={{ position: 'relative', overflow: 'hidden' }}>
             {section.isMainVideo ? (
               <Box sx={{ width: '100%', height: '100%', position: 'relative', backgroundColor: '#000' }}>
-                
                 <div 
                   onClick={() => setIsPlaying(true)}
                   style={{ 
@@ -117,7 +131,7 @@ const AboutFeatures: React.FC = () => {
                       position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
                       border: '2px solid white', width: '70px', height: '70px', color: 'white',
                       backgroundColor: 'rgba(0,0,0,0.2)', backdropFilter: 'blur(4px)',
-                      pointerEvents: 'none' // Faz o clique atravessar o botão e cair na div
+                      pointerEvents: 'none'
                     }}
                   >
                     <FontAwesomeIcon icon={faPlay} />
