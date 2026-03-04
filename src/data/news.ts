@@ -29,7 +29,7 @@ export const newsData: NewsItem[] = [
 
   {
     url: "/artigo/aint-nobody-iskgtm-remix",
-    hide: true,
+    hide: false,
     title: "Ain't Nobody (iSKGtm Remix)",
     label: "Ain't Nobody, um novo remix bootleg, de Alex Warren.",
     imageUrl: "https://i.imgur.com/qYc0xAx.jpeg",
