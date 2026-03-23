@@ -39,11 +39,15 @@ footer {
 }
 
 .footerCopy {
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 17px;
   text-align: center;
   margin-top: 10px;
   display: flex;
+}
+
+.footerCopy span {
+  font-weight: 700;
+  font-family: BariolItalic, Helvetica, Arial, sans-serif;
 }
 
 .footerSocial {
@@ -51,10 +55,11 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  font-size: 15px;
+  font-size: 17px;
   margin-top: 0px;
   gap: 10px;
-  font-weight: 300;
+  font-weight: 400;
+  font-family: SF, Helvetica, Arial, sans-serif;
   flex-direction: row;
 }
 
@@ -118,6 +123,7 @@ footer {
 
   .footerContainer {
     width: calc(100% - 30px);
+    padding: 20px 25px;
     border-radius: 50px;
     height: unset;
     gap: 10px;
@@ -126,11 +132,13 @@ footer {
   .footerCopy {
     display: flex;
     flex-direction: column;
+    font-size: 15px;
   }
 
   .footerSocial{
     display: flex;
     flex-direction: column;
+    font-size: 15px;
     gap: 0;
     margin-top: -15px;
   }

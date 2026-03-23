@@ -60,7 +60,7 @@ const AboutContact = () => {
     <div className={styles.contact}>
       <div className={styles.container}>
         <div className={styles.text}>
-          <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>contatos</h1>
+          <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>contatos.</h1>
           <p>Selecione a área desejada para entrar em contato.</p>
         </div>
 

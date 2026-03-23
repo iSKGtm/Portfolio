@@ -22,7 +22,7 @@ const AboutPartnersCard: React.FC<AboutPartnersCardProps> = ({ partners }) => {
     <div className={styles.sectionWrapper}>
       <div className={styles.container}>
         <div className={styles.text}>
-          <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>parceiros</h1>
+          <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>parceiros.</h1>
           <p>Nossos clientes ou parceiros que utilizam nossos serviços atualmente.</p>
         </div>
 

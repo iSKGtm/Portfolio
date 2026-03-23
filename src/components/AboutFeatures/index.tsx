@@ -39,7 +39,7 @@ const AboutFeatures: React.FC = () => {
   const sections = [
     {
       id: 'main',
-      title: 'we are in everything',
+      title: 'we are in everything.',
       description: 'Este slogan, traduzido para "Estamos em Tudo", é uma expressão que informa que estamos presentes nas diversas áreas de atuação, tais como: produção e composição sonora; produção de imagem e vídeo & desenvolvimento. Estamos ativos desde Outubro de 2016.',
       isMainVideo: true,
       links: [{ label: 'Mais Informações', url: '/artigo/iskgtm' }],
@@ -48,7 +48,7 @@ const AboutFeatures: React.FC = () => {
     },
     {
       id: 'music',
-      title: 'iSKGtm music',
+      title: 'iSKGtm music.',
       description: 'Produzimos faixas desde 2019, tanto para parceiros terceirizados quanto para o próprio iSKGtm, com diversos estilos e gêneros músicais, com foco EDM.',
       video: '/videos/about/music.mp4',
       links: [
@@ -59,7 +59,7 @@ const AboutFeatures: React.FC = () => {
     },
     {
       id: 'prod',
-      title: 'iSKGtm prod',
+      title: 'iSKGtm prod.',
       description: 'Produzimos conteúdos desde 2016, tanto para terceirizados quanto para o próprio iSKGtm. Desde branding, até produções de vídeos, com efeitos VFX 2D.',
       video: '/videos/about/prod.mp4',
       links: [
@@ -71,7 +71,7 @@ const AboutFeatures: React.FC = () => {
     },
     {
       id: 'dev',
-      title: 'iSKGtm dev',
+      title: 'iSKGtm dev.',
       description: 'Desenvolvemos web/aplic., desde 2022, tanto para parceiros terceirizados quanto para o próprio iSKGtm, com diversos estilos de páginas e design, seguindo tendências visuais.',
       video: '/videos/about/dev.mp4',
       links: [{ label: 'Mais Informações', url: '/artigo/dev' }],

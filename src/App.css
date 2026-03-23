@@ -29,6 +29,30 @@ html, body {
 /* FONTES */
 
 @font-face {
+  font-family: Bariol;
+  src: url("/assets/fonts/Bariol/bariolReg.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Bariol;
+  src: url("/assets/fonts/Bariol/bariolBold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: BariolItalic;
+  src: url("/assets/fonts/Bariol/bariolRegItalic.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: BariolItalic;
+  src: url("/assets/fonts/Bariol/bariolBoldItalic.otf");
+  font-weight: 700;
+}
+
+@font-face {
   font-family: SF;
   src: url("/assets/fonts/SF/SFBLACK.otf");
   font-weight: 900;

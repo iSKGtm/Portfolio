@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
     <footer>
       <div className={styles.footerContainer}>
         <div className={styles.footerCopy}>
-            <span>© 2016-<span ref={dateRef}></span> | iShaking Creative Media, Todos os Direitos Reservados.</span><br />
+            <span>© 2016-<span ref={dateRef}></span> iShaking Creative Media.</span><br />
         </div>
         
         <div className={styles.footerSocial}>
