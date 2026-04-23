@@ -1,0 +1,13 @@
+name: qwen3.6 (OpenRouter)
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Qwen Free via OpenRouter
+    provider: openrouter
+    model: qwen/qwen3.6-plus:free
+    apiBase: https://openrouter.ai/api/v1
+    apiKey: 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
+
+mcpServers:
+  - uses: anthropic/memory-mcp
