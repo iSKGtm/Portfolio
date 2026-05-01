@@ -57,11 +57,11 @@ useEffect(() => {
 
   return (
     <>
-    <SkeletonTheme baseColor="#1a1a1a" highlightColor="#333" borderRadius={10}>
+    <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
       <main className='mainNews' style={{ display: isLoading ? 'none' : 'flex' }}>
         <section className="mainSection">
           <div className='containerHeader'>
-            <div className='titleNewsSearch'>artigos</div>
+            <div className='titleNewsSearch'>artigos.</div>
             <div className='labelNewsSearch'>Acompanhe notícias e comunicados da iShaking Creative Media.</div>
             <div className='inputSearchContainer'>
               <div className='searchIcon'>
@@ -90,7 +90,7 @@ useEffect(() => {
           ) : (
             <div className="containerSearch">
               <div className='containerSearchNone'>
-                <img src="/images/symb/warning.png" />
+                <img src="/images/symb/aviso.svg" />
                 <h2>Nenhum artigo encontrado para “<text>{searchTerm}</text>”.</h2>
               </div>
             </div>
@@ -99,7 +99,7 @@ useEffect(() => {
       </main>
     </SkeletonTheme>
     {isLoading && (
-      <SkeletonTheme baseColor="#1a1a1a" highlightColor="#333" borderRadius={10}>
+      <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
         <main className='mainNews'>
           <section className="mainSectionSkeleton">
             <div className='containerHeader'>

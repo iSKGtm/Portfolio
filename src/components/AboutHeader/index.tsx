@@ -52,7 +52,7 @@ useEffect(() => {
 
 
   return (
-    <SkeletonTheme baseColor="#1a1a1a" highlightColor="#333" borderRadius={10}>
+    <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
       <section className={styles.mainSection}>
         {isLoading ? (
           <div className={styles.logoNameSkeleton}>
@@ -74,8 +74,8 @@ useEffect(() => {
               </video>
             </div>
             <div className={styles.logoName}>
-              <img src="/images/logo/logoName.png" alt="Logo" />
-              <div>we are in everything</div>
+              <img src="/images/logo/logoName.svg" alt="Logo" />
+              <div>we are in everything.</div>
             </div>
           </>
         )}

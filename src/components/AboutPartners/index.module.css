@@ -1,8 +1,7 @@
 /* ABOUT PARTNERS */
 .sectionWrapper {
   background: #000000;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(15, 15, 15, 1) 100%);
-  background: linear-gradient(0deg, rgba(15, 15, 15, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(0deg, rgb(200, 200, 200) 0%, rgb(255, 255, 255) 100%);
   width: 100%;
   padding: 30px 50px;
 }
@@ -16,10 +15,10 @@
 }
 
 .text {
-  font-family: SF, Helvetica, Arial, sans-serif;
+  font-family: Inter, Helvetica, Arial, sans-serif;
   text-align: left;
   margin-bottom: 40px;
-  color: #fff;
+  font-size: 19px;
 }
 
 .title {
@@ -41,18 +40,18 @@
 
 .card {
   text-decoration: none;
-  color: #fff;
+  color: #000000;
   padding: 20px;
   width: 280px;
-  border-radius: 25px;
+  border-radius: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: var(--color-bg-blur-primary);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 5px 15px -5px rgba(255, 255, 255, 0.1);
-  
+  box-shadow: inset 0 5px 10px -3px #00000030;
+
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
 }
@@ -62,7 +61,7 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
   margin-bottom: 15px;
-  border-radius: 15px;
+  border-radius: 30px;
   background: #000;
   pointer-events: none;
 }
@@ -83,7 +82,7 @@
 }
 
 .card p {
-  font-family: SF, Helvetica, Arial, sans-serif;
+  font-family: Inter, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   opacity: 0.7;
@@ -93,9 +92,9 @@
 
 /* HOVERS */
 .card:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: var(--color-bg-blur-primary-hover);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  color: #000000;
 }
 
 .card:active {

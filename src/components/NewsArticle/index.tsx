@@ -48,9 +48,9 @@ const sanitizedContent = DOMPurify.sanitize(article.content, {
         <div className={styles.dateAuthor}>
           <div className={styles.imgDateMin}>
             <img src={article.tagImage} alt={article.title} className={styles.image} />
-            ◦
+            •
             <div> {article.publishDate.toLocaleDateString()}</div>
-            ◦
+            •
             <div className={styles.minutesRead}>{article.minutesRead}min.</div>
           </div>
           <div className={styles.author}>Por {article.authorName}</div>

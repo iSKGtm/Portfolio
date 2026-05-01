@@ -2,7 +2,7 @@
   max-width: 1280px;
   padding-top: 15px;
   margin: 0 auto;
-  font-family: SF, Helvetica, Arial, sans-serif;
+  font-family: Inter, Helvetica, Arial, sans-serif;
 }
 
 .containerHeader {
@@ -14,7 +14,7 @@
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: var(--color-bg-blur-primary);
-  box-shadow: inset 0 5px 10px -3px #ffffff30;
+  box-shadow: inset 0 5px 10px -3px #00000030;
   border: 1px solid #92929225;
   user-select: none;
 }
@@ -22,19 +22,18 @@
 .title {
   font-size: 2.5rem;
   line-height: 1.2;
-  color: var(--color-text-primary);
   font-family: SyneBold;
 }
 
 .label {
   font-size: 1.2rem;
-  color: var(--color-text-primary);
   font-weight: 300;
 }
 
 .image {
   width: 32px;
   margin-top: -3px;
+  filter: invert(100%);
 }
 
 .dateAuthor {
@@ -50,20 +49,18 @@
   gap: 5px;
   font-size: 1.2rem;
   font-weight: 300;
-  color: var(--color-text-primary);
 }
 
 .author {
   font-size: 1.2rem;
-  color: var(--color-text-primary);
   font-weight: 300;
 }
 
 .shareButton {
-  box-shadow: inset 0 8px 15px -6px #ffffff25;
+  box-shadow: inset 0 5px 10px -3px #00000030;
   text-decoration: none;
   user-select: none;
-  font-family: SF, Helvetica, Arial, sans-serif;
+  font-family: Inter, Helvetica, Arial, sans-serif;
   font-size: 21px;
   padding: 0.4rem 1.0rem;
   width: 56px;
@@ -73,16 +70,15 @@
 
 .content {
   font-size: 1rem;
-  line-height: 1.6;
-  color: var(--color-text-primary);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Merriweather', serif;
+  line-height: 1.7;
   font-size: 19px;
   padding: 2rem;
   border-radius: 40px;
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: var(--color-bg-blur-primary);
-  box-shadow: inset 0 5px 10px -3px #ffffff30;
+  box-shadow: inset 0 5px 10px -3px #00000030;
   border: 1px solid #92929225;
   
 }
@@ -158,7 +154,7 @@ table {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  font-family: SF, Helvetica, Arial, sans-serif;
+  font-family: Inter, Helvetica, Arial, sans-serif;
 }
 
 thead {
@@ -242,14 +238,13 @@ th, td {
 /* HOVERS */
 
 .shareButton {
-  background-color: var(--color-bg-blur-primary);
+  background-color: rgba(32, 32, 32, 0.05);
   border: 1px solid #92929225;
   transition: all 0.1s;
 }
 
 .shareButton:hover {
-  color: var(--color-text-primary); 
-  background: #ffffff1c;
+  background-color: var(--color-bg-blur-primary);
   border: 1px solid #92929285;
   transition: all 0.1s;
 }
@@ -262,7 +257,6 @@ th, td {
   }
 
   .shareButton:active {
-    color: var(--color-text-primary); 
     background: #ffffff1c;
     border: 1px solid #92929285;
     transition: all 0.1s;

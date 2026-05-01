@@ -34,7 +34,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <SkeletonTheme baseColor="#1a1a1a" highlightColor="#333" borderRadius={10}>
+      <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
         {isLoading ? (
           <main className='mainAboutSkeleton'>
             <AboutHeader />

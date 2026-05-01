@@ -2,66 +2,103 @@ import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
-      main: '#2C2C2C', // --color-primary
+      main: '#db1168', // --color-primary
     },
     secondary: {
-      main: '#4B1E4D', // --color-secondary
+      main: '#db1168', // --color-secondary
     },
     error: {
       main: '#BE3455', // --color-accent usado como destaque de erro/alerta
     },
     background: {
-      default: '#000000', // --color-bg-primary
+      default: '#ffffff', // --color-bg-primary
       paper: '#202020',   // Base para o blur
     },
     text: {
-      primary: '#ffffff', // --color-text-primary
+      primary: '#000000', // --color-text-primary
       secondary: '#000000', // --color-text-secondary
     },
   },
   typography: {
-    fontFamily: 'SF, Helvetica, Arial, sans-serif',
+    fontFamily: 'Inter, Helvetica, Arial, sans-serif',
     h1: { fontFamily: 'Phonk, sans-serif' },
     h2: { fontFamily: 'Phonk, sans-serif' },
     h3: { fontFamily: 'Phonk, sans-serif' },
   },
   components: {
+    MuiLink: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.text.primary,
+          textDecoration: 'none',
+
+          '&:hover': {
+            color: theme.palette.text.primary,
+          },
+        }),
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
           borderRadius: '100px',
           textTransform: 'none',
-          color: '#ffffff',
-          backgroundColor: '#20202040', 
-          backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          boxShadow: 'inset 0 5px 10px -3px #ffffff30',
-          transition: 'all 0.1s ease',
+          fontWeight: 500,
+          transition: 'all 0.15s ease',
+        },
+
+        contained: ({ theme }) => ({
+          color: theme.palette.text.primary,
+          backgroundColor: theme.palette.primary.main,
+          boxShadow: 'none',
 
           '&:hover': {
-            backgroundColor: 'rgba(75, 30, 77, 0.4)',
-            color: '#ffffff',
+            backgroundColor: '#1f1f1f',
+            boxShadow: 'none',
           },
+
           '&:active': {
-            scale: '0.950',
+            transform: 'scale(0.97)',
           },
-        },
+        }),
+
+        outlined: ({ theme }) => ({
+          borderRadius: '100px',
+          border: `1px solid ${theme.palette.primary.main}`,
+          color: theme.palette.primary.main,
+          backgroundColor: 'transparent',
+
+          '&:hover': {
+            backgroundColor: 'rgba(44,44,44,0.05)',
+            borderColor: theme.palette.primary.main,
+          },
+        }),
+
+        text: ({ theme }) => ({
+          color: theme.palette.text.primary,
+
+          '&:hover': {
+            backgroundColor: 'rgba(0,0,0,0.04)',
+          },
+        }),
       },
     },
     MuiIconButton: {
       styleOverrides: {
-        root: {
-          border: '2px solid white',
-          color: 'white',
-          backgroundColor: '#20202040',
+        root: ({ theme }) => ({
+          border: `2px solid ${theme.palette.primary.main}`,
+          color: theme.palette.primary.main,
+          backgroundColor: 'rgba(32,32,32,0.1)',
           backdropFilter: 'blur(10px)',
+
           '&:hover': {
-            backgroundColor: '#BE3455',
-            borderColor: '#BE3455',
+            backgroundColor: theme.palette.error.main,
+            borderColor: theme.palette.error.main,
+            color: theme.palette.text.primary,
           },
-        },
+        }),
       },
     },
   },

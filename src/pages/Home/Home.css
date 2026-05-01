@@ -3,9 +3,7 @@
 .mainAboutSkeleton {
     color: var(--color-white);
     cursor: wait;
-}
-.mainAbout {
-    color: var(--color-white);
+    background-color: black;
 }
 
 .section2 {

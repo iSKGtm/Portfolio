@@ -1,7 +1,5 @@
 @import "tailwindcss";
 .mainNews {
-    color: var(--color-white);
-    background-color: var(--color-bg-primary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +29,7 @@
     padding: 2rem;
     border-radius: 50px;
     background-color: var(--color-bg-blur-primary);
-    box-shadow: inset 0 5px 10px -3px #ffffff30;
+    box-shadow: inset 0 5px 10px -3px #00000030;
     outline: 1px solid #92929225;
     margin-bottom: 45px;
 }
@@ -53,7 +51,7 @@
     margin-left: 5px;
     border-radius: 50%;
     background-color: var(--color-bg-blur-primary);
-    box-shadow: inset 0 5px 10px -3px #ffffff30;
+    box-shadow: inset 0 5px 10px -3px #00000030;
     outline: 2px solid #92929225;
     justify-content: center;
     align-items: center;
@@ -68,10 +66,9 @@
 }
 
 .inputSearchContainer > input {
-    font-family: SF, Helvetica, Arial, sans-serif;
-    backdrop-filter: blur(20px);
+    font-family: Inter, Helvetica, Arial, sans-serif;
     border-radius: 100px;
-    box-shadow: inset 0 8px 15px -6px #ffffff25;
+    box-shadow: inset 0 5px 10px -3px #00000030;
     outline: 0;
     width: 340px;
     height: 50px;
@@ -80,9 +77,8 @@
 }
 
 .inputSearchContainer > button {
-    backdrop-filter: blur(20px);
     border-radius: 50%;
-    box-shadow: inset 0 8px 15px -6px #ffffff25;
+    box-shadow: inset 0 5px 10px -3px #00000030;
     width: 50px;
     aspect-ratio: 1 / 1;
 }
@@ -93,11 +89,10 @@
     font-family: Phonk;
     text-align: left;
     font-size: 48px;
-    color: var(--color-text-primary);
 }
 
 .labelNewsSearch {
-    font-family: SF, Arial, Helvetica, sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 20px;
 }
@@ -113,7 +108,7 @@
 }
 
 .containerSearch > h2 {
-    font-family: SF, Arial, Helvetica, sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 20px;
 }
@@ -147,9 +142,10 @@
     gap: 15px;
     padding: 2rem 3rem;
     height: fit-content;
+    font-size: 20px;
     border-radius: 50px;
     background-color: var(--color-bg-blur-primary);
-    box-shadow: inset 0 5px 10px -3px #ffffff30;
+    box-shadow: inset 0 5px 10px -3px #00000030;
     outline: 1px solid #92929225;
     justify-content: center;
     flex-direction: column;
@@ -157,34 +153,35 @@
 }
 
 .containerSearchNone > img {
-  width: 100px;
+  width: 200px;
   animation: pulse 2s infinite ease-in-out;
   user-select: none;
   pointer-events: none;
+  filter: invert(100%);
 }
 
 /* HOVERS */
 
 .inputSearchContainer > input {
-  background: var(--color-bg-blur-primary);
+  background: rgba(32, 32, 32, 0.05);
   border: 1px solid #92929225;
   transition: all 0.1s;
 }
 
 .inputSearchContainer > input:focus {
-  background: #ffffff1c;
-  border: 1px solid #92929285;
+    background-color: var(--color-bg-blur-primary-hover);
+    border: 1px solid #92929285;
 }
 
 .inputSearchContainer > button {
-  background: var(--color-bg-blur-primary);
+  background: rgba(32, 32, 32, 0.05);
   border: 1px solid #92929225;
   transition: all 0.1s;
 }
 
 .inputSearchContainer > button:hover {
-  background: #ffffff1c;
-  border: 1px solid #92929285;
+    background-color: var(--color-bg-blur-primary-hover);
+    border: 1px solid #92929285;
 }
 
 .inputSearchContainer > button:active {
@@ -206,7 +203,7 @@
   }
 
   .inputSearchContainer > button:active {
-    background: #ffffff1c;
+    background-color: var(--color-bg-blur-primary-hover);
     border: 1px solid #92929285;
   }
 }
@@ -240,7 +237,7 @@
     }
 
     .labelNewsSearch {
-        font-size: 19px;
+        font-size: 18px;
         padding-right: 0px;
     }
     .titleNewsSearch {
@@ -268,7 +265,7 @@
     }
 
     .labelNewsSearch {
-        font-size: 18px;
+        font-size: 16px;
     }
     .titleNewsSearch {
         font-size: 30px;

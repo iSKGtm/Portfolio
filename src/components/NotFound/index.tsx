@@ -16,7 +16,7 @@ const NotFound: React.FC = () => {
     return (
         <>
         <div className={styles.containerNotFound}>
-            <img src="/images/symb/warning.png" />
+            <img src="/images/symb/aviso.svg" />
             <p ref={warningTextRef}></p>
             <button className={styles.button} onClick={() => navigate('/home')}>Voltar</button>
         </div>

@@ -1,20 +1,20 @@
 import { useRef, useEffect } from 'react';
-import styles from './index.module.css'
+import styles from './index.module.css';
 
 const NoAvailableRef: React.FC = () => {
   const noAvailableRef = useRef<HTMLDivElement | null>(null);
   const warningTextRef = useRef<HTMLParagraphElement | null>(null);
 
-  const html = document.body;
-
   useEffect(() => {
-    const windowWidthNoAvailable = () => {
-      const sysWidth = window.outerHeight;
-      const sysHeight = window.outerHeight;
+    const html = document.body;
 
-      if (sysWidth < 600 || sysHeight < 150) {
+    const windowWidthNoAvailable = () => {
+      const sysWidth = window.innerWidth;   // ✅ corrigido
+
+      if (sysWidth < 301) {
         if (noAvailableRef.current && warningTextRef.current) {
-          warningTextRef.current.textContent = "Esta aplicação não está disponível para este dispositivo.";
+          warningTextRef.current.textContent =
+            "Aplicação indisponível para este dispositivo.";
           noAvailableRef.current.style.display = "flex";
           html.style.overflowY = "hidden";
         }
@@ -28,16 +28,25 @@ const NoAvailableRef: React.FC = () => {
     };
 
     windowWidthNoAvailable();
-    addEventListener("resize", windowWidthNoAvailable);
+    window.addEventListener("resize", windowWidthNoAvailable);
+
+    return () => {
+      window.removeEventListener("resize", windowWidthNoAvailable);
+    };
   }, []);
 
   return (
-    <>
-      <div className={styles.containerNoAvailable} ref={noAvailableRef}>
-        <img src="/images/symb/warning.png" />
-        <p ref={warningTextRef}>Teste</p>
+    <div
+      className={styles.containerNoAvailable}
+      ref={noAvailableRef}
+      style={{ display: "none" }}
+    >
+      <div className={styles.containerBox}>
+        <img src="/images/symb/aviso.svg" alt="Aviso" />
+        <p ref={warningTextRef}>
+        </p>
       </div>
-    </>
+    </div>
   );
 };
 

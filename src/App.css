@@ -6,13 +6,10 @@
   --color-secondary: #4B1E4D;
   --color-accent: #db1168;
   --color-neutral: #64748B;
-  --color-bg-primary: #000000;
-  --color-bg-secondary: white;
-  --color-bg-blur-primary: #20202040;
-  --color-text-primary: white;
-  --color-text-secondary: black;
+  --color-bg-blur-primary: #0000001a;
+  --color-bg-blur-primary-hover: #00000040;
   
-  font-family: SF, Helvetica, Arial, sans-serif;
+  font-family: Inter, Helvetica, Arial, sans-serif;
 }
 
 html, body {
@@ -53,54 +50,6 @@ html, body {
 }
 
 @font-face {
-  font-family: SF;
-  src: url("/assets/fonts/SF/SFBLACK.otf");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: SF;
-  src: url("/assets/fonts/SF/SFBOLD.otf");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: SF;
-  src: url("/assets/fonts/SF/SFREG.otf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: SF;
-  src: url("/assets/fonts/SF/SFLIGHT.otf");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: SFITALIC;
-  src: url("/assets/fonts/SF/SFBLACKITALIC.otf");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: SFITALIC;
-  src: url("/assets/fonts/SF/SFBOLDITALIC.otf");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: SFITALIC;
-  src: url("/assets/fonts/SF/SFREGITALIC.otf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: SFITALIC;
-  src: url("/assets/fonts/SF/SFLIGHTITALIC.otf");
-  font-weight: 300;
-}
-
-@font-face {
   font-family: SyneExt;
   src: url("/assets/fonts/Syne/SyneExtra.otf");
 }
@@ -133,5 +82,4 @@ html, body {
 
 body {
   margin: 0;
-  background: var(--color-bg-primary);
 }

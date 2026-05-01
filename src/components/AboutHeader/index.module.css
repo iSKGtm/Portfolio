@@ -4,7 +4,6 @@
     width: 100%;
     overflow: hidden;
     user-select: none;
-    background-color: #000;
     z-index: -1;
 }
 
@@ -35,7 +34,7 @@
     font-size: 32px;
     z-index: 10; /* Garante que fique acima do vídeo */
     font-family: Phonk, sans-serif;
-    color: #bfbfbf;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -48,7 +47,7 @@
 }
 
 .logoName > img {
-    width: 474px;
+    width: 460px;
     height: auto;
 }
 
@@ -67,7 +66,9 @@
         padding: 0 20px;
         font-size: 5.7vw;
     }
-    .logoName > img { width: 90%; }
+    .logoName > img { 
+        width: 90%;
+    }
 
     .logoNameSkeleton {
         bottom: 90px;
@@ -81,7 +82,9 @@
         align-items: flex-start;
         font-size: 24px;
     }
-    .logoName > img { width: 350px; }
+    .logoName > img { 
+        width: 346px;
+    }
     
     .logoNameSkeleton {
         bottom: 90px;

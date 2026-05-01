@@ -1,5 +1,11 @@
 import './App.css';
 import React from 'react';
+import "@fontsource/inter";
+import "@fontsource/inter/700.css";
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/merriweather/400.css';
+import '@fontsource/merriweather/700.css';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, scale } from 'framer-motion';
 import NoAvailable from './components/NoAvailable';

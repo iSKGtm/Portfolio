@@ -21,9 +21,8 @@
   position: absolute;
   background-color: var(--color-bg-blur-primary);
   backdrop-filter: url(#glass-distortion) blur(3px);
-  box-shadow: inset 0 5px 10px -3px #ffffff30,
-  0px 0px 15px #00000055;
-  color: white;
+  box-shadow: inset 0 5px 10px -3px #00000030,
+  0px 0px 20px #00000020;
   border: 1px solid #92929225;
 }
 
@@ -56,8 +55,8 @@ nav {
   align-items: center;
   justify-content: center;
   user-select: none !important;
-  font-family: SF, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: Inter, Helvetica, Arial, sans-serif;
+  font-size: 14px;
   letter-spacing: 0.5px;
   font-weight: 600;
   gap: 0px;
@@ -67,12 +66,11 @@ nav {
   bottom: 15px;
   width: fit-content;
   height: 70px;
-  background-color: var(--color-bg-blur-primary);
+  background-color: #00000000;
   backdrop-filter: url(#glass-distortion) blur(3px);
-  color: white;
   border: 1px solid #92929225;
-  box-shadow: inset 0 5px 10px -3px #ffffff30,
-  0px 0px 15px #00000055;
+  box-shadow: inset 0 5px 10px -3px #00000030,
+  0px 0px 20px #00000020;
   transition: scale 200ms;
 }
 
@@ -100,9 +98,8 @@ nav > .buttonItem > svg {
   border-radius: 100px;
   padding: 3px 25px;
   transition: all 0.1s;
-
-  fill-opacity: 0;
-  stroke: #ffffff;
+  fill-opacity: 1;
+  stroke: #00000000;
   stroke-width: 20px;
   stroke-dasharray: 1, 0;
   stroke-linejoin: round;
@@ -110,6 +107,10 @@ nav > .buttonItem > svg {
 
 nav > .buttonItem:hover {
   border-color: #ff000000;
+}
+
+.buttonText {
+  font-weight: 600;
 }
 
 .buttonItem:focus,
@@ -135,6 +136,7 @@ nav > .buttonItem:hover {
   margin-bottom: 9px;
   margin-left: 5px;
   margin-right: 2px;
+  filter: invert(100%);
   pointer-events: none;
 }
 
@@ -149,8 +151,10 @@ nav > .buttonItem:hover {
 
 .logoName > img {
   width: 211px;
+  margin-top: -5px;
   padding-right: 15px;
   pointer-events: none;
+  filter: invert(100%)
 }
 
 /* NAVBAR HOVERS */
@@ -166,17 +170,17 @@ nav:active {
 }
 
 .buttonNav:hover{
-  box-shadow: inset 0 5px 10px -3px #ffffff30,
-  0px 0px 15px #00000055;
-  background: #ffffff1c;
+  box-shadow: inset 0 5px 10px -3px #00000030,
+  0px 0px 15px #00000020;
+  background: #00000020;
   outline: 1px solid #92929285;
   transition: outline 0.1s;
 }
 
 .buttonNav.active{
-  box-shadow: inset 0 5px 10px -3px #ffffff30,
-  0px 0px 15px #00000055;
-  background: #ffffff1c;
+  box-shadow: inset 0 5px 10px -3px #00000030,
+  0px 0px 15px #00000010;
+  background: #00000025;
   outline: 1px solid #92929285;
   transition: outline 0.1s;
 }
@@ -185,10 +189,15 @@ nav:active {
   fill-opacity: 1 !important;
   background-color: #fff;
   transition: all 0.1s;
+  color: #db1168;
+}
+
+.activeTEXT {
+  color: #db1168;
 }
 
 .scrollButton:hover {
-  background: #ffffff1c;
+  background: #00000025;
   border: 1px solid #92929285;
   transition: all 0.1s;
 }
@@ -205,7 +214,7 @@ nav:active {
     transition: all 0.1s;
   }
   .scrollButton:active {
-    background: #ffffff1c;
+    background: #00000025;
     border: 1px solid #92929285;
     transition: all 0.1s;
   }

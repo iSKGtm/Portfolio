@@ -42,7 +42,7 @@ const ArticleDetailPage: React.FC = () => {
             title: foundArticle.title,
             label: foundArticle.label,
             imageUrl: foundArticle.imageUrl,
-            tagImage: foundArticle.tagImage || "/images/symb/outros.png",
+            tagImage: foundArticle.tagImage || "/images/symb/outros.svg",
             authorName: foundArticle.authorName || "iShaking Creative Media",
             publishDate: new Date(foundArticle.date),
             minutesRead: foundArticle.minutesRead || 5,
@@ -76,7 +76,7 @@ const ArticleDetailPage: React.FC = () => {
   const pageTitle = isLoading
     ? "Por favor, aguarde..."
     : error
-    ? "Notícia não encontrado."
+    ? "Artigo não encontrado."
     : article
     ? `iSKGtm - ${article.title}`
     : "Notícia ou artigo não encontrado.";
@@ -84,7 +84,7 @@ const ArticleDetailPage: React.FC = () => {
     const navigate = useNavigate();
 
   return (
-    <SkeletonTheme baseColor="#1a1a1a" highlightColor="#333" borderRadius={10}>
+    <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
       <SetTitle title={pageTitle} />
       <main className="mainArticlePage">
         {isLoading ? (
@@ -108,7 +108,7 @@ const ArticleDetailPage: React.FC = () => {
         ) : error ? (
           <>
           <div className='containerNotFoundArticle'>
-            <img src="/images/symb/warning.png" />
+            <img src="/images/symb/aviso.svg" />
             <p>{error}</p>
             <button className="button" onClick={() => navigate('/news')}>Voltar</button>
           </div>
@@ -118,7 +118,7 @@ const ArticleDetailPage: React.FC = () => {
         ) : (
           <>
           <div className='containerNotFoundArticle'>
-            <img src="/images/symb/warning.png" />
+            <img src="/images/symb/aviso.svg" />
             <p>Notícia ou artigo não encontrado.</p>
             <button className="button" onClick={() => navigate('/news')}>Voltar</button>
           </div>

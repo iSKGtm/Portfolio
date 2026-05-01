@@ -19,6 +19,6 @@ export const partners: Partner[] = [
   name: 'Truco 24H',
   logo: 'https://i.imgur.com/vtn6G09.jpeg',
   description: 'Jogue, aposte, ganhe!',
-  link: 'https://truco24hr.com/'
+  link: 'https://www.instagram.com/truco24hr/'
 },
 ]

@@ -3,27 +3,35 @@ import { Button } from '@mui/material';
 import styles from './index.module.css';
 
 const AboutContact = () => {
-  const glassButtonStyle = {
+  const glassButtonStyle = (theme: any) => ({
     borderRadius: '100px',
-    color: '#fff',
     textTransform: 'none',
     fontFamily: 'inherit',
     fontWeight: 500,
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    border: '1px solid rgba(255, 255, 255, 0.15)',
-    boxShadow: 'inset 0 5px 10px -3px rgba(255, 255, 255, 0.2)',
-    transition: 'all 0.2s ease-in-out',
     padding: '10px 25px',
     fontSize: '18px',
-    cursor: "default",
+    cursor: 'default',
+
+
+    backgroundColor: 'rgba(32, 32, 32, 0.05)',
+    border: '1px solid rgba(0, 0, 0, 0.1)',
+    boxShadow: 'inset 0 5px 10px -3px #00000030;',
+
+    transition: 'all 0.2s ease-in-out',
+
     '&:hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.12)',
-      borderColor: 'rgba(255, 255, 255, 0.4)',
+      backgroundColor: theme.palette.secondary.main,
+      borderColor: theme.palette.secondary.main,
+      color: '#fff',
+    },
+
+    '&:active': {
+      transform: 'scale(0.96)',
     }
-  };
+  });
 
   const categories = [
-      {
+    {
       title: "Geral",
       links: [
         { name: "Discord", url: "https://discordapp.com/users/320273425035689986" },
@@ -60,7 +68,9 @@ const AboutContact = () => {
     <div className={styles.contact}>
       <div className={styles.container}>
         <div className={styles.text}>
-          <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>contatos.</h1>
+          <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>
+            contatos.
+          </h1>
           <p>Selecione a área desejada para entrar em contato.</p>
         </div>
 
@@ -68,6 +78,7 @@ const AboutContact = () => {
           {categories.map((cat, idx) => (
             <div key={idx} className={styles.categoryGroup}>
               <h3 className={styles.categoryTitle}>{cat.title}</h3>
+
               <div className={styles.containerButton}>
                 {cat.links.map((link) => (
                   <Button
@@ -75,12 +86,14 @@ const AboutContact = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    sx={glassButtonStyle}
+                    variant="contained"
+                    sx={(theme) => glassButtonStyle(theme)}
                   >
                     {link.name}
                   </Button>
                 ))}
               </div>
+
             </div>
           ))}
         </div>

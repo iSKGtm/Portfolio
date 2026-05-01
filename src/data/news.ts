@@ -29,12 +29,12 @@ export const newsData: NewsItem[] = [
 
     {
     url: "/artigo/lady-iskgtm-remix",
-    hide: true,
+    hide: false,
     title: "Modjo - Lady (Hear me Tonight) (Remix)",
     label: "Novo remix realizado por iSKGtm & Diguinho DJ.",
     imageUrl: "https://i.imgur.com/qYc0xAx.jpeg",
     tags: ["iSKGtm Music"],
-    tagImage: "/images/symb/music.png",
+    tagImage: "/images/symb/music.svg",
     date: "05/01/2026",
     authorName: "Anthony M.",
     minutesRead: 6,
@@ -99,7 +99,7 @@ export const newsData: NewsItem[] = [
     label: "Ain't Nobody, um novo remix bootleg, de Alex Warren.",
     imageUrl: "https://i.imgur.com/qYc0xAx.jpeg",
     tags: ["iSKGtm Music"],
-    tagImage: "/images/symb/music.png",
+    tagImage: "/images/symb/music.svg",
     date: "03/01/2026",
     authorName: "Anthony M.",
     minutesRead: 5,
@@ -225,7 +225,7 @@ export const newsData: NewsItem[] = [
     label: "Ordinary, um novo remix bootleg, de Alex Warren.",
     imageUrl: "https://i.imgur.com/qYc0xAx.jpeg",
     tags: ["iSKGtm Music"],
-    tagImage: "/images/symb/music.png",
+    tagImage: "/images/symb/music.svg",
     date: "01/01/2026",
     authorName: "Anthony M.",
     minutesRead: 3,
@@ -454,7 +454,7 @@ export const newsData: NewsItem[] = [
     label: "How to Love, um novo remix bootleg, de Tokio Hotel.",
     imageUrl: "/images/news/posts/music/how_to_love_iskgtm_remix/banner.jpg",
     tags: ["iSKGtm Music"],
-    tagImage: "/images/symb/music.png",
+    tagImage: "/images/symb/music.svg",
     date: "11/01/2025",
     authorName: "Anthony M.",
     minutesRead: 2,
@@ -497,7 +497,7 @@ export const newsData: NewsItem[] = [
     label: "Freed From Desire, um novo remix bootleg, de Gala.",
     imageUrl: "/images/news/posts/music/freed_from_desire_iskgtm_remix/banner.jpg",
     tags: ["iSKGtm Music"],
-    tagImage: "/images/symb/music.png",
+    tagImage: "/images/symb/music.svg",
     date: "09/01/2025",
     authorName: "Anthony M.",
     minutesRead: 3,
@@ -542,7 +542,7 @@ export const newsData: NewsItem[] = [
     label: "Nova metodologia CoreCycle.",
     imageUrl: "/images/news/posts/outros/corecycle/banner.jpg",
     tags: ["Outros"],
-    tagImage: "/images/symb/outros.png",
+    tagImage: "/images/symb/outros.svg",
     date: "08/06/2025",
     authorName: "Anthony M.",
     minutesRead: 5,
@@ -656,7 +656,7 @@ export const newsData: NewsItem[] = [
     label: "",
     imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
     tags: ["iSKGtm Dev"],
-    tagImage: "/images/symb/outros.png",
+    tagImage: "/images/symb/outros.svg",
     date: "09/01/2025",
     authorName: "Anthony M.",
     minutesRead: 1,
@@ -688,7 +688,7 @@ export const newsData: NewsItem[] = [
     label: "Novo website que demonstra nossos projetos e portfólios.",
     imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
     tags: ["iSKGtm Dev"],
-    tagImage: "/images/symb/dev.png",
+    tagImage: "/images/symb/dev.svg",
     date: "08/01/2025",
     authorName: "Anthony M.",
     minutesRead: 3,
@@ -756,7 +756,7 @@ export const newsData: NewsItem[] = [
     label: "Remix N°50 em 6 anos de iSKGtm Music.",
     imageUrl: "/images/news/posts/music/producao_n50/banner.jpg",
     tags: ["iSKGtm Music"],
-    tagImage: "/images/symb/music.png",
+    tagImage: "/images/symb/music.svg",
     date: "04/01/2025",
     authorName: "Anthony M.",
     minutesRead: 3,
@@ -801,7 +801,7 @@ export const newsData: NewsItem[] = [
     label: "Nova padronização nos vídeos para os prox. anos.",
     imageUrl: "/images/news/posts/prod/nova-padronizacao-prod/banner.jpg",
     tags: ["iSKGtm Prod"],
-    tagImage: "/images/symb/prod.png",
+    tagImage: "/images/symb/prod.svg",
     date: "02/24/2025",
     authorName: "Anthony M.",
     minutesRead: 4,
@@ -832,7 +832,7 @@ export const newsData: NewsItem[] = [
       <h2>Como será a partir de agora?</h2>
 
       <p>
-        A mudança começa pelo editor, partindo de VEGAS Pro 22 para DaVinci Resolve 20, onde este ultimo possui uma série de novas ferramentas e melhorias para o editor, como a capacidade de criar e editar áudio com qualidade superior e projetos modulares, permitindo a criação de projetos complexos e eficientes, se enquadrando no novo fluxo de trabalho, chamado <a href="/news/corecycle" target="_blank"> CoreCycle</a>, que implicará também em outros setores (exceto com VEGAS Pro [iSKGtm Prod]), como iSKGtm Music e iSKGtm Dev. <br> A transição de um editor para o outro começou em Junho de 2025, sendo assim, toda nova produção, será feita no novo editor. Parceiros que utilizam projetos com VEGAS Pro terão suporte até 2027, que será descontinuado em nossos serviços.
+        A mudança começa pelo editor, partindo de VEGAS Pro 22 para DaVinci Resolve 20, onde este ultimo possui uma série de novas ferramentas e melhorias para o editor, como a capacidade de criar e editar áudio com qualidade superior e projetos modulares, permitindo a criação de projetos complexos e eficientes, se enquadrando no novo fluxo de trabalho, chamado <a href="/artigo/corecycle" target="_blank"> CoreCycle</a>, que implicará também em outros setores (exceto com VEGAS Pro [iSKGtm Prod]), como iSKGtm Music e iSKGtm Dev. <br> A transição de um editor para o outro começou em Junho de 2025, sendo assim, toda nova produção, será feita no novo editor. Parceiros que utilizam projetos com VEGAS Pro terão suporte até 2027, que será descontinuado em nossos serviços.
       </p>
 
       <img src="/images/news/posts/prod/nova-padronizacao-prod/1.jpg"/>
@@ -877,7 +877,7 @@ export const newsData: NewsItem[] = [
     label: "Como surgiu e o que é iSKGtm Dev?",
     imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
     tags: ["iSKGtm Dev"],
-    tagImage: "/images/symb/dev.png",
+    tagImage: "/images/symb/dev.svg",
     date: "09/01/2025",
     authorName: "Anthony M.",
     minutesRead: 4,
@@ -920,11 +920,7 @@ export const newsData: NewsItem[] = [
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
           </div>
-          CSS (Vanilla)
-          <div class="expContainer2">
-            <div class="expPercent p100">Avançado</div>
-          </div>
-          HTML
+          HTML & CSS (Vanilla)
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
           </div>
@@ -950,13 +946,9 @@ export const newsData: NewsItem[] = [
         </div>
         <div class="expContainer">
           Outros: <br>
-          Gerenciamento Linux:
+          Gerenciamento Linux (Desktop):
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
-          </div>
-          Julia
-          <div class="expContainer2">
-            <div class="expPercent p10">Iniciante</div>
           </div>
           MySQL
           <div class="expContainer2">
@@ -978,7 +970,7 @@ export const newsData: NewsItem[] = [
     label: "Como surgiu e o que é iSKGtm Music?",
     imageUrl: "/images/news/posts/music/banner.jpg",
     tags: ["iSKGtm Music"],
-    tagImage: "/images/symb/music.png",
+    tagImage: "/images/symb/music.svg",
     date: "09/01/2025",
     authorName: "Anthony M.",
     minutesRead: 5,
@@ -999,14 +991,14 @@ export const newsData: NewsItem[] = [
 
         <h2>Produção de sons para consoles antigos</h2>
 
-        <p>Ainda em 2018, me aperfeiçoei neste ramo, e em 2019, lançava um tributo ao Avicii, chamado "Levels (Sonic Remix)". Que era uma versão do sucesso "Levels" lançado em 2011, porém, inteiramente feito com sintetizadores do SEGA MegaDrive (Yamaha YM2612 & Texas Instruments SN76489), como ocorre em uma outra versão que existe na internet a muito tempo, a versão "Levels - Mario Remix" que usava sintetizadores do Super Nintendo.</p>
+        <p>Ainda em 2018, me aperfeiçoei neste ramo, e em 2019, lançava um tributo ao Avicii, chamado "Levels (Sonic Remix)". Que era uma versão do sucesso "Levels" lançado em 2011, porém, inteiramente feito com sintetizadores do SEGA MegaDrive (Yamaha YM2612 & Texas Instruments SN76489), como ocorre em uma outra versão que existe na internet a muito tempo, de 2011, a versão "Levels - Mario Remix" que usava sintetizadores do Super Nintendo.</p>
 
         <img src="/images/news/sobre/music/1.jpg"/>
 
         <h3>Álbum de música. Imagem: Acervo iSKGtm</h3>
 
         <p>Ao lançar esta música, vi que precisava ir produzir músicas de fato, e aí, conheci o DAW o MAGIX ACID PRO 8, inicialmente como não entendia de produção sonora, optei por pegar efeitos dos sintetizadores do Deflemask e portei para o ACID PRO, fica evidente quando se escuta meu primeiro remix "Youngblood (iSKGtm Remix)". <br>
-        Vale ressaltar que, como eu também sou fan da música "I Took a Pill in Ibiza (Seeb Remix)", optei por adquirir arquivos de samples da Vandalism Sound, os mesmos que foram usados nesta música pelos remixers, que foi um sucesso em 2015.
+        Vale ressaltar que, como eu também sou fan da música "I Took a Pill in Ibiza (Seeb Remix)", optei por adquirir arquivos de samples da Vandalism Sound, o Ultra Tropical House Elements, os mesmos que foram usados nesta música pelos remixers, que foi um sucesso em 2015.
         Estes samples foram feitos para Tropical House, mas com nosso empenho, conseguimos utilizar em diversos estilos de música, sendo a base e identidade sonora de todas as minhas faixas atualmente.</p>
 
         <h2>Problemas com DAW</h2>
@@ -1040,10 +1032,6 @@ export const newsData: NewsItem[] = [
         </div>
         <div class="expContainer">
           Outros: <br>
-          Composição de Letras
-          <div class="expContainer2">
-            <div class="expPercent p25">Básico</div>
-          </div>
           Composição de Melodias/Instrumentação
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
@@ -1052,15 +1040,11 @@ export const newsData: NewsItem[] = [
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
           </div>
-          Criação de Efeitos Sonoros (Superior a 2.1)
-          <div class="expContainer2">
-            <div class="expPercent p25">Básico</div>
-          </div>
         </div>
 
-        <p>Atualmente, produzo efeitos sonoros, músicas de diferentes estilos, como Disco, Dance, Plug Rap, entre outros.</p>
+        <p>Atualmente, produzimos efeitos sonoros, músicas de diferentes estilos, como Dance, Disco, Phonks, Raps, entre outros.</p>
 
-        <p>Acompanhe aqui toda nossa produção nesta <a href="https://www.youtube.com/playlist?list=PL2DivU5yf-1wIXM2F8rp_GNEqpVYW3sqt">playlist!</a>
+        <p>Acompanhe toda nossa produção em <a href="https://www.youtube.com/@iSKGtmMusic">iSKGtm Music</a> ou acesse nossa <a href="https://www.youtube.com/playlist?list=PL2DivU5yf-1wIXM2F8rp_GNEqpVYW3sqt">playlist</a> de produções (pre- 2026) no YouTube.
         </p>
 
         <h2>iSKGtm, We Are in Everything</h2>
@@ -1075,10 +1059,10 @@ export const newsData: NewsItem[] = [
     label: "Como surgiu e o que é iSKGtm Prod?",
     imageUrl: "/images/news/posts/prod/banner.jpg",
     tags: ["iSKGtm Prod"],
-    tagImage: "/images/symb/prod.png",
+    tagImage: "/images/symb/prod.svg",
     date: "09/01/2025",
     authorName: "Anthony M.",
-    minutesRead: 4,
+    minutesRead: 5,
     content: `
       <main>
         <img src="/images/news/tags/iskgtm.jpg" alt="iSKGtm"/>
@@ -1103,23 +1087,36 @@ export const newsData: NewsItem[] = [
 
         <h3>Edição de vídeo (VEGAS PRO). Imagem: Pessoal</h3>
 
-        <h2>Alguns problemas com editor de vídeo</h2>
+        <h2>Mudança de editor de vídeo</h2>
 
         <p>Assim como o DAW da MAGIX, o ACID PRO, o editor de vídeo VEGAS PRO tem alguns problemas, uma delas é similar ao problema no DAW, já que ambos aparentam ter o mesmo framework, afinal, VEGAS PRO surgiu do ACID PRO. As funcionalidades deste programa são boas para a maioria das pessoas, mas são obsoletas para nosso padrão, faltando recursos simples como sistema de textos avançados, edição FULL 3D e não PSEUDO 3D (técnicas de distorção de imagem). Este programa foi substituido aos poucos, nos periodos de Junho de 2025, pelo Blackmagic DaVinci Resolve, na versão 20, que se demonstrou uma solução superior.</p>
 
-        <img src="/images/news/sobre/iskgtm/0.gif"/>
+        <img src="https://i.imgur.com/0QzH9NV.jpeg"/>
 
-        <h3>Parte do Institucional. Imagem: Reprodução</h3>
+        <h3>Demonstração de uso do Resolve. Imagem: Pessoal</h3>
+
+        <h2>Mudança de editor de fotos e vetores</h2>
+
+        <p>Assim como os demais citados, Adobe Photoshop 2025 foi substituido de nossos trabalhos, para o Canva Affinity 3, que é uma solução gratuita da Canva, com similaridades do Photoshop, parecendo funcionar melhor e mais leve, bem como, um editor de vetor avançado integrado. Curiosamente, arquivos .psd são compativeis, facilitando a mudança brusca, convertendo .psd's para .af, do próprio Affinity.
+        <br> Adobe Photoshop foi substituido de uma vez, em Dezembro de 2025.</p>
+
+        <img src="https://i.imgur.com/29Kv5Zs.jpeg"/>
+
+        <h3>Demonstração de uso do Affinity. Imagem: Pessoal</h3>
 
         <p>Minhas experiências abaixo:</p>
 
         <div class="expContainer">
-          Design Gráfico <br>
+          Design Gráfico: <br>
           Branding
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
           </div>
-          Adobe Photoshop
+          Adobe Photoshop (2025 ou anteriores)
+          <div class="expContainer2">
+            <div class="expPercent p100">Avançado</div>
+          </div>
+          Serif/Canva Affinity 3
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
           </div>
@@ -1130,22 +1127,18 @@ export const newsData: NewsItem[] = [
         </div>
         <div class="expContainer">
           Edição de Vídeo: <br>
-          Adobe After Effects
-          <div class="expContainer2">
-            <div class="expPercent p10">Iniciante</div>
-          </div>
           Blackmagic DaVinci Resolve (+ Fusion Motion Graphics)
           <div class="expContainer2">
-            <div class="expPercent p25">Básico</div>
+            <div class="expPercent p50">Intermediário</div>
           </div>
-          MAGIX VEGAS PRO (+ Motion Graphics)
+          MAGIX/Boris FX VEGAS PRO (+ Motion Graphics) (22 ou anteriores)
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
           </div>
         </div>
 
         <p>Atualmente, como toda evolução, nossas experiências subiram de nivel, levando para você um trabalho cada vez mais profissional e cinematico para obter melhores experiências para todo o tipo de público.
-        Acompanhe e <a href="https://www.youtube.com/playlist?list=PL2DivU5yf-1ygeNsR8NEPsPsZYO5DK4_L">veja os serviços feitos por nós!</a>
+        <br>Acompanhe e <a href="https://www.youtube.com/playlist?list=PL2DivU5yf-1ygeNsR8NEPsPsZYO5DK4_L">veja os serviços feitos por nós</a>, ou acesse o perfil <a href="https://www.youtube.com/@iSKGtmProd">iSKGtm Prod</a> no YouTube!
         </p>
 
         <h2>iSKGtm, We Are in Everything</h2>
@@ -1160,7 +1153,7 @@ export const newsData: NewsItem[] = [
     label: "Como surgiu e o que é iShaking Creative Media?",
     imageUrl: "",
     tags: ["Outros"],
-    tagImage: "/images/symb/outros.png",
+    tagImage: "/images/symb/outros.svg",
     date: "09/01/2025",
     authorName: "Anthony M.",
     minutesRead: 6,
@@ -1212,7 +1205,7 @@ export const newsData: NewsItem[] = [
 
         <p>Em 2022, após o surgimento de "iSKGtm Dev", nossa proposta foi alterada seguindo até hoje, para um lado mais profissional que antes, que significa desenvolvimento de aplicações e Websites, UX/UI, etc. O termo "iShaKinGameR" parou de ser utilizado, passando a ser "iShaking Creative Media", com a frase "Estamos em Tudo!" e posteriormente para "We Are in Everything", devido a expansão global.</p>
 
-        <img src="/images/news/sobre/iskgtm/4.jpg"/>
+        <img src="https://i.imgur.com/kt9zEEr.jpeg"/>
 
         <h3>Logo atual "iSKGtm" Imagem: Reprodução</h3>
 

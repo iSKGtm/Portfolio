@@ -12,6 +12,8 @@ const Navbar: React.FC = () => {
   const buttonScrollIconRef = useRef<HTMLDivElement | null>(null);
   const homeSVG = useRef<SVGSVGElement | null>(null);
   const newsSVG = useRef<SVGSVGElement | null>(null);
+  const homeTEXT = useRef<HTMLDivElement | null>(null);
+  const newsTEXT = useRef<HTMLDivElement | null>(null);
   const [activeButton, setActiveButton] = useState('');
   const location = useLocation();
 
@@ -24,6 +26,9 @@ const Navbar: React.FC = () => {
       if(newsSVG.current && homeSVG.current) {
         newsSVG.current.classList.add(styles.activeSVG);
         homeSVG.current.classList.remove(styles.activeSVG);
+
+        newsTEXT.current.classList.add(styles.activeTEXT);
+        homeTEXT.current.classList.remove(styles.activeTEXT);
       }
     } else if (currentPath.startsWith('/home')) {
       setActiveButton('home');
@@ -31,6 +36,9 @@ const Navbar: React.FC = () => {
       if(newsSVG.current && homeSVG.current) {
         newsSVG.current.classList.remove(styles.activeSVG);
         homeSVG.current.classList.add(styles.activeSVG);
+
+        newsTEXT.current.classList.remove(styles.activeTEXT);
+        homeTEXT.current.classList.add(styles.activeTEXT);
       }
     } else {
       setActiveButton('');
@@ -148,7 +156,7 @@ const Navbar: React.FC = () => {
                 activeButton === 'home' ? styles.active : ''
               }`}
             >
-              <div className={styles.buttonText}>Home</div>
+              <div ref={homeTEXT} className={styles.buttonText}>Home</div>
               <FontAwesomeIcon ref={homeSVG} icon={faHouse} className={styles.icon} />
             </Link>
             <div className={styles.logo}>
@@ -156,7 +164,7 @@ const Navbar: React.FC = () => {
                 <img src="/images/logo/logoGif.gif" />
               </div>
               <div className={styles.logoName}>
-                <img src="/images/logo/logoName.png" />
+                <img src="/images/logo/logoName.svg" />
               </div>
             </div>
             <Link
@@ -165,7 +173,7 @@ const Navbar: React.FC = () => {
                 activeButton === 'news' ? styles.active : ''
               }`}
             >
-              <div className={styles.buttonText}>Artigos</div>
+              <div ref={newsTEXT} className={styles.buttonText}>Artigos</div>
               <FontAwesomeIcon ref={newsSVG} icon={faNewspaper} className={styles.icon} />
             </Link>
           </nav>

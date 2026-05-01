@@ -1,5 +1,26 @@
 # Changelog
 
+## [26.2] - 28/02/2026
+### Adicionado
+
+- Mudança de arquivos .png para .svg, assim como pacote gráfico atualizado (parcialmente).
+
+- Spotlight usando mouse ou canetas S-PEN & bordas mais arredondadas nos containers de Features.
+
+- O componente de permissão para dispositivos acima de 300px de largura de resolução foi reativado.
+
+### Corrigido
+
+- A fonte Phonk foi atualizada, permitindo caracteres especiais.
+
+- Mudança de fonte principal San Francisco para Inter.
+
+- Mudança de fonte de artigo Times New Roman para Merriweather.
+
+- Mudança de paleta de cores, e aprimoramento de sistema de temas via Material UI e Tailwind CSS.
+
+### Problemas Conhecidos
+
 ## [26.1] - 10/02/2026
 ### Adicionado
 
