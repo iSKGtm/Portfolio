@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import styles from './index.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
@@ -47,7 +47,7 @@ const AboutFeatures: React.FC = () => {
       id: 'main',
       title: 'we are in everything.',
       description:
-        'Este slogan, traduzido para "Estamos em Tudo", é uma expressão que informa que estamos presentes nas diversas áreas de atuação, tais como: produção e composição sonora; produção de imagem e vídeo & desenvolvimento. Estamos ativos desde Outubro de 2016.',
+        'iSKGtm atua em diferentes frentes criativas e técnicas: música, produção audiovisual e desenvolvimento de software. Do conceito à entrega, com foco em identidade, qualidade e consistência.',
       isMainVideo: true,
       links: [{ label: 'Mais Informações', url: '/artigo/iskgtm' }],
       playlistNote: false,
@@ -57,7 +57,7 @@ const AboutFeatures: React.FC = () => {
       id: 'music',
       title: 'iSKGtm music.',
       description:
-        'Produzimos faixas desde 2019, tanto para parceiros terceirizados quanto para o próprio iSKGtm, com diversos estilos e gêneros músicais, com foco EDM.',
+        'Faixas e sons desde 2019 para terceiros e para o próprio iSKGtm. Entregas comuns: Arranjo, sound design, mix e master (foco EDM).',
       video: '/videos/about/music.mp4',
       links: [
         {
@@ -72,7 +72,7 @@ const AboutFeatures: React.FC = () => {
       id: 'prod',
       title: 'iSKGtm prod.',
       description:
-        'Produzimos conteúdos desde 2016, tanto para terceirizados quanto para o próprio iSKGtm. Desde branding, até produções de vídeos, com efeitos VFX 2D.',
+        'Conteúdos desde 2016: de branding a vídeos. Entregas comuns: edição, motion graphics e pacotes visuais para redes/projetos.',
       video: '/videos/about/prod.mp4',
       links: [
         {
@@ -88,7 +88,7 @@ const AboutFeatures: React.FC = () => {
       id: 'dev',
       title: 'iSKGtm dev.',
       description:
-        'Desenvolvemos web/aplic., desde 2022, tanto para parceiros terceirizados quanto para o próprio iSKGtm, com diversos estilos de páginas e design, seguindo tendências visuais.',
+        'Web e aplicações desde 2022. Entregas comuns: sites institucionais, front-ends com UI moderna e performance/SEO.',
       video: '/videos/about/dev.mp4',
       links: [{ label: 'Mais Informações', url: '/artigo/dev' }],
       playlistNote: false
@@ -127,7 +127,7 @@ const AboutFeatures: React.FC = () => {
             </div>
 
             {section.playlistNote && (
-              <h4>Link para playlist de produções já feitas.</h4>
+              <h4>Acesse a playlist do nosso portfólio.</h4>
             )}
           </div>
 

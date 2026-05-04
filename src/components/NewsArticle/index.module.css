@@ -68,6 +68,32 @@
   cursor: default;
 }
 
+.shareContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* feedback invisível por padrão */
+.copyFeedback {
+  opacity: 0;
+  filter: blur(5px);
+  font-weight: 900;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.copyFeedback.visible {
+  opacity: 1;
+  filter: blur(0px);
+}
+
+/* erro */
+.copyFeedback.error {
+  color: initial;
+}
+
 .content {
   font-size: 1rem;
   font-family: 'Merriweather', serif;

@@ -9,6 +9,8 @@
 
 - O componente de permissão para dispositivos acima de 300px de largura de resolução foi reativado.
 
+- Foi adicionado a biblioteca react-helmet, que é para uso de meta tags em aplicações SPA, necessários para indexação no Google.
+
 ### Corrigido
 
 - A fonte Phonk foi atualizada, permitindo caracteres especiais.
@@ -19,7 +21,13 @@
 
 - Mudança de paleta de cores, e aprimoramento de sistema de temas via Material UI e Tailwind CSS.
 
+- Alterações de informações, referente a página "home.tsx".
+
+- Feedback de URL alterado e com maior minimalismo.
+
 ### Problemas Conhecidos
+
+- N/A
 
 ## [26.1] - 10/02/2026
 ### Adicionado
