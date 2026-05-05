@@ -107,6 +107,17 @@
     align-items: center;
 }
 
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 37px;
+}
+
+.paginationContainer {
+    user-select: none;
+}
+
 .containerSearch > h2 {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 300;
@@ -281,7 +292,13 @@
 }
 
 @media screen and (max-width: 575px) {
+    .mainNews {
+        padding-bottom: 25px;
+    }
 
+    .paginationContainer {
+        padding-bottom: 20px;
+    }
 }
 
 /* ANIMATIONS */

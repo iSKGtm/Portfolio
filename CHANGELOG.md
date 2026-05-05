@@ -9,6 +9,8 @@
 
 - O componente de permissão para dispositivos acima de 300px de largura de resolução foi reativado.
 
+- Adicionado um sistema de páginação e rotas na tela de artigos, através de IA assistida com intervenção manual para correção de bugs.
+
 ### Corrigido
 
 - A fonte Phonk foi atualizada, permitindo caracteres especiais.

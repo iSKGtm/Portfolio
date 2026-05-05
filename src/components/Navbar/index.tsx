@@ -149,7 +149,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
         <div className={styles.mainNavbar}>
-          <nav>
+          <div className={styles.nav}>
             <Link
               to="/home"
               className={`${styles.buttonNav} ${styles.buttonItem} ${
@@ -176,7 +176,7 @@ const Navbar: React.FC = () => {
               <div ref={newsTEXT} className={styles.buttonText}>Artigos</div>
               <FontAwesomeIcon ref={newsSVG} icon={faNewspaper} className={styles.icon} />
             </Link>
-          </nav>
+          </div>
         </div>
       </header>
     </>

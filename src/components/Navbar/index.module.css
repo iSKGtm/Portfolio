@@ -45,12 +45,12 @@
   pointer-events: none; /* desativa interação geral */
 }
 
-.mainNavbar nav {
+.nav {
   pointer-events: auto; /* reativa interação no nav */
 }
 
 
-nav {
+.nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +81,7 @@ nav {
   transition: outline 0.1s;
 }
 
-nav > .buttonItem {
+.nav > .buttonItem {
   display: flex;
   gap: 0px;
   padding: 0 5px;
@@ -92,7 +92,7 @@ nav > .buttonItem {
   color: inherit;
 }
 
-nav > .buttonItem > svg {
+.nav > .buttonItem > svg {
   background-color: #ffffff00;
   outline: 1px #0000;
   border-radius: 100px;
@@ -105,7 +105,7 @@ nav > .buttonItem > svg {
   stroke-linejoin: round;
 }
 
-nav > .buttonItem:hover {
+.nav > .buttonItem:hover {
   border-color: #ff000000;
 }
 
@@ -159,12 +159,12 @@ nav > .buttonItem:hover {
 
 /* NAVBAR HOVERS */
 
-nav:hover {
+.nav:hover {
   scale: 1.010;
   transition: scale 200ms;
 }
 
-nav:active {
+.nav:active {
   scale: 0.980;
   transition: scale 200ms;
 }
@@ -228,17 +228,17 @@ nav:active {
     margin-bottom: 10px; 
   }
 
-  nav {
+  .nav {
     /* width: calc(100% - 30px); */
     height: 60px;
     width: 230px;
     justify-content: space-between;
   }
-  nav > .buttonItem > .buttonText {
+  .nav > .buttonItem > .buttonText {
     display: none;
   }
 
-  nav > .buttonItem > svg {
+  .nav > .buttonItem > svg {
     padding: 13px 20px;
   }
 

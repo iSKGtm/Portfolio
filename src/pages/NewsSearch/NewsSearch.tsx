@@ -1,19 +1,32 @@
-import React, { useState, useEffect, ChangeEvent, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import type { ChangeEvent } from 'react'
 import Footer from '../../components/Footer';
 import './NewsSearch.css'
 import NewsCard from '../../components/NewsCard'
-import { newsData, NewsItem } from '../../data/news'
+import { newsData } from '../../data/news'
+import type { NewsItem } from '../../data/news'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faX } from '@fortawesome/free-solid-svg-icons';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import { CircularProgress } from '@mui/material';
+import { CircularProgress, Pagination } from '@mui/material';
+import { useSearchParams } from 'react-router-dom';
 
 const NewsSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('')
   const [filteredNews, setFilteredNews] = useState<NewsItem[]>(newsData)
   const [isLoading, setIsLoading] = useState(true);
+  const [page, setPage] = useState(1);
   const showClearButtonRef = useRef<HTMLButtonElement | null>(null);
+  const itemsPerPage = 11;
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    const raw = searchParams.get('page');
+    const parsed = raw ? Number.parseInt(raw, 10) : 1;
+    const next = Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
+    setPage(next);
+  }, [searchParams]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,6 +42,12 @@ useEffect(() => {
 
   if (!term) {
     setFilteredNews(newsData);
+    setPage(1);
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      next.delete('page');
+      return next;
+    });
     return;
   }
 
@@ -36,7 +55,7 @@ useEffect(() => {
     newsData.filter(item => {
       const searchableFields: string[] = [
         item.title,
-        item.label,
+        item.label ?? '',
         typeof item.date === 'string' ? new Date(item.date).toLocaleDateString() : new Date(item.date).toLocaleDateString(),
       ];
       if (Array.isArray(item.tags)) {
@@ -49,11 +68,35 @@ useEffect(() => {
       );
     })
   );
+  setPage(1);
+  setSearchParams((prev) => {
+    const next = new URLSearchParams(prev);
+    next.delete('page');
+    return next;
+  });
 }, [searchTerm]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value)
   }
+
+  const totalPages = Math.max(1, Math.ceil(filteredNews.length / itemsPerPage));
+
+  useEffect(() => {
+    const clamped = Math.min(Math.max(1, page), totalPages);
+    if (clamped !== page) setPage(clamped);
+  }, [page, totalPages]);
+
+  const pagedNews = filteredNews.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+
+  useEffect(() => {
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      if (page <= 1) next.delete('page');
+      else next.set('page', String(page));
+      return next;
+    });
+  }, [page, setSearchParams]);
 
   return (
     <>
@@ -82,11 +125,57 @@ useEffect(() => {
             </div>
           </div>
           {filteredNews.length > 0 ? (
-            <div className="containerSearch">
-              {filteredNews.map(item => (
-                <NewsCard key={item.url} {...item} />
-              ))}
-            </div>
+            <>
+              {totalPages > 1 && (
+                <div className="paginationContainer">
+                  <Pagination
+                    className='pageCards'
+                    count={totalPages}
+                    page={page}
+                    onChange={(_, value) => setPage(value)}
+                    variant="outlined"
+                    shape="rounded"
+                    siblingCount={0}
+                    boundaryCount={1}
+                    sx={{
+                      '& .MuiPagination-ul': {
+                        gap: '6px',
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                      },
+                      '& .MuiPaginationItem-root': {
+                        color: 'var(--color-primary)',
+                        borderRadius: '100px',
+                        borderColor: '#0000001a',
+                        backgroundColor: 'var(--color-bg-blur-primary)',
+                        boxShadow: 'inset 0 5px 10px -3px #00000030',
+                        transition: 'transform 120ms ease, background-color 120ms ease, border-color 120ms ease',
+                      },
+                      '& .MuiPaginationItem-root:hover': {
+                        backgroundColor: 'var(--color-bg-blur-primary-hover)',
+                        borderColor: '#00000040',
+                      },
+                      '& .MuiPaginationItem-root.Mui-selected': {
+                        color: '#fff',
+                        backgroundColor: 'var(--color-accent)',
+                      },
+                      '& .MuiPaginationItem-root.Mui-selected:hover': {
+                        backgroundColor: 'var(--color-accent)',
+                      },
+                      '& .MuiPaginationItem-root:active': {
+                        transform: 'scale(0.98)',
+                      },
+                    }}
+                  />
+                </div>
+              )}
+              <div className="containerSearch">
+                {pagedNews.map(item => (
+                  <NewsCard key={item.url} {...item} />
+                ))}
+              </div>
+            </>
           ) : (
             <div className="containerSearch">
               <div className='containerSearchNone'>
@@ -107,7 +196,7 @@ useEffect(() => {
               <div className='labelNewsSearch'><Skeleton width="35%" /></div>
               <div className='inputSearchContainer'>
                 <div className='searchIcon'>
-                  <CircularProgress enableTrackSlot color="white" />
+                  <CircularProgress size={18} sx={{ color: '#fff' }} />
                 </div>
                 <input
                   type="text"
@@ -123,7 +212,7 @@ useEffect(() => {
                   key={i}
                   title={<Skeleton width="100%" />}
                   label={<Skeleton width="70%" />}
-                  type={<Skeleton width="50%" />}
+                  tags={<Skeleton width="50%" />}
                   date={<Skeleton width="30%" />}
                   imageUrl={"/images/symb/placeholder480.jpg"}
                 />

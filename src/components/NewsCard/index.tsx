@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './index.module.css'
 import type { NewsItem } from '../../data/news.ts';
 
@@ -7,17 +8,45 @@ const isValidDate = (dateString: string): boolean => {
   return !isNaN(date.getTime());
 };
 
-const NewsCard: React.FC<NewsItem> = ({ title, label, tags, date, url, imageUrl, hide }) => {
+type NewsCardProps = Omit<Partial<NewsItem>, 'title' | 'label' | 'tags' | 'date'> & {
+  title?: string | React.ReactNode;
+  label?: string | React.ReactNode;
+  tags?: string | string[] | React.ReactNode;
+  date?: string | React.ReactNode;
+};
+
+const NewsCard: React.FC<NewsCardProps> = ({ title, label, tags, date, url, imageUrl, hide }) => {
+  const navigate = useNavigate();
   if (hide === true) return null;
 
-  if (imageUrl === undefined || imageUrl === '') {
-    imageUrl = '/images/symb/placeholder480.jpg';
+  const finalImageUrl =
+    imageUrl === undefined || imageUrl === '' ? '/images/symb/placeholder480.jpg' : imageUrl;
+
+  const isClickable = typeof url === 'string' && url.trim().length > 0;
+
+  const handleOpen = () => {
+    if (!isClickable) return;
+    if (url.startsWith('/')) {
+      navigate(url);
+      return;
+    }
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <div className={styles.newsCard} onClick={() => window.open(url, '_blank')}>
+    <div
+      className={styles.newsCard}
+      role={isClickable ? 'link' : undefined}
+      tabIndex={isClickable ? 0 : -1}
+      onClick={handleOpen}
+      onKeyDown={(e) => {
+        if (!isClickable) return;
+        if (e.key === 'Enter' || e.key === ' ') handleOpen();
+      }}
+      style={{ cursor: isClickable ? 'pointer' : 'default' }}
+    >
       <div className={styles.newsIMG}>
-        <img src={imageUrl} alt={title} />
+        <img src={finalImageUrl} alt={typeof title === 'string' ? title : 'Artigo'} />
       </div>
       <div className={styles.containerText}>
         <div className={styles.type}>{tags}</div>
@@ -26,7 +55,7 @@ const NewsCard: React.FC<NewsItem> = ({ title, label, tags, date, url, imageUrl,
           <h3 className={styles.label}>{label}</h3>
         </div>
         <div className={styles.date}>
-          {isValidDate(date) && new Date(date).toLocaleDateString()}
+          {typeof date === 'string' && isValidDate(date) ? new Date(date).toLocaleDateString() : date}
         </div>
       </div>
     </div>
