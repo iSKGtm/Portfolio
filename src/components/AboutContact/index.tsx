@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Button } from '@mui/material';
 import styles from './index.module.css';
 
@@ -71,7 +71,7 @@ const AboutContact = () => {
           <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>
             contatos.
           </h1>
-          <p>Selecione a área desejada para entrar em contato.</p>
+          <p>Escolha a área para seguir ou entrar em contato. Para orçamentos e parcerias, use Geral (LinkedIn/Discord).</p>
         </div>
 
         <div className={styles.categoriesWrapper}>

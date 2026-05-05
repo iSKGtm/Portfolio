@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import styles from './index.module.css';
 
 interface Partner {
@@ -23,7 +23,7 @@ const AboutPartnersCard: React.FC<AboutPartnersCardProps> = ({ partners }) => {
       <div className={styles.container}>
         <div className={styles.text}>
           <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>parceiros.</h1>
-          <p>Nossos clientes ou parceiros que utilizam nossos serviços atualmente.</p>
+          <p>Clientes e parceiros com quem já trabalhamos (e alguns que seguem ativos).</p>
         </div>
 
         <div className={styles.containerCard}>
