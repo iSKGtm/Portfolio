@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import styles from './index.module.css'
 import type { NewsItem } from '../../data/news.ts';
 
@@ -16,7 +15,6 @@ type NewsCardProps = Omit<Partial<NewsItem>, 'title' | 'label' | 'tags' | 'date'
 };
 
 const NewsCard: React.FC<NewsCardProps> = ({ title, label, tags, date, url, imageUrl, hide }) => {
-  const navigate = useNavigate();
   if (hide === true) return null;
 
   const finalImageUrl =
@@ -24,27 +22,8 @@ const NewsCard: React.FC<NewsCardProps> = ({ title, label, tags, date, url, imag
 
   const isClickable = typeof url === 'string' && url.trim().length > 0;
 
-  const handleOpen = () => {
-    if (!isClickable) return;
-    if (url.startsWith('/')) {
-      navigate(url);
-      return;
-    }
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
-  return (
-    <div
-      className={styles.newsCard}
-      role={isClickable ? 'link' : undefined}
-      tabIndex={isClickable ? 0 : -1}
-      onClick={handleOpen}
-      onKeyDown={(e) => {
-        if (!isClickable) return;
-        if (e.key === 'Enter' || e.key === ' ') handleOpen();
-      }}
-      style={{ cursor: isClickable ? 'pointer' : 'default' }}
-    >
+  const cardContent = (
+    <>
       <div className={styles.newsIMG}>
         <img src={finalImageUrl} alt={typeof title === 'string' ? title : 'Artigo'} />
       </div>
@@ -58,6 +37,28 @@ const NewsCard: React.FC<NewsCardProps> = ({ title, label, tags, date, url, imag
           {typeof date === 'string' && isValidDate(date) ? new Date(date).toLocaleDateString() : date}
         </div>
       </div>
+    </>
+  );
+
+  if (isClickable) {
+    return (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.newsCard}
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
+  return (
+    <div
+      className={styles.newsCard}
+      style={{ cursor: 'default' }}
+    >
+      {cardContent}
     </div>
   );
 };

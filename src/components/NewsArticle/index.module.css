@@ -1,4 +1,4 @@
-.articlePage {
+﻿.articlePage {
   max-width: 1280px;
   padding-top: 15px;
   margin: 0 auto;
@@ -62,9 +62,9 @@
   user-select: none;
   font-family: Inter, Helvetica, Arial, sans-serif;
   font-size: 21px;
-  padding: 0.4rem 1.0rem;
-  width: 56px;
-  border-radius: 18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 100px;
   cursor: default;
 }
 
@@ -74,7 +74,21 @@
   gap: 10px;
 }
 
-/* feedback invisível por padrão */
+.shareFloating {
+  box-shadow: inset 0 5px 10px -3px #00000030,
+  0px 0px 20px #00000020;
+  opacity: 0;
+  position: fixed;
+  z-index: 9;
+  left: calc(50% - 700px);
+  top: 15px;
+  width: 55px;
+  height: 55px;
+  border-radius: 100px;
+  backdrop-filter: url(#glass-distortion) blur(3px);
+}
+
+/* feedback invisÃ­vel por padrÃ£o */
 .copyFeedback {
   opacity: 0;
   filter: blur(5px);
@@ -86,12 +100,24 @@
 
 .copyFeedback.visible {
   opacity: 1;
+  text-align: center;
   filter: blur(0px);
 }
 
-/* erro */
-.copyFeedback.error {
-  color: initial;
+.copyFeedbackFloating {
+  opacity: 0;
+  filter: blur(5px);
+  font-weight: 900;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+
+.copyFeedbackFloating.visible {
+  opacity: 1;
+  text-align: center;
+  filter: blur(0px);
 }
 
 .content {
@@ -138,7 +164,9 @@
 }
 
 q {
+  font-family: 'Merriweather', serif;
   font-style: italic;
+  opacity: 0.8;
 }
 
 cite {
@@ -200,6 +228,12 @@ th, td {
   font-weight: 300;
 }
 
+@media (max-width: 1420px) {
+  .shareFloating {
+    left: 15px;
+  }
+}
+
 @media (max-width: 1313px) {
   .articlePage {
     max-width: calc(100% - 30px);
@@ -243,6 +277,10 @@ th, td {
   .content > main > ul {
     margin: 10px 0;
     margin-left: 15px;
+  }
+  .shareFloating, .shareButton {
+    width: 46px;
+    height: 46px;
   }
 }
 
@@ -297,5 +335,33 @@ th, td {
 
   .title {
     font-size: 1.9rem;
+  }
+}
+
+.shareIconPulse {
+  color: var(--color-accent);
+  animation: shareIconPulse 2200ms ease-in-out;
+}
+
+.shareIconPulse svg {
+  fill: currentColor;
+}
+
+@keyframes shareIconPulse {
+  0% {
+    color: inherit;
+    transform: scale(1);
+  }
+  20% {
+    color: var(--color-accent);
+    transform: scale(1.12);
+  }
+  55% {
+    color: var(--color-accent);
+    transform: scale(0.98);
+  }
+  100% {
+    color: inherit;
+    transform: scale(1);
   }
 }

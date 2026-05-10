@@ -128,6 +128,19 @@
     font-weight: 600;
 }
 
+.containerPaginationSkeleton {
+    width: 100%;
+    margin-top: -2px;
+    margin-bottom: 35px;
+}
+
+.paginationSkeleton {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 .containerSearchSkeleton {
     display: flex;
     gap: 30px;
@@ -294,6 +307,10 @@
 @media screen and (max-width: 575px) {
     .mainNews {
         padding-bottom: 25px;
+    }
+
+    .containerPaginationSkeleton {
+        margin-bottom: 15px;
     }
 
     .paginationContainer {

@@ -9,7 +9,7 @@ const NoAvailableRef: React.FC = () => {
     const html = document.body;
 
     const windowWidthNoAvailable = () => {
-      const sysWidth = window.innerWidth;   // ✅ corrigido
+      const sysWidth = window.innerWidth;
 
       if (sysWidth < 301) {
         if (noAvailableRef.current && warningTextRef.current) {

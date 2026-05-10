@@ -143,6 +143,7 @@ useEffect(() => {
                         display: 'flex',
                         flexWrap: 'wrap',
                         justifyContent: 'center',
+                        cursor: 'default',
                       },
                       '& .MuiPaginationItem-root': {
                         color: 'var(--color-primary)',
@@ -151,6 +152,7 @@ useEffect(() => {
                         backgroundColor: 'var(--color-bg-blur-primary)',
                         boxShadow: 'inset 0 5px 10px -3px #00000030',
                         transition: 'transform 120ms ease, background-color 120ms ease, border-color 120ms ease',
+                        cursor: 'default',
                       },
                       '& .MuiPaginationItem-root:hover': {
                         backgroundColor: 'var(--color-bg-blur-primary-hover)',
@@ -196,7 +198,7 @@ useEffect(() => {
               <div className='labelNewsSearch'><Skeleton width="35%" /></div>
               <div className='inputSearchContainer'>
                 <div className='searchIcon'>
-                  <CircularProgress size={18} sx={{ color: '#fff' }} />
+                  <CircularProgress size={32} sx={{ color: '#000' }} />
                 </div>
                 <input
                   type="text"
@@ -206,6 +208,17 @@ useEffect(() => {
                 />
             </div>
             </div>
+
+          <div className="containerPaginationSkeleton">
+            <div className="paginationSkeleton">
+              <Skeleton width="32px" height="32px" borderRadius="50%"/>
+              <Skeleton width="32px" height="32px" borderRadius="50%"/>
+              <Skeleton width="32px" height="32px" borderRadius="50%"/>
+              <Skeleton width="32px" height="32px" borderRadius="50%"/>
+            </div>
+
+          </div>
+
             <div className="containerSearchSkeleton">
               {Array.from({ length: 10 }, (_, i) => (
                 <NewsCard 

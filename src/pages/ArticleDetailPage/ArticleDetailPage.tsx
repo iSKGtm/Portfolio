@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
 import NewsArticle, { Article } from "../../components/NewsArticle";
 import Footer from "../../components/Footer";
+import { CircularProgress } from '@mui/material';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { Helmet } from 'react-helmet-async';
@@ -54,7 +55,7 @@ const ArticleDetailPage: React.FC = () => {
             authorName: foundArticle.authorName || "iShaking Creative Media",
             publishDate: new Date(foundArticle.date),
             minutesRead: foundArticle.minutesRead || 5,
-            content: foundArticle.content || "ConteÃºdo nÃ£o disponÃ­vel.",
+            content: foundArticle.content || "Conteúdo não disponível.",
             tags: foundArticle.tags,
           };
           setArticle(mappedArticle);
@@ -65,7 +66,7 @@ const ArticleDetailPage: React.FC = () => {
             url: typeof window !== 'undefined' ? window.location.href : undefined,
           });
         } else {
-          setError("NotÃ­cia ou artigo nÃ£o encontrado.");
+          setError("Notícia ou artigo não encontrado.");
           disableFooter();
         }
       } catch (err) {
@@ -82,7 +83,7 @@ const ArticleDetailPage: React.FC = () => {
     if (id) {
       fetchArticle();
     } else {
-      setError("ID do artigo nÃ£o fornecido na URL.");
+      setError("ID do artigo não fornecido na URL.");
       setIsLoading(false);
     }
   }, [id]);
@@ -90,10 +91,10 @@ const ArticleDetailPage: React.FC = () => {
   const pageTitle = isLoading
     ? "Por favor, aguarde..."
     : error
-    ? "Artigo nÃ£o encontrado."
+    ? "Artigo não encontrado."
     : article
     ? `iSKGtm - ${article.title}`
-    : "NotÃ­cia ou artigo nÃ£o encontrado.";
+    : "Notícia ou artigo não encontrado.";
 
     const navigate = useNavigate();
 
@@ -132,7 +133,9 @@ const ArticleDetailPage: React.FC = () => {
               <div style={{display: "flex", flexDirection: "row-reverse", marginBottom: "-20px"}}>
                 <Skeleton height={16} width="120px" style={{ position: "relative", bottom: "25px" }} />
               </div>
-              <Skeleton height={48} width="48px" />
+              <div className='loadIcon'>
+                <CircularProgress size={32} sx={{ color: '#000' }} />
+              </div>
             </div>
 
             <div className='contentSkeleton'>
@@ -155,7 +158,7 @@ const ArticleDetailPage: React.FC = () => {
           <>
           <div className='containerNotFoundArticle'>
             <img src="/images/symb/aviso.svg" />
-            <p>NotÃ­cia ou artigo nÃ£o encontrado.</p>
+            <p>Notí­cia ou artigo não encontrado.</p>
             <button className="button" onClick={() => navigate('/news')}>Voltar</button>
           </div>
           </>

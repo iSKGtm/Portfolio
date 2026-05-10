@@ -5,13 +5,15 @@
 
 - Mudança de arquivos .png para .svg, assim como pacote gráfico atualizado (parcialmente).
 
-- Spotlight usando mouse ou canetas S-PEN & bordas mais arredondadas nos containers de Features.
+- Spotlight usando mouse & bordas mais arredondadas nos containers de Features.
 
 - O componente de permissão para dispositivos acima de 300px de largura de resolução foi reativado.
 
 - Foi adicionado a biblioteca react-helmet, que é para uso de meta tags em aplicações SPA, necessários para indexação no Google.
 
 - Adicionado um sistema de páginação e rotas na tela de artigos, através de IA assistida com intervenção manual para correção de bugs.
+
+- Adicionado um botão flutuante de compartilhar link de URL de um artigo.
 
 ### Corrigido
 
@@ -25,7 +27,9 @@
 
 - Alterações de informações, referente a página "home.tsx".
 
-- Feedback de URL alterado e com maior minimalismo.
+- Feedback de compartilhar URL de artigo alterado e com maior minimalismo.
+
+- Corrigido uma falha de criação de nova aba ao selecionar uma aba de artigo.
 
 ### Problemas Conhecidos
 

@@ -18,8 +18,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 3rem;
-  font-size: 20px;
+  padding: 2rem 1rem;
+  width: calc(100vw - 30px);
+  font-size: 18px;
   border-radius: 50px;
   background-color: var(--color-bg-blur-primary);
   box-shadow: inset 0 5px 10px -3px #00000030;
@@ -33,7 +34,7 @@
 }
 
 .containerBox > p {
-  font-size: 18px;
+  font-size: 15px;
   font-family: Inter, Helvetica, Arial, sans-serif;
   text-align: center;
   margin-top: 15px;
@@ -45,10 +46,16 @@
   transition: scale 200ms;
 }
 
-@media screen and (max-width: 260px) {
+@media screen and (max-width: 239px) {
 
   .containerNoAvailable {
     padding: 25px;
+  }
+
+  .containerBox {
+    background-color: #00000000;
+    box-shadow: inset 0 5px 10px -3px #00000000;
+    outline: #00000000;
   }
 
   .containerBox > img {
