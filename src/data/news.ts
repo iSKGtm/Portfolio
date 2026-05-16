@@ -82,6 +82,7 @@ export const newsData: NewsItem[] = [
         <cite>Diz Anthony M. - responsável pela marca iSKGtm / iShaking Creative Media.</cite>
       </p>
         
+      <p>
         Exploramos também o vocal chop, assim como diversas REMIX de 2026 nosso, apesar de o som soar um pouco "experimental", a produção ficou dentro de nossas expectativas, com o novo padrão de mixagem vocal, que antes, era o padrão vindo de <a href="https://youtu.be/51MYBoyyBts&feature=youtu.be" target="_blank">"I'm Good (iSKGtm Remix)"</a>  de 2023, de qualquer forma vale a pena conferir!
       </p>
 
