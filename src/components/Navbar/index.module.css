@@ -56,7 +56,7 @@
   justify-content: center;
   user-select: none !important;
   font-family: Inter, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.5px;
   font-weight: 600;
   gap: 0px;
@@ -93,17 +93,32 @@
   color: inherit;
 }
 
-.nav > .buttonItem > svg {
+.nav > .buttonItem > .navIcon {
   background-color: #ffffff00;
   outline: 1px #0000;
   border-radius: 100px;
   padding: 3px 25px;
   transition: all 0.1s;
-  fill-opacity: 0;
-  stroke: #000;
-  stroke-width: 26px;
-  stroke-dasharray: 0, 0;
-  stroke-linejoin: round;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  line-height: 0;
+  color: var(--nav-icon-color, inherit);
+  --nav-icon-color: inherit;
+}
+
+.nav > .buttonItem > .navIcon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  color: var(--nav-icon-color, inherit);
+  fill: var(--nav-icon-color, currentColor);
+  stroke: none;
+}
+
+.nav > .buttonItem > .navIcon svg path {
+  fill: var(--nav-icon-color, currentColor) !important;
 }
 
 .nav > .buttonItem:hover {
@@ -117,10 +132,6 @@
 .buttonItem:focus,
 .buttonItem:focus-visible {
   outline: 0px auto -webkit-focus-ring-color;
-}
-
-.buttonItem > svg {
-  font-size: 25px;
 }
 
 .logo {
@@ -189,11 +200,20 @@
 }
 
 .activeSVG{
-  fill-opacity: 1 !important;
-  stroke: #db116800 !important;
   background-color: #fff;
-  transition: all 0.1s;
   color: #db1168;
+  --nav-icon-color: #db1168;
+  transition: all 0.1s;
+}
+
+.activeSVG svg {
+  color: #db1168 !important;
+  fill: #db1168 !important;
+  stroke: none !important;
+}
+
+.activeSVG svg path {
+  fill: #db1168 !important;
 }
 
 .activeTEXT {
@@ -242,7 +262,7 @@
 
   .nav {
     /* width: calc(100% - 30px); */
-    height: 60px;
+    height: 65px;
     width: 230px;
     justify-content: space-between;
   }
@@ -250,11 +270,11 @@
     display: none;
   }
 
-  .nav > .buttonItem > svg {
+  .nav > .buttonItem > .navIcon {
     padding: 13px 20px;
   }
 
-  .buttonItem > svg {
+  .buttonItem > .navIcon {
     font-size: 20px;
   }
 

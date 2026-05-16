@@ -1,49 +1,70 @@
 import { useRef, useEffect, useState } from 'react';
 import styles from './index.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faNewspaper, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
+const sanitizeSvgMarkup = (svgText: string) =>
+  svgText
+    .replace(/^\s*<\?xml[\s\S]*?\?>\s*/i, '')
+    .replace(/^\s*<!DOCTYPE[\s\S]*?>\s*/i, '')
+    .replace(/style="fill:#fff;fill-opacity:1;"/gi, 'fill="currentColor"')
+    .replace(/style="fill:#fff;fill-opacity:1"/gi, 'fill="currentColor"')
+    .replace(/fill="#fff"/gi, 'fill="currentColor"');
 
 const Navbar: React.FC = () => {
   const lastScrollTop = useRef(0);
   const headerRef = useRef<HTMLDivElement | null>(null);
   const buttonScrollRef = useRef<HTMLDivElement | null>(null);
   const buttonScrollIconRef = useRef<HTMLDivElement | null>(null);
-  const homeSVG = useRef<SVGSVGElement | null>(null);
-  const newsSVG = useRef<SVGSVGElement | null>(null);
-  const homeTEXT = useRef<HTMLDivElement | null>(null);
-  const newsTEXT = useRef<HTMLDivElement | null>(null);
   const [activeButton, setActiveButton] = useState('');
+  const [homeSvgMarkup, setHomeSvgMarkup] = useState('');
+  const [articleSvgMarkup, setArticleSvgMarkup] = useState('');
   const location = useLocation();
 
   useEffect(() => {
     const currentPath = location.pathname;
-    
+
     if (currentPath.startsWith('/artigos') || currentPath.startsWith('/artigo')) {
       setActiveButton('news');
-      
-      if(newsSVG.current && homeSVG.current) {
-        newsSVG.current.classList.add(styles.activeSVG);
-        homeSVG.current.classList.remove(styles.activeSVG);
-
-        newsTEXT.current.classList.add(styles.activeTEXT);
-        homeTEXT.current.classList.remove(styles.activeTEXT);
-      }
     } else if (currentPath.startsWith('/home')) {
       setActiveButton('home');
-      
-      if(newsSVG.current && homeSVG.current) {
-        newsSVG.current.classList.remove(styles.activeSVG);
-        homeSVG.current.classList.add(styles.activeSVG);
-
-        newsTEXT.current.classList.remove(styles.activeTEXT);
-        homeTEXT.current.classList.add(styles.activeTEXT);
-      }
     } else {
       setActiveButton('');
     }
-  }, [location]);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadSvgIcons = async () => {
+      try {
+        const [homeResponse, articleResponse] = await Promise.all([
+          fetch('/images/symb/home.svg'),
+          fetch('/images/symb/article.svg'),
+        ]);
+
+        const [homeSvg, articleSvg] = await Promise.all([
+          homeResponse.text(),
+          articleResponse.text(),
+        ]);
+
+        if (!cancelled) {
+          setHomeSvgMarkup(sanitizeSvgMarkup(homeSvg));
+          setArticleSvgMarkup(sanitizeSvgMarkup(articleSvg));
+        }
+      } catch (error) {
+        console.error('Erro ao carregar os SVGs da navbar:', error);
+      }
+    };
+
+    loadSvgIcons();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +87,7 @@ const Navbar: React.FC = () => {
           buttonScrollIconRef.current.style.transition = "all 210ms";
           //buttonScrollRef.current.style.transform = 'translateX(calc(0% + 0px))';
           buttonScrollRef.current.style.opacity = "1";
-            buttonScrollRef.current.style.transform = 'scale(1)';
+          buttonScrollRef.current.style.transform = 'scale(1)';
 
           buttonScrollIconRef.current.style.filter = "blur(0px)";
         }
@@ -156,8 +177,12 @@ const Navbar: React.FC = () => {
                 activeButton === 'home' ? styles.active : ''
               }`}
             >
-              <div ref={homeTEXT} className={styles.buttonText}>Home</div>
-              <FontAwesomeIcon ref={homeSVG} icon={faHouse} className={styles.icon} />
+              <div className={`${styles.buttonText} ${activeButton === 'home' ? styles.activeTEXT : ''}`}>Home</div>
+              <div
+                className={`${styles.navIcon} ${activeButton === 'home' ? styles.activeSVG : ''}`}
+                dangerouslySetInnerHTML={{ __html: homeSvgMarkup }}
+                aria-hidden="true"
+              />
             </Link>
             <div className={styles.logo}>
               <div className={styles.logoGif}>
@@ -173,8 +198,12 @@ const Navbar: React.FC = () => {
                 activeButton === 'news' ? styles.active : ''
               }`}
             >
-              <div ref={newsTEXT} className={styles.buttonText}>Artigos</div>
-              <FontAwesomeIcon ref={newsSVG} icon={faNewspaper} className={styles.icon} />
+              <div className={`${styles.buttonText} ${activeButton === 'news' ? styles.activeTEXT : ''}`}>Artigos</div>
+              <div
+                className={`${styles.navIcon} ${activeButton === 'news' ? styles.activeSVG : ''}`}
+                dangerouslySetInnerHTML={{ __html: articleSvgMarkup }}
+                aria-hidden="true"
+              />
             </Link>
           </div>
         </div>

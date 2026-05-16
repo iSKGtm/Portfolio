@@ -3,8 +3,6 @@
 ## [26.2] - 28/02/2026
 ### Adicionado
 
-- Atualização de modulo VITE de 7.3.3 para 8.0.
-
 - Atualização de pacote gráfico iShaking Creative Media atual.
 
 - Mudança de arquivos .png para .svg. (Parcialmente)
@@ -23,6 +21,8 @@
 
 - O componente BlurTopBottom agora é global em App.tsx.
 
+- // EM 16/05/2026 APÓS UMA ATUALIZAÇÃO VITE (7.3.3 PARA 8.0), OS BUILDS PARARAM DE FUNCIONAR, SENDO NECESSÁRIO REGREDIR O CÓDIGO.
+
 ### Corrigido
 
 - A fonte Phonk foi atualizada, permitindo caracteres especiais.
@@ -38,6 +38,8 @@
 - Feedback de compartilhar URL de artigo alterado e com maior minimalismo.
 
 - Corrigido uma falha de criação de nova aba ao selecionar uma aba de artigo.
+
+- Os icones SVG na barra de navegação foram substituidos, agora foram feitos por mim.
 
 ### Problemas Conhecidos
 
