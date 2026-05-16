@@ -9,7 +9,8 @@
   overflow: hidden;
   background-color: var(--color-bg-blur-primary);
   color: var(--color-text);
-  box-shadow: inset 0 5px 10px -3px #00000030;
+  box-shadow: inset 0 5px 10px -3px #00000030,
+  0px 0px 20px #00000015;
   outline: 1px solid #92929225;
 }
 
@@ -106,13 +107,13 @@
 /* NAVBAR HOVERS */
 .newsCard {
   background: var(--color-bg-blur-primary);
-  border: 1px solid #92929225;
+  border: 1px solid var(--color-bg-blur-primary);
   transition: all 100ms;
 }
 
 .newsCard:hover {
   background: var(--color-bg-blur-primary-hover);
-  border: 1px solid #92929285;
+  border: 1px solid var(--color-bg-blur-primary-hover);
   color: var(--color-text);
 }
 
@@ -123,16 +124,16 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 
   .newsCard:hover {
-    background: var(--color-bg-blur-primary-hover);
-    border: 1px solid #92929225;
+    background: var(--color-bg-blur-primary);
+    border: 1px solid var(--color-bg-blur-primary);
     transition: all 100ms;
   }
   .newsCard:active {
-    background: #ffffff1c;
-    border: 1px solid #92929285;
+    background: var(--color-bg-blur-primary-hover);
+    border: 1px solid var(--color-bg-blur-primary-hover);
 }
 }
 

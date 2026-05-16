@@ -3,32 +3,32 @@
     width: 100vw;
     position: fixed;
     z-index: 9;
-    pointer-events: none; /* desativa interação geral */
+    pointer-events: none;
+    transition: opacity 300ms ease;
 }
 
 .BlurTop {
-    background-color: #ffffff00;
-    backdrop-filter: blur(5px);
+    background-color: #00000000;
+    backdrop-filter: blur(0px);
 }
 
 .BlurBottom {
-    background-color: #ffffffa0;
-    backdrop-filter: blur(5px);
+    background-color: #d1d1d1;
+    backdrop-filter: blur(0px);
 }
 
-.BlurTop{
+.BlurTop {
     position: absolute;
     top: 0;
     width: 100vw;
     height: 30px;
     mask: linear-gradient(0deg, transparent 0%, white 70%);
-
 }
 
 .BlurBottom {
     position: absolute;
     bottom: 0;
     width: 100vw;
-    height: 45px;
-    mask: linear-gradient(180deg, transparent, white 70%);
+    height: 60px;
+    mask: linear-gradient(180deg, transparent, white 80%);
 }

@@ -3,7 +3,11 @@
 ## [26.2] - 28/02/2026
 ### Adicionado
 
-- Mudança de arquivos .png para .svg, assim como pacote gráfico atualizado (parcialmente).
+- Atualização de modulo VITE de 7.3.3 para 8.0.
+
+- Atualização de pacote gráfico iShaking Creative Media atual.
+
+- Mudança de arquivos .png para .svg. (Parcialmente)
 
 - Spotlight usando mouse & bordas mais arredondadas nos containers de Features.
 
@@ -15,6 +19,10 @@
 
 - Adicionado um botão flutuante de compartilhar link de URL de um artigo.
 
+- Atualizado a biblioteca Font Awesome de 6.7 para 7.2.
+
+- O componente BlurTopBottom agora é global em App.tsx.
+
 ### Corrigido
 
 - A fonte Phonk foi atualizada, permitindo caracteres especiais.
@@ -23,7 +31,7 @@
 
 - Mudança de fonte de artigo Times New Roman para Merriweather.
 
-- Mudança de paleta de cores, e aprimoramento de sistema de temas via Material UI e Tailwind CSS.
+- Aprimoramento de sistema de temas via Material UI e Tailwind CSS.
 
 - Alterações de informações, referente a página "home.tsx".
 

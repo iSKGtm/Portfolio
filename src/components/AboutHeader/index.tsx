@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './index.module.css'
+import BlurTopBottom from '../../components/BlurTopBottom';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
@@ -18,14 +19,14 @@ useEffect(() => {
       
       const blur = winScroll / 50;
       const scale = 1 + winScroll / 5000;
-      const opacity = Math.max(0, 1.0 - winScroll / 800);
+      const opacity = Math.max(0, 1.1 - winScroll / 800);
       const translate = winScroll * 0.83;
 
       if (aboutHeaderRef.current) {
-        aboutHeaderRef.current.style.filter = `blur(${blur}px) brightness(${opacity})`;
+        aboutHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;
         aboutHeaderRef.current.style.transform = `scale(${scale}) translateY(${translate}px)`;
         
-        if (winScroll >= 1148) {
+        if (winScroll >= 1280) {
           aboutHeaderRef.current.pause();
           aboutHeaderRef.current.style.display = "none";
         } else {
@@ -35,14 +36,11 @@ useEffect(() => {
       }
     };
 
-    // Adiciona os dois ouvintes
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('load', handleScroll, { passive: true });
 
-    // Chama imediatamente para garantir que o estado inicial esteja correto após o Skeleton
     handleScroll();
 
-    // Limpeza: remove os dois ouvintes
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('load', handleScroll);

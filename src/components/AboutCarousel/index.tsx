@@ -72,7 +72,7 @@ const AboutCarousel: React.FC<ContinuousCarouselProps> = ({
                     height: "100%",
                     width: "auto",
                     borderRadius: "35px",
-                    border: "1px solid #ffffff25",
+                    border: "1px solid var(--color-bg-blur-primary)",
                     pointerEvents: "none",
                     backfaceVisibility: "hidden",
                   }}

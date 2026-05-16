@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "@fontsource/inter";
 import "@fontsource/inter/700.css";
 import '@fontsource/inter/400.css';
@@ -150,15 +150,46 @@ const AnimatedRoutes = () => {
   );
 };
 
+const AppContent = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/home';
+  const [blurForcedOpacity, setBlurForcedOpacity] = useState<number | null>(null);
+
+  useEffect(() => {
+    let timeoutId: number | undefined;
+
+    if (isHome) {
+      setBlurForcedOpacity(null);
+    } else {
+      setBlurForcedOpacity(0);
+      timeoutId = window.setTimeout(() => {
+        setBlurForcedOpacity(1);
+      }, 300);
+    }
+
+    return () => {
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+    };
+  }, [isHome]);
+
+  return (
+    <>
+      <NoAvailable />
+      <Navbar />
+      <BlurTopBottom forcedOpacity={blurForcedOpacity} />
+      <AnimatedRoutes />
+    </>
+  );
+};
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline /> 
       <Router>
-        <NoAvailable />
-        <Navbar />
-        <BlurTopBottom />
-        <AnimatedRoutes />
+        <AppContent />
       </Router>
     </ThemeProvider>
   );

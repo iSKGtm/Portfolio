@@ -148,15 +148,15 @@ useEffect(() => {
                       '& .MuiPaginationItem-root': {
                         color: 'var(--color-primary)',
                         borderRadius: '100px',
-                        borderColor: '#0000001a',
+                        borderColor: 'var(--color-bg-blur-primary)',
                         backgroundColor: 'var(--color-bg-blur-primary)',
-                        boxShadow: 'inset 0 5px 10px -3px #00000030',
+                        boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 10px #00000015',
                         transition: 'transform 120ms ease, background-color 120ms ease, border-color 120ms ease',
                         cursor: 'default',
                       },
                       '& .MuiPaginationItem-root:hover': {
                         backgroundColor: 'var(--color-bg-blur-primary-hover)',
-                        borderColor: '#00000040',
+                        borderColor: 'var(--color-bg-blur-primary-hover)',
                       },
                       '& .MuiPaginationItem-root.Mui-selected': {
                         color: '#fff',
@@ -166,7 +166,7 @@ useEffect(() => {
                         backgroundColor: 'var(--color-accent)',
                       },
                       '& .MuiPaginationItem-root:active': {
-                        transform: 'scale(0.98)',
+                        transform: 'scale(0.90)',
                       },
                     }}
                   />

@@ -13,9 +13,9 @@ const AboutContact = () => {
     cursor: 'default',
 
 
-    backgroundColor: 'rgba(32, 32, 32, 0.05)',
-    border: '1px solid rgba(0, 0, 0, 0.1)',
-    boxShadow: 'inset 0 5px 10px -3px #00000030;',
+    backgroundColor: 'var(--color-bg-blur-primary)',
+    border: '1px solid var(--color-bg-blur-primary)',
+    boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
 
     transition: 'all 0.2s ease-in-out',
 

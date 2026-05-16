@@ -23,7 +23,7 @@
   backdrop-filter: url(#glass-distortion) blur(3px);
   box-shadow: inset 0 5px 10px -3px #00000030,
   0px 0px 20px #00000020;
-  border: 1px solid #92929225;
+  border: 1px solid var(--color-bg-blur-primary);
 }
 
 .scrollButtonIcon {
@@ -66,12 +66,13 @@
   bottom: 15px;
   width: fit-content;
   height: 70px;
-  background-color: #00000000;
+  background-color: var(--color-bg-blur-primary);
+  transition: all 0.1s;
   backdrop-filter: url(#glass-distortion) blur(3px);
-  border: 1px solid #92929225;
+  border: 1px solid var(--color-bg-blur-primary-hover);
   box-shadow: inset 0 5px 10px -3px #00000030,
   0px 0px 20px #00000020;
-  transition: scale 200ms;
+  transition: scale 200ms background-color 200ms;
 }
 
 .buttonNav {
@@ -98,10 +99,10 @@
   border-radius: 100px;
   padding: 3px 25px;
   transition: all 0.1s;
-  fill-opacity: 1;
-  stroke: #00000000;
-  stroke-width: 20px;
-  stroke-dasharray: 1, 0;
+  fill-opacity: 0;
+  stroke: #000;
+  stroke-width: 26px;
+  stroke-dasharray: 0, 0;
   stroke-linejoin: round;
 }
 
@@ -161,32 +162,35 @@
 
 .nav:hover {
   scale: 1.010;
-  transition: scale 200ms;
+  background-color: var(--color-bg-blur-primary-hover);
+  transition: scale 200ms background-color 200ms;
 }
 
 .nav:active {
   scale: 0.980;
-  transition: scale 200ms;
+  background-color: var(--color-bg-blur-primary-hover);
+  transition: scale 200ms background-color 200ms;
 }
 
 .buttonNav:hover{
   box-shadow: inset 0 5px 10px -3px #00000030,
   0px 0px 15px #00000020;
-  background: #00000020;
-  outline: 1px solid #92929285;
+  background-color: var(--color-bg-blur-primary-hover);
+  outline: 1px solid var(--color-bg-blur-primary-hover);
   transition: outline 0.1s;
 }
 
 .buttonNav.active{
   box-shadow: inset 0 5px 10px -3px #00000030,
   0px 0px 15px #00000010;
-  background: #00000025;
-  outline: 1px solid #92929285;
+  background: var(--color-bg-blur-primary-active);
+  outline: 1px solid var(--color-bg-blur-primary-active);
   transition: outline 0.1s;
 }
 
 .activeSVG{
   fill-opacity: 1 !important;
+  stroke: #db116800 !important;
   background-color: #fff;
   transition: all 0.1s;
   color: #db1168;
@@ -197,25 +201,33 @@
 }
 
 .scrollButton:hover {
-  background: #00000025;
-  border: 1px solid #92929285;
+  background-color: var(--color-bg-blur-primary-hover);
+  border: 1px solid var(--color-bg-blur-primary-hover);
   transition: all 0.1s;
 }
 
 .scrollButton:active {
-  scale: 0.950;
-  transition: scale 200ms;
+  scale: 0.900;
+  transition: scale 0.1s;
 }
 
 @media screen and (max-width: 992px) {
   .scrollButton:hover {
     background-color: var(--color-bg-blur-primary);
-    border: 1px solid #92929225;
+    border: 1px solid var(--color-bg-blur-primary);
     transition: all 0.1s;
   }
   .scrollButton:active {
-    background: #00000025;
-    border: 1px solid #92929285;
+    background-color: var(--color-bg-blur-primary-hover);
+    border: 1px solid var(--color-bg-blur-primary-hover);
+    transition: all 0.1s;
+  }
+  .nav:hover {
+    background-color: var(--color-bg-blur-primary);
+    transition: all 0.1s;
+  }
+  .nav:active {
+    background-color: var(--color-bg-blur-primary-hover);
     transition: all 0.1s;
   }
 }
