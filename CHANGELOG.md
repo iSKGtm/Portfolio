@@ -41,6 +41,8 @@
 
 - Os icones SVG na barra de navegação foram substituidos, agora foram feitos por mim.
 
+- Corrigido um problema com o componente BlurTopBottom, envolvendo a interface do Chrome em telefones.
+
 ### Problemas Conhecidos
 
 - N/A
@@ -48,7 +50,7 @@
 ## [26.1] - 10/02/2026
 ### Adicionado
 
-- Efeito de blur e gradiente nas extremidades, no topo e no fundo da janela.
+- Efeito de blur e gradiente nas extremidades, no topo e no fundo da janela (BlurTopBottom), em beta.
 
 - Barra de navegação agora fixo, seguindo tendências de UI/UX (GlassDesign).
 

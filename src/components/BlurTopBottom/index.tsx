@@ -7,13 +7,15 @@ type BlurTopBottomProps = {
 
 const BlurTopBottom: React.FC<BlurTopBottomProps> = ({ forcedOpacity = null }) => {
 
-  const containerBlurTopBottomRef = useRef<HTMLDivElement | null>(null);
+  const blurBottomRef = useRef<HTMLDivElement | null>(null);
+  const blurTopRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (forcedOpacity !== null) {
-        if (containerBlurTopBottomRef.current) {
-          containerBlurTopBottomRef.current.style.opacity = String(forcedOpacity);
+        if (blurBottomRef.current && blurTopRef.current) {
+          blurBottomRef.current.style.opacity = String(forcedOpacity);
+          blurTopRef.current.style.opacity = String(forcedOpacity);
         }
         return;
       }
@@ -21,9 +23,14 @@ const BlurTopBottom: React.FC<BlurTopBottomProps> = ({ forcedOpacity = null }) =
       const winScroll = window.pageYOffset || document.documentElement.scrollTop;
       
       const opacity = Math.max(0, Math.min(1, winScroll / 200));
+      const opacityTopOnly = Math.max(0, Math.min(1, winScroll / 1000));
 
-      if (containerBlurTopBottomRef.current) {
-        containerBlurTopBottomRef.current.style.opacity = String(opacity);
+      if (blurBottomRef.current) {
+        blurBottomRef.current.style.opacity = String(opacity);
+      }
+
+      if (blurTopRef.current) {
+        blurTopRef.current.style.opacity = String(opacityTopOnly);
       }
     };
 
@@ -40,10 +47,8 @@ const BlurTopBottom: React.FC<BlurTopBottomProps> = ({ forcedOpacity = null }) =
 
   return (
     <>
-        <div className={styles.containerBlurTopBottom} ref={containerBlurTopBottomRef}>
-            <div className={styles.BlurTop}></div>
-            <div className={styles.BlurBottom}></div>
-        </div>
+      <div className={styles.BlurTop} ref={blurTopRef}></div>
+      <div className={styles.BlurBottom} ref={blurBottomRef}></div>
     </>
   )
 }
