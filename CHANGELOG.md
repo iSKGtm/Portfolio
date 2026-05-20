@@ -23,6 +23,8 @@
 
 - // EM 16/05/2026 APÓS UMA ATUALIZAÇÃO VITE (7.3.3 PARA 8.0), OS BUILDS PARARAM DE FUNCIONAR, SENDO NECESSÁRIO REGREDIR O CÓDIGO.
 
+- Mudança de nome do projeto "Portólio" & "iSKGtm Website" para "iSKGtm Hub".
+
 ### Corrigido
 
 - A fonte Phonk foi atualizada, permitindo caracteres especiais.
