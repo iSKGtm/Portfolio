@@ -153,6 +153,7 @@ useEffect(() => {
                         boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 10px #00000015',
                         transition: 'transform 120ms ease, background-color 120ms ease, border-color 120ms ease',
                         cursor: 'default',
+                        fontSize: '1rem',
                       },
                       '& .MuiPaginationItem-root:hover': {
                         backgroundColor: 'var(--color-bg-blur-primary-hover)',
@@ -223,9 +224,22 @@ useEffect(() => {
               {Array.from({ length: 10 }, (_, i) => (
                 <NewsCard 
                   key={i}
-                  title={<Skeleton width="100%" />}
-                  label={<Skeleton width="70%" />}
-                  tags={<Skeleton width="50%" />}
+                  title={<>
+                    <Skeleton width="100%" /> <Skeleton width="30%" />
+                    </>
+                  }
+                  label={
+                    <>
+                    <Skeleton width="100%" /> <Skeleton width="60%" />
+                    </>
+                  }
+                  tags={
+                    <>
+                    <SkeletonTheme baseColor="#ccc" highlightColor="#eee" borderRadius={10}>
+                      <Skeleton width="70%" />
+                    </SkeletonTheme>
+                    </>
+                  }
                   date={<Skeleton width="30%" />}
                   imageUrl={"/images/symb/placeholder480.jpg"}
                 />

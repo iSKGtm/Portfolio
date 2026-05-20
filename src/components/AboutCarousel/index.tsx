@@ -5,6 +5,7 @@ interface ContinuousCarouselProps {
   slides: string[];
   durationInSeconds?: number;
   height?: string;
+  isReady?: boolean;
 }
 
 const AboutCarousel: React.FC<ContinuousCarouselProps> = ({
@@ -19,14 +20,12 @@ const AboutCarousel: React.FC<ContinuousCarouselProps> = ({
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Mantendo sua lógica original de rotação
       const rotation = Math.max(-175, Math.min(-160 - scrollY / 60, -90));
 
       if (wrapperRef.current) {
         wrapperRef.current.style.transform = `perspective(1200px) rotateY(${rotation}deg)`;
       }
 
-      // Alteração solicitada: delay de 5s e valor de 199px
       setTimeout(() => {
         if (loopFixRef.current) {
           loopFixRef.current.style.height = "200px";
@@ -34,14 +33,11 @@ const AboutCarousel: React.FC<ContinuousCarouselProps> = ({
       }, 100);
     };
 
-    // Adiciona os ouvintes para scroll e load
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("load", handleScroll);
 
-    // Executa imediatamente para evitar "pulo" visual
     handleScroll();
 
-    // Limpeza: remove ambos os ouvintes ao desmontar
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("load", handleScroll);

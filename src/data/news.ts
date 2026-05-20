@@ -6,6 +6,7 @@ export interface NewsItem {
   tags: string | string[];
   tagImage?: string;
   date: string;
+  dateEdit?: string | null;
   imageUrl?: string;
   authorName?: string;
   minutesRead?: number;
@@ -20,6 +21,7 @@ export interface Article {
   tagImage: string;
   authorName: string;
   publishDate: Date;
+  dateEdit?: Date | null;
   minutesRead?: number;
   content: string;
   tags?: string | string[] | React.ReactNode;
@@ -659,6 +661,7 @@ export const newsData: NewsItem[] = [
     tags: ["iSKGtm Dev"],
     tagImage: "/images/symb/outros.svg",
     date: "09/01/2025",
+    dateEdit: "27/02/2026",
     authorName: "Anthony M.",
     minutesRead: 1,
     content: `

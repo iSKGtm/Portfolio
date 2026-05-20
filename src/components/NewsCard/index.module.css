@@ -1,7 +1,7 @@
 /* ABOUT NEWS SEARCHING (COMPONENTE DE PESQUISA) */
 
 .newsCard {
-  height: 380px;
+  height: 368px;
   width: 296px;
   border-radius: 35px;
   user-select: none;
@@ -17,6 +17,7 @@
 .newsIMG {
   width: 296px;
   display: flex;
+  flex-direction: column;
   aspect-ratio: 16 / 9;
   justify-content: center;
   align-items: center;
@@ -36,7 +37,7 @@
 }
 
 .containerText{
-  padding: 16px;
+  padding: 0 16px;
   height: calc(100% - 160px);
   font-family: Inter, Helvetica, Arial, sans-serif;
   display: flex;
@@ -60,29 +61,34 @@
 }
 
 .titleLabel{
-  margin-top: 17px;
+  margin-top: 10px;
   width: 100%;
 }
 
 .title {
-  font-size: 22px;
+  font-size: 1.2rem;
   font-weight: 700;
-  height: 33px;
+  height: 60px;
   width: 100%;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.labelDate {
+  display: flex;
+  flex-direction: column;
+}
+
 .label {
   height: 50px;
   width: 100%;
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: 500;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -146,8 +152,9 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .newsCard {
-    height: 360px;
+    height: 380px;
     width: 100%
   }
 
@@ -162,29 +169,29 @@
   }
 
   .titleLabel {
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .title {
-    font-size: 23px;
-    height: 30px;
+    font-size: 1.5rem;
+    height: 70px;
   }
 
   .label {
     height: 50px;
-    font-size: 19px;
+    font-size: 1.1rem;
     margin-bottom: 0px;
   }
 
   .date {
-    margin-top: 30px;
-    font-size: 19px;
+    margin-top: 25px;
+    font-size: 1.1rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   .newsCard {
-    height: 330px;
+    height: 340px;
     width: 100%
   }
 
@@ -194,27 +201,27 @@
   }
 
   .type {
-    font-size: 16px;
+    font-size: 1rem;
     width: 128px;
     padding: 5px 0;
   }
 
   .titleLabel {
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .title {
-    font-size: 20px;
-    height: 30px;
+    font-size: 1.2rem;
+    height: 60px;
   }
 
   .label {
     height: 50px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .date {
-    margin-top: 25px;
-    font-size: 16px;
+    margin-top: 23px;
+    font-size: 1rem;
   }
 }

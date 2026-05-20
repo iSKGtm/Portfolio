@@ -1,4 +1,3 @@
-﻿import React from 'react';
 import { Button } from '@mui/material';
 import styles from './index.module.css';
 
@@ -8,11 +7,9 @@ const AboutContact = () => {
     textTransform: 'none',
     fontFamily: 'inherit',
     fontWeight: 500,
-    padding: '10px 25px',
-    fontSize: '18px',
+    padding: '6px 16px',
+    fontSize: '1rem',
     cursor: 'default',
-
-
     backgroundColor: 'var(--color-bg-blur-primary)',
     border: '1px solid var(--color-bg-blur-primary)',
     boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
@@ -20,9 +17,10 @@ const AboutContact = () => {
     transition: 'all 0.2s ease-in-out',
 
     '&:hover': {
-      backgroundColor: theme.palette.secondary.main,
-      borderColor: theme.palette.secondary.main,
-      color: '#fff',
+      backgroundColor: 'var(--color-bg-blur-primary-hover)',
+      border: '1px solid var(--color-bg-blur-primary-hover)',
+      boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
+      color: '#000',
     },
 
     '&:active': {

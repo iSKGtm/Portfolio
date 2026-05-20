@@ -75,6 +75,7 @@
     outline: 0;
     width: 340px;
     height: 50px;
+    font-size: 1.2rem;
     padding: 0 15px;
     padding-left: 50px;
 }
@@ -92,13 +93,13 @@
     margin-top: 0;
     font-family: Phonk;
     text-align: left;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 .labelNewsSearch {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .containerSearch {
@@ -125,7 +126,7 @@
 .containerSearch > h2 {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .containerSearch > h2 > text {
@@ -170,7 +171,7 @@
     gap: 15px;
     padding: 2rem 3rem;
     height: fit-content;
-    font-size: 20px;
+    font-size: 1.2rem;
     border-radius: 50px;
     background-color: var(--color-bg-blur-primary);
     box-shadow: inset 0 5px 10px -3px #00000030,
@@ -250,12 +251,7 @@
         padding: 10px 0px;
     }
     .labelNewsSearch {
-        font-size: 20px;
         padding-right: 50px;
-    }
-
-    .titleNewsSearch {
-        font-size: 40px;
     }
 }
 
@@ -266,7 +262,6 @@
     }
 
     .labelNewsSearch {
-        font-size: 18px;
         padding-right: 0px;
     }
     .titleNewsSearch {
@@ -291,13 +286,14 @@
 
     .inputSearchContainer > input { 
         width: calc(100% - 50px);
+        font-size: 1rem;
     }
 
     .labelNewsSearch {
-        font-size: 16px;
+        font-size: 1rem;
     }
     .titleNewsSearch {
-        font-size: 30px;
+        font-size: 2rem;
     }
     .containerSearch {
         gap: 30px;

@@ -25,6 +25,8 @@
 
 - Mudança de nome do projeto "Portólio" & "iSKGtm Website" para "iSKGtm Hub".
 
+- Adicionado suporte a data de edição de artigos, tendo data original e data de edição.
+
 ### Corrigido
 
 - A fonte Phonk foi atualizada, permitindo caracteres especiais.
@@ -32,6 +34,8 @@
 - Mudança de fonte principal San Francisco para Inter.
 
 - Mudança de fonte de artigo Times New Roman para Merriweather.
+
+- Foi removido a familia de fontes Syne, devido a falta de licenciamento.
 
 - Aprimoramento de sistema de temas via Material UI e Tailwind CSS.
 
@@ -44,6 +48,8 @@
 - Os icones SVG na barra de navegação foram substituidos, agora foram feitos por mim.
 
 - Corrigido um problema com o componente BlurTopBottom, envolvendo a interface do Chrome em telefones.
+
+- Todo o texto do website agora está na medida REM.
 
 ### Problemas Conhecidos
 

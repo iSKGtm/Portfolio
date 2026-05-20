@@ -1,8 +1,9 @@
 ﻿import './ArticleDetailPage.css'
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
-import NewsArticle, { Article } from "../../components/NewsArticle";
+import { useNavigate } from 'react-router-dom';
+import NewsArticle from "../../components/NewsArticle";
+import type { Article } from "../../components/NewsArticle";
 import Footer from "../../components/Footer";
 import { CircularProgress } from '@mui/material';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
@@ -49,11 +50,12 @@ const ArticleDetailPage: React.FC = () => {
           const description = typeof foundArticle.label === 'string' ? foundArticle.label : '';
           const mappedArticle: Article = {
             title: foundArticle.title,
-            label: foundArticle.label,
-            imageUrl: foundArticle.imageUrl,
+            label: foundArticle.label || '',
+            imageUrl: foundArticle.imageUrl || '',
             tagImage: foundArticle.tagImage || "/images/symb/outros.svg",
             authorName: foundArticle.authorName || "iShaking Creative Media",
-            publishDate: new Date(foundArticle.date),
+            publishDate: foundArticle.date,
+            dateEdit: foundArticle.dateEdit || null,
             minutesRead: foundArticle.minutesRead || 5,
             content: foundArticle.content || "Conteúdo não disponível.",
             tags: foundArticle.tags,

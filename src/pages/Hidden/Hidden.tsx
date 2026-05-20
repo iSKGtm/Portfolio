@@ -1,5 +1,5 @@
 import './Hidden.css'
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 
 const Hidden: React.FC = () => {
 

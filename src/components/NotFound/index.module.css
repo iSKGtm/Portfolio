@@ -20,7 +20,7 @@
 }
 
 .containerNotFound > p {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-family: Inter, Helvetica, Arial, sans-serif;
   text-align: justify;
   text-align-last: center;
@@ -34,7 +34,7 @@
   0px 0px 10px #00000015;
   text-decoration: none;
   user-select: none;
-  font-size: 19px;
+  font-size: 1.2rem;
   font-family: Inter, Helvetica, Arial, sans-serif;
   padding: 5px 15px;
   border-radius: 50px;

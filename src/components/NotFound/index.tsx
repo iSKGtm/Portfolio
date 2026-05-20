@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import styles from './index.module.css'
-import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const NotFound: React.FC = () => {
 

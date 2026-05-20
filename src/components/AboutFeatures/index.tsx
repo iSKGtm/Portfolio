@@ -24,6 +24,7 @@ const AboutFeatures: React.FC = () => {
     fontWeight: 500,
     width: '100%',
     cursor: 'default',
+    fontSize: '1rem',
 
     backgroundColor: 'var(--color-bg-blur-primary)',
     border: `1px solid var(--color-bg-blur-primary)`,
@@ -32,9 +33,10 @@ const AboutFeatures: React.FC = () => {
     transition: 'all 0.2s ease-in-out',
 
     '&:hover': {
-      backgroundColor: theme.palette.secondary.main,
-      borderColor: theme.palette.secondary.main,
-      color: '#fff',
+      backgroundColor: 'var(--color-bg-blur-primary-hover)',
+      border: '1px solid var(--color-bg-blur-primary-hover)',
+      boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
+      color: '#000',
     },
 
     '&:active': {

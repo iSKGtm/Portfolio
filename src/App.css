@@ -7,9 +7,9 @@
   --color-accent: #db1168;
   --color-neutral: #64748B;
   --color-bg-primary: #d1d1d1;
-  --color-bg-blur-primary: #ffffff50;
+  --color-bg-blur-primary: #ffffff60;
   --color-bg-blur-primary-hover: #ffffffaa;
-  --color-bg-blur-primary-active: #ffffff65;
+  --color-bg-blur-primary-active: #ffffff75;
   
   font-family: Inter, Helvetica, Arial, sans-serif;
 }
@@ -57,21 +57,6 @@ body {
   font-family: BariolItalic;
   src: url("/assets/fonts/Bariol/bariolBoldItalic.otf");
   font-weight: 700;
-}
-
-@font-face {
-  font-family: SyneExt;
-  src: url("/assets/fonts/Syne/SyneExtra.otf");
-}
-
-@font-face {
-  font-family: SyneBold;
-  src: url("/assets/fonts/Syne/SyneBold.otf");
-}
-
-@font-face {
-  font-family: SyneReg;
-  src: url("/assets/fonts/Syne/SyneRegular.otf");
 }
 
 @font-face {

@@ -9,11 +9,14 @@ import DOMPurify from "dompurify";
 export interface Article {
   title: string;
   label: string;
-  imageUrl: string;
+  imageUrl?: string;
+  tagImage: string;
   authorName: string;
-  publishDate: Date;
+  publishDate: string | Date;
+  dateEdit?: string | Date | null;
   minutesRead: number;
   content: string;
+  tags?: string | string[] | React.ReactNode;
 }
 
 interface Props {
@@ -25,9 +28,15 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
   const [showFloatingPulse, setShowFloatingPulse] = React.useState(false);
   const [copyError, setCopyError] = React.useState<string | null>(null);
   const [isMounted, setIsMounted] = React.useState(false);
-  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const floatingShareRef = React.useRef<HTMLDivElement | null>(null);
   const floatingShareIconRef = React.useRef<HTMLDivElement | null>(null);
+  const formatArticleDate = (dateValue: string | Date) => {
+    if (typeof dateValue === "string") return dateValue;
+    return !isNaN(dateValue.getTime()) ? dateValue.toLocaleDateString() : "";
+  };
+  const formattedDateEdit = article.dateEdit ? formatArticleDate(article.dateEdit) : "";
+  const hasDateEdit = formattedDateEdit.trim().length > 0;
 
   const copyToClipboard = async (text: string) => {
     if (navigator.clipboard?.writeText) {
@@ -200,7 +209,7 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
               className={styles.image}
             />
             •
-            <div>{article.publishDate.toLocaleDateString()}</div>
+            <div>{formatArticleDate(article.publishDate)}</div>
             •
             <div className={styles.minutesRead}>
               {article.minutesRead}min.
@@ -209,6 +218,12 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
 
           <div className={styles.author}>Por {article.authorName}</div>
         </div>
+
+        {hasDateEdit ? (
+          <div className={styles.dateEdit}>
+            editado em: {formattedDateEdit}.
+          </div>
+        ) : null}
 
         <div className={styles.shareContainer}>
           <button

@@ -10,7 +10,7 @@ import '@fontsource/merriweather/700-italic.css';
 import '@fontsource/merriweather/500-italic.css';
 import '@fontsource/merriweather/400-italic.css';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence, scale } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import NoAvailable from './components/NoAvailable';
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
