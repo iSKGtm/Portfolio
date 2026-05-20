@@ -37,7 +37,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "https://i.imgur.com/qYc0xAx.jpeg",
     tags: ["iSKGtm Music"],
     tagImage: "/images/symb/music.svg",
-    date: "05/01/2026",
+    date: "01/05/2026",
     authorName: "Anthony M.",
     minutesRead: 6,
     content: `
@@ -103,7 +103,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "https://i.imgur.com/qYc0xAx.jpeg",
     tags: ["iSKGtm Music"],
     tagImage: "/images/symb/music.svg",
-    date: "03/01/2026",
+    date: "01/03/2026",
     authorName: "Anthony M.",
     minutesRead: 5,
     content: `
@@ -153,7 +153,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "https://i.imgur.com/xHxXV9F.jpeg",
     tagImage: "/images/symb/10y.png",
     tags: ["iSKGtm 10"],
-    date: "01/12/2026",
+    date: "12/01/2026",
     authorName: "Anthony M.",
     minutesRead: 3,
     content: `
@@ -276,7 +276,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "https://i.imgur.com/nhUTcug.jpeg",
     tagImage: "/images/symb/10y.png",
     tags: ["iSKGtm 10"],
-    date: "12/31/2025",
+    date: "31/12/2025",
     authorName: "Anthony M.",
     minutesRead: 6,
     content: `
@@ -405,7 +405,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "https://i.imgur.com/cke2ut6.jpeg",
     tags: ["iSKGtm 10"],
     tagImage: "/images/symb/10y.png",
-    date: "11/15/2025",
+    date: "15/11/2025",
     authorName: "Anthony M.",
     minutesRead: 2,
     content: `
@@ -458,7 +458,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/music/how_to_love_iskgtm_remix/banner.jpg",
     tags: ["iSKGtm Music"],
     tagImage: "/images/symb/music.svg",
-    date: "11/01/2025",
+    date: "01/11/2025",
     authorName: "Anthony M.",
     minutesRead: 2,
     content: `
@@ -501,7 +501,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/music/freed_from_desire_iskgtm_remix/banner.jpg",
     tags: ["iSKGtm Music"],
     tagImage: "/images/symb/music.svg",
-    date: "09/01/2025",
+    date: "01/09/2025",
     authorName: "Anthony M.",
     minutesRead: 3,
     content: `
@@ -546,7 +546,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/outros/corecycle/banner.jpg",
     tags: ["Outros"],
     tagImage: "/images/symb/outros.svg",
-    date: "08/06/2025",
+    date: "06/08/2025",
     authorName: "Anthony M.",
     minutesRead: 5,
     content: `
@@ -660,7 +660,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
     tags: ["iSKGtm Dev"],
     tagImage: "/images/symb/outros.svg",
-    date: "09/01/2025",
+    date: "01/09/2025",
     dateEdit: "27/02/2026",
     authorName: "Anthony M.",
     minutesRead: 1,
@@ -693,7 +693,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
     tags: ["iSKGtm Dev"],
     tagImage: "/images/symb/dev.svg",
-    date: "08/01/2025",
+    date: "01/08/2025",
     authorName: "Anthony M.",
     minutesRead: 3,
     content: `
@@ -761,7 +761,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/music/producao_n50/banner.jpg",
     tags: ["iSKGtm Music"],
     tagImage: "/images/symb/music.svg",
-    date: "04/01/2025",
+    date: "01/04/2025",
     authorName: "Anthony M.",
     minutesRead: 3,
     content: `
@@ -806,7 +806,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/prod/nova-padronizacao-prod/banner.jpg",
     tags: ["iSKGtm Prod"],
     tagImage: "/images/symb/prod.svg",
-    date: "02/24/2025",
+    date: "24/02/2025",
     authorName: "Anthony M.",
     minutesRead: 4,
     content: `
@@ -882,7 +882,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
     tags: ["iSKGtm Dev"],
     tagImage: "/images/symb/dev.svg",
-    date: "09/01/2025",
+    date: "01/09/2025",
     authorName: "Anthony M.",
     minutesRead: 4,
     content: `
@@ -975,7 +975,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/music/banner.jpg",
     tags: ["iSKGtm Music"],
     tagImage: "/images/symb/music.svg",
-    date: "09/01/2025",
+    date: "01/09/2025",
     authorName: "Anthony M.",
     minutesRead: 5,
     content: `
@@ -1064,7 +1064,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "/images/news/posts/prod/banner.jpg",
     tags: ["iSKGtm Prod"],
     tagImage: "/images/symb/prod.svg",
-    date: "09/01/2025",
+    date: "01/09/2025",
     authorName: "Anthony M.",
     minutesRead: 5,
     content: `
@@ -1158,7 +1158,7 @@ export const newsData: NewsItem[] = [
     imageUrl: "",
     tags: ["Outros"],
     tagImage: "/images/symb/outros.svg",
-    date: "09/01/2025",
+    date: "01/09/2025",
     authorName: "Anthony M.",
     minutesRead: 6,
     content: `

@@ -20,7 +20,7 @@ useEffect(() => {
       const blur = winScroll / 50;
       const scale = 1 + winScroll / 5000;
       const opacity = Math.max(0, 1.1 - winScroll / 800);
-      const translate = winScroll * 0.83;
+      const translate = winScroll * 0.60;
 
       if (aboutHeaderRef.current) {
         aboutHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;

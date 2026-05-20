@@ -28,7 +28,7 @@ const AboutFeatures: React.FC = () => {
 
     backgroundColor: 'var(--color-bg-blur-primary)',
     border: `1px solid var(--color-bg-blur-primary)`,
-    boxShadow: 'inset 0 5px 10px -3px #00000030',
+    boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
 
     transition: 'all 0.2s ease-in-out',
 

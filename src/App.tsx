@@ -23,7 +23,6 @@ import BlurTopBottom from './components/BlurTopBottom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from './theme';
-import MusicHome from './pages/MusicHome/MusicHome';
 
 const SetTitle = ({ title }: { title: string }) => {
   React.useEffect(() => {
@@ -86,8 +85,44 @@ const AnimatedRoutes = () => {
               exit="exit"
               variants={homeVariants}
             >
-              <SetTitle title="iSKGtm Music - Home" />
-              <MusicHome />
+              <SetTitle title="iSKGtm Music" />
+              <>
+                Hello World!
+              </>
+            </motion.div>
+          }
+        />
+
+        <Route
+          path="/prod"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={homeVariants}
+            >
+              <SetTitle title="iSKGtm Prod" />
+              <>
+                Hello World!
+              </>
+            </motion.div>
+          }
+        />
+
+        <Route
+          path="/dev"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={homeVariants}
+            >
+              <SetTitle title="iSKGtm Dev" />
+              <>
+                Hello World!
+              </>
             </motion.div>
           }
         />

@@ -33,7 +33,7 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
   const floatingShareIconRef = React.useRef<HTMLDivElement | null>(null);
   const formatArticleDate = (dateValue: string | Date) => {
     if (typeof dateValue === "string") return dateValue;
-    return !isNaN(dateValue.getTime()) ? dateValue.toLocaleDateString() : "";
+    return !isNaN(dateValue.getTime()) ? dateValue.toLocaleDateString("pt-BR") : "";
   };
   const formattedDateEdit = article.dateEdit ? formatArticleDate(article.dateEdit) : "";
   const hasDateEdit = formattedDateEdit.trim().length > 0;

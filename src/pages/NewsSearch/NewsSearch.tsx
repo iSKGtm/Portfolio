@@ -56,7 +56,7 @@ useEffect(() => {
       const searchableFields: string[] = [
         item.title,
         item.label ?? '',
-        typeof item.date === 'string' ? new Date(item.date).toLocaleDateString() : new Date(item.date).toLocaleDateString(),
+        typeof item.date === 'string' ? item.date : new Date(item.date).toLocaleDateString('pt-BR'),
       ];
       if (Array.isArray(item.tags)) {
         searchableFields.push(...item.tags);

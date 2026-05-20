@@ -20,7 +20,7 @@ type NewsCardProps = Omit<Partial<NewsItem>, 'title' | 'label' | 'tags' | 'date'
 const formatDate = (dateValue?: string | React.ReactNode | null) => {
   if (typeof dateValue !== 'string') return dateValue;
   if (dateValue.includes('/')) return dateValue;
-  return isValidDate(dateValue) ? new Date(dateValue).toLocaleDateString() : dateValue;
+  return isValidDate(dateValue) ? new Date(dateValue).toLocaleDateString('pt-BR') : dateValue;
 };
 
 const NewsCard: React.FC<NewsCardProps> = ({ title, label, tags, date, dateEdit, url, imageUrl, hide }) => {
