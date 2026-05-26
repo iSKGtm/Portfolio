@@ -80,7 +80,7 @@ export const newsData: NewsItem[] = [
 
         <br> A escolha desta faixa foi avulsa, ouvindo essa faixa em uma plataforma de streaming, percebi que ela ficaria boa com minhas produções.
         <p>
-        - <q>Estava em uma Academia, ouvindo esta faixa, percebi que ela ficaria boa com minhas produções. Ao retirar meu fone de ouvido, estava tocando um Brazillian Phonk no local com uma melodia similiar, era exatamente aquilo que faltava no meu portfólio (iSKGtm Music). No mesmo dia, já havia iniciado a produção, isso foi no final de Março de 2026. </q> <br>
+        - <q>Estava em uma Academia, ouvindo esta faixa, percebi que ela ficaria boa com minhas produções. Ao retirar meu fone de ouvido, estava tocando um Brazillian Phonk no local com uma melodia similiar, era exatamente aquilo que faltava no meu portfólio (iSKGtm Music). No mesmo dia, já havia iniciado a produção, isso foi no final de Março de 2026.</q> <br>
         <cite>Diz Anthony M. - responsável pela marca iSKGtm / iShaking Creative Media.</cite>
       </p>
         
@@ -867,6 +867,131 @@ export const newsData: NewsItem[] = [
       <p>
         Todo nosso material no acervo, que tem padrões citados abaixo do esperado ou abaixo da resolução 1440p, terão todo tratamento de imagem, com upscaling a 2160p (4K) via IA, incluindo vídeos clássicos de iSKGtm.
       </p>
+
+      <h2>iSKGtm, We Are in Everything</h2>
+
+    </main>
+    `,
+  },
+
+    {
+    url: "/artigo/conheca-revolut-tech",
+    title: "Conheça a Revolut Tech",
+    label: "Revolut Tech é uma startup em fase de crescimento, com uma equipe engajada.",
+    imageUrl: "https://i.imgur.com/gSVEw4S.jpeg",
+    tags: ["iSKGtm Dev"],
+    tagImage: "/images/symb/dev.svg",
+    date: "27/05/2024",
+    authorName: "Anthony M.",
+    minutesRead: 3,
+    content: `
+      <main>
+        <img src="/images/news/tags/dev.jpg" alt="iSKGtm"/>
+        
+        <p>Revolut Tech é uma startup em fase de crescimento, definição & estruturação, com uma equipe engajada de desenvolvimento de tecnologias. O foco deste grupo é em visar uma ampla redução de custos a empresas, serviços industriais & segmentos familiares neste mundo contemporâneo.</p>
+
+        <h2>Sobre a Maëlle AI</h2>
+
+        <p>A Maëlle AI, está sendo desenvolvida pela Revolut Tech, que é um braço robótico que a equipe o considera como parte da 'revolução industrial', sendo o seu 'braço direito'.</p>
+
+        <img src="https://i.imgur.com/NRcDKpX.jpeg" alt="Protótipo (esboço) de Maëlle AI."/>
+
+        <h3>Protótipo (esboço) de Maëlle AI. Imagem cedida</h3>
+
+        <h2> </h2>
+
+        <p>Ricardo Barbosa (CEO da Revolut Tech) & Fabricio Vieira (COO & Desenvolvedor da Revolut Tech) dizem a iSKGtm que, com a evolução da tecnologia, pensaram em desenvolver algo que ajude o cozinheiro industrial ou residencial. Surge então a Maëlle AI, com fim de ajudar a reduzir custos especificos & aumentar a eficiência na cozinha.</p>
+
+        <p>
+          Ricardo Barbosa entrou em contato com a iShaking Creative Media para uma propor uma parceria para Revolut Tech, não pensamos 2 vezes e aceitamos:
+        </p>
+
+        <p>
+          - <q>Acredito no sucesso e na capacidade que a Revolut Tech com Maëlli AI pode trazer, ainda mais hoje em dia com a evolução da Inteligência Artificial & Machine Learning e a popularização delas. Ricardo entrou em contato numa penultima sexta-feira de maio (24 de Maio de 2024), conversamos por 1min e já estava dentro da equipe.</q> <br>
+          <cite>Diz Anthony Max (Responsavel pela iShaking Creative Media | iSKGtm).</cite>
+        </p>
+        
+        <p>
+          iSKGtm irá levar sua experiência para Revolut Tech e seus serviços 'Prod' (Toda Branding e imagem da Startup) & 'Dev' (Desenvolvedor aux. em Python).
+        </p>
+
+        <h2>iSKGtm, We Are in Everything</h2>
+      </main>
+    `,
+  },
+
+  {
+    url: "/artigo/quer-voar-iskgtm-remix",
+    title: "Quer Voar? (iSKGtm Remix)",
+    label: "Quer Voar? Um novo remix bootleg, de Matuê.",
+    imageUrl: "https://i.imgur.com/Ct4nHUk.png",
+    tags: ["iSKGtm Music"],
+    tagImage: "/images/symb/music.svg",
+    date: "06/05/2024",
+    authorName: "Anthony M.",
+    minutesRead: 1,
+    content: `
+    <main>
+
+      <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
+
+      <p>
+      Mais uma produção do REMIX em BOOTLEG foi lançada, dessa vez, conta com o famoso trapper de São Paulo, o Matuê. A música original "Quer Voar?" foi um sucesso de 2021, um dos mais tocados no Brasil naquele ano. <br> Como iSKGtm é do Brasil, nada como produzir um BOOTLEG Brasileiro, certo?
+      </p>
+
+      <img src="https://i.imgur.com/Ct4nHUk.png"/>
+
+      <h3>Imagem do álbum: The Western (2024) - iSKGtm. Imagem: Reprodução</h3>
+
+      <h2>Estruturação Sonora (parte técnica)</h2>
+      <p>
+        Seguindo a estruturação base de "Amor e Fé (iSKGtm Remix)", esta faixa utiliza a estrutura Chill Tropical (2020), que é o 'Carro-Chefe' da iSKGtm Music até o momento, tazendo toda sua harmonia e segmentação com boa progressividade para que os ouvintes ouçam e entre na imersividade da 'batida'!
+        <br> Esta faixa REMIX tem como destaque a metodologia de mixagem e masterização atual, de 2023, diminuindo ruidos que chamamos de "poluição sonora", sendo a melhor das faixas iSKGtm Music até o momento, vale a pena conferir:
+      </p>
+
+      <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/m0LvWsZq9do"></iframe>
+
+      <h2>iSKGtm, We Are in Everything</h2>
+
+    </main>
+    `,
+  },
+
+  {
+    url: "/artigo/amor-e-fe-iskgtm-remix",
+    title: "Amor e Fé (iSKGtm Remix)",
+    label: "Amor e Fé, um novo remix bootleg, de Hungria.",
+    imageUrl: "https://i.imgur.com/Ct4nHUk.png",
+    tags: ["iSKGtm Music"],
+    tagImage: "/images/symb/music.svg",
+    date: "27/02/2024",
+    authorName: "Anthony M.",
+    minutesRead: 1,
+    content: `
+    <main>
+
+      <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
+
+      <p>
+        Uma produção do REMIX em BOOTLEG foi lançada, contendo o melhor do EDM e assinatura sonora iSKGtm, sendo a segunda do album "The Western", a faixa "Amor e Fé" de Hungria Hip-Hop teve sucesso quando foi lançada sua versão original e acústica em 2020.
+      </p>
+
+      <p>
+        4 anos depois de seu lançamento, iSKGtm lança uma versão REMIX/BOOTLEG. Este remix teve sua instrumentação totalmente refeita, assim como também todo o tom melódico desta faixa.
+      </p>
+
+      <img src="https://i.imgur.com/Ct4nHUk.png"/>
+
+      <h3>Imagem do álbum: The Western (2024) - iSKGtm. Imagem: Reprodução</h3>
+
+      <h2>Estruturação Sonora (parte técnica)</h2>
+
+      <p>
+          Esta faixa REMIX é a segunda produzida com o eficiente DAW Cockos Reaper 7. <br>
+          Utilizando a estrutura Chill Tropical (2020), que é o 'Carro-Chefe' da iSKGtm Music, a estrutura traz toda sua harmonia e segmentação com boa progressividade para que os ouvintes ouçam e entre na imersividade da 'batida', vale a pena conferir:
+      </p>
+
+      <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/sTrO73QLZIs"></iframe>
 
       <h2>iSKGtm, We Are in Everything</h2>
 

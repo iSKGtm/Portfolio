@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+.mainSection {
+    background-color: #00000000;
+}
+
+.section2 {
+    background-color: #00000000;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--color-bg-primary);
+}

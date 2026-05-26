@@ -1,6 +1,29 @@
 # Changelog
 
-## [26.2] - 28/02/2026
+## [26.3] - 21/05/2026
+### Adicionado
+
+- As páginas Music, Prod & Dev e seus componentes foram clonadas de Home.
+
+- Foram re-adicionados postagens antigas, de 2024, de versões anteriores do iSKGtm Hub.
+
+- Adicionado uma página Hidden. (?)
+
+## Corrigido
+
+- Os componentes do home, com o termo "About", agora usam o termo "Home" e os componentes passaram a ficar em subpasta da página Home.tsx.
+
+- Uma pequena inconsistencia gráfica, no vídeo em HomeHeader (antigo AboutHeader) e em páginas derivadas (Music, Prod, Dev), foi mascarada.
+
+- Spotlight agora é da cor primary-hover, para melhor consistencia visual.
+
+- Foi removido de forma definitiva fontes, usadas de versões anteriores do iSKGtm Hub. (Syne & SF)
+
+### Problemas Conhecidos
+
+- N/A
+
+## [26.2] - 28/02/2026 - 21/05/2026
 ### Adicionado
 
 - Atualização de pacote gráfico iShaking Creative Media atual.
@@ -53,7 +76,7 @@
 
 ### Problemas Conhecidos
 
-- N/A
+- Uma pequena inconsistencia gráfica, no vídeo em AboutHeader.
 
 ## [26.1] - 10/02/2026
 ### Adicionado

@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import './Home.css';
-import AboutCarousel from '../../components/AboutCarousel';
-import AboutHeader from '../../components/AboutHeader';
-import AboutFeatures from '../../components/AboutFeatures';
-import AboutPartnersCard from '../../components/AboutPartners';
-import AboutContact from '../../components/AboutContact';
+import HomeCarousel from './components/HomeCarousel';
+import HomeHeader from './components/HomeHeader';
+import HomeFeatures from './components/HomeFeatures';
+import HomePartnersCard from './components/HomePartners';
+import HomeContact from './components/HomeContact';
 import { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { partners } from '../../data/partners';
 
 const slides = [
-  "./images/carouselImages/slide1.jpg",
-  "./images/carouselImages/slide2.jpg",
-  "./images/carouselImages/slide3.jpg",
-  "./images/carouselImages/slide4.jpg",
-  "./images/carouselImages/slide5.jpg",
-  "./images/carouselImages/slide6.jpg",
-  "./images/carouselImages/slide7.jpg",
-  "./images/carouselImages/slide8.jpg",
+  "./images/carouselImages/music/slide06.jpg",
+  "./images/carouselImages/music/slide07.jpg",
+  "./images/carouselImages/music/slide08.jpg",
+  "./images/carouselImages/prod/slide6.jpg",
+  "./images/carouselImages/prod/slide7.jpg",
+  "./images/carouselImages/prod/slide8.jpg",
+  "./images/carouselImages/dev/slide7.jpg",
+  "./images/carouselImages/dev/slide8.jpg",
 ];
 
 const Home: React.FC = () => {
@@ -37,30 +37,30 @@ const Home: React.FC = () => {
       <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
         {isLoading ? (
           <main className='mainAboutSkeleton'>
-            <AboutHeader />
+            <HomeHeader />
           </main>
         ) : (
           <main className='mainAbout'>
             <section className='mainSection'>
-              <AboutHeader />
+              <HomeHeader />
             </section>
 
             <section className="section2">
-              <AboutCarousel
+              <HomeCarousel
                 slides={slides}
-                durationInSeconds={30}
+                durationInSeconds={10}
                 height="fit-content"
                 isReady={!isLoading}
               />
-              <AboutFeatures />
+              <HomeFeatures />
             </section>
 
             <section className='section3'>
-              <AboutPartnersCard partners={partners} />
+              <HomePartnersCard partners={partners} />
             </section>
 
             <section className='section4'>
-              <AboutContact />
+              <HomeContact />
             </section>
 
             <Footer />

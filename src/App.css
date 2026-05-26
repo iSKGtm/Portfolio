@@ -6,7 +6,8 @@
   --color-secondary: #4B1E4D;
   --color-accent: #db1168;
   --color-neutral: #64748B;
-  --color-bg-primary: #d1d1d1;
+  --color-bg-primary: #c1c1c1;
+  --color-bg-primaryGradient: #e1e1e1;
   --color-bg-blur-primary: #ffffff60;
   --color-bg-blur-primary-hover: #ffffffaa;
   --color-bg-blur-primary-active: #ffffff75;
@@ -25,7 +26,7 @@ html {
 }
 
 body {
-  background: linear-gradient(0deg, #d1d1d1 0%, #e1e1e1 100%);
+  background: linear-gradient(0deg, var(--color-bg-primary) 0%, var(--color-bg-primaryGradient) 100%);
 }
 
 #root {

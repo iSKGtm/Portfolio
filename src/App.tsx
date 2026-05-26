@@ -16,6 +16,11 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
 import NewsSearch from './pages/NewsSearch/NewsSearch';
 import ArticleDetailPage from './pages/ArticleDetailPage/ArticleDetailPage';
+
+import Music from './pages/Music/Music';
+import Prod from './pages/Prod/Prod';
+import Dev from './pages/Dev/Dev';
+
 import Hidden from './pages/Hidden/Hidden';
 import NotFound from './components/NotFound';
 import BlurTopBottom from './components/BlurTopBottom';
@@ -34,14 +39,12 @@ const SetTitle = ({ title }: { title: string }) => {
 const AnimatedRoutes = () => {
   const location = useLocation();
 
-  // Variantes para páginas internas (Artigos, etc)
   const pageVariants = {
     initial: { opacity: 0, filter: "blur(10px)", scale: 0.95 },
     animate: { opacity: 1, filter: "blur(0px)", scale: 1 },
     exit: { opacity: 0, filter: "blur(10px)", scale: 0.99, transition: { duration: 0.2 } }
   };
 
-  // Variantes específicas para a Home (Slide lateral)
   const homeVariants = {
     initial: { opacity: 0, filter: "blur(10px)"},
     animate: { opacity: 1, filter: "blur(0px)" },
@@ -87,7 +90,7 @@ const AnimatedRoutes = () => {
             >
               <SetTitle title="iSKGtm Music" />
               <>
-                Hello World!
+                <Music />
               </>
             </motion.div>
           }
@@ -104,7 +107,7 @@ const AnimatedRoutes = () => {
             >
               <SetTitle title="iSKGtm Prod" />
               <>
-                Hello World!
+                <Prod />
               </>
             </motion.div>
           }
@@ -121,7 +124,7 @@ const AnimatedRoutes = () => {
             >
               <SetTitle title="iSKGtm Dev" />
               <>
-                Hello World!
+                <Dev />
               </>
             </motion.div>
           }
@@ -174,7 +177,7 @@ const AnimatedRoutes = () => {
           path="/hidden"
           element={
             <div style={{ width: '100%' }}>
-              <SetTitle title="For Testing Purposes" />
+              <SetTitle title="?" />
               <Hidden />
             </div>
           }
@@ -187,12 +190,16 @@ const AnimatedRoutes = () => {
 const AppContent = () => {
   const location = useLocation();
   const isHome = location.pathname === '/home';
+  const isMusic = location.pathname === '/music';
+  const isProd = location.pathname === '/prod';
+  const isDev = location.pathname === '/dev';
+  const isHidden = location.pathname === '/hidden';
   const [blurForcedOpacity, setBlurForcedOpacity] = useState<number | null>(null);
 
   useEffect(() => {
     let timeoutId: number | undefined;
 
-    if (isHome) {
+    if (isHome || isMusic || isProd || isDev || isHidden) {
       setBlurForcedOpacity(null);
     } else {
       setBlurForcedOpacity(0);

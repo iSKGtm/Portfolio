@@ -22,6 +22,7 @@ const Navbar: React.FC = () => {
   const [homeSvgMarkup, setHomeSvgMarkup] = useState('');
   const [articleSvgMarkup, setArticleSvgMarkup] = useState('');
   const location = useLocation();
+  const isHidden = location.pathname === '/hidden';
 
   useEffect(() => {
     const currentPath = location.pathname;
@@ -68,37 +69,49 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScroll = window.scrollY;
       if (!headerRef.current) return;
+
+      if (isHidden) {
+        headerRef.current.style.transform = 'translateY(100%)';
+        return;
+      }
+
+      const currentScroll = window.scrollY;
       headerRef.current.style.transform =
         currentScroll > lastScrollTop.current ? 'translateY(100%)' : 'translateY(0)';
       lastScrollTop.current = currentScroll <= 0 ? 0 : currentScroll;
     };
 
-    //window.addEventListener('scroll', handleScroll); (Função de esconder navbar)
+    if (!headerRef.current) return;
+
+    if (isHidden) {
+      headerRef.current.style.transform = 'translateY(100%)';
+      lastScrollTop.current = 0;
+      return;
+    }
+
+    headerRef.current.style.transform = 'translateY(0)';
+    //window.addEventListener('scroll', handleScroll);
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHidden]);
 
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
         if (buttonScrollRef.current && buttonScrollIconRef.current) {
-          buttonScrollRef.current.style.transition = "all 300ms";
-          buttonScrollIconRef.current.style.transition = "all 210ms";
-          //buttonScrollRef.current.style.transform = 'translateX(calc(0% + 0px))';
-          buttonScrollRef.current.style.opacity = "1";
+          buttonScrollRef.current.style.transition = 'all 300ms';
+          buttonScrollIconRef.current.style.transition = 'all 210ms';
+          buttonScrollRef.current.style.opacity = '1';
           buttonScrollRef.current.style.transform = 'scale(1)';
 
-          buttonScrollIconRef.current.style.filter = "blur(0px)";
+          buttonScrollIconRef.current.style.filter = 'blur(0px)';
         }
-      } else {
-        if (buttonScrollRef.current && buttonScrollIconRef.current) {
-          //buttonScrollRef.current.style.transform = 'translateX(calc(100% + 15px))';
-          buttonScrollRef.current.style.opacity = "0";
-          buttonScrollRef.current.style.transform = 'scale(1.1)';
+      } else if (buttonScrollRef.current && buttonScrollIconRef.current) {
+        buttonScrollRef.current.style.opacity = '0';
+        buttonScrollRef.current.style.transform = 'scale(1.1)';
 
-          buttonScrollIconRef.current.style.filter = "blur(10px)";
-        }
+        buttonScrollIconRef.current.style.filter = 'blur(10px)';
       }
     };
 
@@ -112,7 +125,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <svg style={{display: "none"}}>
+      <svg style={{ display: 'none' }}>
         <filter
           id="glass-distortion"
           x="0%"
@@ -163,7 +176,11 @@ const Navbar: React.FC = () => {
         </filter>
       </svg>
 
-      <header className={styles.headerAnim} ref={headerRef}>
+      <header
+        className={styles.headerAnim}
+        ref={headerRef}
+        style={isHidden ? { transform: 'translateY(100%)' } : undefined}
+      >
         <div className={styles.scrollButton} onClick={scrollToTop} ref={buttonScrollRef}>
           <div ref={buttonScrollIconRef}>
             <FontAwesomeIcon icon={faChevronUp} />

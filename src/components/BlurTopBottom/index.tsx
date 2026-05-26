@@ -22,7 +22,7 @@ const BlurTopBottom: React.FC<BlurTopBottomProps> = ({ forcedOpacity = null }) =
 
       const winScroll = window.pageYOffset || document.documentElement.scrollTop;
       
-      const opacity = Math.max(0, Math.min(1, winScroll / 200));
+      const opacity = Math.max(0, Math.min(1, winScroll / 50));
       const opacityTopOnly = Math.max(0, Math.min(1, winScroll / 1000));
 
       if (blurBottomRef.current) {
