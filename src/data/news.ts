@@ -896,11 +896,22 @@ export const newsData: NewsItem[] = [
 
         <img src="https://i.imgur.com/NRcDKpX.jpeg" alt="Protótipo (esboço) de Maëlle AI."/>
 
-        <h3>Protótipo (esboço) de Maëlle AI. Imagem cedida</h3>
+        <h3>Imagem: Redes Sociais de Maëlli AI</h3>
 
         <h2> </h2>
 
         <p>Ricardo Barbosa (CEO da Revolut Tech) & Fabricio Vieira (COO & Desenvolvedor da Revolut Tech) dizem a iSKGtm que, com a evolução da tecnologia, pensaram em desenvolver algo que ajude o cozinheiro industrial ou residencial. Surge então a Maëlle AI, com fim de ajudar a reduzir custos especificos & aumentar a eficiência na cozinha.</p>
+
+        <p>
+        <cite>Fabricio Vieira, COO da Revolut Tech, fala brevemente sobre o desenvolvimento da Maëlli: </cite> <br>
+          - <q>O nosso braço robótico está sendo desenvolvido por meio das linguagens como Python e biblioteca TensorFlow, que é altamente recomendada para Machine Learning.</q>
+        </p>
+
+        <img src="https://i.imgur.com/VpKiPTN.jpeg" alt="Protótipo (esboço) de Maëlle AI."/>
+
+        <h3>Protótipo (esboço) de Maëlle AI. Imagem cedida</h3>
+
+        <h2> </h2>
 
         <p>
           Ricardo Barbosa entrou em contato com a iShaking Creative Media para uma propor uma parceria para Revolut Tech, não pensamos 2 vezes e aceitamos:
