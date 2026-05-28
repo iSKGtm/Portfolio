@@ -5,7 +5,7 @@ Aplicável para seguintes serviços após o inicio:
 
 Serviço			Programa ou Framework
 
-iSKGtm Music	Cockos REAPER
+iSKGtm Music	   	Cockos REAPER
 iSKGtm Prod		Adobe Photoshop | Blackmagic DaVinci Resolve
 iSKGtm Dev		META REACT (TS ver.) | JS VANILLA | Python (Versões Recentes)
 
