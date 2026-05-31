@@ -146,7 +146,7 @@ useEffect(() => {
                         cursor: 'default',
                       },
                       '& .MuiPaginationItem-root': {
-                        color: 'var(--color-primary)',
+                        color: 'var(--color-text-primary)',
                         borderRadius: '100px',
                         borderColor: 'var(--color-bg-blur-primary)',
                         backgroundColor: 'var(--color-bg-blur-primary)',

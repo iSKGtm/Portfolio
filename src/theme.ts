@@ -17,7 +17,7 @@ export const theme = createTheme({
       paper: '#202020',   // Base para o blur
     },
     text: {
-      primary: '#000000', // --color-text-primary
+      primary: '#151515', // --color-text-primary
       secondary: '#000000', // --color-text-secondary
     },
   },
@@ -28,6 +28,13 @@ export const theme = createTheme({
     h3: { fontFamily: 'Phonk, sans-serif' },
   },
   components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: 'var(--color-bg-blur-primary)',
+        },
+      },
+    },
     MuiLink: {
       styleOverrides: {
         root: ({ theme }) => ({

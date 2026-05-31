@@ -21,6 +21,7 @@ import Music from './pages/Music/Music';
 import Prod from './pages/Prod/Prod';
 import Dev from './pages/Dev/Dev';
 
+import Hub from './pages/Hub/Hub';
 import Hidden from './pages/Hidden/Hidden';
 import NotFound from './components/NotFound';
 import BlurTopBottom from './components/BlurTopBottom';
@@ -148,6 +149,22 @@ const AnimatedRoutes = () => {
         />
 
         <Route
+          path="/hub"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={homeVariants}
+              transition={{ duration: 0.2 }}
+            >
+              <SetTitle title="iSKGtm Hub" />
+              <Hub />
+            </motion.div>
+          }
+        />
+
+        <Route
           path="/artigo/:id"
           element={
             <motion.div
@@ -194,17 +211,27 @@ const AppContent = () => {
   const isProd = location.pathname === '/prod';
   const isDev = location.pathname === '/dev';
   const isHidden = location.pathname === '/hidden';
+  const isHub = location.pathname === '/hub';
   const [blurForcedOpacity, setBlurForcedOpacity] = useState<number | null>(null);
+  const [navbarOpacity, setNavbarOpacity] = useState<number | null>(null);
+  const isMainRoute = isHome || isMusic || isProd || isDev || isHidden;
+  const effectiveNavbarOpacity = isHub ? 0 : isMainRoute ? null : navbarOpacity ?? 1;
 
   useEffect(() => {
     let timeoutId: number | undefined;
 
-    if (isHome || isMusic || isProd || isDev || isHidden) {
+    if (isHub) {
       setBlurForcedOpacity(null);
+      setNavbarOpacity(0);
+    } else if (isMainRoute) {
+      setBlurForcedOpacity(null);
+      setNavbarOpacity(null);
     } else {
       setBlurForcedOpacity(0);
+      setNavbarOpacity(1);
       timeoutId = window.setTimeout(() => {
         setBlurForcedOpacity(1);
+        setNavbarOpacity(1);
       }, 300);
     }
 
@@ -213,12 +240,12 @@ const AppContent = () => {
         window.clearTimeout(timeoutId);
       }
     };
-  }, [isHome]);
+  }, [isHub, isMainRoute]);
 
   return (
     <>
       <NoAvailable />
-      <Navbar />
+      <Navbar forcedOpacity={effectiveNavbarOpacity} />
       <BlurTopBottom forcedOpacity={blurForcedOpacity} />
       <AnimatedRoutes />
     </>

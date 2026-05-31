@@ -3,6 +3,7 @@
 .mainDev {
     width: 100%;
     background-color: #00000000;
+    color: var(--color-text-primary);
 }
 
 .mainSection {

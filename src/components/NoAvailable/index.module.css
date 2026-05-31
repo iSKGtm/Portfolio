@@ -1,10 +1,11 @@
 /* NOAVAILABLE (RESPSYS) */
 
 .containerNoAvailable {
+  color: var(--color-text-primary);
   position: fixed;
-  padding-top: 5px;
+  inset: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   padding: 55px;
   display: none;
   align-items: center;
@@ -12,6 +13,14 @@
   flex-direction: column;
   z-index: 9999999;
   backdrop-filter: blur(50px);
+}
+
+.containerNoAvailableActive {
+  display: flex;
+}
+
+.noAvailableLock {
+  overflow: hidden !important;
 }
 
 .containerBox {
@@ -30,7 +39,7 @@
 
 .containerBox > img {
   width: 100px;
-  filter: invert(100%);
+  filter: var(--filter-image-on-bg);
   animation: pulse 2s infinite ease-in-out;
 }
 
@@ -68,6 +77,25 @@
   }
 }
 
+@media screen and (max-height: 259px) {
+  .containerNoAvailable {
+    padding: 20px;
+  }
+
+  .containerBox {
+    padding: 1rem;
+    border-radius: 30px;
+  }
+
+  .containerBox > img {
+    width: 60px;
+  }
+
+  .containerBox > p {
+    font-size: 0.85rem;
+  }
+}
+
 /* ANIMATIONS */
 
 @keyframes pulse {
@@ -84,6 +112,12 @@
 
 /* PARA NOAVAILABLE (RESPSYS) */
 @media screen and (max-width: 300px) {
+  header, footer, section {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 259px) {
   header, footer, section {
     display: none;
   }

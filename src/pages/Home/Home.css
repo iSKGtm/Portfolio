@@ -9,14 +9,17 @@
 .section2 {
     /* background-color: var(--color-bg-primary);*/
     background-color: #00000000;
+    color: var(--color-text-primary);
 }
 
 .section3 {
     background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
 }
 
 .section4 {
     background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
 }
 
 /* Firefox */

@@ -1,6 +1,7 @@
 /* 404 article */
 
 .containerNotFound {
+  color: var(--color-text-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +14,7 @@
 
 .containerNotFound > img {
   width: 250px;
-  filter: invert(100%);
+  filter: var(--filter-image-on-bg);
   animation: pulse 2s infinite ease-in-out;
   user-select: none;
   pointer-events: none;

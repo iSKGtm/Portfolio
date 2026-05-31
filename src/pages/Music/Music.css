@@ -2,6 +2,7 @@
 
 .mainSection {
     background-color: #00000000;
+    color: 'var(--color-text-primary)',
 }
 
 .section2 {

@@ -5,6 +5,10 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+type NavbarProps = {
+  forcedOpacity?: number | null;
+};
+
 const sanitizeSvgMarkup = (svgText: string) =>
   svgText
     .replace(/^\s*<\?xml[\s\S]*?\?>\s*/i, '')
@@ -13,7 +17,7 @@ const sanitizeSvgMarkup = (svgText: string) =>
     .replace(/style="fill:#fff;fill-opacity:1"/gi, 'fill="currentColor"')
     .replace(/fill="#fff"/gi, 'fill="currentColor"');
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
   const lastScrollTop = useRef(0);
   const headerRef = useRef<HTMLDivElement | null>(null);
   const buttonScrollRef = useRef<HTMLDivElement | null>(null);
@@ -179,7 +183,16 @@ const Navbar: React.FC = () => {
       <header
         className={styles.headerAnim}
         ref={headerRef}
-        style={isHidden ? { transform: 'translateY(100%)' } : undefined}
+        style={
+          forcedOpacity !== null
+            ? {
+                opacity: forcedOpacity,
+                display: forcedOpacity === 0 ? 'none' : undefined,
+              }
+            : isHidden
+              ? { transform: 'translateY(100%)' }
+              : undefined
+        }
       >
         <div className={styles.scrollButton} onClick={scrollToTop} ref={buttonScrollRef}>
           <div ref={buttonScrollIconRef}>

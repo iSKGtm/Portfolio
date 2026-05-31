@@ -7,6 +7,7 @@
     flex-direction: column;
     padding: 30px 50px;
     gap: 50px;
+    color: var(--color-text-primary);
 }
 
 .mainSection {
@@ -187,7 +188,7 @@
   animation: pulse 2s infinite ease-in-out;
   user-select: none;
   pointer-events: none;
-  filter: invert(100%);
+  filter: var(--filter-image-on-bg);
 }
 
 /* HOVERS */

@@ -9,6 +9,12 @@
 
 - Adicionado uma página Hidden. (?)
 
+- Adicionado uma página HUB. Em https://linktr.ee/iSKGtm, foi mantido apenas um botão para acessar o site. (Árvore de Links)
+
+- Tematização em todo texto do site. (Tailwind)
+
+- Foi integrado os dominios iskgtm.com e www.iskgtm.com por 2 anos, via cloudflare.
+
 ## Corrigido
 
 - Os componentes do home, com o termo "About", agora usam o termo "Home" e os componentes passaram a ficar em subpasta da página Home.tsx.
@@ -21,7 +27,7 @@
 
 ### Problemas Conhecidos
 
-- N/A
+- Devido ao uso de low-code na criação da página /hub, é necessário observar o comportamento ou bug.
 
 ## [26.2] - 28/02/2026 - 21/05/2026
 ### Adicionado

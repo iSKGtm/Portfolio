@@ -1,50 +1,44 @@
-import { useRef, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './index.module.css';
 
 const NoAvailableRef: React.FC = () => {
-  const noAvailableRef = useRef<HTMLDivElement | null>(null);
-  const warningTextRef = useRef<HTMLParagraphElement | null>(null);
+  const [isUnavailable, setIsUnavailable] = useState(false);
 
   useEffect(() => {
-    const html = document.body;
-
-    const windowWidthNoAvailable = () => {
-      const sysWidth = window.innerWidth;
-
-      if (sysWidth < 301) {
-        if (noAvailableRef.current && warningTextRef.current) {
-          warningTextRef.current.textContent =
-            "Aplicação indisponível para este dispositivo.";
-          noAvailableRef.current.style.display = "flex";
-          html.style.overflowY = "hidden";
-        }
-      } else {
-        if (noAvailableRef.current && warningTextRef.current) {
-          warningTextRef.current.textContent = "";
-          noAvailableRef.current.style.display = "none";
-          html.style.overflowY = "auto";
-        }
-      }
+    const updateAvailability = () => {
+      setIsUnavailable(window.innerWidth < 301 || window.innerHeight < 260);
     };
 
-    windowWidthNoAvailable();
-    window.addEventListener("resize", windowWidthNoAvailable);
+    updateAvailability();
+    window.addEventListener('resize', updateAvailability);
+    window.addEventListener('orientationchange', updateAvailability);
 
     return () => {
-      window.removeEventListener("resize", windowWidthNoAvailable);
+      window.removeEventListener('resize', updateAvailability);
+      window.removeEventListener('orientationchange', updateAvailability);
     };
   }, []);
 
+  useEffect(() => {
+    document.documentElement.classList.toggle(styles.noAvailableLock, isUnavailable);
+    document.body.classList.toggle(styles.noAvailableLock, isUnavailable);
+
+    return () => {
+      document.documentElement.classList.remove(styles.noAvailableLock);
+      document.body.classList.remove(styles.noAvailableLock);
+    };
+  }, [isUnavailable]);
+
   return (
     <div
-      className={styles.containerNoAvailable}
-      ref={noAvailableRef}
-      style={{ display: "none" }}
+      className={`${styles.containerNoAvailable} ${
+        isUnavailable ? styles.containerNoAvailableActive : ''
+      }`}
+      aria-hidden={!isUnavailable}
     >
       <div className={styles.containerBox}>
         <img src="/images/symb/aviso.svg" alt="Aviso" />
-        <p ref={warningTextRef}>
-        </p>
+        <p>Aplicacao indisponivel para este dispositivo.</p>
       </div>
     </div>
   );
