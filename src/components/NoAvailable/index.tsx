@@ -38,7 +38,7 @@ const NoAvailableRef: React.FC = () => {
     >
       <div className={styles.containerBox}>
         <img src="/images/symb/aviso.svg" alt="Aviso" />
-        <p>Aplicacao indisponivel para este dispositivo.</p>
+        <p>Aplicação indisponível para este dispositivo.</p>
       </div>
     </div>
   );

@@ -63,7 +63,7 @@ const HomeFeatures: React.FC = () => {
       video: '/videos/about/music.mp4',
       links: [
         {
-          label: 'Acesse',
+          label: 'YouTube',
           url: 'https://youtube.com/playlist?list=PL2DivU5yf-1wIXM2F8rp_GNEqpVYW3sqt'
         },
         { label: 'Mais Informações', url: '/artigo/music' }

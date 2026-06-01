@@ -6,7 +6,7 @@ A iShaking Creative Media é a entidade-mãe da iSKGtm. Ela é responsável pela
 
 O hub apresenta diferentes frentes de trabalho, como música, produção audiovisual, desenvolvimento web e outros projetos autorais. A ideia e servir como uma porta de entrada visual e organizada para conhecer o ecossistema iSKGtm, acessar conteúdos publicados e acompanhar novas atualizações.
 
-> Versão atual do projeto: **26.2**
+> Versão atual do projeto: **26.3**
 
 ## Sobre o Projeto
 

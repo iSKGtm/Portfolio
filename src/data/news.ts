@@ -1172,7 +1172,7 @@ export const newsData: NewsItem[] = [
         </div>
         <div class="expContainer">
           Outros: <br>
-          Composição de Melodias/Instrumentação
+          Sound Design
           <div class="expContainer2">
             <div class="expPercent p100">Avançado</div>
           </div>

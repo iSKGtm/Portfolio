@@ -1,8 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './index.module.css';
+import { music } from '../../../../data/listaMusicas';
 
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+
+const parseDate = (date: string) => {
+  const [day, month, year] = date.split('/').map(Number);
+  return new Date(year, month - 1, day).getTime();
+};
+
+const latestSong = music.filter((song) => !song.hide).sort((a, b) => parseDate(b.date) - parseDate(a.date))[0];
 
 const MusicHeader: React.FC = () => {
   const musicHeaderRef = useRef<HTMLVideoElement | null>(null);
@@ -51,6 +59,12 @@ const MusicHeader: React.FC = () => {
     };
   }, [isLoading]);
 
+  const playLatestSong = () => {
+    if (!latestSong) return;
+    document.getElementById('music-player')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    window.dispatchEvent(new CustomEvent('music-player:play-song', { detail: { id: latestSong.id } }));
+  };
+
   return (
     <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
       <section className={styles.mainSection}>
@@ -77,6 +91,15 @@ const MusicHeader: React.FC = () => {
               <span className={styles.logoText}>iSKGtm</span>
               <span className={styles.logoText}>music.</span>
             </div>
+            {latestSong && (
+              <button className={styles.latestAlbum} type="button" onClick={playLatestSong}>
+                <span>
+                  {latestSong.albumName}
+                  <small>ouça agora!</small>
+                </span>
+                <img src={latestSong.fileAlbum ?? '/images/symb/music.svg'} alt={latestSong.albumName} />
+              </button>
+            )}
           </>
         )}
       </section>

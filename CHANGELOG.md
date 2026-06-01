@@ -15,6 +15,10 @@
 
 - Foi integrado os dominios iskgtm.com e www.iskgtm.com por 2 anos, via cloudflare.
 
+- A página music e seu mini-player (beta) foi finalizada.
+
+- Em MusicHeader, ficará o ultimo álbum listado em listaMusicas.ts.
+
 ## Corrigido
 
 - Os componentes do home, com o termo "About", agora usam o termo "Home" e os componentes passaram a ficar em subpasta da página Home.tsx.

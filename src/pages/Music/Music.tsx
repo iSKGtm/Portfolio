@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import MusicHeader from './components/MusicHeader';
 import MusicCarousel from './components/MusicCarousel';
 import MusicFeatures from './components/MusicFeatures';
+import MusicPlayer from './components/MusicPlayer';
 
 const slides = [
   "./images/carouselImages/music/slide1.jpg",
@@ -19,26 +20,28 @@ const slides = [
 const Music: React.FC = () => {
 
     return (
-        <>
-            <main className='mainMusic'>
-                <section className='mainSection'>
-                    <MusicHeader />
-                </section>
+        <main className='mainMusic'>
+            <section className='mainSection'>
+                <MusicHeader />
+            </section>
 
-                <section className='section2'>
-                    <MusicCarousel
-                        slides={slides}
-                        durationInSeconds={10}
-                        height="fit-content"
-                        imageAspectRatio={1.1}
-                    />
-                    <MusicFeatures />
-                </section>
+            <section className='section2'>
+                <MusicCarousel
+                    slides={slides}
+                    durationInSeconds={10}
+                    height="fit-content"
+                    imageAspectRatio={1.1}
+                />
+                <MusicFeatures />
+            </section>
 
-                <Footer />
-            </main>
-        </>
-  );
+            <section className='section3'>
+                <MusicPlayer />
+            </section>
+        <Footer />
+
+        </main>
+    );
 };
 
 export default Music;

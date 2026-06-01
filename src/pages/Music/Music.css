@@ -9,6 +9,10 @@
     background-color: #00000000;
 }
 
+.section3 {
+    background-color: #00000000;
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--secondary) var(--color-bg-primary);
