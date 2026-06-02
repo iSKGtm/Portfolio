@@ -52,7 +52,7 @@ const HomeShowcase: React.FC = () => {
       description:
         'iSKGtm atua em diferentes frentes criativas e técnicas: música, produção audiovisual e desenvolvimento de software. Do conceito à entrega, com foco em identidade, qualidade e consistência.',
       isMainVideo: true,
-      links: [{ label: 'Sobre Nós', url: '/artigo/iskgtm' }],
+      links: [{ label: 'Hub', url: '/hub' }, { label: 'Sobre Nós', url: '/artigo/iskgtm' }],
       playlistNote: false,
       reverse: true
     },
