@@ -22,14 +22,15 @@
 }
 
 .title {
-  font-size: 2rem;
-  line-height: 1.2;
+  font-size: 1.85rem;
+  line-height: 1.12;
   font-family: Phonk;
 }
 
 .label {
-  font-size: 1.2rem;
+  font-size: 1.02rem;
   font-weight: 300;
+  line-height: 1.55;
 }
 
 .image {
@@ -49,12 +50,12 @@
   display: flex;
   flex-direction: row;
   gap: 5px;
-  font-size: 1.2rem;
+  font-size: 1.02rem;
   font-weight: 300;
 }
 
 .author {
-  font-size: 1.2rem;
+  font-size: 1.02rem;
   font-weight: 300;
 }
 
@@ -70,7 +71,7 @@
   text-decoration: none;
   user-select: none;
   font-family: Inter, Helvetica, Arial, sans-serif;
-  font-size: 21px;
+  font-size: 1.2rem;
   width: 54px;
   height: 54px;
   border-radius: 100px;
@@ -129,7 +130,7 @@
 }
 
 .content {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-family: 'Merriweather', serif;
   line-height: 1.7;
   padding: 2rem;
@@ -163,7 +164,7 @@
 .content > main > h2 {
   margin-top: 50px;
   margin-bottom: 10px;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
 .content > main > p {
@@ -270,7 +271,7 @@ th, td {
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
 
   .dateAuthor {
@@ -372,7 +373,7 @@ th, td {
   }
 
   .title {
-    font-size: 1.3rem;
+    font-size: 1.28rem;
   }
 }
 

@@ -3,7 +3,7 @@ import React from "react";
 import Footer from '../../components/Footer';
 import DevHeader from './components/DevHeader';
 import DevCarousel from './components/DevCarousel';
-import DevFeatures from './components/DevFeatures';
+import DevShowcase from './components/DevShowcase';
 
 const slides = [
   "./images/carouselImages/dev/slide1.jpg",
@@ -26,11 +26,11 @@ const Dev: React.FC = () => {
       <section className='section2'>
         <DevCarousel
           slides={slides}
-          durationInSeconds={30}
+          durationInSeconds={20}
           height="fit-content"
           imageAspectRatio={16 / 9}
         />
-        <DevFeatures />
+        <DevShowcase />
       </section>
 
       <Footer />

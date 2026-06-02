@@ -218,6 +218,17 @@ const AppContent = () => {
   const effectiveNavbarOpacity = isHub ? 0 : isMainRoute ? null : navbarOpacity ?? 1;
 
   useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, 220);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [location.pathname]);
+
+
+  useEffect(() => {
     let timeoutId: number | undefined;
 
     if (isHub) {

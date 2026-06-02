@@ -19,13 +19,15 @@
   font-family: Inter, Helvetica, Arial, sans-serif;
   text-align: left;
   margin-bottom: 40px;
-  font-size: 1.2rem;
+  font-size: 1.02rem;
+  line-height: 1.55;
 }
 
 .title {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 3rem;
+  font-size: 2.4rem;
+  line-height: 1;
   text-transform: lowercase;
 }
 
@@ -124,7 +126,7 @@
 
 @media screen and (max-width: 768px) {
   .text { width: 100%; font-size: 1rem; }
-  .title { font-size: 2rem; }
+  .title { font-size: 1.72rem; }
   .containerCard { justify-content: center; }
   .card { width: 100%; max-width: 400px; }
 }

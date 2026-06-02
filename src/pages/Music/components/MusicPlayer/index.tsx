@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import {
   faArrowUpRightFromSquare,
   faBackwardStep,
@@ -260,7 +261,7 @@ const MusicPlayer: React.FC = () => {
           />
         </filter>
       </svg>
-
+      
       <div className={styles.musicListContainer} onMouseMove={handleMouseMove}>
         <div className={styles.spotlight}></div>
         <div className={styles.containerContent}>
@@ -272,7 +273,7 @@ const MusicPlayer: React.FC = () => {
               <input
                 className={styles.searchInput}
                 type="text"
-                placeholder="Pesquisar música"
+                placeholder="Buscar..."
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
               />

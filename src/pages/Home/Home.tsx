@@ -3,7 +3,7 @@ import Footer from '../../components/Footer';
 import './Home.css';
 import HomeCarousel from './components/HomeCarousel';
 import HomeHeader from './components/HomeHeader';
-import HomeFeatures from './components/HomeFeatures';
+import HomeShowcase from './components/HomeShowcase';
 import HomePartnersCard from './components/HomePartners';
 import HomeContact from './components/HomeContact';
 import { SkeletonTheme } from 'react-loading-skeleton';
@@ -48,11 +48,11 @@ const Home: React.FC = () => {
             <section className="section2">
               <HomeCarousel
                 slides={slides}
-                durationInSeconds={10}
+                durationInSeconds={20}
                 height="fit-content"
                 isReady={!isLoading}
               />
-              <HomeFeatures />
+              <HomeShowcase />
             </section>
 
             <section className='section3'>

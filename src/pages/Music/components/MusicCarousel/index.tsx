@@ -11,7 +11,7 @@ interface ContinuousCarouselProps {
 
 const MusicCarousel: React.FC<ContinuousCarouselProps> = ({
   slides,
-  durationInSeconds = 30,
+  durationInSeconds = 20,
   height = '400px',
   imageAspectRatio = 1.1,
 }) => {

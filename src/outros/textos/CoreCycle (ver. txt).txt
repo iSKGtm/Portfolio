@@ -6,7 +6,7 @@ Aplicável para seguintes serviços após o inicio:
 Serviço			Programa ou Framework
 
 iSKGtm Music	   	Cockos REAPER
-iSKGtm Prod		Adobe Photoshop | Blackmagic DaVinci Resolve
+iSKGtm Prod		Canva Affinity | Blackmagic DaVinci Resolve
 iSKGtm Dev		META REACT (TS ver.) | JS VANILLA | Python (Versões Recentes)
 
 
@@ -30,7 +30,8 @@ Ciclo de Evolução
 Serviço iSKGtm Music
 
 No serviço Music, com REAPER, onde é compatível com este fluxograma, utilizam-se projetos
-com modulos (pastas) de samples e VST's que podem ser reutilizados com facilidade.
+com modulos (pastas) de samples e VST's que podem ser reutilizados com facilidade, bem como, a criação
+unificada de Sound Design, chamada de CoreMusic.
 
 
 Serviço iSKGtm Prod.
@@ -62,7 +63,7 @@ mesmo sem haver a necessidade disto, demandando tempo e reduzindo a qualidade de
 um projeto em produção, como polimento do mesmo por exemplo.
 
 
-Observação a parceiros que utilizam serviço iSKGtm Prod. (Edição VFX VEGAS Pro)
+Observação a parceiros que utilizam serviço iSKGtm Prod. (VEGAS Pro)
 
 Os serviços de vídeo estão em transição, de um programa para outro, de VEGAS Pro para
 DaVinci Resolve, iniciado em 14 jun. 2025. Vale destacar a incompatibilidade com esta
@@ -70,3 +71,10 @@ metodologia com VEGAS Pro, devido a problemas com projetos legados e ausência d
 modulares a serem criados. Parceiros que mantem projetos legados deste programa (como
 EagleVision e PlayVicio), serão mantidos até o final de 2026, mas não se enquadrará nos
 novos padrões de fluxograma, com criação limitada e com serviços maior lentidão.
+
+Observação a parceiros que utilizam serviço iSKGtm Prod. (Photoshop)
+
+Os serviços de branding e logo estão em transição, de um programa para outro, de Photoshop
+para Affinity, iniciado em 01 jan. 2026. O motivo foi a facilidade, e a integração de 
+editor de vetor, pixel e layout, tudo em 1 só programa, de forma gratuita.
+Devido a compatibilidade com .psd's, a transição foi feita de uma vez.

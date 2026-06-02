@@ -10,7 +10,7 @@ interface ContinuousCarouselProps {
 
 const HomeCarousel: React.FC<ContinuousCarouselProps> = ({
   slides,
-  durationInSeconds = 30,
+  durationInSeconds = 20,
   height = "400px",
 }) => {
   const mergedSlides = [...slides, ...slides];

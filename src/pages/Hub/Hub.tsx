@@ -69,28 +69,28 @@ const hubLinks: HubLink[] = [
     icon: faGlobe,
   },
   {
-    title: 'iSKGtm - YouTube',
-    href: 'https://www.youtube.com/@iSKGtm',
-    description: 'Assista nosso conteúdo.',
-    image: '/images/logo/logo.jpg',
-  },
-  {
-    title: 'iSKGtm Music - YouTube',
-    href: 'https://www.youtube.com/@iSKGtmMusic',
+    title: 'iSKGtm Music',
+    href: '/music',
     description: 'Ouça nossas produções de músicas.',
     image: '/images/logo/logoMusic.jpg',
   },
   {
-    title: 'iSKGtm Prod - YouTube',
-    href: 'https://www.youtube.com/@iSKGtmProd',
-    description: 'Veja nossas criações.',
+    title: 'iSKGtm Prod',
+    href: '/prod',
+    description: 'Veja nossas criações audiovisuais.',
     image: '/images/logo/logoProd.jpg',
   },
   {
-    title: 'iSKGtm Dev - YouTube',
-    href: '#',
-    description: 'Em breve.',
+    title: 'iSKGtm Dev',
+    href: '/dev',
+    description: 'Explore nossas experiências e soluções digitais.',
     image: '/images/logo/logoDev.jpg',
+  },
+  {
+    title: 'iSKGtm - YouTube',
+    href: 'https://www.youtube.com/@iSKGtm',
+    description: 'Assista todo o nosso conteúdo.',
+    image: '/images/logo/logo.jpg',
   },
 ];
 
@@ -325,7 +325,7 @@ const Hub: React.FC = () => {
                   {link.description && <small>{link.description}</small>}
                 </span>
 
-                <FontAwesomeIcon icon={faEllipsisVertical} className="hubLinkMore" />
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="hubLinkMore" />
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="hubLinkOpen" />
               </a>
             ))}

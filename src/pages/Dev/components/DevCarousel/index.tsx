@@ -11,7 +11,7 @@ interface ContinuousCarouselProps {
 
 const DevCarousel: React.FC<ContinuousCarouselProps> = ({
   slides,
-  durationInSeconds = 10,
+  durationInSeconds = 20,
   height = '400px',
   imageAspectRatio = 1.1,
 }) => {

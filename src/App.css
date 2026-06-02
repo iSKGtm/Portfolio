@@ -14,7 +14,6 @@
   --filter-image-on-bg: invert(93%);
   --filter-logo-on-bg: invert(93%);
   --filter-hidden-image: saturate(0) brightness(500%);
-  --filter-hub-background: brightness(0.45) contrast(1.08) saturate(0.9);
   
   font-family: Inter, Helvetica, Arial, sans-serif;
 }
@@ -26,10 +25,13 @@ html, body {
 }
 
 html {
+  font-size: 16px;
   background-color: var(--color-bg-primary);
 }
 
 body {
+  font-size: 1rem;
+  line-height: 1.5;
   background: linear-gradient(0deg, var(--color-bg-primary) 0%, var(--color-bg-primaryGradient) 100%);
 }
 

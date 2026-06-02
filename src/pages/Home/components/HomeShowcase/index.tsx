@@ -3,22 +3,9 @@ import styles from './index.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { Button, IconButton, Box } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
-type MusicFeatureSection = {
-  id: string;
-  title: string;
-  description: string;
-  video: string;
-  links: {
-    label: string;
-    url: string;
-  }[];
-  playlistNote?: boolean;
-  reverse?: boolean;
-  isMainVideo?: boolean;
-};
-
-const MusicFeatures: React.FC = () => {
+const HomeShowcase: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -43,65 +30,79 @@ const MusicFeatures: React.FC = () => {
     backgroundColor: 'var(--color-bg-blur-primary)',
     border: `1px solid var(--color-bg-blur-primary)`,
     boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
+
     transition: 'all 0.2s ease-in-out',
+
     '&:hover': {
       backgroundColor: 'var(--color-bg-blur-primary-hover)',
       border: '1px solid var(--color-bg-blur-primary-hover)',
       boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
       color: 'var(--color-text-primary)',
     },
+
     '&:active': {
       transform: 'scale(0.96)',
     }
   });
 
-  const sections: MusicFeatureSection[] = [
-    /*
+  const sections = [
     {
       id: 'main',
-      title: 'iSKGtm music.',
+      title: 'we are in everything.',
       description:
-        'Descrição',
+        'iSKGtm atua em diferentes frentes criativas e técnicas: música, produção audiovisual e desenvolvimento de software. Do conceito à entrega, com foco em identidade, qualidade e consistência.',
       isMainVideo: true,
-      links: [
-        {
-          label: 'Acesse a playlist',
-          url: 'https://youtube.com/playlist?list=PL2DivU5yf-1wIXM2F8rp_GNEqpVYW3sqt'
-        },
-        { label: 'Mais informacoes', url: '/artigo/music' }
-      ],
-      playlistNote: true,
+      links: [{ label: 'Sobre Nós', url: '/artigo/iskgtm' }],
+      playlistNote: false,
       reverse: true
-    }, */
+    },
     {
       id: 'music',
       title: 'iSKGtm music.',
       description:
-        'Criado em 2019, atuamos no seguimento de produções músicais originais, remixes & criação de efeitos sonoros, tanto para produções próprias e/ou "collabs", quanto clientes e parceiros que confiam no nosso trabalho.',
+        'Faixas e sons desde 2019 para terceiros e para o próprio iSKGtm. Entregas comuns: Arranjo, sound design, mix e master (foco EDM).',
       video: '/videos/about/music.mp4',
       links: [
-        {
-          label: 'YouTube',
-          url: 'https://youtube.com/@iSKGtmMusic'
-        },
-        { label: 'Sobre', url: '/artigo/music' }
+        { label: 'Saiba Mais', url: '/music' }
       ],
-      playlistNote: true
+      playlistNote: false
+    },
+    {
+      id: 'prod',
+      title: 'iSKGtm prod.',
+      description:
+        'Conteúdos desde 2016: de branding a vídeos. Entregas comuns: edição, motion graphics e pacotes visuais para redes/projetos.',
+      video: '/videos/about/prod.mp4',
+      links: [
+        { label: 'Saiba Mais', url: '/prod' }
+      ],
+      playlistNote: false,
+      reverse: true
+    },
+    {
+      id: 'dev',
+      title: 'iSKGtm dev.',
+      description:
+        'Web e aplicações desde 2022. Entregas comuns: sites institucionais, front-ends com UI moderna e performance/SEO.',
+      video: '/videos/about/dev.mp4',
+      links: [{ label: 'Saiba Mais', url: '/dev' },
+      ],
+      playlistNote: false
     }
   ];
 
   return (
-    <div className={styles.features}>
+    <section className={styles.section}>
       {sections.map((section) => (
         <div
           key={section.id}
-          className={`${styles.container2} ${section.reverse ? styles.container2Rev : ''}`}
+          className={`${styles.featureContainer} ${section.reverse ? styles.featureContainerRev : ''}`}
           onMouseMove={handleMouseMove}
         >
           <div className={styles.spotlight}></div>
 
-          <div className={styles.text2}>
-            <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>
+          <div className={styles.featureText}>
+            <h1 className={styles.featureTitle}>
               {section.title}
             </h1>
             <p>{section.description}</p>
@@ -110,8 +111,9 @@ const MusicFeatures: React.FC = () => {
               {section.links.map((link, index) => (
                 <Button
                   key={index}
-                  href={link.url}
-                  target="_blank"
+                  {...(link.url.startsWith('/')
+                    ? { component: RouterLink, to: link.url }
+                    : { href: link.url, target: '_blank' })}
                   variant="contained"
                   sx={glassButtonStyle()}
                 >
@@ -121,12 +123,12 @@ const MusicFeatures: React.FC = () => {
             </div>
 
             {section.playlistNote && (
-              <h4>Ouça nossas produções ou conheça um pouco mais!</h4>
+              <h4>Acesse a playlist do nosso portfólio.</h4>
             )}
           </div>
 
           <div
-            className={styles.containerSkills}
+            className={styles.featureMedia}
             style={{ position: 'relative', overflow: 'hidden' }}
           >
             {section.isMainVideo ? (
@@ -154,7 +156,7 @@ const MusicFeatures: React.FC = () => {
                   }}
                 >
                   <img
-                    src="/images/news/tags/music.jpg"
+                    src="/images/about/institucionalThumb.jpg"
                     alt="Thumbnail"
                     style={{
                       width: '100%',
@@ -171,10 +173,14 @@ const MusicFeatures: React.FC = () => {
                       transform: 'translate(-50%, -50%)',
                       width: '70px',
                       height: '70px',
+
                       border: `2px solid white`,
-                      color: 'white',
+                      color: "white",
+
                       backgroundColor: 'rgba(0,0,0,0.2)',
+
                       pointerEvents: 'none',
+
                       '&:hover': {
                         backgroundColor: theme.palette.error.main,
                         borderColor: theme.palette.error.main,
@@ -229,8 +235,8 @@ const MusicFeatures: React.FC = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
-export default MusicFeatures;
+export default HomeShowcase;

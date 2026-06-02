@@ -23,13 +23,15 @@
   font-family: Inter, Helvetica, Arial, sans-serif;
   text-align: left;
   margin-bottom: 30px;
-  font-size: 1.2rem;
+  font-size: 1.02rem;
+  line-height: 1.55;
 }
 
 .title {
   margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 3rem;
+  margin-bottom: 10px;
+  font-size: 2.4rem;
+  line-height: 1;
 }
 
 .categoriesWrapper {
@@ -48,7 +50,7 @@
 .categoryTitle {
   font-family: Inter, Helvetica, Arial, sans-serif;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.02rem;
   opacity: 0.8;
   margin: 0;
 }
@@ -68,5 +70,5 @@
 
 @media screen and (max-width: 768px) {
   .text { width: 100%; font-size: 1rem; }
-  .title { font-size: 2rem; }
+  .title { font-size: 1.72rem; }
 }

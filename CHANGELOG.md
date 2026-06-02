@@ -15,9 +15,15 @@
 
 - Foi integrado os dominios iskgtm.com e www.iskgtm.com por 2 anos, via cloudflare.
 
-- A página music e seu mini-player (beta) foi finalizada.
+- A página music e seu mini-player foi finalizada.
 
 - Em MusicHeader, ficará o ultimo álbum listado em listaMusicas.ts.
+
+- As páginas prod e dev foram finalizados.
+
+- Atualização de curriculo.
+
+- Troca de favicons do site.
 
 ## Corrigido
 
@@ -28,6 +34,10 @@
 - Spotlight agora é da cor primary-hover, para melhor consistencia visual.
 
 - Foi removido de forma definitiva fontes, usadas de versões anteriores do iSKGtm Hub. (Syne & SF)
+
+- Os componentes com final features, agora serão chamados de showcase, e foram apriomorados.
+
+- Foi corrigido o problema ao alterar a rota, onde o scroll mantem a mesma da rota anterior.
 
 ### Problemas Conhecidos
 
@@ -87,6 +97,10 @@
 ### Problemas Conhecidos
 
 - Uma pequena inconsistencia gráfica, no vídeo em AboutHeader.
+
+- Problema ao alterar a rota, onde o scroll mantem a mesma da rota anterior.
+
+- Um bug visual de pesquisa de artigos em celulares, onde o input e o botão de apagar não preenche a tela inteira.
 
 ## [26.1] - 10/02/2026
 ### Adicionado

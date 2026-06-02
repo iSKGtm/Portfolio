@@ -3,7 +3,7 @@ import React from "react";
 import Footer from '../../components/Footer';
 import ProdHeader from './components/ProdHeader';
 import ProdCarousel from './components/ProdCarousel';
-import ProdFeatures from './components/ProdFeatures';
+import ProdShowcase from './components/ProdShowcase';
 
 const slides = [
   "./images/carouselImages/prod/slide1.jpg",
@@ -26,11 +26,11 @@ const Prod: React.FC = () => {
       <section className='section2'>
         <ProdCarousel
           slides={slides}
-          durationInSeconds={10}
+          durationInSeconds={20}
           height="fit-content"
           imageAspectRatio={16 / 9}
         />
-        <ProdFeatures />
+        <ProdShowcase />
       </section>
 
       <Footer />

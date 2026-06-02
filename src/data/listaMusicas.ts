@@ -113,6 +113,24 @@ export const music: Music[] = [
     hide: false,
     classic: true,
     explicit: false,
+    fileSong: '/musicas/audio/DTM31BG.opus',
+    fileAlbum: '/musicas/album/DTM31BG.jpg',
+    title: 'Head & Heart (iSKGtm Remix)',
+    author: 'Joel Corry',
+    featuring: 'MNEK',
+    albumName: 'Head & Heart (Remix)',
+    date: '09/02/2021',
+    productionType: 'Bootleg Remix',
+    madeWith: 'ACID PRO 10.0.4 Suite',
+    drumKit: 'Dance Tropical [LEGADO]',
+    soundDesign: null,
+    url: 'https://youtu.be/2nO53rY0raA',
+  },
+  {
+    id: 6,
+    hide: false,
+    classic: true,
+    explicit: false,
     fileSong: '/musicas/audio/DTM32BG.opus',
     fileAlbum: '/musicas/album/DTM32BG.jpg',
     title: 'GIRL LIKE ME (iSKGtm Remix)',
@@ -127,7 +145,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/ahxoiH8zaF0',
   },
   {
-    id: 6,
+    id: 7,
     hide: false,
     classic: true,
     explicit: false,
@@ -145,7 +163,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/RG7kLguH_eM',
   },
   {
-    id: 7,
+    id: 8,
     hide: false,
     classic: true,
     explicit: false,
@@ -163,7 +181,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/oIo-CgMzyjM',
   },
   {
-    id: 8,
+    id: 9,
     hide: false,
     classic: true,
     explicit: true,
@@ -181,7 +199,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/RTWsT-hdESI',
   },
   {
-    id: 9,
+    id: 10,
     hide: false,
     classic: true,
     explicit: false,
@@ -199,7 +217,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/4vEQ_bKZSsE',
   },
   {
-    id: 10,
+    id: 11,
     hide: false,
     classic: true,
     explicit: false,
@@ -217,7 +235,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/zfC91fjHOTo',
   },
   {
-    id: 11,
+    id: 12,
     hide: false,
     classic: true,
     explicit: true,
@@ -235,7 +253,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/7d2Z6JWewqs',
   },
   {
-    id: 12,
+    id: 13,
     hide: false,
     classic: true,
     explicit: false,
@@ -253,7 +271,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/S5dKfsLkcbQ',
   },
   {
-    id: 13,
+    id: 14,
     hide: false,
     classic: false,
     explicit: false,
@@ -271,7 +289,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/51MYBoyyBts',
   },
   {
-    id: 14,
+    id: 15,
     hide: false,
     classic: false,
     explicit: true,
@@ -289,7 +307,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/sTrO73QLZIs',
   },
   {
-    id: 15,
+    id: 16,
     hide: false,
     classic: false,
     explicit: true,
@@ -307,7 +325,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/m0LvWsZq9do',
   },
   {
-    id: 16,
+    id: 17,
     hide: false,
     classic: false,
     explicit: false,
@@ -325,7 +343,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/xHUoSp1FFhk',
   },
   {
-    id: 17,
+    id: 18,
     hide: false,
     classic: false,
     explicit: false,
@@ -343,7 +361,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/u-LyIqquDCQ',
   },
   {
-    id: 18,
+    id: 19,
     hide: false,
     classic: false,
     explicit: false,
@@ -361,7 +379,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/Uh25arbwuH8',
   },
   {
-    id: 19,
+    id: 20,
     hide: false,
     classic: false,
     explicit: false,
@@ -379,7 +397,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/njX2bu-_Vw4',
   },
   {
-    id: 20,
+    id: 21,
     hide: false,
     classic: false,
     explicit: false,
@@ -397,7 +415,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/1Lr89TR7YpY',
   },
   {
-    id: 21,
+    id: 22,
     hide: false,
     classic: false,
     explicit: false,
@@ -415,7 +433,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/MQAukHZqJ2Q',
   },
   {
-    id: 22,
+    id: 23,
     hide: false,
     classic: false,
     explicit: false,
@@ -433,7 +451,7 @@ export const music: Music[] = [
     url: 'https://youtu.be/1YUo1nJp7HI',
   },
   {
-    id: 23,
+    id: 24,
     hide: true,
     classic: false,
     explicit: true,
@@ -451,7 +469,7 @@ export const music: Music[] = [
     url: '',
   },
   {
-    id: 24,
+    id: 25,
     hide: false,
     classic: false,
     explicit: false,
