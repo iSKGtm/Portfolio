@@ -31,12 +31,12 @@ const getTitle = (song: Music) =>
   song.featuring ? `${song.title} ft. ${song.featuring}` : song.title;
 
 const ExplicitBadge = ({ explicit }: { explicit: boolean }) =>
-  explicit ? <span className={styles.explicitBadge} title="Explícita">E</span> : null;
+  explicit ? <span className={styles.explicitBadge} title="Música Explícita">E</span> : null;
 
 const filters: { mode: FilterMode; label: string }[] = [
   { mode: 'all', label: 'Todas' },
   { mode: 'albumName', label: 'Álbum' },
-  { mode: 'drumKit', label: 'Drum kit' },
+  { mode: 'drumKit', label: 'Drumkit' },
   { mode: 'productionType', label: 'Tipo de produção' },
   { mode: 'classic', label: 'Clássicas' },
 ];
@@ -203,7 +203,7 @@ const MusicPlayer: React.FC = () => {
   };
 
   const referenceText = (song: Music) => {
-    if (filterMode === 'drumKit') return song.drumKit ?? 'Sem drum kit';
+    if (filterMode === 'drumKit') return song.drumKit ?? 'Sem drumkit';
     if (filterMode === 'productionType') return song.productionType;
     return song.albumName;
   };
@@ -343,8 +343,10 @@ const MusicPlayer: React.FC = () => {
                 <div className={styles.musicInfo}>
                   <div className={styles.titleRow}>
                     <strong className={styles.songTitle}>
-                      <span>{getTitle(song)}</span>
-                      <ExplicitBadge explicit={song.explicit} />
+                      <span className={styles.songTitleText}>
+                        {getTitle(song)}
+                        <ExplicitBadge explicit={song.explicit} />
+                      </span>
                     </strong>
                   </div>
                   <span className={styles.songMeta}>{song.author}</span>

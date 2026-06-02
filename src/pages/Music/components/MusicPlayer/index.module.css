@@ -284,7 +284,7 @@
   padding: 28px;
   border: 1px solid var(--color-bg-blur-primary-hover);
   border-radius: 34px;
-  color: var(--color-neutral);
+  color: var(--color-primary);
   background: color-mix(in srgb, var(--color-bg-blur-primary) 72%, transparent);
   box-shadow: inset 0 5px 10px -3px #00000030, 0 0 20px #00000015;
   text-align: center;
@@ -345,35 +345,39 @@
 }
 
 .songTitle {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  min-width: 0;
-  font-size: 1rem;
-  line-height: 1.15;
-}
-
-.songTitle span {
+  display: block;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.songTitleText {
+  display: inline;
+}
+
+.songTitleText .explicitBadge {
+  margin-left: 0.36em;
+  vertical-align: 0.03em;
 }
 
 .explicitBadge {
   display: inline-flex;
   flex: 0 0 auto;
-  width: 15px;
-  height: 15px;
-  margin-top: 1px;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0;
   border-radius: 4px;
   border: 1px solid currentColor;
   color: var(--color-text-primary);
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 800;
-  line-height: 1;
+  line-height: 1rem;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .listenLink {
@@ -400,7 +404,7 @@
 .songMeta,
 .songTag,
 .playerInfo p {
-  color: var(--color-neutral);
+  color: var(--color-primary);
 }
 
 .songMeta,
@@ -465,7 +469,7 @@
 }
 
 .playerTitle .explicitBadge {
-  margin-top: 0.12em;
+  align-self: center;
   user-select: none;
 }
 
@@ -669,14 +673,9 @@
   }
 
   .songTitle {
-    align-items: flex-start;
-  }
-
-  .songTitle span {
-    display: -webkit-box;
+    max-height: 2.35em;
+    text-overflow: clip;
     white-space: normal;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
   }
 
   .musicItem {
