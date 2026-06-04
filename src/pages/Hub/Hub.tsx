@@ -27,6 +27,7 @@ type HubBackground =
       sources: {
         src: string;
         type: string;
+        media?: string;
       }[];
     }
   | {
@@ -57,6 +58,12 @@ const hubBackground: HubBackground = {
     {
       src: '/videos/backgrounds/Website10.mp4',
       type: 'video/mp4',
+      media: '(max-width: 767px)',
+    },
+    {
+      src: '/videos/backgrounds/Website10.mp4',
+      type: 'video/mp4',
+      media: '(min-width: 768px)',
     },
   ],
 };
@@ -220,7 +227,7 @@ const Hub: React.FC = () => {
           onError={markHubReady}
         >
           {background.sources.map((source) => (
-            <source key={source.src} src={source.src} type={source.type} />
+            <source key={source.src} src={source.src} type={source.type} media={source.media} />
           ))}
         </video>
       );

@@ -72,7 +72,8 @@ const HomeHeader: React.FC = () => {
                 className={styles.backgroundVideo} 
                 ref={homeHeaderRef}
               >
-                <source src="/videos/backgrounds/Website10.mp4" type="video/mp4"/>
+                <source media="(max-width: 767px)" src="/videos/backgrounds/Website10.mp4" type="video/mp4" />
+                <source media="(min-width: 768px)" src="/videos/backgrounds/Website10.mp4" type="video/mp4" />
               </video>
             </div>
             <div className={styles.logoName}>
