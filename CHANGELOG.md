@@ -21,9 +21,9 @@
 
 - As páginas prod e dev foram finalizados.
 
-- Atualização de curriculo.
+- Atualização de curriculo & Troca de favicons do site.
 
-- Troca de favicons do site.
+- Banners animados de showcase foram atualizados, mas só serão visiveis em 10 de Outubro de 2026.
 
 ## Corrigido
 

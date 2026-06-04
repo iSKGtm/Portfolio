@@ -158,7 +158,7 @@ const MusicShowcase: React.FC = () => {
         <div className={styles.featureText}>
           <h1 className={styles.featureTitle}>iSKGtm music.</h1>
           <p>
-            Criado em 2019, atuamos no seguimento de produções músicais originais, remixes & criação de efeitos sonoros,
+            Criado em 2019, atuamos no seguimento de produções musicais originais, remixes & criação de efeitos sonoros,
             tanto para produções próprias e/ou collabs, quanto clientes e parceiros que confiam no nosso trabalho.
           </p>
 
@@ -174,7 +174,7 @@ const MusicShowcase: React.FC = () => {
 
         <div className={styles.featureMedia}>
           <video autoPlay muted loop playsInline>
-            <source type="video/mp4" src="/videos/about/music.mp4" />
+            <source type="video/mp4" src="/videos/showcase/musicTemp.mp4" />
           </video>
         </div>
       </div>

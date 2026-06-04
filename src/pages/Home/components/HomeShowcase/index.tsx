@@ -61,7 +61,7 @@ const HomeShowcase: React.FC = () => {
       title: 'iSKGtm music.',
       description:
         'Faixas e sons desde 2019 para terceiros e para o próprio iSKGtm. Entregas comuns: Arranjo, sound design, mix e master (foco EDM).',
-      video: '/videos/about/music.mp4',
+      video: '/videos/showcase/musicTemp.mp4',
       links: [
         { label: 'Saiba Mais', url: '/music' }
       ],
@@ -72,7 +72,7 @@ const HomeShowcase: React.FC = () => {
       title: 'iSKGtm prod.',
       description:
         'Conteúdos desde 2016: de branding a vídeos. Entregas comuns: edição, motion graphics e pacotes visuais para redes/projetos.',
-      video: '/videos/about/prod.mp4',
+      video: '/videos/showcase/prodTemp.mp4',
       links: [
         { label: 'Saiba Mais', url: '/prod' }
       ],
@@ -84,7 +84,7 @@ const HomeShowcase: React.FC = () => {
       title: 'iSKGtm dev.',
       description:
         'Web e aplicações desde 2022. Entregas comuns: sites institucionais, front-ends com UI moderna e performance/SEO.',
-      video: '/videos/about/dev.mp4',
+      video: '/videos/showcase/devTemp.mp4',
       links: [{ label: 'Saiba Mais', url: '/dev' },
       ],
       playlistNote: false
@@ -156,7 +156,7 @@ const HomeShowcase: React.FC = () => {
                   }}
                 >
                   <img
-                    src="/images/about/institucionalThumb.jpg"
+                    src="/images/about/institucionalThumbTemp.jpg"
                     alt="Thumbnail"
                     style={{
                       width: '100%',
@@ -203,6 +203,7 @@ const HomeShowcase: React.FC = () => {
                 >
                   {isPlaying && (
                     <iframe
+                         /*https://www.youtube.com/embed/h6t8WE1vV3E?autoplay=1*/
                       src="https://www.youtube.com/embed/Yqf_Fhd-9hc?autoplay=1"
                       title="YouTube video"
                       allow="autoplay; encrypted-media"
