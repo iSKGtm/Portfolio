@@ -508,8 +508,8 @@ body:has(.mainHub) {
   }
 
   .hubLink:hover {
-    background-color: var(--color-bg-blur-primary-hover);
-    border-color: var(--color-bg-blur-primary-hover);
+    background-color: var(--color-bg-blur-primary);
+    border-color: var(--color-bg-blur-primary);
   }
 
   .hubLink:active {
@@ -520,8 +520,8 @@ body:has(.mainHub) {
 
   .hubSocial:hover {
     color: var(--color-text-primary);
-    background-color: var(--color-bg-blur-primary-hover);
-    border-color: var(--color-bg-blur-primary-hover);
+    background-color: var(--color-bg-blur-primary);
+    border-color: var(--color-bg-blur-primary);
   }
 
   .hubSocial:active {

@@ -11,6 +11,7 @@ import '@fontsource/merriweather/500-italic.css';
 import '@fontsource/merriweather/400-italic.css';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import NoAvailable from './components/NoAvailable';
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
@@ -30,11 +31,24 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from './theme';
 
-const SetTitle = ({ title }: { title: string }) => {
+const defaultDescription = 'Músicas, audiovisual & soluções digitais em um só lugar!';
+
+const PageSeo = ({ title, description = defaultDescription }: { title: string; description?: string }) => {
   React.useEffect(() => {
     document.title = title;
   }, [title]);
-  return null;
+
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+    </Helmet>
+  );
 };
 
 const AnimatedRoutes = () => {
@@ -59,7 +73,7 @@ const AnimatedRoutes = () => {
           path="/"
           element={
             <>
-              <SetTitle title="iShaking Creative Media" />
+              <PageSeo title="iSKGtm Hub" />
               <Navigate to="/home" replace />
             </>
           }
@@ -74,7 +88,10 @@ const AnimatedRoutes = () => {
               exit="exit"
               variants={homeVariants}
             >
-              <SetTitle title="iSKGtm - Home" />
+              <PageSeo
+                title="iSKGtm - Home"
+                description="Conheça a iSKGtm Hub, hub criativo da iShaking Creative Media, contendo músicas, audiovisual & soluções digitais em um só lugar!"
+              />
               <Home />
             </motion.div>
           }
@@ -89,7 +106,10 @@ const AnimatedRoutes = () => {
               exit="exit"
               variants={homeVariants}
             >
-              <SetTitle title="iSKGtm Music" />
+              <PageSeo
+                title="iSKGtm Music"
+                description="Explore produções musicais, remixes & composições originais iSKGtm Music."
+              />
               <>
                 <Music />
               </>
@@ -106,7 +126,10 @@ const AnimatedRoutes = () => {
               exit="exit"
               variants={homeVariants}
             >
-              <SetTitle title="iSKGtm Prod" />
+              <PageSeo
+                title="iSKGtm Prod"
+                description="Conheça a área de produção visual da iSKGtm, com criação audiovisual, design, motion graphics e pipeline criativo."
+              />
               <>
                 <Prod />
               </>
@@ -123,7 +146,10 @@ const AnimatedRoutes = () => {
               exit="exit"
               variants={homeVariants}
             >
-              <SetTitle title="iSKGtm Dev" />
+              <PageSeo
+                title="iSKGtm Dev"
+                description="Veja projetos, interfaces, soluções web e experiências digitais desenvolvidas pela iSKGtm Dev."
+              />
               <>
                 <Dev />
               </>
@@ -142,7 +168,10 @@ const AnimatedRoutes = () => {
               variants={pageVariants}
               transition={{ duration: 0.2 }}
             >
-              <SetTitle title="iSKGtm - Artigos" />
+              <PageSeo
+                title="iSKGtm - Artigos"
+                description="Acompanhe artigos, notícias, comunicados e registros de projetos da iShaking Creative Media."
+              />
               <NewsSearch />
             </motion.div>
           }
@@ -158,7 +187,10 @@ const AnimatedRoutes = () => {
               variants={homeVariants}
               transition={{ duration: 0.2 }}
             >
-              <SetTitle title="iSKGtm Hub" />
+              <PageSeo
+                title="iSKGtm Hub"
+                description="Acesse os principais links da iSKGtm: música, produção visual, desenvolvimento, redes sociais e canais oficiais."
+              />
               <Hub />
             </motion.div>
           }
@@ -174,7 +206,10 @@ const AnimatedRoutes = () => {
               variants={pageVariants}
               transition={{ duration: 0.2 }}
             >
-              <SetTitle title="iSKGtm - Artigo" />
+              <PageSeo
+                title="iSKGtm - Artigo"
+                description="Leia artigos e publicações da iShaking Creative Media."
+              />
               <ArticleDetailPage />
             </motion.div>
           }
@@ -184,7 +219,10 @@ const AnimatedRoutes = () => {
           path="*"
           element={
             <div style={{ width: '100%' }}>
-              <SetTitle title="Página não encontrada." />
+              <PageSeo
+                title="Página não encontrada."
+                description="A página solicitada não foi encontrada no site."
+              />
               <NotFound />
             </div>
           }
@@ -194,7 +232,7 @@ const AnimatedRoutes = () => {
           path="/hidden"
           element={
             <div style={{ width: '100%' }}>
-              <SetTitle title="?" />
+              <PageSeo title="?" description="?" />
               <Hidden />
             </div>
           }
@@ -267,9 +305,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline /> 
-      <Router>
-        <AppContent />
-      </Router>
+      <HelmetProvider>
+        <Router>
+          <AppContent />
+        </Router>
+      </HelmetProvider>
     </ThemeProvider>
   );
 }

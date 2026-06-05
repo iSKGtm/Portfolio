@@ -27,6 +27,8 @@
 
 - Colocado um suporte a checagem de resolução em source, para banners com proporção de celular e desktop.
 
+- Os artigos agora são separados em arquivos. Estão em newsItem.
+
 ## Corrigido
 
 - Os componentes do home, com o termo "About", agora usam o termo "Home" e os componentes passaram a ficar em subpasta da página Home.tsx.
