@@ -37,7 +37,7 @@ const gridClass = {
 const blocks: DevShowcaseBlock[] = [
   {
     eyebrow: '',
-    title: 'desenvolvimento web.',
+    title: 'dev web.',
     description:
       'Áreas principais da iSKGtm Dev para criação de websites, interfaces, aplicações e experiências digitais.',
     icon: faCode,
@@ -49,7 +49,7 @@ const blocks: DevShowcaseBlock[] = [
       },
       {
         title: 'Software Engineer',
-        description: 'Organização técnica, documentação e metodologia própria para reduzir custo de manutenção (CoreCycle, XP).',
+        description: 'Organização técnica, documentação e metodologia própria para reduzir custo de manutenção (CoreCycle, Kanban).',
         meta: ' ',
       },
       {

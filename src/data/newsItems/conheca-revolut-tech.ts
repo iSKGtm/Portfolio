@@ -52,7 +52,7 @@ export const conhecaRevolutTech: NewsItem = {
           iSKGtm irá levar sua experiência para Revolut Tech e seus serviços 'Prod' (Toda Branding e imagem da Startup) & 'Dev' (Desenvolvedor aux. em Python).
         </p>
 
-        <h2>iSKGtm, We Are in Everything</h2>
+        <h2>iiSKGtm, We Are in Everything.</h2>
       </main>
     `,
   };

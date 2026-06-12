@@ -49,7 +49,7 @@ export const antesDoEspecial10Anos: NewsItem = {
 
       <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/Yqf_Fhd-9hc"></iframe>
 
-      <h2>iSKGtm, We Are in Everything</h2>
+      <h2>iiSKGtm, We Are in Everything.</h2>
     </main>
   `,
   };

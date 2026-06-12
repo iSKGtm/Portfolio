@@ -71,7 +71,7 @@ export const article10Anos: NewsItem = {
         <a href="https://www.youtube.com/playlist?list=PL2DivU5yf-1wArFIBOAhkM8jBvT6YK5d_" target="_blank">Playlist do Especial 10 Anos</a>
       </p>
 
-      <h2>iSKGtm, We Are in Everything</h2>
+      <h2>iiSKGtm, We Are in Everything.</h2>
     </main>
   `,
   };

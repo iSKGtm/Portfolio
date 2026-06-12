@@ -63,7 +63,7 @@ export const novoWebsite: NewsItem = {
 
         <p>Fizemos ele de uma forma diferente das anteriores, demonstrando profissionalismo e simplicidade, até no código. O site também herda alguns recursos das respectivas versões de 2023 e 2024, como o sistema de navegação e scrolling do site (chama-se internamente de FLUID UI), onde houve apenas melhorias de como ele reage e a mudança visual da barra de navegação, para melhor acesso aos dispositivos móveis. Na parte de CSS, herdamos toda estrutura base do site de 2024, com animações & fontes pré-definidas, apenas melhoramos para melhor visualização.</p>
 
-        <h2>iSKGtm, We Are in Everything</h2>
+        <h2>iiSKGtm, We Are in Everything.</h2>
       </main>
     `,
   };

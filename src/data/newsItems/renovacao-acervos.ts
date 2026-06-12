@@ -124,7 +124,7 @@ export const renovacaoAcervos: NewsItem = {
         <cite>Diz Anthony M.</cite>
       </p>
 
-      <h2>iSKGtm, We Are in Everything</h2>
+      <h2>iiSKGtm, We Are in Everything.</h2>
     </main>
   `,
   };

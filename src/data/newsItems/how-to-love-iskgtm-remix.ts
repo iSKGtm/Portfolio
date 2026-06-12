@@ -38,7 +38,7 @@ export const howToLoveIskgtmRemix: NewsItem = {
 
       <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/-D6n4L2iEnw"></iframe>
 
-      <h2>iSKGtm, We Are in Everything</h2>
+      <h2>iiSKGtm, We Are in Everything.</h2>
     </main>
   `,
   };

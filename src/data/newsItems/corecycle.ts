@@ -8,6 +8,7 @@ export const corecycle: NewsItem = {
     tags: ["Outros"],
     tagImage: "/images/symb/outros.svg",
     date: "06/08/2025",
+    dateEdit: "12/06/2026",
     authorName: "Anthony M.",
     minutesRead: 5,
     content: `
@@ -15,7 +16,7 @@ export const corecycle: NewsItem = {
         <img src="/images/news/tags/iskgtm.jpg" alt="iSKGtm"/>
         
         <p>É um fluxo de trabalho, ou metodologia, iniciado em 01 de julho de 2025 a todos os serviços, que visa a reutilização de projetos com elementos modulares, que deram "certo", para otimizar tempo e qualidade de
-        serviço/produção.</p>
+        serviço/produção, com métodos usados nas metodologias Kanban. </p>
 
         <h2>Anteriormente, como funcionava?</h2>
 
@@ -69,7 +70,7 @@ export const corecycle: NewsItem = {
 
         <h2>Como funcionará nos serviços iSKGtm Music?</h2>
 
-        <p>No serviço Music, com REAPER, onde é compatível com este fluxograma, utilizam-se projetos com modulos (pastas) de samples e VST's que podem ser reutilizados com facilidade em produções futuras.</p>
+        <p>No serviço Music, com REAPER, onde é compatível com este fluxograma, utilizam-se projetos com modulos (pastas) de samples e VST's que contem as bases (Disco Tropical, Chill Tropical, etc.), e a criação CoreMusic que faz com que facilitará a reutilização de assets, sem impactar a identidade sonora, entregando com facilidade e rapidez em produções futuras.</p>
 
         <img src="/images/news/posts/outros/corecycle/0.jpg" alt="Exemplo de modulos, com REAPER"/>
 
@@ -77,7 +78,7 @@ export const corecycle: NewsItem = {
 
         <h2>Como funcionará nos serviços iSKGtm Prod?</h2>
 
-        <p>No serviço Prod, com Photoshop, onde é compatível com este fluxograma, utilizam-se
+        <p>No serviço Prod, com Affinity, onde é compatível com este fluxograma, utilizam-se
         projetos com modulos (pastas de composição), que podem ser reutilizados com facilidade. </p>
 
         <p>Ainda no serviço Prod, com DaVinci Resolve, onde é compatível com este fluxograma,
@@ -101,14 +102,16 @@ export const corecycle: NewsItem = {
 
         <h2>Observação a parceiros que utilizam nossos serviços iSKGtm Prod.</h2>
 
-        <p>Os serviços de produção, de vídeo, estão em transição, de um programa para outro, de VEGAS Pro para
-        DaVinci Resolve, iniciado em 14 jun. 2025. Vale destacar a incompatibilidade com esta
+        <p>Sobre os serviços de produção que estão em transição, de um programa para outro, envolvendo o VEGAS Pro para
+        DaVinci Resolve & Photoshop para Affinity, iniciado em 14 jun. 2025 & 01 de jan. 2026 respectivamente, vale destacar a incompatibilidade com esta
         metodologia com VEGAS Pro, devido a problemas com projetos legados e ausência de elementos
-        modulares a serem criados. <br> Parceiros que mantem projetos legados deste programa (como
-        EagleVision e PlayVicio att: [06/08/2025]), serão mantidos até o final de 2026, mas não se enquadrará nos
-        novos padrões de fluxograma, com criação limitada e com serviços maior lentidão.</p>
+        modulares a serem criados.
+        <br>Photoshop foi substituido pelo Affinity na entrada de 2026, que se mostrou uma solução, além de gratuita, melhor do que o anterior.
+        <br>Parceiros que mantem projetos legados destes programas (como
+        EagleVision e PlayVicio att: [12/06/2026]), serão mantidos até o final de 2026, mas não se enquadrarão nos
+        novos padrões CoreCycle, com criação limitada e com serviços maior lentidão.</p>
 
-        <h2>iSKGtm, We Are in Everything</h2>
+        <h2>iiSKGtm, We Are in Everything.</h2>
       </main>
     `,
   };
