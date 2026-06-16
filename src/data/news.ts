@@ -1,5 +1,6 @@
 export type { NewsItem, Article } from './newsItems/types';
 import type { NewsItem } from './newsItems/types';
+import { backstageIskgtmRemix } from './newsItems/backstage-iskgtm-remix';
 import { ladyIskgtmRemix } from './newsItems/lady-iskgtm-remix';
 import { aintNobodyIskgtmRemix } from './newsItems/aint-nobody-iskgtm-remix';
 import { article10Anos } from './newsItems/10-anos';
@@ -22,6 +23,7 @@ import { prod } from './newsItems/prod';
 import { iskgtm } from './newsItems/iskgtm';
 
 export const newsData: NewsItem[] = [
+  backstageIskgtmRemix,
   ladyIskgtmRemix,
   aintNobodyIskgtmRemix,
   article10Anos,

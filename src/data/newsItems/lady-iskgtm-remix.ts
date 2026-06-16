@@ -10,7 +10,7 @@ export const ladyIskgtmRemix: NewsItem = {
     tagImage: "/images/symb/music.svg",
     date: "01/05/2026",
     authorName: "Anthony M.",
-    minutesRead: 6,
+    minutesRead: 3,
     content: `
     <main>
       <img src="/images/news/tags/music.jpg" alt="iSKGtm Music"/>
