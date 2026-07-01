@@ -2,7 +2,7 @@ import type { NewsItem } from './types';
 
 export const backstageIskgtmRemix: NewsItem = {
     url: "/artigo/backstage-iskgtm-remix",
-    hide: true,
+    hide: false,
     title: "Matuê - BACKSTAGE (iSKGtm Remix)",
     label: "Novo remix realizado por iSKGtm Music.",
     imageUrl: "https://i.imgur.com/qYc0xAx.jpeg",
