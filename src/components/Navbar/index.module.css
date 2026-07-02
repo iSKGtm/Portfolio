@@ -21,6 +21,9 @@
   position: absolute;
   color: var(--color-text-primary);
   background-color: var(--color-bg-blur-primary);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: url(#glass-distortion) blur(3px);
   backdrop-filter: url(#glass-distortion) blur(3px);
   box-shadow: inset 0 5px 10px -3px #00000030,
   0px 0px 20px #00000020;
@@ -69,6 +72,9 @@
   color: var(--color-text-primary);
   background-color: var(--color-bg-blur-primary);
   transition: all 0.1s;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: url(#glass-distortion) blur(3px);
   backdrop-filter: url(#glass-distortion) blur(3px);
   border: 1px solid var(--color-bg-blur-primary-hover);
   box-shadow: inset 0 5px 10px -3px #00000030,
@@ -251,6 +257,23 @@
   .nav:active {
     background-color: var(--color-bg-blur-primary-hover);
     transition: all 0.1s;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .scrollButton,
+  .nav {
+    background-color: var(--color-bg-blur-primary);
+    -webkit-backdrop-filter: blur(7px) saturate(1.2);
+    backdrop-filter: blur(7px) saturate(1.2);
+  }
+}
+
+@supports (-moz-appearance: none) {
+  .scrollButton,
+  .nav {
+    background-color: var(--color-bg-blur-primary);
+    backdrop-filter: blur(7px) saturate(1.2);
   }
 }
 

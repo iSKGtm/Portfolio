@@ -95,6 +95,9 @@
   width: 55px;
   height: 55px;
   border-radius: 100px;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: url(#glass-distortion) blur(3px);
   backdrop-filter: url(#glass-distortion) blur(3px);
 }
 
@@ -337,6 +340,8 @@ th, td {
 .shareButton {
   background-color: var(--color-bg-blur-primary);
   border: 1px solid var(--color-bg-blur-primary);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   transition: all 0.1s;
 }
 
@@ -363,6 +368,23 @@ th, td {
     border: 1px solid var(--color-bg-blur-primary-hover);
     scale: 0.900;
     transition: all 0.1s;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .shareFloating,
+  .shareButton {
+    background-color: var(--color-bg-blur-primary-hover);
+    -webkit-backdrop-filter: blur(22px) saturate(1.18);
+    backdrop-filter: blur(22px) saturate(1.18);
+  }
+}
+
+@supports (-moz-appearance: none) {
+  .shareFloating,
+  .shareButton {
+    background-color: var(--color-bg-blur-primary-hover);
+    backdrop-filter: blur(22px) saturate(1.18);
   }
 }
 

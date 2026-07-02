@@ -43,9 +43,12 @@
 
 - Foi corrigido o problema ao alterar a rota, onde o scroll mantem a mesma da rota anterior.
 
+- Devido a incompatiblidade com webkits envolvendo Safari e Firefox nos efeitos de vidro liquido, foi colocado um blur a mais para compensar.
+
+
 ### Problemas Conhecidos
 
-- Devido ao uso de low-code na criação da página /hub, é necessário observar o comportamento ou bug.
+- N/A
 
 ## [26.2] - 28/02/2026 - 21/05/2026
 ### Adicionado
