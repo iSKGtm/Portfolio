@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           </div>
           <div className={styles.footerSocialIcons}>
               Siga-nos:
-              <Link href="https://linktr.ee/iSKGtm" target="_blank">
+              <Link href="/hub" target="_blank">
                 <FontAwesomeIcon icon={faLink} />
               </Link>
               <Link href="https://www.linkedin.com/in/iskgtm/" target="_blank">

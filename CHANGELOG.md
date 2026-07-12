@@ -1,6 +1,6 @@
 # Changelog
 
-## [26.3] - 21/05/2026
+## [26.3] - 21/05/2026 - 31/07/2026
 ### Adicionado
 
 - As páginas Music, Prod & Dev e seus componentes foram clonadas de Home.
@@ -44,6 +44,8 @@
 - Foi corrigido o problema ao alterar a rota, onde o scroll mantem a mesma da rota anterior.
 
 - Devido a incompatiblidade com webkits envolvendo Safari e Firefox nos efeitos de vidro liquido, foi colocado um blur a mais para compensar.
+
+- Links envolvendo o Linktr.ee, foram substituidos por /hub (árvore de links proprietária).
 
 
 ### Problemas Conhecidos
