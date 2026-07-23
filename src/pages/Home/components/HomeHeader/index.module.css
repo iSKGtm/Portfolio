@@ -33,11 +33,15 @@
     font-size: 2rem;
     z-index: 10;
     font-family: Phonk, sans-serif;
-    color: #ffffff;
+    color: #fff;
     display: flex;
     flex-direction: column;
     gap: 7px;
     text-transform: lowercase;
+}
+
+.logoName {
+    filter: brightness(5%);
 }
 
 .logoNameSkeleton {

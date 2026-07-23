@@ -70,8 +70,8 @@ const DevHeader: React.FC = () => {
                 className={styles.backgroundVideo}
                 ref={devHeaderRef}
               >
-                <source media="(max-width: 767px)" src="/videos/backgrounds/Website10.mp4" type="video/mp4" />
-                <source media="(min-width: 768px)" src="/videos/backgrounds/Website10.mp4" type="video/mp4" />
+                <source media="(max-width: 767px)" src="/videos/backgrounds/WebsiteMobile.mp4" type="video/mp4" />
+                <source media="(min-width: 768px)" src="/videos/backgrounds/Website.mp4" type="video/mp4" />
               </video>
             </div>
             <div className={styles.logoName}>

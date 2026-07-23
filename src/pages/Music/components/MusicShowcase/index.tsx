@@ -174,7 +174,7 @@ const MusicShowcase: React.FC = () => {
 
         <div className={styles.featureMedia}>
           <video autoPlay muted loop playsInline>
-            <source type="video/mp4" src="/videos/showcase/musicTemp.mp4" />
+            <source type="video/mp4" src="/videos/showcase/music.mp4" />
           </video>
         </div>
       </div>

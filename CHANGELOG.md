@@ -1,6 +1,19 @@
 # Changelog
 
-## [26.3] - 21/05/2026 - 31/07/2026
+## [26.4] - 23/07/2026 - xx/10/2026
+### Adicionado
+
+-
+
+### Corrigido
+
+- Atualização de banners (exceto o principal de showcase) para o padrão atual.
+
+### Problemas Conhecidos & Feedback dos usuários.
+
+- 
+
+## [26.3] - 21/05/2026 - 23/07/2026
 ### Adicionado
 
 - As páginas Music, Prod & Dev e seus componentes foram clonadas de Home.
@@ -46,7 +59,6 @@
 - Devido a incompatiblidade com webkits envolvendo Safari e Firefox nos efeitos de vidro liquido, foi colocado um blur a mais para compensar.
 
 - Links envolvendo o Linktr.ee, foram substituidos por /hub (árvore de links proprietária).
-
 
 ### Problemas Conhecidos
 

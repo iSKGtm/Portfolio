@@ -61,7 +61,7 @@ const HomeShowcase: React.FC = () => {
       title: 'iSKGtm music.',
       description:
         'Faixas e sons desde 2019 para terceiros e para o próprio iSKGtm. Entregas comuns: Arranjo, sound design, mix e master (foco EDM).',
-      video: '/videos/showcase/musicTemp.mp4',
+      video: '/videos/showcase/music.mp4',
       links: [
         { label: 'Saiba Mais', url: '/music' }
       ],
@@ -72,7 +72,7 @@ const HomeShowcase: React.FC = () => {
       title: 'iSKGtm prod.',
       description:
         'Conteúdos desde 2016: de branding a vídeos. Entregas comuns: edição, motion graphics e pacotes visuais para redes/projetos.',
-      video: '/videos/showcase/prodTemp.mp4',
+      video: '/videos/showcase/prod.mp4',
       links: [
         { label: 'Saiba Mais', url: '/prod' }
       ],
@@ -84,7 +84,7 @@ const HomeShowcase: React.FC = () => {
       title: 'iSKGtm dev.',
       description:
         'Web e aplicações desde 2022. Entregas comuns: sites institucionais, front-ends com UI moderna e performance/SEO.',
-      video: '/videos/showcase/devTemp.mp4',
+      video: '/videos/showcase/dev.mp4',
       links: [{ label: 'Saiba Mais', url: '/dev' },
       ],
       playlistNote: false

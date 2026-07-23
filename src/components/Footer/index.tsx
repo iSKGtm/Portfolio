@@ -31,6 +31,9 @@ const Footer: React.FC = () => {
               <Link className={styles.footerAtribution} href='/artigo/atribuicoes' target='_blank'>
                   Atribuições Legais
               </Link>
+              <Link className={styles.footerAtribution}>
+                
+              </Link>
           </div>
           <div className={styles.footerSocialIcons}>
               Siga-nos:
