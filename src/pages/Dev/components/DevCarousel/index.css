@@ -65,10 +65,12 @@
   .dev-carousel-container {
     max-width: 2560px;
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
   }
   .devCarouselCont {
     max-width: 2560px;
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
   }
 }
 
@@ -76,10 +78,12 @@
   .dev-carousel-container {
     max-width: 2560px;
     mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
   }
   .devCarouselCont {
     max-width: 2560px;
     mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
   }
 }
 

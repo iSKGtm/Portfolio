@@ -3,6 +3,7 @@ import styles from './index.module.css'
 
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { CircularProgress } from '@mui/material';
 
 const HomeHeader: React.FC = () => {
   const homeHeaderRef = useRef<HTMLVideoElement | null>(null);
@@ -57,10 +58,11 @@ const HomeHeader: React.FC = () => {
     <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
       <section className={styles.mainSection}>
         {isLoading ? (
-          <div className={styles.logoNameSkeleton}>
-            <Skeleton width={300} height={80} />
-            <Skeleton width={240} height={30} />
-          </div>
+          <>
+            <div className={styles.headerLoading}>
+              <CircularProgress size={64} sx={{ color: 'var(--color-text-primary)' }} />
+            </div>
+          </>
         ) : (
           <>
             <div className={styles.backgroundVideoContainer}>
@@ -77,8 +79,7 @@ const HomeHeader: React.FC = () => {
               </video>
             </div>
             <div className={styles.logoName}>
-              <img src="/images/logo/logoName.svg" alt="Logo" />
-              <div>we are in everything.</div>
+              <span className={styles.logoText}>iSKGtm</span>
             </div>
           </>
         )}

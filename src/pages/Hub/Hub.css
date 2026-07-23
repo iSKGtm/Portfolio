@@ -85,6 +85,28 @@ body:has(.mainHub) {
   filter: blur(2px) brightness(50%);
 }
 
+video.hubBackgroundMedia {
+  opacity: 1;
+}
+
+.hubBackgroundVideo {
+    background: linear-gradient(0deg, var(--color-bg-primary) 0%, var(--color-bg-primaryGradient) 100%);
+}
+
+.hubBackgroundVideo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(0deg, var(--color-bg-primary) 0%, var(--color-bg-primaryGradient) 100%);
+  transition: opacity 1000ms ease;
+}
+
+.mainHubReady .hubBackgroundVideo::after {
+  opacity: 0;
+}
+
 .hubBackgroundOverlay {
   z-index: 1;
   background:
@@ -118,9 +140,7 @@ body:has(.mainHub) {
   position: fixed;
   inset: 0;
   z-index: 4;
-  background:
-    linear-gradient(0deg, var(--color-bg-primary) 0%, var(--color-bg-primaryGradient) 100%);
-  transition: opacity 260ms ease;
+  background: linear-gradient(0deg, var(--color-bg-primary) 0%, var(--color-bg-primaryGradient) 100%);
 }
 
 .hubSkeletonContainer,
@@ -572,6 +592,25 @@ body:has(.mainHub) {
   .hubSocial {
     background-color: var(--color-bg-blur-primary-active);
   }
+}
+
+:root[data-theme='dark'] .hubLinkThumb {
+  color: #151515;
+  background: linear-gradient(0deg, #c1c1c1 0%, #e1e1e1 100%);
+  border-color: #ffffff60;
+}
+
+:root[data-theme='dark'] .hubSocial {
+  color: #151515;
+  background-color: #ffffff75;
+  border-color: #ffffff60;
+}
+
+:root[data-theme='dark'] .hubSocial:hover,
+:root[data-theme='dark'] .hubSocial:active {
+  color: #151515;
+  background-color: #ffffffaa;
+  border-color: #ffffffaa;
 }
 
 @media screen and (max-height: 650px) and (min-width: 700px) {

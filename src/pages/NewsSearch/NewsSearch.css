@@ -178,6 +178,10 @@
     display: none;
 }
 
+.containerSearchSkeleton img {
+    filter: var(--filter-placeholder-only);
+}
+
 .containerSearchNone {
     display: flex;
     gap: 12px;

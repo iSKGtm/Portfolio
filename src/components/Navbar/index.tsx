@@ -1,7 +1,8 @@
 import { useRef, useEffect, useState } from 'react';
 import styles from './index.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { SwipeableDrawer } from '@mui/material';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -17,6 +18,8 @@ const sanitizeSvgMarkup = (svgText: string) =>
     .replace(/style="fill:#fff;fill-opacity:1"/gi, 'fill="currentColor"')
     .replace(/fill="#fff"/gi, 'fill="currentColor"');
 
+const themeStorageKey = 'iskgtm-color-theme';
+
 const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
   const lastScrollTop = useRef(0);
   const headerRef = useRef<HTMLDivElement | null>(null);
@@ -25,6 +28,8 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
   const [activeButton, setActiveButton] = useState('');
   const [homeSvgMarkup, setHomeSvgMarkup] = useState('');
   const [articleSvgMarkup, setArticleSvgMarkup] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem(themeStorageKey) === 'dark');
   const location = useLocation();
   const isHidden = location.pathname === '/hidden';
 
@@ -122,6 +127,32 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
+
+  useEffect(() => {
+    if (!headerRef.current || isHidden) return;
+
+    headerRef.current.style.transform = isMenuOpen ? 'translateY(100%)' : 'translateY(0)';
+  }, [isMenuOpen, isHidden]);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = isDarkMode ? 'dark' : 'light';
+    localStorage.setItem(themeStorageKey, isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -237,7 +268,59 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
             </Link>
           </div>
         </div>
+        <button
+          className={styles.menuButton}
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen(true)}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
       </header>
+      
+      <SwipeableDrawer
+        anchor="bottom"
+        open={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        onOpen={() => setIsMenuOpen(true)}
+        slotProps={{
+          paper: { className: styles.menuDrawerPaper },
+          backdrop: { className: styles.menuBackdrop },
+        }}
+      >
+        <div className={styles.menuDrawerContent}>
+          <div className={styles.menuDrawerHeader}>
+            <span className={styles.drawerHandle} aria-hidden="true" />
+            <h2>Config.</h2>
+            
+            <div className={styles.menuList}>
+                <div className={styles.menuOption}>
+                  <div>Modo Escuro (Beta)</div>
+                  <button
+                    className={`${styles.themeSwitch} ${isDarkMode ? styles.themeSwitchActive : ''}`}
+                    type="button"
+                    role="switch"
+                    aria-checked={isDarkMode}
+                    aria-label={isDarkMode ? 'Ativar modo claro' : 'Ativar modo escuro'}
+                    onClick={() => setIsDarkMode((enabled) => !enabled)}
+                  >
+                    <span />
+                  </button>
+                </div>
+              
+            </div>
+
+            <div className={styles.menuList}>
+
+                <div className={`${styles.menuOption} ${styles.menuVersion}`}>
+                  ver. {__APP_VERSION__}
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </SwipeableDrawer>
     </>
   );
 };

@@ -64,7 +64,13 @@ footer {
 }
 
 .footerSocial a {
+  color: var(--color-text-primary) !important;
   text-decoration: none;
+}
+
+.footerSocial a:hover,
+.footerSocial a:focus-visible {
+  color: var(--color-text-primary) !important;
 }
 
 .footerTerm {

@@ -1,17 +1,27 @@
 # Changelog
 
-## [26.4] - 23/07/2026 - xx/10/2026
+## [26.4] - 23/07/2026 - xx/12/2026
 ### Adicionado
 
--
+- Um botão de menu do usuário, SwipeableDrawer API (MaterialUI)
+
+- O modo escuro foi adicionado, usando localStorage para armazenamento do cliente. (Beta)
+
+- O versionamento foi exposto, para indicar ao usuário a versão do website.
+
+- Aprimoramento de /hidden.
 
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.
 
+- Remoção de fadein dos skeletons de /hub para melhor consistencia.
+
+- Spinner nos headers das páginas home, music, prod e dev, no lugar do skeleton.
+
 ### Problemas Conhecidos & Feedback dos usuários.
 
-- 
+- Fallback envolvendo o carousel das páginas home, music, prod e dev, para navegador Safari (Apple). (Feedback)
 
 ## [26.3] - 21/05/2026 - 23/07/2026
 ### Adicionado

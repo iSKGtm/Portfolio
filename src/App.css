@@ -8,14 +8,37 @@
   --color-text-primary: #151515;
   --color-bg-primary: #c1c1c1;
   --color-bg-primaryGradient: #e1e1e1;
+  --color-bg-blur-primary-menu: #ffffff85;
   --color-bg-blur-primary: #ffffff60;
   --color-bg-blur-primary-hover: #ffffffaa;
   --color-bg-blur-primary-active: #ffffff75;
+  --filter-placeholder-only: invert(0%);
   --filter-image-on-bg: invert(93%);
   --filter-logo-on-bg: invert(93%);
   --filter-hidden-image: saturate(0) brightness(500%);
+  --color-filter-blurtopbottom: #d1d1d1;
   
   font-family: Inter, Helvetica, Arial, sans-serif;
+}
+
+/* 🎯 Tema padrão (escuro) */
+:root[data-theme='dark'] {
+  --color-secondary: #b65c9d;
+  --color-accent: #ef4f91;
+  --color-neutral: #a8acb5;
+  --color-text-primary: #f2f0f2;
+  --color-bg-primary: #19191b;
+  --color-bg-primaryGradient: #303034;
+  --color-bg-blur-primary-menu: #52525285;
+  --color-bg-blur-primary: #65656530;
+  --color-bg-blur-primary-hover: #ffffff30;
+  --color-bg-blur-primary-active: #ffffff24;
+  --filter-placeholder-only: invert(75%);
+  --filter-image-on-bg: invert(7%);
+  --filter-logo-on-bg: invert(7%);
+  --filter-hidden-image: saturate(0) brightness(500%);
+  --color-filter-blurtopbottom: #252525;
+  color-scheme: dark;
 }
 
 html, body {
@@ -32,6 +55,7 @@ html {
 body {
   font-size: 1rem;
   line-height: 1.5;
+  color: var(--color-text-primary);
   background: linear-gradient(0deg, var(--color-bg-primary) 0%, var(--color-bg-primaryGradient) 100%);
 }
 

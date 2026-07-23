@@ -136,7 +136,7 @@ const ArticleDetailPage: React.FC = () => {
                 <Skeleton height={16} width="120px" style={{ position: "relative", bottom: "25px" }} />
               </div>
               <div className='loadIcon'>
-                <CircularProgress size={32} sx={{ color: '#000' }} />
+                <CircularProgress size={32} sx={{ color: 'var(--color-text-primary)' }} />
               </div>
             </div>
 

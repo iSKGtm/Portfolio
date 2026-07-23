@@ -24,29 +24,48 @@
     object-fit: cover;
     z-index: -1;
     pointer-events: none;
+    animation: fadeIn 300ms ease;
+}
+
+.headerLoading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logoName, .logoNameSkeleton {
     position: absolute;
     left: 25px;
-    bottom: 90px;
+    bottom: 100px;
     font-size: 2rem;
     z-index: 10;
     font-family: Phonk, sans-serif;
-    color: #fff;
+    font-weight: 600;
+    color: #151515;
     display: flex;
     flex-direction: column;
     gap: 7px;
-    text-transform: lowercase;
+    z-index: 2;
 }
+
+.logoText {
+    font-family: Phonk, sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.9;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-clamp: 2;
+    animation: fadeIn 1500ms ease;
+}
+
+/* --- LOGO ISKGTM (IMAGEM) + WE ARE IN EVERYTHING --- */
+
+/*
 
 .logoName {
     filter: brightness(5%);
-}
-
-.logoNameSkeleton {
-    bottom: 40px;
-    left: 20px;
 }
 
 .logoName > img {
@@ -54,7 +73,12 @@
     height: auto;
 }
 
+*/
+
+
 .logoNameSkeleton {
+    bottom: 65px;
+    left: 20px;
     padding-left: 25px;
 }
 
@@ -66,10 +90,15 @@
         width: 100%;
         align-items: center;
         padding: 0 20px;
-        font-size: 5.6vw;
+        font-size: 5.7vw;
     }
+
     .logoName > img { 
         width: 90%;
+    }
+
+    .logoText {
+        font-size: clamp(2.8rem, 13vw, 5rem);
     }
 
     .logoNameSkeleton {
@@ -79,13 +108,18 @@
 }
 
 @media screen and (min-width: 576px) and (max-width: 1199px) {
+    .logoName > img { 
+        width: 346px;
+    }
+
     .logoName {
         left: 20px;
         align-items: flex-start;
-        font-size: 1.5rem;
+        font-size: 24px;
     }
-    .logoName > img { 
-        width: 346px;
+
+    .logoText {
+        font-size: clamp(3.2rem, 6vw, 5rem);
     }
     
     .logoNameSkeleton {
@@ -99,4 +133,16 @@
         bottom: 50px;
         left: 40px;
     }
+}
+
+
+/* --- ANIMATIONS --- */
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

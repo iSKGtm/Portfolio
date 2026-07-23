@@ -56,12 +56,12 @@ const hubBackground: HubBackground = {
   poster: '/videos/backgrounds/Website.jpg',
   sources: [
     {
-      src: '/videos/backgrounds/Website10.mp4',
+      src: '/videos/backgrounds/WebsiteMobile.mp4',
       type: 'video/mp4',
       media: '(max-width: 767px)',
     },
     {
-      src: '/videos/backgrounds/Website10.mp4',
+      src: '/videos/backgrounds/Website.mp4',
       type: 'video/mp4',
       media: '(min-width: 768px)',
     },
@@ -246,7 +246,7 @@ const Hub: React.FC = () => {
 
   return (
     <main className={`mainHub ${isHubReady ? 'mainHubReady' : ''} ${isHubLeaving ? 'mainHubLeaving' : ''}`}>
-      <div className="hubBackground" aria-hidden="true">
+      <div className={`hubBackground ${hubBackground.kind === 'video' ? 'hubBackgroundVideo' : ''}`} aria-hidden="true">
         {renderBackground(hubBackground)}
       </div>
       <div className="hubBackgroundOverlay" aria-hidden="true" />

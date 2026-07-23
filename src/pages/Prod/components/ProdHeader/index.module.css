@@ -25,6 +25,15 @@
     object-fit: cover;
     z-index: -999;
     pointer-events: none;
+    animation: fadeIn 300ms ease;
+}
+
+.headerLoading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logoName, .logoNameSkeleton {
@@ -60,6 +69,7 @@
     font-weight: 600;
     letter-spacing: -0.04em;
     line-clamp: 2;
+    animation: fadeIn 1500ms ease;
 }
 
 @media screen and (max-width: 575px) {
@@ -102,5 +112,15 @@
     .logoName {
         bottom: 50px;
         left: 40px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

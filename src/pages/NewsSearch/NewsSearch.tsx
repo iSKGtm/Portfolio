@@ -199,7 +199,7 @@ useEffect(() => {
               <div className='labelNewsSearch'><Skeleton width="35%" /></div>
               <div className='inputSearchContainer'>
                 <div className='searchIcon'>
-                  <CircularProgress size={32} sx={{ color: '#000' }} />
+                  <CircularProgress size={32} sx={{ color: 'var(--color-text-primary)' }} />
                 </div>
                 <input
                   type="text"

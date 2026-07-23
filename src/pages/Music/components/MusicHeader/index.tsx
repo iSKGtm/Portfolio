@@ -4,6 +4,7 @@ import { music } from '../../../../data/listaMusicas';
 
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { CircularProgress } from '@mui/material';
 
 const parseDate = (date: string) => {
   const [day, month, year] = date.split('/').map(Number);
@@ -69,10 +70,11 @@ const MusicHeader: React.FC = () => {
     <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
       <section className={styles.mainSection}>
         {isLoading ? (
-          <div className={styles.logoNameSkeleton}>
-            <Skeleton width={300} height={80} />
-            <Skeleton width={240} height={30} />
-          </div>
+          <>
+            <div className={styles.headerLoading}>
+              <CircularProgress size={64} sx={{ color: 'var(--color-text-primary)' }} />
+            </div>
+          </>
         ) : (
           <>
             <div className={styles.backgroundVideoContainer}>

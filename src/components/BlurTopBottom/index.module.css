@@ -8,13 +8,13 @@
 }
 
 .BlurTop {
-    background-color: #d1d1d1;
+    background-color: var(--color-filter-blurtopbottom);
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
 }
 
 .BlurBottom {
-    background-color: #d1d1d1;
+    background-color: var(--color-filter-blurtopbottom);
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
 }

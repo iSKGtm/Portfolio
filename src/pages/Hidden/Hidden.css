@@ -24,5 +24,52 @@
 }
 
 .mainHidden > img {
+    position: relative;
+    z-index: 1;
     filter: var(--filter-hidden-image);
+    mix-blend-mode: screen;
+}
+
+.hiddenQuestions {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.hiddenQuestions > span {
+    position: absolute;
+    color: #fff;
+    font-size: clamp(2.5rem, 8vw, 7rem);
+    font-weight: 700;
+    opacity: 0.14;
+    animation: hiddenQuestionFloat 12s ease-in-out infinite;
+}
+
+.hiddenQuestions > span:nth-child(1) { left: 8%; top: 12%; animation-delay: -8s; }
+.hiddenQuestions > span:nth-child(2) { left: 24%; top: 75%; animation-delay: -2s; }
+.hiddenQuestions > span:nth-child(3) { left: 42%; top: 30%; animation-delay: -11s; }
+.hiddenQuestions > span:nth-child(4) { left: 58%; top: 84%; animation-delay: -5s; }
+.hiddenQuestions > span:nth-child(5) { left: 72%; top: 18%; animation-delay: -9s; }
+.hiddenQuestions > span:nth-child(6) { left: 88%; top: 62%; animation-delay: -3s; }
+.hiddenQuestions > span:nth-child(7) { left: 12%; top: 48%; animation-delay: -6s; }
+.hiddenQuestions > span:nth-child(8) { left: 78%; top: 42%; animation-delay: -1s; }
+
+@keyframes hiddenQuestionFloat {
+    from {
+        transform: translate3d(-4vw, 8vh, 0) rotate(-12deg);
+    }
+
+    50% {
+        transform: translate3d(5vw, -10vh, 0) rotate(12deg);
+    }
+
+    to {
+        transform: translate3d(-4vw, 8vh, 0) rotate(-12deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hiddenQuestions > span {
+        animation: none;
+    }
 }

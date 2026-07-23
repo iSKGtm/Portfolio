@@ -13,12 +13,13 @@ const Hidden: React.FC = () => {
     let disposed = false;
 
     const enterFullscreen = () => {
+      console.log("Nem tudo precisa ser encontrado.");
       if (document.fullscreenElement || !mainRef.current) {
         return;
       }
 
       void mainRef.current.requestFullscreen().catch(() => {
-        // Fullscreen requires user interaction in most browsers.
+        // Requer interação para isso.
       });
     };
 
@@ -105,6 +106,9 @@ const Hidden: React.FC = () => {
   return (
     <main ref={mainRef} className='mainHidden'>
       <div className='textDebug'>View: Hidden.tsx</div>
+      <div className='hiddenQuestions' aria-hidden="true">
+        {Array.from({ length: 8 }, (_, index) => <span key={index}>?</span>)}
+      </div>
       <img src="https://cdn.pixabay.com/animation/2023/01/07/11/06/11-06-03-651_512.gif" />
     </main>
   );
