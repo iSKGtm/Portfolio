@@ -9,7 +9,7 @@ export const prod: NewsItem = {
     tags: ["iSKGtm Prod"],
     tagImage: "/images/symb/prod.svg",
     date: "01/09/2025",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 5,
     content: `
       <main>
@@ -89,7 +89,7 @@ export const prod: NewsItem = {
         <br>Acompanhe e <a href="https://www.youtube.com/playlist?list=PL2DivU5yf-1ygeNsR8NEPsPsZYO5DK4_L">veja os serviços feitos por nós</a>, ou acesse o perfil <a href="https://www.youtube.com/@iSKGtmProd">iSKGtm Prod</a> no YouTube!
         </p>
 
-        <h2>iiSKGtm, We Are in Everything.</h2>
+        <h2>iSKGtm, We Are in Everything.</h2>
       </main>
     `,
   };

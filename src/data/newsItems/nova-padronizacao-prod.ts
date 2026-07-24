@@ -8,7 +8,7 @@ export const novaPadronizacaoProd: NewsItem = {
     tags: ["iSKGtm Prod"],
     tagImage: "/images/symb/prod.svg",
     date: "24/02/2025",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 4,
     content: `
     <main>
@@ -69,7 +69,7 @@ export const novaPadronizacaoProd: NewsItem = {
         Todo nosso material no acervo, que tem padrões citados abaixo do esperado ou abaixo da resolução 1440p, terão todo tratamento de imagem, com upscaling a 2160p (4K) via IA, incluindo vídeos clássicos de iSKGtm.
       </p>
 
-      <h2>iiSKGtm, We Are in Everything.</h2>
+      <h2>iSKGtm, We Are in Everything.</h2>
 
     </main>
     `,

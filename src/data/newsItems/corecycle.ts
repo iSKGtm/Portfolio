@@ -9,7 +9,7 @@ export const corecycle: NewsItem = {
     tagImage: "/images/symb/outros.svg",
     date: "06/08/2025",
     dateEdit: "12/06/2026",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 5,
     content: `
       <main>
@@ -111,7 +111,7 @@ export const corecycle: NewsItem = {
         EagleVision e PlayVicio att: [12/06/2026]), serão mantidos até o final de 2026, mas não se enquadrarão nos
         novos padrões CoreCycle, com criação limitada e com serviços maior lentidão.</p>
 
-        <h2>iiSKGtm, We Are in Everything.</h2>
+        <h2>iSKGtm, We Are in Everything.</h2>
       </main>
     `,
   };

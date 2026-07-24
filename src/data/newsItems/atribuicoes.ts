@@ -10,7 +10,7 @@ export const atribuicoes: NewsItem = {
     tagImage: "/images/symb/outros.svg",
     date: "01/09/2025",
     dateEdit: "27/02/2026",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 1,
     content: `
       <main>

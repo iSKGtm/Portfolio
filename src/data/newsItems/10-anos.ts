@@ -9,7 +9,7 @@ export const article10Anos: NewsItem = {
     tagImage: "/images/symb/10y.png",
     tags: ["iSKGtm 10"],
     date: "12/01/2026",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 3,
     content: `
     <main>
@@ -71,7 +71,7 @@ export const article10Anos: NewsItem = {
         <a href="https://www.youtube.com/playlist?list=PL2DivU5yf-1wArFIBOAhkM8jBvT6YK5d_" target="_blank">Playlist do Especial 10 Anos</a>
       </p>
 
-      <h2>iiSKGtm, We Are in Everything.</h2>
+      <h2>iSKGtm, We Are in Everything.</h2>
     </main>
   `,
   };

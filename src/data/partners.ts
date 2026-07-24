@@ -15,10 +15,10 @@ export const partners: Partner[] = [
     link: 'https://www.instagram.com/priorado.com.br/'
   },
   {
-  id: 2,
-  name: 'Truco 24H',
-  logo: 'https://i.imgur.com/vtn6G09.jpeg',
-  description: 'Jogue, aposte, ganhe!',
-  link: 'https://www.instagram.com/truco24hr/'
-},
+    id: 2,
+    name: 'Truco 24H',
+    logo: 'https://i.imgur.com/vtn6G09.jpeg',
+    description: 'Jogue, aposte, ganhe!',
+    link: 'https://www.instagram.com/truco24hr/'
+  },
 ]

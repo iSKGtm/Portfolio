@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import type { ownershipArticle } from '../ownershipArticle';
 
 export interface NewsItem {
   url: string;
@@ -10,7 +11,7 @@ export interface NewsItem {
   date: string;
   dateEdit?: string | null;
   imageUrl?: string;
-  authorName?: string;
+  user: ownershipArticle['user'];
   minutesRead?: number;
   content?: string;
 }
@@ -20,7 +21,7 @@ export interface Article {
   label: string | ReactNode;
   imageUrl: string;
   tagImage: string;
-  authorName: string;
+  user: ownershipArticle['user'];
   publishDate: Date;
   dateEdit?: Date | null;
   minutesRead?: number;

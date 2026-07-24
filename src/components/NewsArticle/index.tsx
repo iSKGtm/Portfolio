@@ -5,13 +5,14 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
 import DOMPurify from "dompurify";
+import type { ownershipArticle } from "../../data/ownershipArticle";
 
 export interface Article {
   title: string;
   label: string;
   imageUrl?: string;
   tagImage: string;
-  authorName: string;
+  author: ownershipArticle;
   publishDate: string | Date;
   dateEdit?: string | Date | null;
   minutesRead: number;
@@ -216,7 +217,7 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
             </div>
           </div>
 
-          <div className={styles.author}>Por {article.authorName}</div>
+          <div className={styles.author}>Por {article.author.name}</div>
         </div>
 
         {hasDateEdit ? (
@@ -249,6 +250,17 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
         dangerouslySetInnerHTML={{ __html: sanitizedContent }}
         className={styles.content}
       />
+      <section className={styles.authorCard} aria-label={`Sobre ${article.author.name}`}>
+        <img
+          className={styles.authorAvatar}
+          src={`/images/news/profileArticle/${article.author.logo}`}
+          alt={`Foto de ${article.author.name}`}
+        />
+        <div className={styles.authorInfo}>
+          <h2>{article.author.name}</h2>
+          <p>{article.author.description}</p>
+        </div>
+      </section>
     </div>
   );
 };

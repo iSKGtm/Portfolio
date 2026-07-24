@@ -9,7 +9,7 @@ export const renovacaoAcervos: NewsItem = {
     tagImage: "/images/symb/10y.png",
     tags: ["iSKGtm 10"],
     date: "31/12/2025",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 6,
     content: `
     <main>
@@ -124,7 +124,7 @@ export const renovacaoAcervos: NewsItem = {
         <cite>Diz Anthony M.</cite>
       </p>
 
-      <h2>iiSKGtm, We Are in Everything.</h2>
+      <h2>iSKGtm, We Are in Everything.</h2>
     </main>
   `,
   };

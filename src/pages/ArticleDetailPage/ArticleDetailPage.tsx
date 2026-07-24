@@ -11,6 +11,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import { Helmet } from 'react-helmet-async';
 
 import { newsData } from '../../data/news';
+import { partners } from '../../data/ownershipArticle';
 
 const SetTitle = ({ title }: { title: string }) => {
   React.useEffect(() => {
@@ -48,12 +49,13 @@ const ArticleDetailPage: React.FC = () => {
 
         if (foundArticle) {
           const description = typeof foundArticle.label === 'string' ? foundArticle.label : '';
+          const author = partners.find(({ user }) => user === foundArticle.user) ?? partners[0];
           const mappedArticle: Article = {
             title: foundArticle.title,
             label: foundArticle.label || '',
             imageUrl: foundArticle.imageUrl || '',
             tagImage: foundArticle.tagImage || "/images/symb/outros.svg",
-            authorName: foundArticle.authorName || "iShaking Creative Media",
+            author,
             publishDate: foundArticle.date,
             dateEdit: foundArticle.dateEdit || null,
             minutesRead: foundArticle.minutesRead || 5,

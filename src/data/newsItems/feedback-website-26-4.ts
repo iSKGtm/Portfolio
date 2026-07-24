@@ -9,7 +9,7 @@ export const feedbackWebsite264: NewsItem = {
     tags: ["iSKGtm Dev"],
     tagImage: "/images/symb/dev.svg",
     date: "12/07/2026",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 3,
     content: `
       <main>

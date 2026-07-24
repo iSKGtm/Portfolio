@@ -10,7 +10,7 @@ export const music: NewsItem = {
     tagImage: "/images/symb/music.svg",
     date: "01/09/2025",
     dateEdit: "12/06/2026",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 5,
     content: `
       <main>
@@ -102,7 +102,7 @@ export const music: NewsItem = {
         <p>Acompanhe toda nossa produção em <a href="https://www.youtube.com/@iSKGtmMusic">iSKGtm Music</a> ou acesse nossa <a href="https://www.youtube.com/playlist?list=PL2DivU5yf-1wIXM2F8rp_GNEqpVYW3sqt">playlist</a> de produções (pre- 2026) no YouTube.
         </p>
 
-        <h2>iiSKGtm, We Are in Everything.</h2>
+        <h2>iSKGtm, We Are in Everything.</h2>
       </main>
     `,
   };

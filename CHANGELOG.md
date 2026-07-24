@@ -13,6 +13,8 @@
 
 - Caso tenha dateEdit, os cards do newssearch que o contenham, serão reclassificados.
 
+- Suporte a descrição do autor da postagem de um artigo.
+
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.

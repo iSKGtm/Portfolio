@@ -8,7 +8,7 @@ export const conhecaRevolutTech: NewsItem = {
     tags: ["iSKGtm Dev"],
     tagImage: "/images/symb/dev.svg",
     date: "27/05/2024",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 3,
     content: `
       <main>
@@ -52,7 +52,7 @@ export const conhecaRevolutTech: NewsItem = {
           iSKGtm irá levar sua experiência para Revolut Tech e seus serviços 'Prod' (Toda Branding e imagem da Startup) & 'Dev' (Desenvolvedor aux. em Python).
         </p>
 
-        <h2>iiSKGtm, We Are in Everything.</h2>
+        <h2>iSKGtm, We Are in Everything.</h2>
       </main>
     `,
   };

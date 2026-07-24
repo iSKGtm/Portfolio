@@ -9,7 +9,7 @@ export const backstageIskgtmRemix: NewsItem = {
     tags: ["iSKGtm Music"],
     tagImage: "/images/symb/music.svg",
     date: "01/07/2026",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 2,
     content: `
     <main>
@@ -45,7 +45,7 @@ export const backstageIskgtmRemix: NewsItem = {
 
       <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/dYy1j1x7EsI"></iframe>
 
-      <h2>iiSKGtm, We Are in Everything.</h2>
+      <h2>iSKGtm, We Are in Everything.</h2>
     </main>
   `,
   };

@@ -9,7 +9,7 @@ export const dev: NewsItem = {
     tags: ["iSKGtm Dev"],
     tagImage: "/images/symb/dev.svg",
     date: "01/09/2025",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 4,
     content: `
       <main>
@@ -88,7 +88,7 @@ export const dev: NewsItem = {
 
         <p>Atualmente, assim como em outros setores, levamos toda nossa experiência para diversos tipos de público, afinal, a tecnologia evolui, a gente também.</p>
 
-        <h2>iiSKGtm, We Are in Everything.</h2>
+        <h2>iSKGtm, We Are in Everything.</h2>
       </main>
     `,
   };

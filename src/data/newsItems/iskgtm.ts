@@ -9,7 +9,7 @@ export const iskgtm: NewsItem = {
     tags: ["Outros"],
     tagImage: "/images/symb/outros.svg",
     date: "01/09/2025",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 6,
     content: `
       <main>
@@ -67,8 +67,8 @@ export const iskgtm: NewsItem = {
 
         <p>Com novos equipamentos de ultima geração, nós levamos nossos serviços a outro nivel, de forma mais profissional ao comparar com periodos de 2017, não ficando limitado apenas em vídeos de gameplays como antes, mas sim, de mostrar todo nosso empenho em criação de serviços, participações, portfólios do jeito que a iShaking Creative Media sabe fazer.</p>
 
-        <h2>iSKGtm Music | iSKGtm Prod's. | iSKGtm Dev<br>
-        iiSKGtm, We Are in Everything.</h2>
+        <h2>iSKGtm Music | iSKGtm Prod. | iSKGtm Dev<br>
+        iSKGtm, We Are in Everything.</h2>
       </main>
     `,
   };

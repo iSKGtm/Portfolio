@@ -9,7 +9,7 @@ export const antesDoEspecial10Anos: NewsItem = {
     tags: ["iSKGtm 10"],
     tagImage: "/images/symb/10y.png",
     date: "15/11/2025",
-    authorName: "Anthony M.",
+    user: "anthonym",
     minutesRead: 2,
     content: `
     <main>
@@ -49,7 +49,7 @@ export const antesDoEspecial10Anos: NewsItem = {
 
       <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/Yqf_Fhd-9hc"></iframe>
 
-      <h2>iiSKGtm, We Are in Everything.</h2>
+      <h2>iSKGtm, We Are in Everything.</h2>
     </main>
   `,
   };
