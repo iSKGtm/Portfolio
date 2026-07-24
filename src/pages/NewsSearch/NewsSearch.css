@@ -117,7 +117,7 @@
 .containerSearch {
     display: flex;
     gap: 30px;
-    min-height: 400px;
+    min-height: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -161,9 +161,7 @@
 .containerSearchSkeleton {
     display: flex;
     gap: 30px;
-    height: 500px;
-    max-height: 500px;
-    min-height: 500px;
+    min-height: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;

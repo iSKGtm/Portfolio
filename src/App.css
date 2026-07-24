@@ -12,6 +12,8 @@
   --color-bg-blur-primary: #ffffff60;
   --color-bg-blur-primary-hover: #ffffffaa;
   --color-bg-blur-primary-active: #ffffff75;
+  --color-skeleton-base: #c7c7c7;
+  --color-skeleton-highlight: #a1a1a1;
   --filter-placeholder-only: invert(0%);
   --filter-image-on-bg: invert(93%);
   --filter-logo-on-bg: invert(93%);
@@ -33,6 +35,8 @@
   --color-bg-blur-primary: #65656530;
   --color-bg-blur-primary-hover: #ffffff30;
   --color-bg-blur-primary-active: #ffffff24;
+  --color-skeleton-base: #505050;
+  --color-skeleton-highlight: #606060;
   --filter-placeholder-only: invert(75%);
   --filter-image-on-bg: invert(7%);
   --filter-logo-on-bg: invert(7%);

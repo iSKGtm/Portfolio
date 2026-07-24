@@ -101,7 +101,7 @@ const ArticleDetailPage: React.FC = () => {
     const navigate = useNavigate();
 
   return (
-    <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
+    <SkeletonTheme baseColor="var(--color-skeleton-base)" highlightColor="var(--color-skeleton-highlight)" borderRadius={10}>
       <Helmet>
         <title>{articleSeo?.title ?? pageTitle}</title>
         {articleSeo?.description ? (

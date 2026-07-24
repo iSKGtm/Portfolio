@@ -12,13 +12,25 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import { CircularProgress, Pagination } from '@mui/material';
 import { useSearchParams } from 'react-router-dom';
 
+const getNewsOrderDate = ({ date, dateEdit }: NewsItem) => {
+  const value = dateEdit || date;
+  const [day, month, year] = value.split('/').map(Number);
+
+  return Number.isFinite(day) && Number.isFinite(month) && Number.isFinite(year)
+    ? new Date(year, month - 1, day).getTime()
+    : 0;
+};
+
+const sortNewsByLatestDate = (items: NewsItem[]) =>
+  [...items].sort((first, second) => getNewsOrderDate(second) - getNewsOrderDate(first));
+
 const NewsSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('')
-  const [filteredNews, setFilteredNews] = useState<NewsItem[]>(newsData)
+  const [filteredNews, setFilteredNews] = useState<NewsItem[]>(() => sortNewsByLatestDate(newsData))
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const showClearButtonRef = useRef<HTMLButtonElement | null>(null);
-  const itemsPerPage = 11;
+  const itemsPerPage = 12;
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
@@ -41,7 +53,7 @@ useEffect(() => {
   const term = searchTerm.trim().toLowerCase();
 
   if (!term) {
-    setFilteredNews(newsData);
+    setFilteredNews(sortNewsByLatestDate(newsData));
     setPage(1);
     setSearchParams((prev) => {
       const next = new URLSearchParams(prev);
@@ -52,7 +64,7 @@ useEffect(() => {
   }
 
   setFilteredNews(
-    newsData.filter(item => {
+    sortNewsByLatestDate(newsData.filter(item => {
       const searchableFields: string[] = [
         item.title,
         item.label ?? '',
@@ -66,7 +78,7 @@ useEffect(() => {
       return searchableFields.some(field =>
         typeof field === 'string' && field.toLowerCase().includes(term)
       );
-    })
+    }))
   );
   setPage(1);
   setSearchParams((prev) => {
@@ -100,7 +112,7 @@ useEffect(() => {
 
   return (
     <>
-    <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
+    <SkeletonTheme baseColor="var(--color-skeleton-base)" highlightColor="var(--color-skeleton-highlight)" borderRadius={10}>
       <main className='mainNews' style={{ display: isLoading ? 'none' : 'flex' }}>
         <section className="mainSection">
           <div className='containerHeader'>
@@ -191,7 +203,7 @@ useEffect(() => {
       </main>
     </SkeletonTheme>
     {isLoading && (
-      <SkeletonTheme baseColor="#a1a1a1" highlightColor="#888" borderRadius={10}>
+      <SkeletonTheme baseColor="var(--color-skeleton-base)" highlightColor="var(--color-skeleton-highlight)" borderRadius={10}>
         <main className='mainNews'>
           <section className="mainSectionSkeleton">
             <div className='containerHeader'>
@@ -221,7 +233,7 @@ useEffect(() => {
           </div>
 
             <div className="containerSearchSkeleton">
-              {Array.from({ length: 10 }, (_, i) => (
+              {Array.from({ length: itemsPerPage }, (_, i) => (
                 <NewsCard 
                   key={i}
                   title={<>
@@ -235,7 +247,7 @@ useEffect(() => {
                   }
                   tags={
                     <>
-                    <SkeletonTheme baseColor="#ccc" highlightColor="#eee" borderRadius={10}>
+                    <SkeletonTheme baseColor="var(--color-skeleton-base)" highlightColor="var(--color-skeleton-highlight)" borderRadius={10}>
                       <Skeleton width="70%" />
                     </SkeletonTheme>
                     </>

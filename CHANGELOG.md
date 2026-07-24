@@ -11,6 +11,8 @@
 
 - Aprimoramento de /hidden.
 
+- Caso tenha dateEdit, os cards do newssearch que o contenham, serão reclassificados.
+
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.
@@ -18,6 +20,10 @@
 - Remoção de fadein dos skeletons de /hub para melhor consistencia.
 
 - Spinner nos headers das páginas home, music, prod e dev, no lugar do skeleton.
+
+- Foram adaptado cores dos skeletons ao sistema de temas.
+
+- Foi corrigido um problema de limite de cards no newssearch. (Beta)
 
 ### Problemas Conhecidos & Feedback dos usuários.
 
