@@ -8,7 +8,7 @@ export const novaPadronizacaoProd: NewsItem = {
     tags: ["iSKGtm Prod"],
     tagImage: "/images/symb/prod.svg",
     date: "24/02/2025",
-    user: "anthonym",
+    user: "iskgtm",
     minutesRead: 4,
     content: `
     <main>

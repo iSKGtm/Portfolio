@@ -250,7 +250,7 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
         dangerouslySetInnerHTML={{ __html: sanitizedContent }}
         className={styles.content}
       />
-      <section className={styles.authorCard} aria-label={`Sobre ${article.author.name}`}>
+      <div className={styles.authorCard} aria-label={`Sobre ${article.author.name}`}>
         <img
           className={styles.authorAvatar}
           src={`/images/news/profileArticle/${article.author.logo}`}
@@ -260,7 +260,7 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
           <h2>{article.author.name}</h2>
           <p>{article.author.description}</p>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

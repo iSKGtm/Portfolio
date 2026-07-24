@@ -9,7 +9,7 @@ export const corecycle: NewsItem = {
     tagImage: "/images/symb/outros.svg",
     date: "06/08/2025",
     dateEdit: "12/06/2026",
-    user: "anthonym",
+    user: "iskgtm",
     minutesRead: 5,
     content: `
       <main>

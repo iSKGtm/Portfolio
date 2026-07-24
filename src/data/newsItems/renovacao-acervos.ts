@@ -9,7 +9,7 @@ export const renovacaoAcervos: NewsItem = {
     tagImage: "/images/symb/10y.png",
     tags: ["iSKGtm 10"],
     date: "31/12/2025",
-    user: "anthonym",
+    user: "iskgtm",
     minutesRead: 6,
     content: `
     <main>
