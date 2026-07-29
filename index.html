@@ -10,6 +10,14 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon/48.png" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"> 
+    <meta name="theme-color" content="#19191b" />
+    <script>
+      const savedTheme = localStorage.getItem('iskgtm-color-theme');
+      const themeColor = savedTheme === 'dark' ? '#19191b' : '#c1c1c1';
+
+      document.documentElement.dataset.theme = savedTheme === 'dark' ? 'dark' : 'light';
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', themeColor);
+    </script>
     <title>iSKGtm Hub</title>
   </head>
   <body>

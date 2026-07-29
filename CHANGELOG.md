@@ -5,7 +5,7 @@
 
 - Um botão de menu do usuário, SwipeableDrawer API (MaterialUI)
 
-- O modo escuro foi adicionado, usando localStorage para armazenamento do cliente. (Beta)
+- O modo escuro foi adicionado, usando localStorage para armazenamento do cliente.
 
 - O versionamento foi exposto, para indicar ao usuário a versão do website.
 

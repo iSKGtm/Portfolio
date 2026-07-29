@@ -150,8 +150,14 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
   }, [isMenuOpen]);
 
   useEffect(() => {
-    document.documentElement.dataset.theme = isDarkMode ? 'dark' : 'light';
-    localStorage.setItem(themeStorageKey, isDarkMode ? 'dark' : 'light');
+    const currentTheme = isDarkMode ? 'dark' : 'light';
+    const themeColor = isDarkMode ? '#19191b' : '#c1c1c1';
+
+    document.documentElement.dataset.theme = currentTheme;
+    document
+      .querySelector<HTMLMetaElement>('meta[name="theme-color"]')
+      ?.setAttribute('content', themeColor);
+    localStorage.setItem(themeStorageKey, currentTheme);
   }, [isDarkMode]);
 
   const scrollToTop = () => {
@@ -296,7 +302,7 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
             
             <div className={styles.menuList}>
                 <div className={styles.menuOption}>
-                  <div>Modo Escuro (Beta)</div>
+                  <div>Modo Escuro</div>
                   <button
                     className={`${styles.themeSwitch} ${isDarkMode ? styles.themeSwitchActive : ''}`}
                     type="button"
