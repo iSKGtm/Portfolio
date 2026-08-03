@@ -56,6 +56,7 @@ const ArticleDetailPage: React.FC = () => {
           const description = typeof foundArticle.label === 'string' ? foundArticle.label : '';
           const author = partners.find(({ user }) => user === foundArticle.user) ?? partners[0];
           const mappedArticle: Article = {
+            url: foundArticle.url,
             title: foundArticle.title,
             label: foundArticle.label || '',
             imageUrl: foundArticle.imageUrl || '',

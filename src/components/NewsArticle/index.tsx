@@ -7,8 +7,11 @@ import { faShare } from "@fortawesome/free-solid-svg-icons";
 import DOMPurify from "dompurify";
 import { Link } from "react-router-dom";
 import type { ownershipArticle } from "../../data/ownershipArticle";
+import { newsData } from "../../data/news";
+import NewsCard from "../NewsCard";
 
 export interface Article {
+  url: string;
   title: string;
   label: string;
   imageUrl?: string;
@@ -42,6 +45,28 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
   const formattedDateEdit = article.dateEdit ? formatArticleDate(article.dateEdit) : "";
   const hasDateEdit = formattedDateEdit.trim().length > 0;
   const mainTags = Array.isArray(article.mainTag) ? article.mainTag : [article.mainTag];
+  const relatedArticles = React.useMemo(() => {
+    const currentUrl = article.url.replace(/\/+$/, "");
+    const currentTitle = article.title.trim().toLocaleLowerCase();
+    const candidates = newsData.filter(
+      (item) =>
+        item.url.replace(/\/+$/, "") !== currentUrl &&
+        item.title.trim().toLocaleLowerCase() !== currentTitle &&
+        item.hide !== true &&
+        item.private !== true
+    );
+    const isRelated = (item: (typeof newsData)[number]) => {
+      const itemMainTags = Array.isArray(item.mainTag) ? item.mainTag : [item.mainTag];
+      return itemMainTags.some((tag) => mainTags.includes(tag));
+    };
+    const shuffle = <T,>(items: T[]) => [...items].sort(() => Math.random() - 0.5);
+    const firstArticle = shuffle(candidates.filter(isRelated))[0] ?? shuffle(candidates)[0];
+    const remainingArticles = candidates.filter((item) => item.url !== firstArticle?.url);
+
+    return [firstArticle, ...shuffle(remainingArticles).slice(0, 2)].filter(
+      (item): item is (typeof newsData)[number] => Boolean(item)
+    );
+  }, [article.url, article.title, article.mainTag]);
 
   const copyToClipboard = async (text: string) => {
     if (navigator.clipboard?.writeText) {
@@ -326,6 +351,16 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
           <p>{article.author.description}</p>
         </div>
       </div>
+      {relatedArticles.length > 0 ? (
+        <section className={styles.relatedArticles} aria-labelledby="related-articles-title">
+          <h1 id="related-articles-title">veja também.</h1>
+          <div className={styles.relatedArticleList}>
+            {relatedArticles.map((relatedArticle) => (
+              <NewsCard key={relatedArticle.url} {...relatedArticle} />
+            ))}
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 };

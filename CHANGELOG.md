@@ -35,6 +35,8 @@
 
 - Imagens nos artigos, na proporção 1.1 agora são reajustados para 520px de largura máxima. (IA)
 
+- Artigos relatados aleatórios adicionados "veja também", baseando-se no NewsCard. (IA)
+
 ### Problemas Conhecidos & Feedback dos usuários.
 
 - Fallback envolvendo o carousel das páginas home, music, prod e dev, para navegador Safari (Apple). (Feedback)
