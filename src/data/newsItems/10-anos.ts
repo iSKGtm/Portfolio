@@ -7,7 +7,8 @@ export const article10Anos: NewsItem = {
     label: "Conteúdos para o Especial de 10 Anos iSKGtm",
     imageUrl: "https://i.imgur.com/xHxXV9F.jpeg",
     tagImage: "/images/symb/10y.png",
-    tags: ["iSKGtm 10"],
+    mainTag: ["iSKGtm 10"],
+    tags: ["Especial", "10 anos", "iSKGtm"],
     date: "12/01/2026",
     user: "anthonym",
     minutesRead: 3,
@@ -57,7 +58,7 @@ export const article10Anos: NewsItem = {
         Ainda em 2019, até 2022 seguimos com músicas e gameplays. Mas em meados de 2022, criamos a divisão iSKGtm Dev, que é produções tecnológicas, como desenvolvimento de aplicação e web aplicação. Inicialmente, utilizamos JavaScript para nossas aplicações e em 2025 chegamos ao React TypeScript. Em 2026-27, analisaremos a possibilidade de desenvolver para áreas de back-end e posteriormente, para o Android, utilizando ReactNative e Flutter.
       </p>
 
-      <img src="/images/carouselImages/slide8.jpg"/>
+      <img src="/images/carouselImages/dev/slide7.jpg"/>
 
       <h3>WebApp para Truco 24H. Imagem: Acervo iSKGtm</h3>
 

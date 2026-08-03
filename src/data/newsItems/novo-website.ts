@@ -5,7 +5,8 @@ export const novoWebsite: NewsItem = {
     title: "Novo Website",
     label: "Novo website que demonstra nossos projetos e portfólios.",
     imageUrl: "/images/news/posts/dev/novo_website/banner.jpg",
-    tags: ["iSKGtm Dev"],
+    mainTag: ["iSKGtm Dev"],
+    tags: ["Website", "React", "Desenvolvimento"],
     tagImage: "/images/symb/dev.svg",
     date: "01/08/2025",
     user: "anthonym",
@@ -18,7 +19,7 @@ export const novoWebsite: NewsItem = {
 
         <img src="/images/news/posts/dev/novo_website/0.jpg" alt="iSKGtm Dev"/>
 
-        <h3>Imagem do website atual</h3>
+        <h3>Imagem do website. Imagem: Acervo iSKGtm (2025)</h3>
 
         <h2>Como vai funcionar nosso website?</h2>
 

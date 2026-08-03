@@ -6,9 +6,11 @@ export const feedbackWebsite264: NewsItem = {
     title: "Feedback sobre melhorias para o website",
     label: "Participe da avaliação de UI/UX da iSKGtm Hub.",
     imageUrl: "https://i.imgur.com/ZotvYV9.jpeg",
-    tags: ["iSKGtm Dev"],
+    mainTag: ["iSKGtm Dev"],
+    tags: ["Website", "UI/UX", "Feedback"],
     tagImage: "/images/symb/dev.svg",
     date: "12/07/2026",
+    dateEdit: "03/08/2026",
     user: "anthonym",
     minutesRead: 3,
     content: `
@@ -16,11 +18,17 @@ export const feedbackWebsite264: NewsItem = {
         <img src="/images/news/tags/dev.jpg" alt="iSKGtm Dev"/>
 
         <p>
-          Estou coletando feedbacks para a futura versão 26.4 de iSKGtm Hub para apoiar meu TCC sobre interfaces, experiência de usuário e uso de IA assistiva no processo de desenvolvimento e avaliação de uma plataforma ou website real.
+          Foi coletado feedbacks para a versão 26.4 de iSKGtm Hub para apoiar meu TCC sobre interfaces, experiência de usuário e uso de IA assistiva no processo de desenvolvimento e avaliação de uma plataforma ou website real.
         </p>
 
         <p>
-          O período de recebimento dos feedbacks será de <strong>13 de julho de 2026</strong> até <strong>31 de julho de 2026</strong>. A proposta é entender como diferentes pessoas percebem a navegação, a organização visual, a clareza das páginas e a facilidade de uso do site, bem como, o comportamento em diversos dispositivos e navegadores, já que se comportam de uma maneira diferente.
+          O período de recebimento dos feedbacks ocorreu em <strong>13 de julho de 2026</strong> até <strong>31 de julho de 2026</strong>. A proposta foi entender como diferentes pessoas percebem a navegação, a organização visual, a clareza das páginas e a facilidade de uso do site, bem como, o comportamento em diversos dispositivos e navegadores, já que se comportam de uma maneira diferente.
+        </p>
+
+        <h2>Mas a coleta foi finalizada?</h2>
+
+        <p>
+          Não, inclusive, nós o encorajamos a enviar feedbacks sobre este website, para melhorias, já que este foi criado do 0 e segue evoluindo desde 2022, veja como era este <a href="/artigo/novo-website">website.</a>
         </p>
 
         <h2>Como participar</h2>
@@ -42,14 +50,14 @@ export const feedbackWebsite264: NewsItem = {
           <li>O que você melhoraria?</li>
         </ul>
 
-        <h2>Uso no TCC</h2>
-
-        <p>
-          As respostas serão usadas como base para uma análise inicial de UI/UX, considerando comentários sobre clareza, navegação, responsividade, aparência profissional e possíveis melhorias de interface. O objetivo não é coletar dados sensíveis, mas observar a experiência de uso do website em um contexto prático, bem como, a melhoria do mesmo, incluindo acessibilidade e facilidade a novos usuários.
-        </p>
-
         <p>
           Se possível, informe também o navegador e dispositivo usado durante o teste, como celular, computador ou tablet & Google Chrome ou Firefox. Caso seja testado em produtos Apple (exceto macOS), não é necessário informar qual navegador você utilizou. Isso ajuda a entender melhor diferenças de experiência entre telas e navegadores.
+        </p>
+
+        <h2>Este Website foi usado no TCC prático</h2>
+
+        <p>
+          As respostas foram usadas como base para uma análise inicial de UI/UX, considerando comentários sobre clareza, navegação, responsividade, aparência profissional e possíveis melhorias de interface. O objetivo não é coletar dados sensíveis, mas observar a experiência de uso do website em um contexto prático, bem como, a melhoria do mesmo, incluindo acessibilidade e facilidade a novos usuários.
         </p>
 
         <h2>Envio dos feedbacks</h2>

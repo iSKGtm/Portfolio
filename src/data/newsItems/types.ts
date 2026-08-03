@@ -4,9 +4,11 @@ import type { ownershipArticle } from '../ownershipArticle';
 export interface NewsItem {
   url: string;
   hide?: boolean;
+  private?: boolean | null;
   title: string;
   label?: string;
-  tags: string | string[];
+  mainTag: string | string[];
+  tags?: string[];
   tagImage?: string;
   date: string;
   dateEdit?: string | null;
@@ -26,5 +28,6 @@ export interface Article {
   dateEdit?: Date | null;
   minutesRead?: number;
   content: string;
-  tags?: string | string[] | ReactNode;
+  mainTag: string | string[];
+  tags?: string[];
 }

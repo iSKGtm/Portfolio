@@ -2,8 +2,8 @@
 
 /* 🎯 Tema padrão (claro) */
 :root {
-  --color-secondary: #4B1E4D;
   --color-accent: #db1168;
+  --color-accent-hover: #ec5798;
   --color-neutral: #64748B;
   --color-text-primary: #151515;
   --color-bg-primary: #c1c1c1;
@@ -25,8 +25,8 @@
 
 /* 🎯 Tema padrão (escuro) */
 :root[data-theme='dark'] {
-  --color-secondary: #b65c9d;
   --color-accent: #ef4f91;
+  --color-accent-hover: #df79a5;
   --color-neutral: #a8acb5;
   --color-text-primary: #f2f0f2;
   --color-bg-primary: #19191b;

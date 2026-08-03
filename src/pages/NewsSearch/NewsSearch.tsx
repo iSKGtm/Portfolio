@@ -24,20 +24,24 @@ const getNewsOrderDate = ({ date, dateEdit }: NewsItem) => {
 const sortNewsByLatestDate = (items: NewsItem[]) =>
   [...items].sort((first, second) => getNewsOrderDate(second) - getNewsOrderDate(first));
 
+const getPageFromSearchParams = (searchParams: URLSearchParams) => {
+  const raw = searchParams.get('page');
+  const parsed = raw ? Number.parseInt(raw, 10) : 1;
+
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
+};
+
 const NewsSearch: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState<string>('')
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchTerm, setSearchTerm] = useState<string>(() => searchParams.get('search') ?? '')
   const [filteredNews, setFilteredNews] = useState<NewsItem[]>(() => sortNewsByLatestDate(newsData))
   const [isLoading, setIsLoading] = useState(true);
-  const [page, setPage] = useState(1);
   const showClearButtonRef = useRef<HTMLButtonElement | null>(null);
   const itemsPerPage = 12;
-  const [searchParams, setSearchParams] = useSearchParams();
+  const page = getPageFromSearchParams(searchParams);
 
   useEffect(() => {
-    const raw = searchParams.get('page');
-    const parsed = raw ? Number.parseInt(raw, 10) : 1;
-    const next = Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
-    setPage(next);
+    setSearchTerm(searchParams.get('search') ?? '');
   }, [searchParams]);
 
   useEffect(() => {
@@ -46,7 +50,20 @@ const NewsSearch: React.FC = () => {
     }, 800);
   }, []);
 
-  const clearInput = () => setSearchTerm('');
+  const updateSearchTerm = (value: string) => {
+    setSearchTerm(value);
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      const term = value.trim();
+
+      if (term) next.set('search', term);
+      else next.delete('search');
+      next.delete('page');
+      return next;
+    });
+  };
+
+  const clearInput = () => updateSearchTerm('');
   const showClearButton = searchTerm.length > 1;
 
 useEffect(() => {
@@ -54,12 +71,6 @@ useEffect(() => {
 
   if (!term) {
     setFilteredNews(sortNewsByLatestDate(newsData));
-    setPage(1);
-    setSearchParams((prev) => {
-      const next = new URLSearchParams(prev);
-      next.delete('page');
-      return next;
-    });
     return;
   }
 
@@ -70,45 +81,35 @@ useEffect(() => {
         item.label ?? '',
         typeof item.date === 'string' ? item.date : new Date(item.date).toLocaleDateString('pt-BR'),
       ];
-      if (Array.isArray(item.tags)) {
-        searchableFields.push(...item.tags);
-      } else if (typeof item.tags === 'string') {
-        searchableFields.push(item.tags);
-      }
+      if (Array.isArray(item.mainTag)) searchableFields.push(...item.mainTag);
+      else searchableFields.push(item.mainTag);
+      if (item.tags) searchableFields.push(...item.tags);
       return searchableFields.some(field =>
         typeof field === 'string' && field.toLowerCase().includes(term)
       );
     }))
   );
-  setPage(1);
-  setSearchParams((prev) => {
-    const next = new URLSearchParams(prev);
-    next.delete('page');
-    return next;
-  });
 }, [searchTerm]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value)
+    updateSearchTerm(e.target.value)
   }
 
   const totalPages = Math.max(1, Math.ceil(filteredNews.length / itemsPerPage));
 
   useEffect(() => {
     const clamped = Math.min(Math.max(1, page), totalPages);
-    if (clamped !== page) setPage(clamped);
-  }, [page, totalPages]);
+    if (clamped === page) return;
 
-  const pagedNews = filteredNews.slice((page - 1) * itemsPerPage, page * itemsPerPage);
-
-  useEffect(() => {
     setSearchParams((prev) => {
       const next = new URLSearchParams(prev);
-      if (page <= 1) next.delete('page');
-      else next.set('page', String(page));
+      if (clamped <= 1) next.delete('page');
+      else next.set('page', String(clamped));
       return next;
     });
-  }, [page, setSearchParams]);
+  }, [page, setSearchParams, totalPages]);
+
+  const pagedNews = filteredNews.slice((page - 1) * itemsPerPage, page * itemsPerPage);
 
   return (
     <>
@@ -144,7 +145,14 @@ useEffect(() => {
                     className='pageCards'
                     count={totalPages}
                     page={page}
-                    onChange={(_, value) => setPage(value)}
+                    onChange={(_, value) => {
+                      setSearchParams((prev) => {
+                        const next = new URLSearchParams(prev);
+                        if (value <= 1) next.delete('page');
+                        else next.set('page', String(value));
+                        return next;
+                      });
+                    }}
                     variant="outlined"
                     shape="rounded"
                     siblingCount={0}
@@ -245,7 +253,7 @@ useEffect(() => {
                     <Skeleton width="100%" /> <Skeleton width="60%" />
                     </>
                   }
-                  tags={
+                  mainTag={
                     <>
                     <SkeletonTheme baseColor="var(--color-skeleton-base)" highlightColor="var(--color-skeleton-highlight)" borderRadius={10}>
                       <Skeleton width="70%" />

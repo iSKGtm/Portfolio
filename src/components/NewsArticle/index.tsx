@@ -5,6 +5,7 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
 import DOMPurify from "dompurify";
+import { Link } from "react-router-dom";
 import type { ownershipArticle } from "../../data/ownershipArticle";
 
 export interface Article {
@@ -17,7 +18,8 @@ export interface Article {
   dateEdit?: string | Date | null;
   minutesRead: number;
   content: string;
-  tags?: string | string[] | React.ReactNode;
+  mainTag: string | string[];
+  tags?: string[];
 }
 
 interface Props {
@@ -32,12 +34,14 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
   const timeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const floatingShareRef = React.useRef<HTMLDivElement | null>(null);
   const floatingShareIconRef = React.useRef<HTMLDivElement | null>(null);
+  const contentRef = React.useRef<HTMLDivElement | null>(null);
   const formatArticleDate = (dateValue: string | Date) => {
     if (typeof dateValue === "string") return dateValue;
     return !isNaN(dateValue.getTime()) ? dateValue.toLocaleDateString("pt-BR") : "";
   };
   const formattedDateEdit = article.dateEdit ? formatArticleDate(article.dateEdit) : "";
   const hasDateEdit = formattedDateEdit.trim().length > 0;
+  const mainTags = Array.isArray(article.mainTag) ? article.mainTag : [article.mainTag];
 
   const copyToClipboard = async (text: string) => {
     if (navigator.clipboard?.writeText) {
@@ -145,6 +149,37 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
     ],
   });
 
+  const classifyContentImage = React.useCallback((image: HTMLImageElement) => {
+    if (!image.naturalWidth || !image.naturalHeight) return;
+
+    const aspectRatio = image.naturalWidth / image.naturalHeight;
+    const isSquare = aspectRatio >= 0.9 && aspectRatio <= 1.1;
+
+    image.classList.toggle(styles.contentImageSquare, isSquare);
+    image.style.display = isSquare ? "block" : "";
+    image.style.maxWidth = isSquare ? "520px" : "";
+    image.style.marginInline = isSquare ? "auto" : "";
+  }, []);
+
+  React.useLayoutEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+
+    const classifyImages = () => {
+      content.querySelectorAll<HTMLImageElement>("main > img").forEach((image) => {
+        if (image.complete) classifyContentImage(image);
+        else image.addEventListener("load", () => classifyContentImage(image), { once: true });
+      });
+    };
+
+    classifyImages();
+
+    const observer = new MutationObserver(classifyImages);
+    observer.observe(content, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, [article.content, classifyContentImage]);
+
   return (
     <div className={styles.articlePage}>
       <svg style={{ display: "none" }}>
@@ -249,7 +284,37 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
       <div
         dangerouslySetInnerHTML={{ __html: sanitizedContent }}
         className={styles.content}
+        ref={contentRef}
       />
+      <section className={styles.categories} aria-label="Categorias do artigo">
+        <div className={styles.categoryGroup}>
+          <h2>Categoria Principal:</h2>
+          <ul className={styles.categoryList}>
+            {mainTags.map((tag) => (
+              <li key={tag}>
+                <Link className={styles.categoryMainTag} to={`/artigos?search=${encodeURIComponent(tag)}`} target="_blank" rel="noreferrer">
+                  {tag}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {article.tags && article.tags.length > 0 ? (
+          <div className={styles.categoryGroup}>
+            <h2>Categorias:</h2>
+            <ul className={styles.categoryList}>
+              {article.tags.map((tag) => (
+                <li key={tag}>
+                  <Link className={styles.categoryTag} to={`/artigos?search=${encodeURIComponent(tag)}`} target="_blank" rel="noreferrer">
+                    {tag}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </section>
       <div className={styles.authorCard} aria-label={`Sobre ${article.author.name}`}>
         <img
           className={styles.authorAvatar}

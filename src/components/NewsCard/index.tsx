@@ -9,10 +9,10 @@ const isValidDate = (dateString: string): boolean => {
   return !isNaN(date.getTime());
 };
 
-type NewsCardProps = Omit<Partial<NewsItem>, 'title' | 'label' | 'tags' | 'date'> & {
+type NewsCardProps = Omit<Partial<NewsItem>, 'title' | 'label' | 'mainTag' | 'date'> & {
   title?: string | React.ReactNode;
   label?: string | React.ReactNode;
-  tags?: string | string[] | React.ReactNode;
+  mainTag?: string | string[] | React.ReactNode;
   date?: string | React.ReactNode;
   dateEdit?: string | null;
 };
@@ -23,7 +23,7 @@ const formatDate = (dateValue?: string | React.ReactNode | null) => {
   return isValidDate(dateValue) ? new Date(dateValue).toLocaleDateString('pt-BR') : dateValue;
 };
 
-const NewsCard: React.FC<NewsCardProps> = ({ title, label, tags, date, dateEdit, url, imageUrl, hide }) => {
+const NewsCard: React.FC<NewsCardProps> = ({ title, label, mainTag, date, dateEdit, url, imageUrl, hide }) => {
   if (hide === true) return null;
 
   const finalImageUrl =
@@ -37,7 +37,9 @@ const NewsCard: React.FC<NewsCardProps> = ({ title, label, tags, date, dateEdit,
     <>
       <div className={styles.newsIMG}>
         <img src={finalImageUrl} alt={typeof title === 'string' ? title : 'Artigo'} />
-        <div className={styles.type}>{tags}</div>
+        <div className={styles.type}>
+          {Array.isArray(mainTag) ? mainTag.join(' · ') : mainTag}
+        </div>
       </div>
       <div className={styles.containerText}>
         <div className={styles.titleLabel}>

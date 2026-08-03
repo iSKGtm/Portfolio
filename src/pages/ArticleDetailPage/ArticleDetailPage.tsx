@@ -13,6 +13,8 @@ import { Helmet } from 'react-helmet-async';
 import { newsData } from '../../data/news';
 import { partners } from '../../data/ownershipArticle';
 
+const privateArticleMessage = "Este artigo está privado.";
+
 const SetTitle = ({ title }: { title: string }) => {
   React.useEffect(() => {
     document.title = title;
@@ -47,7 +49,10 @@ const ArticleDetailPage: React.FC = () => {
       try {
         const foundArticle = newsData.find(item => item.url === `/artigo/${id}`);
 
-        if (foundArticle) {
+        if (foundArticle?.private === true) {
+          setError(privateArticleMessage);
+          disableFooter();
+        } else if (foundArticle) {
           const description = typeof foundArticle.label === 'string' ? foundArticle.label : '';
           const author = partners.find(({ user }) => user === foundArticle.user) ?? partners[0];
           const mappedArticle: Article = {
@@ -60,6 +65,7 @@ const ArticleDetailPage: React.FC = () => {
             dateEdit: foundArticle.dateEdit || null,
             minutesRead: foundArticle.minutesRead || 5,
             content: foundArticle.content || "Conteúdo não disponível.",
+            mainTag: foundArticle.mainTag,
             tags: foundArticle.tags,
           };
           setArticle(mappedArticle);
@@ -95,7 +101,7 @@ const ArticleDetailPage: React.FC = () => {
   const pageTitle = isLoading
     ? "Por favor, aguarde..."
     : error
-    ? "Artigo não encontrado."
+    ? error === privateArticleMessage ? privateArticleMessage : "Artigo não encontrado."
     : article
     ? `iSKGtm - ${article.title}`
     : "Notícia ou artigo não encontrado.";

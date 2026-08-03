@@ -15,6 +15,10 @@
 
 - Suporte a descrição do autor da postagem de um artigo.
 
+- Suporte a tags e pesquisa via tags.
+
+- Suporte a artigos privados.
+
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.
@@ -25,7 +29,11 @@
 
 - Foram adaptado cores dos skeletons ao sistema de temas.
 
-- Foi corrigido um problema de limite de cards no newssearch. (Beta)
+- Corrigido um problema de limite de cards no newssearch.
+
+- Corrigido um problema lógico envolvendo a URL usando artigos?page=X. (IA)
+
+- Imagens nos artigos, na proporção 1.1 agora são reajustados para 520px de largura máxima. (IA)
 
 ### Problemas Conhecidos & Feedback dos usuários.
 
