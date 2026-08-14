@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type React from 'react';
+import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -43,8 +44,10 @@ const filters: { mode: FilterMode; label: string }[] = [
 ];
 
 const MusicPlayer: React.FC = () => {
+  const { internalId } = useParams<{ internalId?: string }>();
   const audioRef = useRef<HTMLAudioElement>(null);
   const musicListRef = useRef<HTMLDivElement | null>(null);
+  const musicPlayerRef = useRef<HTMLDivElement | null>(null);
   const [filterMode, setFilterMode] = useState<FilterMode>('all');
   const [filterValue, setFilterValue] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
@@ -101,6 +104,32 @@ const MusicPlayer: React.FC = () => {
 
   const currentSong = selectedSong ?? listedSongs[0] ?? sortedSongs[0] ?? null;
 
+  const updateSongUrl = (song: Music) => {
+    const songPath = `/music/${song.internalId}`;
+    if (window.location.pathname !== songPath) {
+      window.history.replaceState(window.history.state, '', songPath);
+    }
+  };
+
+  useEffect(() => {
+    if (!internalId) return;
+
+    const song = sortedSongs.find(
+      (item) => item.internalId.toLowerCase() === internalId.toLowerCase()
+    );
+
+    if (song) {
+      setSelectedSong(song);
+      setAutoPlaySongId(null);
+
+      const scrollTimeout = window.setTimeout(() => {
+        musicPlayerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 350);
+
+      return () => window.clearTimeout(scrollTimeout);
+    }
+  }, [internalId, sortedSongs]);
+
   useEffect(() => {
     if (!currentSong || listedSongs.some((song) => song.id === currentSong.id)) return;
     setSelectedSong(listedSongs[0] ?? sortedSongs[0] ?? null);
@@ -150,6 +179,7 @@ const MusicPlayer: React.FC = () => {
 
       setSelectedSong(song);
       setAutoPlaySongId(song.id);
+      updateSongUrl(song);
     };
 
     window.addEventListener('music-player:play-song', playRequestedSong);
@@ -169,6 +199,7 @@ const MusicPlayer: React.FC = () => {
   const selectSong = (song: Music) => {
     setSelectedSong(song);
     setAutoPlaySongId(song.id);
+    updateSongUrl(song);
 
     if (currentSong?.id === song.id && audioRef.current) {
       void audioRef.current.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
@@ -185,6 +216,7 @@ const MusicPlayer: React.FC = () => {
       return;
     }
 
+    if (currentSong) updateSongUrl(currentSong);
     void audio.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
   };
 
@@ -351,7 +383,7 @@ const MusicPlayer: React.FC = () => {
                     </strong>
                   </div>
                   <span className={styles.songMeta}>{song.author}</span>
-                  <small className={styles.songTag}>{referenceText(song)}</small>
+                  <small className={styles.songTag}>{referenceText(song)} ({song.year})</small>
                 </div>
 
                 <a
@@ -361,7 +393,10 @@ const MusicPlayer: React.FC = () => {
                   rel="noreferrer"
                   aria-label="Ouça agora"
                   title="Ouça agora"
-                  onClick={(event) => event.stopPropagation()}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    updateSongUrl(song);
+                  }}
                 >
                   <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                 </a>
@@ -371,7 +406,12 @@ const MusicPlayer: React.FC = () => {
         </div>
       </div>
 
-      <div className={styles.musicPlayerContainer} id="music-player" onMouseMove={handleMouseMove}>
+      <div
+        className={styles.musicPlayerContainer}
+        id="music-player"
+        ref={musicPlayerRef}
+        onMouseMove={handleMouseMove}
+      >
         <div className={styles.spotlight}></div>
         <div className={styles.containerContentPlayer}>
           {currentSong && (
@@ -429,7 +469,14 @@ const MusicPlayer: React.FC = () => {
                   <button type="button" onClick={() => skipSong(1)} aria-label="Seguinte" title="Seguinte">
                     <FontAwesomeIcon icon={faForwardStep} />
                   </button>
-                  <a href={currentSong.url} target="_blank" rel="noreferrer" aria-label="Ouça agora" title="Ouça agora">
+                  <a
+                    href={currentSong.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Ouça agora"
+                    title="Ouça agora"
+                    onClick={() => updateSongUrl(currentSong)}
+                  >
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   </a>
                 </div>

@@ -19,6 +19,10 @@
 
 - Suporte a artigos privados.
 
+- Agora o mini-player mostra o ano das produções no seletor.
+
+- Suporte a rotas URL usando a numeração da produção (mini-player). (IA)
+
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.

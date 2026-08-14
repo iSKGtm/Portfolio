@@ -9,7 +9,7 @@ import '@fontsource/merriweather/400.css';
 import '@fontsource/merriweather/700-italic.css';
 import '@fontsource/merriweather/500-italic.css';
 import '@fontsource/merriweather/400-italic.css';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import NoAvailable from './components/NoAvailable';
@@ -26,6 +26,7 @@ import Hub from './pages/Hub/Hub';
 import Hidden from './pages/Hidden/Hidden';
 import NotFound from './components/NotFound';
 import BlurTopBottom from './components/BlurTopBottom';
+import { music } from './data/listaMusicas';
 
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -48,6 +49,22 @@ const PageSeo = ({ title, description = defaultDescription }: { title: string; d
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </Helmet>
+  );
+};
+
+const MusicSongRoute: React.FC = () => {
+  const { internalId } = useParams<{ internalId: string }>();
+  const hasSong = music.some(
+    (song) => song.internalId.toLowerCase() === internalId?.toLowerCase()
+  );
+
+  if (!hasSong) return <NotFound />;
+
+  return (
+    <>
+      <PageSeo title="iSKGtm Music" />
+      <Music />
+    </>
   );
 };
 
@@ -215,6 +232,8 @@ const AnimatedRoutes = () => {
           }
         />
 
+        <Route path="/music/:internalId" element={<MusicSongRoute />} />
+
         <Route
           path="*"
           element={
@@ -245,7 +264,9 @@ const AnimatedRoutes = () => {
 const AppContent = () => {
   const location = useLocation();
   const isHome = location.pathname === '/home';
-  const isMusic = location.pathname === '/music';
+  const isMusic = location.pathname === '/music' || music.some(
+    (song) => location.pathname === `/music/${song.internalId}`
+  );
   const isProd = location.pathname === '/prod';
   const isDev = location.pathname === '/dev';
   const isHidden = location.pathname === '/hidden';
