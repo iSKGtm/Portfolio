@@ -2,6 +2,7 @@ export type { NewsItem, Article } from './newsItems/types';
 import type { NewsItem } from './newsItems/types';
 import { feedbackWebsite264 } from './newsItems/feedback-website-26-4';
 import { backstageIskgtmRemix } from './newsItems/backstage-iskgtm-remix';
+import { contramaoIskgtmRemix } from './newsItems/contramao-iskgtm-remix';
 import { ladyIskgtmRemix } from './newsItems/lady-iskgtm-remix';
 import { aintNobodyIskgtmRemix } from './newsItems/aint-nobody-iskgtm-remix';
 import { article10Anos } from './newsItems/10-anos';
@@ -26,6 +27,7 @@ import { iskgtm } from './newsItems/iskgtm';
 export const newsData: NewsItem[] = [
   feedbackWebsite264,
   backstageIskgtmRemix,
+  contramaoIskgtmRemix,
   ladyIskgtmRemix,
   aintNobodyIskgtmRemix,
   article10Anos,

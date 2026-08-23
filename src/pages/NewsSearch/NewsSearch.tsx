@@ -24,6 +24,29 @@ const getNewsOrderDate = ({ date, dateEdit }: NewsItem) => {
 const sortNewsByLatestDate = (items: NewsItem[]) =>
   [...items].sort((first, second) => getNewsOrderDate(second) - getNewsOrderDate(first));
 
+const filterNews = (term: string) => {
+  const normalizedTerm = term.trim().toLowerCase();
+
+  return sortNewsByLatestDate(newsData.filter((item) => {
+    if (item.hide) return false;
+    if (!normalizedTerm) return true;
+
+    const searchableFields: string[] = [
+      item.title,
+      item.label ?? '',
+      typeof item.date === 'string' ? item.date : new Date(item.date).toLocaleDateString('pt-BR'),
+    ];
+
+    if (Array.isArray(item.mainTag)) searchableFields.push(...item.mainTag);
+    else searchableFields.push(item.mainTag);
+    if (item.tags) searchableFields.push(...item.tags);
+
+    return searchableFields.some(
+      (field) => typeof field === 'string' && field.toLowerCase().includes(normalizedTerm)
+    );
+  }));
+};
+
 const getPageFromSearchParams = (searchParams: URLSearchParams) => {
   const raw = searchParams.get('page');
   const parsed = raw ? Number.parseInt(raw, 10) : 1;
@@ -34,10 +57,10 @@ const getPageFromSearchParams = (searchParams: URLSearchParams) => {
 const NewsSearch: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState<string>(() => searchParams.get('search') ?? '')
-  const [filteredNews, setFilteredNews] = useState<NewsItem[]>(() => sortNewsByLatestDate(newsData))
+  const [filteredNews, setFilteredNews] = useState<NewsItem[]>(() => filterNews(''))
   const [isLoading, setIsLoading] = useState(true);
   const showClearButtonRef = useRef<HTMLButtonElement | null>(null);
-  const itemsPerPage = 12;
+  const itemsPerPage = 10;
   const page = getPageFromSearchParams(searchParams);
 
   useEffect(() => {
@@ -67,28 +90,7 @@ const NewsSearch: React.FC = () => {
   const showClearButton = searchTerm.length > 1;
 
 useEffect(() => {
-  const term = searchTerm.trim().toLowerCase();
-
-  if (!term) {
-    setFilteredNews(sortNewsByLatestDate(newsData));
-    return;
-  }
-
-  setFilteredNews(
-    sortNewsByLatestDate(newsData.filter(item => {
-      const searchableFields: string[] = [
-        item.title,
-        item.label ?? '',
-        typeof item.date === 'string' ? item.date : new Date(item.date).toLocaleDateString('pt-BR'),
-      ];
-      if (Array.isArray(item.mainTag)) searchableFields.push(...item.mainTag);
-      else searchableFields.push(item.mainTag);
-      if (item.tags) searchableFields.push(...item.tags);
-      return searchableFields.some(field =>
-        typeof field === 'string' && field.toLowerCase().includes(term)
-      );
-    }))
-  );
+  setFilteredNews(filterNews(searchTerm));
 }, [searchTerm]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

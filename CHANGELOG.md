@@ -23,6 +23,8 @@
 
 - Suporte a rotas URL usando a numeração da produção (mini-player). (IA)
 
+- Adicionado tags de serviços em parceiros em /home. (iSKGtm Music, Prod e Dev).
+
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.
@@ -40,6 +42,8 @@
 - Imagens nos artigos, na proporção 1.1 agora são reajustados para 520px de largura máxima. (IA)
 
 - Artigos relatados aleatórios adicionados "veja também", baseando-se no NewsCard. (IA)
+
+- Corrigido um pequeno problema de ordenamento de artigos em pesquisa (com hide = true).
 
 ### Problemas Conhecidos & Feedback dos usuários.
 

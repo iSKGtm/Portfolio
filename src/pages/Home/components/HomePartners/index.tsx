@@ -7,6 +7,9 @@ interface Partner {
   logo: string;
   description: string;
   link: string;
+  music?: boolean;
+  prod?: boolean;
+  dev?: boolean;
 }
 
 interface HomePartnersCardProps {
@@ -39,6 +42,26 @@ const HomePartnersCard: React.FC<HomePartnersCardProps> = ({ partners }) => {
               <div className={styles.cardInfo}>
                 <h3>{partner.name}</h3>
                 <p>{partner.description}</p>
+                <div className={styles.partnerTags}>
+                  {partner.music && (
+                    <span className={styles.partnerTag}>
+                      <img src="/images/symb/music.svg" alt="" />
+                      iSKGtm Music
+                    </span>
+                  )}
+                  {partner.prod && (
+                    <span className={styles.partnerTag}>
+                      <img src="/images/symb/prod.svg" alt="" />
+                      iSKGtm Prod
+                    </span>
+                  )}
+                  {partner.dev && (
+                    <span className={styles.partnerTag}>
+                      <img src="/images/symb/dev.svg" alt="" />
+                      iSKGtm Dev
+                    </span>
+                  )}
+                </div>
               </div>
             </a>
           ))}
