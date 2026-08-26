@@ -97,7 +97,7 @@ const MusicHeader: React.FC = () => {
             {latestSong && (
               <button className={styles.latestAlbum} type="button" onClick={playLatestSong}>
                 <span>
-                  {latestSong.albumName}
+                  {latestSong.albumName} ({latestSong.year})
                   <small>ouça agora!</small>
                 </span>
                 <img src={latestSong.fileAlbum ?? '/images/symb/music.svg'} alt={latestSong.albumName} />

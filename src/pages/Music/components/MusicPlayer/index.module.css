@@ -361,12 +361,12 @@
   display: inline;
 }
 
-.songTitleText .explicitBadge {
+.songTitleText .badge {
   margin-left: 0.36em;
   vertical-align: 0.03em;
 }
 
-.explicitBadge {
+.badge {
   display: inline-flex;
   flex: 0 0 auto;
   width: 1rem;
@@ -467,7 +467,7 @@
   -webkit-box-orient: vertical;
 }
 
-.playerTitle .explicitBadge {
+.playerTitle .badge {
   align-self: center;
   user-select: none;
 }

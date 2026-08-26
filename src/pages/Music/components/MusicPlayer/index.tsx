@@ -2,20 +2,21 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type React from 'react';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import {
   faArrowUpRightFromSquare,
   faBackwardStep,
+  faBriefcase,
   faForwardStep,
   faMagnifyingGlass,
   faPause,
   faPlay,
+  faTrophy,
   faX,
 } from '@fortawesome/free-solid-svg-icons';
 import { music, type Music } from '../../../../data/listaMusicas';
 import styles from './index.module.css';
 
-type FilterMode = 'all' | 'albumName' | 'drumKit' | 'productionType' | 'classic';
+type FilterMode = 'all' | 'albumName' | 'drumKit' | 'productionType' | 'classic' | 'musicOfYear';
 
 const parseDate = (date: string) => {
   const [day, month, year] = date.split('/').map(Number);
@@ -33,14 +34,22 @@ const getTitle = (song: Music) =>
   song.featuring ? `${song.title} ft. ${song.featuring}` : song.title;
 
 const ExplicitBadge = ({ explicit }: { explicit: boolean }) =>
-  explicit ? <span className={styles.explicitBadge} title="Música Explícita">E</span> : null;
+  explicit ? <span className={styles.badge} title="Produção Explícita">E</span> : null;
+
+const MusicOfYearBadge = ({ musicOfYear }: { musicOfYear?: boolean | null }) =>
+  musicOfYear ? (
+    <span className={styles.badge} title="Produção do Ano">
+      <FontAwesomeIcon icon={faTrophy} />
+    </span>
+  ) : null;
 
 const filters: { mode: FilterMode; label: string }[] = [
   { mode: 'all', label: 'Todas' },
   { mode: 'albumName', label: 'Álbum' },
   { mode: 'drumKit', label: 'Drumkit' },
-  { mode: 'productionType', label: 'Tipo de produção' },
+  { mode: 'productionType', label: 'Tipo de Produção' },
   { mode: 'classic', label: 'Clássicas' },
+  { mode: 'musicOfYear', label: 'Produção do Ano' },
 ];
 
 const MusicPlayer: React.FC = () => {
@@ -64,7 +73,7 @@ const MusicPlayer: React.FC = () => {
   );
 
   const filterOptions = useMemo(() => {
-    if (filterMode === 'all' || filterMode === 'classic') return [];
+    if (filterMode === 'all' || filterMode === 'classic' || filterMode === 'musicOfYear') return [];
 
     const values = sortedSongs
       .map((song) => {
@@ -86,7 +95,8 @@ const MusicPlayer: React.FC = () => {
         (filterMode === 'classic' && song.classic) ||
         (filterMode === 'albumName' && (!filterValue || song.albumName === filterValue)) ||
         (filterMode === 'drumKit' && (!filterValue || song.drumKit === filterValue)) ||
-        (filterMode === 'productionType' && (!filterValue || song.productionType === filterValue));
+        (filterMode === 'productionType' && (!filterValue || song.productionType === filterValue)) ||
+        (filterMode === 'musicOfYear' && song.musicOfYear === true);
 
       if (!matchesFilter) return false;
       if (!normalizedSearch) return true;
@@ -97,7 +107,7 @@ const MusicPlayer: React.FC = () => {
         song.featuring,
         song.albumName,
         song.drumKit,
-        song.productionType,
+        song.productionType
       ].some((value) => value?.toLowerCase().includes(normalizedSearch));
     });
   }, [filterMode, filterValue, searchTerm, sortedSongs]);
@@ -379,6 +389,7 @@ const MusicPlayer: React.FC = () => {
                       <span className={styles.songTitleText}>
                         {getTitle(song)}
                         <ExplicitBadge explicit={song.explicit} />
+                        <MusicOfYearBadge musicOfYear={song.musicOfYear} />
                       </span>
                     </strong>
                   </div>
@@ -433,6 +444,7 @@ const MusicPlayer: React.FC = () => {
                   <h2 className={styles.playerTitle}>
                     <span>{currentSong.title}</span>
                     <ExplicitBadge explicit={currentSong.explicit} />
+                    <MusicOfYearBadge musicOfYear={currentSong.musicOfYear} />
                   </h2>
                   <p>
                     {currentSong.author}

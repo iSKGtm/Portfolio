@@ -4,6 +4,7 @@ export interface Music {
   hide?: boolean
   classic?: boolean
   explicit: boolean
+  musicOfYear?: boolean | null
   fileSong: string
   fileAlbum: string | null
   title: string
@@ -44,6 +45,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     hide: false,
     classic: true,
     explicit: false,
+    musicOfYear: true,
     fileSong: '/musicas/audio/CTM08BG.opus',
     fileAlbum: '/musicas/album/CTM08BG.jpg',
     title: 'Stargazing (iSKGtm Remix)',
@@ -158,6 +160,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     hide: false,
     classic: true,
     explicit: false,
+    musicOfYear: true,
     fileSong: '/musicas/audio/CTM28OC.opus',
     fileAlbum: '/musicas/album/CTM28OC.jpg',
     title: 'Chill Tropical',
@@ -215,6 +218,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     hide: false,
     classic: true,
     explicit: false,
+    musicOfYear: true,
     fileSong: '/musicas/audio/DTM33BG.opus',
     fileAlbum: '/musicas/album/DTM33BG.jpg',
     title: 'Love Me Again (iSKGtm Remix)',
@@ -291,6 +295,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     hide: false,
     classic: true,
     explicit: false,
+    musicOfYear: true,
     fileSong: '/musicas/audio/PTM40OC.opus',
     fileAlbum: '/musicas/album/PTM40OC.jpg',
     title: 'Uma Nova Era (prod. iSKGtm)',
@@ -329,6 +334,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     hide: false,
     classic: true,
     explicit: false,
+    musicOfYear: true,
     fileSong: '/musicas/audio/TTM39BG.opus',
     fileAlbum: '/musicas/album/TTM39BG.jpg',
     title: 'Without Me (iSKGtm & SynthTwin Remix)',
@@ -348,6 +354,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     hide: false,
     classic: false,
     explicit: false,
+    musicOfYear: true,
     fileSong: '/musicas/audio/CTM43BG.opus',
     fileAlbum: '/musicas/album/2024.jpg',
     title: "I'm Good (iSKGtm Remix)",
@@ -355,7 +362,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     featuring: 'Bebe Rexha',
     albumName: 'The Western',
     date: '29/12/2023',
-    year: 2023,
+    year: 2024,
     productionType: 'Bootleg Remix',
     madeWith: 'REAPER 7.07',
     drumKit: 'Chill Tropical',
@@ -481,6 +488,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     hide: false,
     classic: false,
     explicit: false,
+    musicOfYear: true,
     fileSong: '/musicas/audio/DTM52BG.opus',
     fileAlbum: '/musicas/album/2025.jpg',
     title: 'Beautiful People (iSKGtm Remix)',
@@ -557,6 +565,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     hide: false,
     classic: false,
     explicit: true,
+    musicOfYear: true,
     fileSong: '/musicas/audio/CTM58BG.opus',
     fileAlbum: '/musicas/album/2026.jpg',
     title: 'BACKSTAGE (iSKGtm Remix)',
