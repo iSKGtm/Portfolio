@@ -27,6 +27,8 @@
 
 - Adicionado badge de produção do ano, no mini-player.
 
+- Adicionado parcerias anteriores a iShaking Creative Media.
+
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.
