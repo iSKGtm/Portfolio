@@ -29,6 +29,8 @@
 
 - Adicionado parcerias anteriores a iShaking Creative Media.
 
+- Mudança de spinner MUI para .gif.
+
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.

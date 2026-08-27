@@ -9,7 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faX } from '@fortawesome/free-solid-svg-icons';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import { CircularProgress, Pagination } from '@mui/material';
+// import { CircularProgress, Pagination } from '@mui/material';
+import { Pagination } from '@mui/material';
 import { useSearchParams } from 'react-router-dom';
 
 const getNewsOrderDate = ({ date, dateEdit }: NewsItem) => {
@@ -221,7 +222,8 @@ useEffect(() => {
               <div className='labelNewsSearch'><Skeleton width="35%" /></div>
               <div className='inputSearchContainer'>
                 <div className='searchIcon'>
-                  <CircularProgress size={32} sx={{ color: 'var(--color-text-primary)' }} />
+                  {/* <CircularProgress size={32} sx={{ color: 'var(--color-text-primary)' }} /> */}
+                  <img className="spinnerGif" src="/images/symb/loading.gif" alt="" width={24} height={24} />
                 </div>
                 <input
                   type="text"

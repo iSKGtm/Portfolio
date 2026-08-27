@@ -14,6 +14,7 @@
   --color-bg-blur-primary-active: #ffffff75;
   --color-skeleton-base: #c7c7c7;
   --color-skeleton-highlight: #a1a1a1;
+  --filter-spinner-gif: invert(0%);
   --filter-placeholder-only: invert(0%);
   --filter-image-on-bg: invert(93%);
   --filter-logo-on-bg: invert(93%);
@@ -37,6 +38,7 @@
   --color-bg-blur-primary-active: #ffffff24;
   --color-skeleton-base: #505050;
   --color-skeleton-highlight: #606060;
+  --filter-spinner-gif: invert(90%);
   --filter-placeholder-only: invert(75%);
   --filter-image-on-bg: invert(7%);
   --filter-logo-on-bg: invert(7%);
@@ -70,6 +72,11 @@ body {
 #root {
   width: 100%;
   overflow-x: hidden;
+}
+
+.spinnerGif {
+  filter: var(--filter-spinner-gif);
+  mix-blend-mode: color;
 }
 
 /* FONTES */

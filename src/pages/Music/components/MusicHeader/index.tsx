@@ -4,7 +4,7 @@ import { music } from '../../../../data/listaMusicas';
 
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import { CircularProgress } from '@mui/material';
+// import { CircularProgress } from '@mui/material';
 
 const parseDate = (date: string) => {
   const [day, month, year] = date.split('/').map(Number);
@@ -72,7 +72,8 @@ const MusicHeader: React.FC = () => {
         {isLoading ? (
           <>
             <div className={styles.headerLoading}>
-              <CircularProgress size={64} sx={{ color: 'var(--color-text-primary)' }} />
+              {/* <CircularProgress size={64} sx={{ color: 'var(--color-text-primary)' }} /> */}
+              <img className="spinnerGif" src="/images/symb/loading.gif" alt="" width={64} height={64} />
             </div>
           </>
         ) : (

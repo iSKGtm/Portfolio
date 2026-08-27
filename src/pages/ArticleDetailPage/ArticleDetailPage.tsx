@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import NewsArticle from "../../components/NewsArticle";
 import type { Article } from "../../components/NewsArticle";
 import Footer from "../../components/Footer";
-import { CircularProgress } from '@mui/material';
+// import { CircularProgress } from '@mui/material';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { Helmet } from 'react-helmet-async';
@@ -145,7 +145,8 @@ const ArticleDetailPage: React.FC = () => {
                 <Skeleton height={16} width="120px" style={{ position: "relative", bottom: "25px" }} />
               </div>
               <div className='loadIcon'>
-                <CircularProgress size={32} sx={{ color: 'var(--color-text-primary)' }} />
+                {/* <CircularProgress size={32} sx={{ color: 'var(--color-text-primary)' }} /> */}
+                <img className="spinnerGif" src="/images/symb/loading.gif" alt="" width={32} height={32} />
               </div>
             </div>
 
