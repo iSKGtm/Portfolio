@@ -2,8 +2,8 @@ import type { NewsItem } from './types';
 
 export const contramaoIskgtmRemix: NewsItem = {
   url: '/artigo/contramao-iskgtm-remix',
-  hide: true,
-  private: true,
+  hide: false,
+  private: false,
   title: 'Hungria Hip-Hop - Contramão (ft. Lugui) (iSKGtm Remix)',
   label: 'Novo remix realizado por iSKGtm Music.',
   imageUrl: 'https://i.imgur.com/qYc0xAx.jpeg',

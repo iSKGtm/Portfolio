@@ -572,7 +572,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     author: 'Matuê',
     featuring: null,
     albumName: '∞',
-    date: '01/07/2026', //ALTERAR date PARA 20/02/2026 EM 01/09/2026.
+    date: '20/02/2026',
     year: 2026,
     productionType: 'Bootleg Remix',
     madeWith: 'REAPER 7.61',
@@ -601,7 +601,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
   },
   {
     id: 30,
-    hide: true,
+    hide: false,
     classic: false,
     explicit: true,
     fileSong: '/musicas/audio/DTM59BG.opus',
