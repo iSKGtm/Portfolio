@@ -59,6 +59,10 @@
     align-items: center;
 }
 
+.searchIcon > img {
+    transform: translateY(0.4px);
+}
+
 .inputSearchContainer {
     display: flex;
     width: 100%;

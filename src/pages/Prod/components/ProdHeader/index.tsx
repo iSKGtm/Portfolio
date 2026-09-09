@@ -57,9 +57,11 @@ const ProdHeader: React.FC = () => {
       <section className={styles.mainSection}>
         {isLoading ? (
           <>
-            <div className={styles.headerLoading}>
-              {/* <CircularProgress size={64} sx={{ color: 'var(--color-text-primary)' }} /> */}
-              <img className="spinnerGif" src="/images/symb/loading.gif" alt="" width={64} height={64} />
+            <div className={styles.headerContainerLoading}>
+              <div className={styles.headerLoading}>
+                {/* <CircularProgress size={64} sx={{ color: 'var(--color-text-primary)' }} /> */}
+                <img className="spinnerGif" src="/images/symb/loading.gif" alt="" width={64} height={64} />
+              </div>
             </div>
           </>
         ) : (

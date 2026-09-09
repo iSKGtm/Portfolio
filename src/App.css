@@ -26,8 +26,8 @@
 
 /* 🎯 Tema padrão (escuro) */
 :root[data-theme='dark'] {
-  --color-accent: #ef4f91;
-  --color-accent-hover: #df79a5;
+  --color-accent: #db1168;
+  --color-accent-hover: #ec5798;
   --color-neutral: #a8acb5;
   --color-text-primary: #f2f0f2;
   --color-bg-primary: #19191b;

@@ -138,15 +138,15 @@ const ArticleDetailPage: React.FC = () => {
         {isLoading ? (
           <div className='articlePageSkeleton' style={{ maxWidth: '1280px', paddingTop: "50px"}}>
             <div className='containerHeaderSkeleton'>
-              <Skeleton height={40} width="70%" style={{ marginBottom: '20px' }} />
-              <Skeleton height={16} width="50%" style={{ marginBottom: '5px' }} />
+              <Skeleton height={30} width="70%" style={{ marginBottom: '10px' }} />
+              <Skeleton height={16} width="50%" style={{ marginBottom: '10px' }} />
               <Skeleton height={16} width="25%" style={{ marginBottom: '10px' }} />
               <div style={{display: "flex", flexDirection: "row-reverse", marginBottom: "-20px"}}>
-                <Skeleton height={16} width="120px" style={{ position: "relative", bottom: "25px" }} />
+                <Skeleton height={16} width="120px" style={{ position: "relative", bottom: "30px" }} />
               </div>
               <div className='loadIcon'>
                 {/* <CircularProgress size={32} sx={{ color: 'var(--color-text-primary)' }} /> */}
-                <img className="spinnerGif" src="/images/symb/loading.gif" alt="" width={32} height={32} />
+                <img className="spinnerGif" src="/images/symb/loading.gif" alt="" width={38} height={38} />
               </div>
             </div>
 
