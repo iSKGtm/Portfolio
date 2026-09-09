@@ -260,7 +260,7 @@ useEffect(() => {
                   mainTag={
                     <>
                     <SkeletonTheme baseColor="var(--color-skeleton-base)" highlightColor="var(--color-skeleton-highlight)" borderRadius={10}>
-                      <Skeleton width="70%" />
+                      <Skeleton width="70%" baseColor='#DD5691' highlightColor='#F382B3' />
                     </SkeletonTheme>
                     </>
                   }
