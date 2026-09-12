@@ -1,5 +1,6 @@
 export type { NewsItem, Article } from './newsItems/types';
 import type { NewsItem } from './newsItems/types';
+import { mcpsEIaNoProcessoCriativo } from './newsItems/mcps-e-ia-no-processo-criativo';
 import { feedbackWebsite264 } from './newsItems/feedback-website-26-4';
 import { backstageIskgtmRemix } from './newsItems/backstage-iskgtm-remix';
 import { contramaoIskgtmRemix } from './newsItems/contramao-iskgtm-remix';
@@ -25,6 +26,7 @@ import { prod } from './newsItems/prod';
 import { iskgtm } from './newsItems/iskgtm';
 
 export const newsData: NewsItem[] = [
+  mcpsEIaNoProcessoCriativo,
   feedbackWebsite264,
   backstageIskgtmRemix,
   contramaoIskgtmRemix,
