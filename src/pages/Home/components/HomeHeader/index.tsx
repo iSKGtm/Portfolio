@@ -19,11 +19,13 @@ const HomeHeader: React.FC = () => {
       const winScroll = window.pageYOffset || document.documentElement.scrollTop;
       
       const blur = winScroll / 50;
-      let scale = 1 + winScroll / 2000;
+      let scale = 1 + winScroll / 1300;
       const opacity = Math.max(0, 1.1 - winScroll / 800);
       const translate = winScroll * 0.60;
 
-      if (scale >= 1.5) {
+      console.log(scale);
+
+      if (scale >= 1.65) {
         scale = 1;
       }
 

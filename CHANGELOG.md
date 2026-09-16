@@ -51,6 +51,8 @@
 
 - Corrigido um pequeno problema de ordenamento de artigos em pesquisa (com hide = true).
 
+- Desativação de efeito gradiente nas extremidades inferiores, devido a tendências visuais.
+
 ### Problemas Conhecidos & Feedback dos usuários.
 
 - Fallback envolvendo o carousel das páginas home, music, prod e dev, para navegador Safari (Apple). (Feedback)
