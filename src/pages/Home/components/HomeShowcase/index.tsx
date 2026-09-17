@@ -8,16 +8,6 @@ import { Link as RouterLink } from 'react-router-dom';
 const HomeShowcase: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const { currentTarget: target, clientX, clientY } = e;
-    const rect = target.getBoundingClientRect();
-    const x = clientX - rect.left;
-    const y = clientY - rect.top;
-
-    target.style.setProperty('--mouse-x', `${x}px`);
-    target.style.setProperty('--mouse-y', `${y}px`);
-  };
-
   const glassButtonStyle = () => ({
     borderRadius: '100px',
     textTransform: 'none',
@@ -97,10 +87,7 @@ const HomeShowcase: React.FC = () => {
         <div
           key={section.id}
           className={`${styles.featureContainer} ${section.reverse ? styles.featureContainerRev : ''}`}
-          onMouseMove={handleMouseMove}
         >
-          <div className={styles.spotlight}></div>
-
           <div className={styles.featureText}>
             <h1 className={styles.featureTitle}>
               {section.title}

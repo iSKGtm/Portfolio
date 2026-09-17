@@ -26,7 +26,7 @@ const MusicHeader: React.FC = () => {
     const handleScroll = () => {
       const winScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-      const blur = winScroll / 50;
+      const blur = window.innerWidth <= 992 ? 0 : winScroll / 75;
       let scale = 1 + winScroll / 1300;
       const opacity = Math.max(0, 1.1 - winScroll / 800);
       const translate = winScroll * 0.6;

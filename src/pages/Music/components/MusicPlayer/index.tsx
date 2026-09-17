@@ -199,13 +199,6 @@ const MusicPlayer: React.FC = () => {
     };
   }, [sortedSongs]);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const { currentTarget: target, clientX, clientY } = e;
-    const rect = target.getBoundingClientRect();
-    target.style.setProperty('--mouse-x', `${clientX - rect.left}px`);
-    target.style.setProperty('--mouse-y', `${clientY - rect.top}px`);
-  };
-
   const selectSong = (song: Music) => {
     setSelectedSong(song);
     setAutoPlaySongId(song.id);
@@ -304,8 +297,7 @@ const MusicPlayer: React.FC = () => {
         </filter>
       </svg>
       
-      <div className={styles.musicListContainer} onMouseMove={handleMouseMove}>
-        <div className={styles.spotlight}></div>
+      <div className={styles.musicListContainer}>
         <div className={styles.containerContent}>
           <div className={styles.filters}>
             <div className={styles.searchInputContainer}>
@@ -421,9 +413,7 @@ const MusicPlayer: React.FC = () => {
         className={styles.musicPlayerContainer}
         id="music-player"
         ref={musicPlayerRef}
-        onMouseMove={handleMouseMove}
       >
-        <div className={styles.spotlight}></div>
         <div className={styles.containerContentPlayer}>
           {currentSong && (
             <>

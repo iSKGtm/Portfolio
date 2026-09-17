@@ -23,6 +23,7 @@
   outline: 1px solid var(--color-bg-blur-primary);
   position: relative;
   box-sizing: border-box;
+  transition: background-color 200ms ease, outline-color 200ms ease;
 }
 
 .musicListContainer {
@@ -36,23 +37,24 @@
   scroll-margin-bottom: 130px;
 }
 
-.spotlight {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  background: radial-gradient(
-    1200px circle at var(--mouse-x) var(--mouse-y),
-    var(--color-bg-blur-primary-hover),
-    transparent 40%
-  );
+.musicListContainer:hover,
+.musicPlayerContainer:hover {
+  background-color: var(--color-bg-blur-primary-hover);
+  outline-color: var(--color-bg-blur-primary-hover);
 }
 
-.musicListContainer:hover .spotlight,
-.musicPlayerContainer:hover .spotlight {
-  opacity: 1;
+@media screen and (max-width: 992px) {
+  .musicListContainer:hover,
+  .musicPlayerContainer:hover {
+    background-color: var(--color-bg-blur-primary);
+    outline-color: var(--color-bg-blur-primary);
+  }
+
+  .musicListContainer:active,
+  .musicPlayerContainer:active {
+    background-color: var(--color-bg-blur-primary-hover);
+    outline-color: var(--color-bg-blur-primary-hover);
+  }
 }
 
 .containerContent {

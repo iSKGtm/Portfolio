@@ -1,6 +1,6 @@
 # Changelog
 
-## [26.4] - 23/07/2026 - xx/12/2026
+## [26.4] - 23/07/2026 - 31/12/2026
 ### Adicionado
 
 - Um botão de menu do usuário, SwipeableDrawer API (MaterialUI)
@@ -52,6 +52,8 @@
 - Corrigido um pequeno problema de ordenamento de artigos em pesquisa (com hide = true).
 
 - Desativação de efeito gradiente nas extremidades inferiores, devido a tendências visuais.
+
+- Desativação de Spotlight devido a tendências visuais, passando a ser por um simples hover.
 
 - Melhorias de performance envolvendo as páginas: Home, Music, Prod e Dev.
 

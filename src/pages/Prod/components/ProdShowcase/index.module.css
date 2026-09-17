@@ -21,6 +21,7 @@
   background-color: var(--color-bg-blur-primary);
   outline: 1px solid var(--color-bg-blur-primary);
   box-shadow: inset 0 5px 10px -3px #00000030, 0 0 20px #00000015;
+  transition: background-color 200ms ease, outline-color 200ms ease;
 }
 
 .featureContainer {
@@ -33,23 +34,24 @@
   padding: 42px;
 }
 
-.spotlight {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  background: radial-gradient(
-    1200px circle at var(--mouse-x) var(--mouse-y),
-    var(--color-bg-blur-primary-hover),
-    transparent 40%
-  );
+.featureContainer:hover,
+.container:hover {
+  background-color: var(--color-bg-blur-primary-hover);
+  outline-color: var(--color-bg-blur-primary-hover);
 }
 
-.featureContainer:hover .spotlight,
-.container:hover .spotlight {
-  opacity: 1;
+@media screen and (max-width: 992px) {
+  .featureContainer:hover,
+  .container:hover {
+    background-color: var(--color-bg-blur-primary);
+    outline-color: var(--color-bg-blur-primary);
+  }
+
+  .featureContainer:active,
+  .container:active {
+    background-color: var(--color-bg-blur-primary-hover);
+    outline-color: var(--color-bg-blur-primary-hover);
+  }
 }
 
 .featureText,

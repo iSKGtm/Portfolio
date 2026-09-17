@@ -146,12 +146,6 @@ const blocks: ProdShowcaseBlock[] = [
 ];
 
 const ProdShowcase: React.FC = () => {
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    event.currentTarget.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`);
-    event.currentTarget.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);
-  };
-
   const glassButtonStyle = () => ({
     borderRadius: '100px',
     textTransform: 'none',
@@ -178,9 +172,7 @@ const ProdShowcase: React.FC = () => {
 
   return (
     <section className={styles.section}>
-      <div className={styles.featureContainer} onMouseMove={handleMouseMove}>
-        <div className={styles.spotlight}></div>
-
+      <div className={styles.featureContainer}>
         <div className={styles.featureText}>
           <h1 className={styles.featureTitle}>iSKGtm prod.</h1>
           <p>
@@ -206,9 +198,7 @@ const ProdShowcase: React.FC = () => {
       </div>
 
       {blocks.map(({ eyebrow, title, description, icon, items, gridType = 'default' }) => (
-        <div className={styles.container} onMouseMove={handleMouseMove} key={title}>
-          <div className={styles.spotlight}></div>
-
+        <div className={styles.container} key={title}>
           <header className={styles.header}>
             <span>{eyebrow}</span>
             <h2>
