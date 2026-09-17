@@ -28,13 +28,14 @@ const DevHeader: React.FC = () => {
       }
 
       if (devHeaderRef.current) {
-        devHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;
-        devHeaderRef.current.style.transform = `scale(${scale}) translateY(${translate}px)`;
-
         if (winScroll >= 1280) {
           devHeaderRef.current.pause();
+          devHeaderRef.current.style.filter = 'none';
+          devHeaderRef.current.style.transform = 'none';
           devHeaderRef.current.style.display = 'none';
         } else {
+          devHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;
+          devHeaderRef.current.style.transform = `scale(${scale}) translateY(${translate}px)`;
           devHeaderRef.current.play();
           devHeaderRef.current.style.display = 'block';
         }

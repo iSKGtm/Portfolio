@@ -36,13 +36,14 @@ const MusicHeader: React.FC = () => {
       }
 
       if (musicHeaderRef.current) {
-        musicHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;
-        musicHeaderRef.current.style.transform = `scale(${scale}) translateY(${translate}px)`;
-
         if (winScroll >= 1280) {
           musicHeaderRef.current.pause();
+          musicHeaderRef.current.style.filter = 'none';
+          musicHeaderRef.current.style.transform = 'none';
           musicHeaderRef.current.style.display = 'none';
         } else {
+          musicHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;
+          musicHeaderRef.current.style.transform = `scale(${scale}) translateY(${translate}px)`;
           musicHeaderRef.current.play();
           musicHeaderRef.current.style.display = 'block';
         }

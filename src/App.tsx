@@ -71,16 +71,24 @@ const MusicSongRoute: React.FC = () => {
 const AnimatedRoutes = () => {
   const location = useLocation();
 
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, 200);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [location.pathname]);
+
   const pageVariants = {
-    initial: { opacity: 0, filter: "blur(10px)", scale: 0.95 },
+    initial: { opacity: 0, filter: "blur(0px)", scale: 0.95 },
     animate: { opacity: 1, filter: "blur(0px)", scale: 1 },
-    exit: { opacity: 0, filter: "blur(10px)", scale: 0.99, transition: { duration: 0.2 } }
+    exit: { opacity: 0, filter: "blur(0px)", scale: 0.99, transition: { duration: 0.2 } }
   };
 
   const homeVariants = {
-    initial: { opacity: 0, filter: "blur(10px)"},
+    initial: { opacity: 0, filter: "blur(0px)"},
     animate: { opacity: 1, filter: "blur(0px)" },
-    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.2} }
+    exit: { opacity: 0, filter: "blur(0px)", transition: { duration: 0.2} }
   };
 
   return (
@@ -275,17 +283,6 @@ const AppContent = () => {
   const [navbarOpacity, setNavbarOpacity] = useState<number | null>(null);
   const isMainRoute = isHome || isMusic || isProd || isDev || isHidden;
   const effectiveNavbarOpacity = isHub ? 0 : isMainRoute ? null : navbarOpacity ?? 1;
-
-  useEffect(() => {
-    const timeoutId = window.setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-    }, 220);
-
-    return () => {
-      window.clearTimeout(timeoutId);
-    };
-  }, [location.pathname]);
-
 
   useEffect(() => {
     let timeoutId: number | undefined;

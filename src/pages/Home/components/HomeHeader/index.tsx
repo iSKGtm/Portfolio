@@ -23,20 +23,19 @@ const HomeHeader: React.FC = () => {
       const opacity = Math.max(0, 1.1 - winScroll / 800);
       const translate = winScroll * 0.60;
 
-      console.log(scale);
-
       if (scale >= 1.65) {
         scale = 1;
       }
 
       if (homeHeaderRef.current) {
-        homeHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;
-        homeHeaderRef.current.style.transform = `scale(${scale}) translateY(${translate}px)`;
-        
         if (winScroll >= 1280) {
           homeHeaderRef.current.pause();
+          homeHeaderRef.current.style.filter = 'none';
+          homeHeaderRef.current.style.transform = 'none';
           homeHeaderRef.current.style.display = "none";
         } else {
+          homeHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;
+          homeHeaderRef.current.style.transform = `scale(${scale}) translateY(${translate}px)`;
           homeHeaderRef.current.play();
           homeHeaderRef.current.style.display = "block";
         }

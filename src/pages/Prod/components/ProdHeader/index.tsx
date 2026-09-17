@@ -28,13 +28,14 @@ const ProdHeader: React.FC = () => {
       }
 
       if (prodHeaderRef.current) {
-        prodHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;
-        prodHeaderRef.current.style.transform = `scale(${scale}) translateY(${translate}px)`;
-
         if (winScroll >= 1280) {
           prodHeaderRef.current.pause();
+          prodHeaderRef.current.style.filter = 'none';
+          prodHeaderRef.current.style.transform = 'none';
           prodHeaderRef.current.style.display = 'none';
         } else {
+          prodHeaderRef.current.style.filter = `blur(${blur}px) opacity(${opacity})`;
+          prodHeaderRef.current.style.transform = `scale(${scale}) translateY(${translate}px)`;
           prodHeaderRef.current.play();
           prodHeaderRef.current.style.display = 'block';
         }

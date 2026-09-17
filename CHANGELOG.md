@@ -53,6 +53,8 @@
 
 - Desativação de efeito gradiente nas extremidades inferiores, devido a tendências visuais.
 
+- Melhorias de performance envolvendo as páginas: Home, Music, Prod e Dev.
+
 ### Problemas Conhecidos & Feedback dos usuários.
 
 - Fallback envolvendo o carousel das páginas home, music, prod e dev, para navegador Safari (Apple). (Feedback)

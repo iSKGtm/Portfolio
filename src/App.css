@@ -76,7 +76,6 @@ body {
 
 .spinnerGif {
   filter: var(--filter-spinner-gif);
-  mix-blend-mode: color;
 }
 
 /* FONTES */
