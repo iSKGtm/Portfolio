@@ -316,7 +316,8 @@ const AppContent = () => {
     <>
       <NoAvailable />
       <Navbar forcedOpacity={effectiveNavbarOpacity} />
-      <BlurTopBottom forcedOpacity={blurForcedOpacity} />
+      {/* <BlurTopBottom forcedOpacity={blurForcedOpacity} /> */}
+      {/* Desativado devido a tendências visuais */}
       <AnimatedRoutes />
     </>
   );

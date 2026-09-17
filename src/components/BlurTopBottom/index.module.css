@@ -5,7 +5,6 @@
     z-index: 9;
     pointer-events: none;
     transition: opacity 300ms ease;
-    display: none;
 }
 
 .BlurTop {
@@ -34,7 +33,6 @@
 
 .BlurBottom {
     position: fixed;
-    opacity: 0 !important;
     z-index: 9;
     bottom: 0;
     width: 100vw;
