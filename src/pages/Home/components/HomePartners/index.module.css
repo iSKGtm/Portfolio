@@ -232,7 +232,7 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .sectionWrapper { padding: 20px 30px; }
+  .sectionWrapper { padding: 20px 15px; }
   .card { width: 240px; }
   .containerCardOld { justify-content: center; }
   .cardOld { width: 100%; min-height: 128px; border-radius: 40px; }
