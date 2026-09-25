@@ -1,13 +1,15 @@
 import { useRef, useEffect, useState } from 'react';
 import styles from './index.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faChevronUp, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { SwipeableDrawer } from '@mui/material';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 type NavbarProps = {
   forcedOpacity?: number | null;
+  reduceEffects: boolean;
+  onReduceEffectsChange: (enabled: boolean) => void;
 };
 
 const sanitizeSvgMarkup = (svgText: string) =>
@@ -20,7 +22,7 @@ const sanitizeSvgMarkup = (svgText: string) =>
 
 const themeStorageKey = 'iskgtm-color-theme';
 
-const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
+const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null, reduceEffects, onReduceEffectsChange }) => {
   const lastScrollTop = useRef(0);
   const headerRef = useRef<HTMLDivElement | null>(null);
   const buttonScrollRef = useRef<HTMLDivElement | null>(null);
@@ -120,13 +122,14 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
         buttonScrollRef.current.style.opacity = '0';
         buttonScrollRef.current.style.transform = 'scale(1.1)';
 
-        buttonScrollIconRef.current.style.filter = 'blur(10px)';
+        buttonScrollIconRef.current.style.filter = reduceEffects ? 'blur(0px)' : 'blur(10px)';
       }
     };
 
+    toggleVisibility();
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+  }, [reduceEffects]);
 
   useEffect(() => {
     if (!headerRef.current || isHidden) return;
@@ -218,7 +221,7 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
       </svg>
 
       <header
-        className={styles.headerAnim}
+        className={`${styles.headerAnim} ${reduceEffects ? styles.reduceEffects : ''}`}
         ref={headerRef}
         style={
           forcedOpacity !== null
@@ -291,13 +294,22 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
         onClose={() => setIsMenuOpen(false)}
         onOpen={() => setIsMenuOpen(true)}
         slotProps={{
-          paper: { className: styles.menuDrawerPaper },
+          paper: { className: `${styles.menuDrawerPaper} ${reduceEffects ? styles.reduceEffects : ''}` },
           backdrop: { className: styles.menuBackdrop },
         }}
       >
         <div className={styles.menuDrawerContent}>
           <div className={styles.menuDrawerHeader}>
             <span className={styles.drawerHandle} aria-hidden="true" />
+            <button
+              className={styles.closeDrawerButton}
+              type="button"
+              aria-label="Fechar"
+              title="Fechar"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <FontAwesomeIcon icon={faXmark} />
+            </button>
             <h2>Config.</h2>
             
             <div className={styles.menuList}>
@@ -310,6 +322,19 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null }) => {
                     aria-checked={isDarkMode}
                     aria-label={isDarkMode ? 'Ativar modo claro' : 'Ativar modo escuro'}
                     onClick={() => setIsDarkMode((enabled) => !enabled)}
+                  >
+                    <span />
+                  </button>
+                </div>
+                <div className={styles.menuOption}>
+                  <div>Redução de Efeitos</div>
+                  <button
+                    className={`${styles.themeSwitch} ${reduceEffects ? styles.themeSwitchActive : ''}`}
+                    type="button"
+                    role="switch"
+                    aria-checked={reduceEffects}
+                    aria-label={reduceEffects ? 'Desativar redução de efeitos' : 'Ativar redução de efeitos'}
+                    onClick={() => onReduceEffectsChange(!reduceEffects)}
                   >
                     <span />
                   </button>

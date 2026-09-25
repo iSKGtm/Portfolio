@@ -57,6 +57,8 @@
 
 - Melhorias de performance envolvendo as páginas: Home, Music, Prod e Dev.
 
+- Opção de redução de efeitos no menu do usuário, para dispositivos mais lentos.
+
 ### Problemas Conhecidos & Feedback dos usuários.
 
 - Fallback envolvendo o carousel das páginas home, music, prod e dev, para navegador Safari (Apple). (Feedback)

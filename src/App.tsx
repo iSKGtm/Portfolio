@@ -34,6 +34,8 @@ import { theme } from './theme';
 
 const defaultDescription = 'Músicas, audiovisual & soluções digitais em um só lugar!';
 
+const reduceEffectsStorageKey = 'iskgtm-reduce-effects';
+
 const PageSeo = ({ title, description = defaultDescription }: { title: string; description?: string }) => {
   React.useEffect(() => {
     document.title = title;
@@ -68,28 +70,41 @@ const MusicSongRoute: React.FC = () => {
   );
 };
 
-const AnimatedRoutes = () => {
+type AnimatedRoutesProps = {
+  reduceEffects: boolean;
+};
+
+const AnimatedRoutes: React.FC<AnimatedRoutesProps> = ({ reduceEffects }) => {
   const location = useLocation();
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-    }, 200);
+    }, reduceEffects ? 0 : 200);
 
     return () => window.clearTimeout(timeoutId);
-  }, [location.pathname]);
+  }, [location.pathname, reduceEffects]);
 
-  const pageVariants = {
-    initial: { opacity: 0, filter: "blur(0px)", scale: 0.95 },
+  const pageVariants = reduceEffects ? {
+    initial: { opacity: 0, filter: "blur(0px)", scale: 1, transition: { duration: 0 } },
+    animate: { opacity: 1, filter: "blur(0px)", scale: 1, transition: { duration: 0 } },
+    exit: { opacity: 0, filter: "blur(0px)", scale: 1, transition: { duration: 0 } }
+  } : {
+    initial: { opacity: 0, filter: "blur(10px)", scale: 0.95 },
     animate: { opacity: 1, filter: "blur(0px)", scale: 1 },
-    exit: { opacity: 0, filter: "blur(0px)", scale: 0.99, transition: { duration: 0.2 } }
+    exit: { opacity: 0, filter: "blur(10px)", scale: 0.999, transition: { duration: 0.2 } }
   };
 
-  const homeVariants = {
-    initial: { opacity: 0, filter: "blur(0px)"},
-    animate: { opacity: 1, filter: "blur(0px)" },
-    exit: { opacity: 0, filter: "blur(0px)", transition: { duration: 0.2} }
+  const homeVariants = reduceEffects ? {
+    initial: { opacity: 0, filter: "blur(0px)", scale: 1, transition: { duration: 0 } },
+    animate: { opacity: 1, filter: "blur(0px)", scale: 1, transition: { duration: 0 } },
+    exit: { opacity: 0, filter: "blur(0px)", scale: 1, transition: { duration: 0 } }
+  } : {
+    initial: { opacity: 0, filter: "blur(10px)", scale: 0.999 },
+    animate: { opacity: 1, filter: "blur(0px)", scale: 1 },
+    exit: { opacity: 0, filter: "blur(10px)", scale: 0.999, transition: { duration: 0.2 } }
   };
+  const routeTransition = { duration: reduceEffects ? 0 : 0.2 };
 
   return (
     <AnimatePresence mode="wait">
@@ -191,7 +206,7 @@ const AnimatedRoutes = () => {
               animate="animate"
               exit="exit"
               variants={pageVariants}
-              transition={{ duration: 0.2 }}
+              transition={routeTransition}
             >
               <PageSeo
                 title="iSKGtm - Artigos"
@@ -210,7 +225,7 @@ const AnimatedRoutes = () => {
               animate="animate"
               exit="exit"
               variants={homeVariants}
-              transition={{ duration: 0.2 }}
+              transition={routeTransition}
             >
               <PageSeo
                 title="iSKGtm Hub"
@@ -229,7 +244,7 @@ const AnimatedRoutes = () => {
               animate="animate"
               exit="exit"
               variants={pageVariants}
-              transition={{ duration: 0.2 }}
+              transition={routeTransition}
             >
               <PageSeo
                 title="iSKGtm - Artigo"
@@ -281,6 +296,9 @@ const AppContent = () => {
   const isHub = location.pathname === '/hub';
   const [blurForcedOpacity, setBlurForcedOpacity] = useState<number | null>(null);
   const [navbarOpacity, setNavbarOpacity] = useState<number | null>(null);
+  const [reduceEffects, setReduceEffects] = useState(
+    () => localStorage.getItem(reduceEffectsStorageKey) === 'true'
+  );
   const isMainRoute = isHome || isMusic || isProd || isDev || isHidden;
   const effectiveNavbarOpacity = isHub ? 0 : isMainRoute ? null : navbarOpacity ?? 1;
 
@@ -309,13 +327,21 @@ const AppContent = () => {
     };
   }, [isHub, isMainRoute]);
 
+  useEffect(() => {
+    localStorage.setItem(reduceEffectsStorageKey, String(reduceEffects));
+  }, [reduceEffects]);
+
   return (
     <>
       <NoAvailable />
-      <Navbar forcedOpacity={effectiveNavbarOpacity} />
+      <Navbar
+        forcedOpacity={effectiveNavbarOpacity}
+        reduceEffects={reduceEffects}
+        onReduceEffectsChange={setReduceEffects}
+      />
       {/* <BlurTopBottom forcedOpacity={blurForcedOpacity} /> */}
       {/* Desativado devido a tendências visuais */}
-      <AnimatedRoutes />
+      <AnimatedRoutes reduceEffects={reduceEffects} />
     </>
   );
 };
