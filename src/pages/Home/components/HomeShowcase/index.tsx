@@ -143,7 +143,7 @@ const HomeShowcase: React.FC = () => {
                   }}
                 >
                   <img
-                    src="/images/about/institucionalThumbTemp.jpg"
+                    src="/images/about/institucionalThumb.jpg"
                     alt="Thumbnail"
                     style={{
                       width: '100%',
@@ -190,8 +190,7 @@ const HomeShowcase: React.FC = () => {
                 >
                   {isPlaying && (
                     <iframe
-                         /*https://www.youtube.com/embed/h6t8WE1vV3E?autoplay=1*/
-                      src="https://www.youtube.com/embed/Yqf_Fhd-9hc?autoplay=1"
+                      src="https://www.youtube.com/embed/h6t8WE1vV3E?autoplay=1"
                       title="YouTube video"
                       allow="autoplay; encrypted-media"
                       allowFullScreen
