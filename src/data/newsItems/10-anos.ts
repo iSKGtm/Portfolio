@@ -10,6 +10,7 @@ export const article10Anos: NewsItem = {
     mainTag: ["iSKGtm 10"],
     tags: ["Especial", "10 anos", "iSKGtm"],
     date: "12/01/2026",
+    dateEdit: "12/10/2026",
     user: "anthonym",
     minutesRead: 3,
     content: `
@@ -20,7 +21,7 @@ export const article10Anos: NewsItem = {
       Este ano, para comemorar esses 10 anos de trabalhos, vamos relembrar a era clássica iSKGtm (ou iShakinGameR), postando conteúdos clássicos que marcaram uma história, na plataforma YouTube, onde tudo começou.
       </p>
 
-      <h2>O que conteúdo seria?</h2>
+      <h2>Qual conteúdo seria?</h2>
 
       <p>
       A cada mês ano, cada época do que foi a iSKGtm será mostrada, indo nas eras 2016 até a era atual. <br>
@@ -61,10 +62,6 @@ export const article10Anos: NewsItem = {
       <img src="/images/carouselImages/dev/slide7.jpg"/>
 
       <h3>WebApp para Truco 24H. Imagem: Acervo iSKGtm</h3>
-
-      <p>
-        Tudo isso será mostrado no nosso Especial de 10 Anos, fiquem ligados!
-      </p>
 
       <p>
         Segue o link dos vídeos desse especial:

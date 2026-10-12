@@ -9,7 +9,6 @@ import { aintNobodyIskgtmRemix } from './newsItems/aint-nobody-iskgtm-remix';
 import { article10Anos } from './newsItems/10-anos';
 import { ordinaryIskgtmRemix } from './newsItems/ordinary-iskgtm-remix';
 import { renovacaoAcervos } from './newsItems/renovacao-acervos';
-import { antesDoEspecial10Anos } from './newsItems/antes-do-especial-10-anos';
 import { howToLoveIskgtmRemix } from './newsItems/how-to-love-iskgtm-remix';
 import { freedFromDesireIskgtmRemix } from './newsItems/freed-from-desire-iskgtm-remix';
 import { corecycle } from './newsItems/corecycle';
@@ -35,7 +34,6 @@ export const newsData: NewsItem[] = [
   article10Anos,
   ordinaryIskgtmRemix,
   renovacaoAcervos,
-  antesDoEspecial10Anos,
   howToLoveIskgtmRemix,
   freedFromDesireIskgtmRemix,
   corecycle,

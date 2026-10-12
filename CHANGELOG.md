@@ -61,6 +61,8 @@
 
 - Opção de redução de efeitos no menu do usuário, para dispositivos mais lentos.
 
+- Aprimoramento de barra de navegação, agora utilizando arquivo .webp.
+
 ### Problemas Conhecidos & Feedback dos usuários.
 
 - Fallback envolvendo o carousel das páginas home, music, prod e dev, para navegador Safari (Apple). (Feedback)

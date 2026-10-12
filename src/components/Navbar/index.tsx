@@ -255,8 +255,8 @@ const Navbar: React.FC<NavbarProps> = ({ forcedOpacity = null, reduceEffects, on
               />
             </Link>
             <div className={styles.logo}>
-              <div className={styles.logoGif}>
-                <img src="/images/logo/logoGif.gif" />
+              <div className={styles.logoAnim}>
+                <img src="/images/logo/logoAnim.webp" />
               </div>
               <div className={styles.logoName}>
                 <img src="/images/logo/logoName.svg" />
