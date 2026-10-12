@@ -3,7 +3,11 @@ import './Hidden.css';
 import audioInitUrl from './audio/audioInit.opus';
 import audioLoopUrl from './audio/audioLoop.opus';
 
-const Hidden: React.FC = () => {
+type HiddenProps = {
+  maintenanceWebsite: boolean;
+};
+
+const Hidden: React.FC<HiddenProps> = ({ maintenanceWebsite }) => {
   const mainRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -13,7 +17,11 @@ const Hidden: React.FC = () => {
     let disposed = false;
 
     const enterFullscreen = () => {
-      console.log("Nem tudo precisa ser encontrado.");
+      console.log(
+        maintenanceWebsite
+          ? "Nem tudo precisa ser encontrado, ainda mais que estamos em manutenção..."
+          : "Nem tudo precisa ser encontrado."
+      );
       if (document.fullscreenElement || !mainRef.current) {
         return;
       }

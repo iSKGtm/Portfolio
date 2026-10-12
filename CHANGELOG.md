@@ -31,6 +31,8 @@
 
 - Mudança de spinner MUI para .gif.
 
+- Adicionado tela de website em manutenção, usando a lógica da tela de NotFound.
+
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.

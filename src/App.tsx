@@ -25,6 +25,7 @@ import Dev from './pages/Dev/Dev';
 import Hub from './pages/Hub/Hub';
 import Hidden from './pages/Hidden/Hidden';
 import NotFound from './components/NotFound';
+import MainitenceWebsite from './components/MainitenceWebsite';
 import BlurTopBottom from './components/BlurTopBottom';
 import { music } from './data/listaMusicas';
 
@@ -35,6 +36,8 @@ import { theme } from './theme';
 const defaultDescription = 'Músicas, audiovisual & soluções digitais em um só lugar!';
 
 const reduceEffectsStorageKey = 'iskgtm-reduce-effects';
+
+const maintenanceWebsite = false;
 
 const PageSeo = ({ title, description = defaultDescription }: { title: string; description?: string }) => {
   React.useEffect(() => {
@@ -275,7 +278,7 @@ const AnimatedRoutes: React.FC<AnimatedRoutesProps> = ({ reduceEffects }) => {
           element={
             <div style={{ width: '100%' }}>
               <PageSeo title="?" description="?" />
-              <Hidden />
+              <Hidden maintenanceWebsite={maintenanceWebsite} />
             </div>
           }
         />
@@ -330,6 +333,18 @@ const AppContent = () => {
   useEffect(() => {
     localStorage.setItem(reduceEffectsStorageKey, String(reduceEffects));
   }, [reduceEffects]);
+
+  if (maintenanceWebsite && !isHidden) {
+    return (
+      <>
+        <Helmet>
+          <title>Estamos em manutenção.</title>
+          <meta name="description" content="Estamos em manutenção." />
+        </Helmet>
+        <MainitenceWebsite />
+      </>
+    );
+  }
 
   return (
     <>
