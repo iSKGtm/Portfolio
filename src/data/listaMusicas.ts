@@ -616,9 +616,9 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     madeWith: 'REAPER 7.66 ~ 7.74',
     drumKit: 'Disco Tropical',
     soundDesign: 'CoreMusic 26',
-    url: '',
+    url: 'https://youtu.be/uD64yzZ-WOA',
   },
-    {
+  {
     id: 31,
     hide: true,
     classic: false,
@@ -635,8 +635,28 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     madeWith: 'REAPER 7.74 ~ 7.77',
     drumKit: 'Chill Tropical',
     soundDesign: 'CoreMusic 26',
+    url: 'https://youtu.be/vBje2C7c-g0',
+},
+{
+    id: 32,
+    hide: true,
+    classic: false,
+    explicit: false,
+    musicOfYear: true,
+    fileSong: '/musicas/audio/DTM61BG.opus',
+    fileAlbum: '/musicas/album/2027.jpg',
+    title: 'Sad Girls (iSKGtm Remix)',
+    author: 'Bebe Rexha',
+    featuring: 'David Guetta',
+    albumName: '∞',
+    date: '14/10/2026',
+    year: 2027,
+    productionType: 'Bootleg Remix',
+    madeWith: 'REAPER 7.78 ~ 7.81',
+    drumKit: 'Disco Tropical',
+    soundDesign: 'CoreMusic 26',
     url: '',
-  },
+},
 ]
 
 export const music: Music[] = musicEntries.map((song) => ({

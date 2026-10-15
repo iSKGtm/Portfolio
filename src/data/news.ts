@@ -4,6 +4,7 @@ import { mcpsEIaNoProcessoCriativo } from './newsItems/mcps-e-ia-no-processo-cri
 import { feedbackWebsite264 } from './newsItems/feedback-website-26-4';
 import { backstageIskgtmRemix } from './newsItems/backstage-iskgtm-remix';
 import { contramaoIskgtmRemix } from './newsItems/contramao-iskgtm-remix';
+import { miMejorVersionIskgtmRemix } from './newsItems/mi-mejor-version-iskgtm-remix';
 import { ladyIskgtmRemix } from './newsItems/lady-iskgtm-remix';
 import { aintNobodyIskgtmRemix } from './newsItems/aint-nobody-iskgtm-remix';
 import { article10Anos } from './newsItems/10-anos';
@@ -29,6 +30,7 @@ export const newsData: NewsItem[] = [
   feedbackWebsite264,
   backstageIskgtmRemix,
   contramaoIskgtmRemix,
+  miMejorVersionIskgtmRemix,
   ladyIskgtmRemix,
   aintNobodyIskgtmRemix,
   article10Anos,
