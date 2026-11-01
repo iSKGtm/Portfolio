@@ -620,7 +620,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
   },
   {
     id: 31,
-    hide: true,
+    hide: false,
     classic: false,
     explicit: false,
     fileSong: '/musicas/audio/CTM60BG.opus',

@@ -2,8 +2,8 @@ import type { NewsItem } from './types';
 
 export const miMejorVersionIskgtmRemix: NewsItem = {
   url: '/artigo/mi-mejor-version-iskgtm-remix',
-  hide: true,
-  private: true,
+  hide: false,
+  private: false,
   title: 'Lu-Ni - Mi Mejor Versión (ft. NeiNei) (iSKGtm Remix)',
   label: 'Novo remix realizado por iSKGtm Music.',
   imageUrl: 'https://i.imgur.com/qYc0xAx.jpeg',
