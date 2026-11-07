@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -146,30 +145,6 @@ const blocks: DevShowcaseBlock[] = [
 ];
 
 const DevShowcase: React.FC = () => {
-  const glassButtonStyle = () => ({
-    borderRadius: '100px',
-    textTransform: 'none',
-    fontFamily: 'inherit',
-    fontWeight: 500,
-    width: '100%',
-    cursor: 'default',
-    fontSize: '1rem',
-    color: 'var(--color-text-primary)',
-    backgroundColor: 'var(--color-bg-blur-primary)',
-    border: '1px solid var(--color-bg-blur-primary)',
-    boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
-    transition: 'all 0.2s ease-in-out',
-    '&:hover': {
-      backgroundColor: 'var(--color-bg-blur-primary-hover)',
-      border: '1px solid var(--color-bg-blur-primary-hover)',
-      boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
-      color: 'var(--color-text-primary)',
-    },
-    '&:active': {
-      transform: 'scale(0.96)',
-    },
-  });
-
   return (
     <section className={styles.section}>
       <div className={styles.featureContainer}>
@@ -182,12 +157,12 @@ const DevShowcase: React.FC = () => {
           </p>
 
           <div className={styles.buttonsSkills}>
-            <Button href="/pdf/curriculo.pdf" target="_blank" variant="contained" sx={glassButtonStyle()}>
+            <a href="/pdf/curriculo.pdf" target="_blank" rel="noopener noreferrer" className={styles.button}>
               Currículo
-            </Button>
-            <Button component={RouterLink} to="/artigo/dev" variant="contained" sx={glassButtonStyle()}>
+            </a>
+            <RouterLink to="/artigo/dev" className={styles.button}>
               Sobre Nós
-            </Button>
+            </RouterLink>
           </div>
         </div>
 

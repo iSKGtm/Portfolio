@@ -30,6 +30,7 @@ const PartnerTags: React.FC<{ partner: Partner }> = ({ partner }) => (
 );
 
 const HomePartnersCard: React.FC<HomePartnersCardProps> = ({ partners }) => {
+  const privatePartners = 2;
   const visiblePartners = partners?.filter((partner) => !partner.hide) ?? [];
   const currentPartners = visiblePartners.filter((partner) => partner.actually);
   const previousPartners = visiblePartners.filter((partner) => !partner.actually);
@@ -43,7 +44,8 @@ const HomePartnersCard: React.FC<HomePartnersCardProps> = ({ partners }) => {
       <div className={styles.container}>
         <div className={styles.text}>
           <h1 className={styles.title} style={{ fontFamily: 'Phonk' }}>parceiros.</h1>
-          <p>Clientes e parceiros com quem já trabalhamos (e alguns que seguem ativos).</p>
+          <p>Clientes e parceiros privados atualmente (quant.): {privatePartners}</p>
+          <p>Clientes e parceiros públicos com quem já trabalhamos (e alguns que seguem ativos).</p>
         </div>
         
         {currentPartners.length > 0 && (

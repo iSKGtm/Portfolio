@@ -33,6 +33,8 @@
 
 - Adicionado tela de website em manutenção, usando a lógica da tela de NotFound.
 
+- Adicionado uma quantidade de parceiros privados atualmente em HomePartners.
+
 ### Corrigido
 
 - Atualização de banners (exceto o principal de showcase) para o padrão atual.
@@ -62,6 +64,8 @@
 - Opção de redução de efeitos no menu do usuário, para dispositivos mais lentos.
 
 - Aprimoramento de barra de navegação, agora utilizando arquivo .webp.
+
+- Botões MUI foram removidos para melhor consistência visual. (IA)
 
 ### Problemas Conhecidos & Feedback dos usuários.
 

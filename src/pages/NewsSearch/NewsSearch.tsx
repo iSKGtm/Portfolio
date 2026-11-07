@@ -6,11 +6,11 @@ import NewsCard from '../../components/NewsCard'
 import { newsData } from '../../data/news'
 import type { NewsItem } from '../../data/news'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faX } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faMagnifyingGlass, faX } from '@fortawesome/free-solid-svg-icons';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-// import { CircularProgress, Pagination } from '@mui/material';
-import { Pagination } from '@mui/material';
+// import { CircularProgress } from '@mui/material';
+import usePagination from '@mui/material/usePagination';
 import { useSearchParams } from 'react-router-dom';
 
 const getNewsOrderDate = ({ date, dateEdit }: NewsItem) => {
@@ -100,6 +100,21 @@ useEffect(() => {
 
   const totalPages = Math.max(1, Math.ceil(filteredNews.length / itemsPerPage));
 
+  const { items: paginationItems } = usePagination({
+    count: totalPages,
+    page,
+    siblingCount: 0,
+    boundaryCount: 1,
+    onChange: (_, value) => {
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        if (value <= 1) next.delete('page');
+        else next.set('page', String(value));
+        return next;
+      });
+    },
+  });
+
   useEffect(() => {
     const clamped = Math.min(Math.max(1, page), totalPages);
     if (clamped === page) return;
@@ -144,56 +159,29 @@ useEffect(() => {
             <>
               {totalPages > 1 && (
                 <div className="paginationContainer">
-                  <Pagination
-                    className='pageCards'
-                    count={totalPages}
-                    page={page}
-                    onChange={(_, value) => {
-                      setSearchParams((prev) => {
-                        const next = new URLSearchParams(prev);
-                        if (value <= 1) next.delete('page');
-                        else next.set('page', String(value));
-                        return next;
-                      });
-                    }}
-                    variant="outlined"
-                    shape="rounded"
-                    siblingCount={0}
-                    boundaryCount={1}
-                    sx={{
-                      '& .MuiPagination-ul': {
-                        gap: '6px',
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        cursor: 'default',
-                      },
-                      '& .MuiPaginationItem-root': {
-                        color: 'var(--color-text-primary)',
-                        borderRadius: '100px',
-                        borderColor: 'var(--color-bg-blur-primary)',
-                        backgroundColor: 'var(--color-bg-blur-primary)',
-                        boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 10px #00000015',
-                        transition: 'transform 120ms ease, background-color 120ms ease, border-color 120ms ease',
-                        cursor: 'default',
-                        fontSize: '1rem',
-                      },
-                      '& .MuiPaginationItem-root:hover': {
-                        backgroundColor: 'var(--color-bg-blur-primary-hover)',
-                        borderColor: 'var(--color-bg-blur-primary-hover)',
-                      },
-                      '& .MuiPaginationItem-root.Mui-selected': {
-                        color: '#fff',
-                        backgroundColor: 'var(--color-accent)',
-                      },
-                      '& .MuiPaginationItem-root.Mui-selected:hover': {
-                        backgroundColor: 'var(--color-accent)',
-                      },
-                      '& .MuiPaginationItem-root:active': {
-                        transform: 'scale(0.90)',
-                      },
-                    }}
-                  />
+                  <nav className="pageCards" aria-label="Paginação dos artigos">
+                    <ul className="paginationList">
+                      {paginationItems.map(({ type, page: itemPage, selected, ...item }, index) => (
+                        <li key={index}>
+                          {type === 'start-ellipsis' || type === 'end-ellipsis' ? (
+                            <span className="paginationEllipsis">&hellip;</span>
+                          ) : (
+                            <button
+                              type="button"
+                              {...item}
+                              className="paginationButton"
+                              aria-current={selected ? 'page' : undefined}
+                              aria-label={type === 'page' ? `Página ${itemPage}` : type === 'previous' ? 'Página anterior' : 'Próxima página'}
+                            >
+                              {type === 'page' ? itemPage : (
+                                <FontAwesomeIcon icon={type === 'previous' ? faAngleLeft : faAngleRight} />
+                              )}
+                            </button>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
                 </div>
               )}
               <div className="containerSearch">

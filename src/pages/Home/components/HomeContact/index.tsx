@@ -1,34 +1,6 @@
-import { Button } from '@mui/material';
 import styles from './index.module.css';
 
 const HomeContact = () => {
-  const glassButtonStyle = () => ({
-    borderRadius: '100px',
-    textTransform: 'none',
-    fontFamily: 'inherit',
-    fontWeight: 500,
-    padding: '6px 16px',
-    fontSize: '1rem',
-    cursor: 'default',
-    color: 'var(--color-text-primary)',
-    backgroundColor: 'var(--color-bg-blur-primary)',
-    border: '1px solid var(--color-bg-blur-primary)',
-    boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
-
-    transition: 'all 0.2s ease-in-out',
-
-    '&:hover': {
-      backgroundColor: 'var(--color-bg-blur-primary-hover)',
-      border: '1px solid var(--color-bg-blur-primary-hover)',
-      boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
-      color: 'var(--color-text-primary)',
-    },
-
-    '&:active': {
-      transform: 'scale(0.96)',
-    }
-  });
-
   const categories = [
     {
       title: "Geral",
@@ -80,16 +52,15 @@ const HomeContact = () => {
 
               <div className={styles.containerButton}>
                 {cat.links.map((link) => (
-                  <Button
+                  <a
                     key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="contained"
-                  sx={glassButtonStyle()}
-                >
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.button}
+                  >
                     {link.name}
-                  </Button>
+                  </a>
                 ))}
               </div>
 

@@ -2,38 +2,11 @@ import React, { useState } from 'react';
 import styles from './index.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { Button, IconButton, Box } from '@mui/material';
+import { Box } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 const HomeShowcase: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-
-  const glassButtonStyle = () => ({
-    borderRadius: '100px',
-    textTransform: 'none',
-    fontFamily: 'inherit',
-    fontWeight: 500,
-    width: '100%',
-    cursor: 'default',
-    fontSize: '1rem',
-    color: 'var(--color-text-primary)',
-    backgroundColor: 'var(--color-bg-blur-primary)',
-    border: `1px solid var(--color-bg-blur-primary)`,
-    boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
-
-    transition: 'all 0.2s ease-in-out',
-
-    '&:hover': {
-      backgroundColor: 'var(--color-bg-blur-primary-hover)',
-      border: '1px solid var(--color-bg-blur-primary-hover)',
-      boxShadow: 'inset 0 5px 10px -3px #00000030, 0px 0px 20px #00000015',
-      color: 'var(--color-text-primary)',
-    },
-
-    '&:active': {
-      transform: 'scale(0.96)',
-    }
-  });
 
   const sections = [
     {
@@ -96,16 +69,15 @@ const HomeShowcase: React.FC = () => {
 
             <div className={styles.buttonsSkills}>
               {section.links.map((link, index) => (
-                <Button
-                  key={index}
-                  {...(link.url.startsWith('/')
-                    ? { component: RouterLink, to: link.url }
-                    : { href: link.url, target: '_blank' })}
-                  variant="contained"
-                  sx={glassButtonStyle()}
-                >
-                  {link.label}
-                </Button>
+                link.url.startsWith('/') ? (
+                  <RouterLink key={index} to={link.url} className={styles.button}>
+                    {link.label}
+                  </RouterLink>
+                ) : (
+                  <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className={styles.button}>
+                    {link.label}
+                  </a>
+                )
               ))}
             </div>
 
@@ -152,31 +124,14 @@ const HomeShowcase: React.FC = () => {
                     }}
                   />
 
-                  <IconButton
-                    sx={(theme) => ({
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
-                      width: '70px',
-                      height: '70px',
-
-                      border: `2px solid white`,
-                      color: "white",
-
-                      backgroundColor: 'rgba(0,0,0,0.2)',
-
-                      pointerEvents: 'none',
-
-                      '&:hover': {
-                        backgroundColor: theme.palette.error.main,
-                        borderColor: theme.palette.error.main,
-                        color: '#fff'
-                      }
-                    })}
+                  <button
+                    type="button"
+                    className={styles.playButton}
+                    aria-label="Reproduzir vídeo institucional"
+                    onClick={() => setIsPlaying(true)}
                   >
                     <FontAwesomeIcon icon={faPlay} />
-                  </IconButton>
+                  </button>
                 </div>
 
                 <div
