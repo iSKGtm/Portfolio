@@ -655,7 +655,7 @@ const musicEntries: Omit<Music, 'internalId'>[] = [
     madeWith: 'REAPER 7.78 ~ 7.82',
     drumKit: 'Disco Tropical',
     soundDesign: 'CoreMusic 26',
-    url: '',
+    url: 'https://youtu.be/B9KxqRfwXFA',
 },
 ]
 

@@ -11,7 +11,7 @@ export const feedbackWebsite264: NewsItem = {
     tagImage: "/images/symb/dev.svg",
     date: "12/07/2026",
     dateEdit: "03/08/2026",
-    user: "anthonym",
+    user: "iskgtm",
     minutesRead: 3,
     content: `
       <main>

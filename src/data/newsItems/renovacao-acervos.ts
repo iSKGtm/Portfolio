@@ -52,7 +52,7 @@ export const renovacaoAcervos: NewsItem = {
       </p>
 
       <p>
-        Em ordem cronológica, grandes nomes em SA:MP:
+        Em ordem cronológica, grandes nomes em que trabalhamos em SA:MP:
         <ul>
           <li>Brasil Mata Mata Mundo Insano - MMMI (2016-17)</li>
           <li>Brasil Mata Mata Guerra dos Mitos - GDM (2017-18)</li>
@@ -70,7 +70,7 @@ export const renovacaoAcervos: NewsItem = {
       </p>
 
       <p>
-        Grandes nomes em Call of Duty Mobile:
+        Grandes nomes em que trabalhamos em Call of Duty Mobile:
         <ul>
           <li>Fraternity (2020-21)</li>
           <li>COD MOBILE COMMUNITY (2020)</li>
@@ -83,14 +83,14 @@ export const renovacaoAcervos: NewsItem = {
       <p>
       Outros grandes nomes:
       <ul>
-        <li>Wayth - Produtor de Música (2023)</li>
+        <li>SynthTwin - Produtor de Música (2023)</li>
         <li>Revolution - Hamburgueria (2023-25)</li>
         <li>Samp Mobile - Aplicativo Android para SA:MP (2025)</li>
         <li>VOWAC - Sistema de anti-cheat para SA:MP (2025)</li>
         <li>Extremo Roleplay / WorkBestGames - Soluções de internet (2025)</li>
-        <li>Priorado - Site de artigos (Atualmente)</li>
-        <li>GAZAGO - Gestão de Abastecimento (Atualmente)</li>
-        <li>Truco 24H - eTruco (Atualmente)</li>
+        <li>Priorado - Site de artigos (2026)</li>
+        <li>GAZAGO - Gestão de Abastecimento (2026)</li>
+        <li>Truco 24H - eTruco (2026)</li>
       </ul>
       </p>
 
@@ -102,15 +102,15 @@ export const renovacaoAcervos: NewsItem = {
 
       <p>
       Em 2023, haviamos anunciado sobre uma mudança em uma divisão (iSKGtm Music), onde saimos de um programa de produção (ACID Pro) para outro (REAPER). <br>
-      Em 2025, avisamos sobre uma mudança em uma outra divisão (iSKGtm Prod), onde saimos de um programa de produção (VEGAS Pro) para outro (DaVinci Resolve Studio), como também, produções em 4K e HDR. <br>
-      Em 2026, iremos anunciar mais uma mudança, também na divisão iSKGtm Prod, onde iremos sair de um programa de produção (Photoshop) para outro (Affinity).
+      Em 2025, haviamos anunciado sobre uma mudança em uma outra divisão (iSKGtm Prod), onde saimos de um programa de produção (VEGAS Pro) para outro (DaVinci Resolve Studio), como também, produções em 4K e HDR. <br>
+      Em 2026, haviamos anunciado mais uma mudança, também na divisão iSKGtm Prod, onde iremos sair de um programa de produção (Photoshop) para outro (Affinity).
       </p>
 
       <img src="https://i.imgur.com/YqvY5aW.png"/>
 
       <h3>Serif/Canva Affinity 3 - Imagem: Pessoal</h3>
       
-      <h2>Como será os trabalhos em 2026</h2>
+      <h2>Como será os trabalhos</h2>
 
       <p>
         Em 2026, iremos separar as divisões em canais no YouTube, onde o primeiro irá ser a divisão <a href="https://www.youtube.com/@iSKGtmMusic" target="_blank">iSKGtm Music</a>, que terá tudo relacionado a música, com o lançamento da música "Ordinary (iSKGtm Remix)". <br> As divisões iSKGtm Prod e iSKGtm Dev também irão se dividir. Já o canal principal iSKGtm no YouTube, após o especial de 10 anos, terá conteúdos inéditos e um pouco mais variado, do estilo clássico da era 2017, esperamos que goste desse novo padrão.
@@ -121,7 +121,7 @@ export const renovacaoAcervos: NewsItem = {
       </p>
 
       <p>
-        - <q>Em 2026, esperamos evoluir cada vez mais, para entregar cada vez mais sonhos, projetos e alegrias, como sempre entregamos! Esperamos contar com você, e um feliz 2026! </q> <br>
+        - <q>[...] esperamos evoluir cada vez mais, para entregar cada vez mais sonhos, projetos e alegrias, como sempre entregamos! Esperamos contar com você. </q> <br>
         <cite>Diz Anthony M.</cite>
       </p>
 

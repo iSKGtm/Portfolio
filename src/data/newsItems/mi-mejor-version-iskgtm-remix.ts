@@ -44,7 +44,7 @@ export const miMejorVersionIskgtmRemix: NewsItem = {
       </p>
 
       <p>
-        Vale a pena conferir!
+        E esta foi a ultima faixa do álbum "∞ (2026)" vale a pena conferir!
       </p>
 
       <iframe frameborder="0" scrolling="no" src="https://www.youtube.com/embed/vBje2C7c-g0"></iframe> 

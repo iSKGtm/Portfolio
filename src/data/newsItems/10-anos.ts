@@ -4,7 +4,7 @@ export const article10Anos: NewsItem = {
     url: "/artigo/10_anos",
     hide: false,
     title: "Especial de 10 Anos",
-    label: "Conteúdos para o Especial de 10 Anos iSKGtm",
+    label: "Conteúdos para o Especial de 10 Anos iSKGtm.",
     imageUrl: "https://i.imgur.com/xHxXV9F.jpeg",
     tagImage: "/images/symb/10y.png",
     mainTag: ["iSKGtm 10"],
